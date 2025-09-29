@@ -11,10 +11,14 @@
             "id": "b9fd8a4280f2e703",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "免费服务.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "免费服务"
             }
           }
         ]
@@ -210,8 +214,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8b536fcf20839aa1",
+  "active": "b9fd8a4280f2e703",
   "lastOpenFiles": [
+    "免费服务.md",
     "笔记/git.md",
     "笔记/Untitled 1.md",
     "Untitled.md",
@@ -246,7 +251,6 @@
     "FFmpeg/FFmpeg 常用命令速查表.md",
     "OSX/launchctl.md",
     "OSX/Brewfile.md",
-    "OSX/defaults.md",
     "Make",
     "用所选项目新建的文件夹",
     "Nginx/Untitled",
