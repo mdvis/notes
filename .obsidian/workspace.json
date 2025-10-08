@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "091e1bae453c391e",
+        "id": "b705d60ff446c547",
         "type": "tabs",
         "children": [
           {
-            "id": "b115e86aa3cff6b1",
+            "id": "81880287e58bf868",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "用所选项目新建的文件夹/炒鸡.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "炒鸡"
+              "title": "New tab"
             }
           }
         ]
@@ -196,8 +192,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 507.5,
-    "collapsed": true
+    "width": 507.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -215,10 +210,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b115e86aa3cff6b1",
+  "active": "81880287e58bf868",
   "lastOpenFiles": [
+    "烹饪/炒鸡.md",
     "Vim/vim 知识 2.md",
-    "用所选项目新建的文件夹/炒鸡.md",
     "Vim/vim 知识.md",
     "Vim/神级编辑器 Vim 使用.md",
     "Vim/正则表达式.md",
@@ -253,7 +248,7 @@
     "可能的计划",
     "编码",
     "Make",
-    "用所选项目新建的文件夹",
+    "烹饪",
     "Nginx/Untitled",
     "Untitled.canvas",
     "Protocol/HTTP/前端HTTP安全标头简介_640.webp",
