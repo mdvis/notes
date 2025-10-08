@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vim/神级编辑器 Vim 使用.md",
+                "file": "用所选项目新建的文件夹/炒鸡.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "神级编辑器 Vim 使用"
+              "title": "炒鸡"
             }
           }
         ]
@@ -196,7 +196,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 507.5
+    "width": 507.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -216,6 +217,10 @@
   },
   "active": "b115e86aa3cff6b1",
   "lastOpenFiles": [
+    "Vim/vim 知识 2.md",
+    "用所选项目新建的文件夹/炒鸡.md",
+    "Vim/vim 知识.md",
+    "Vim/神级编辑器 Vim 使用.md",
     "Vim/正则表达式.md",
     "Vim/manual.md",
     "Vim/script.md",
@@ -245,10 +250,6 @@
     "Excalidraw",
     "文档/SOP.jpeg",
     "文档/job.md",
-    "文档/codex.md",
-    "文档/CLS.md",
-    "文档/AGENT.md",
-    "笔记/常见和常用的数学定理及其应用领域.md",
     "可能的计划",
     "编码",
     "Make",
