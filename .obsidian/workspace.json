@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "60611f9a19b5db26",
+        "id": "bbb317e7d077485f",
         "type": "tabs",
         "children": [
           {
-            "id": "f3aecc47e1557e55",
+            "id": "b08e56217d009bdf",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -212,8 +212,11 @@
       "simple-mind-map:Create New Mind Map": false
     }
   },
-  "active": "f3aecc47e1557e55",
+  "active": "8b536fcf20839aa1",
   "lastOpenFiles": [
+    "Other/Bug 追踪系统.md",
+    "Other/做机械键盘需要看的书.md",
+    "Other",
     "文档/Vue.md",
     "文档/Linux 加固指南.md",
     "文档/内存模型.md",
@@ -241,8 +244,6 @@
     "base-demo.base",
     "CMD/atop.md",
     "初始化.md",
-    "笔记/玻璃容器材质.md",
-    "笔记/每日一读.md",
     "Untitled 2.base",
     "Untitled 1.base",
     "文档/SOP.jpeg",
@@ -252,7 +253,6 @@
     "文档/Vue.xmind",
     "文档/linux 加固指南.xmind",
     "Linux",
-    "文档/monorepo.xmind",
     "Protocol/HTTP/前端HTTP安全标头简介_640.webp",
     "Protocol/HTTP/3_前端HTTP安全标头简介_640.webp",
     "Protocol/HTTP/2_前端HTTP安全标头简介_640.webp",
