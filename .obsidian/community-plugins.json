@@ -11,5 +11,6 @@
   "obsidian-tasks-plugin",
   "obsidian-git",
   "obsidian-mind-map",
-  "tag-wrangler"
+  "tag-wrangler",
+  "remotely-save"
 ]
