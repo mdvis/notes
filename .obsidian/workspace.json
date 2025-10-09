@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "49691fe88806fe41",
+        "id": "60611f9a19b5db26",
         "type": "tabs",
         "children": [
           {
-            "id": "536044a32a940a53",
+            "id": "f3aecc47e1557e55",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Drawing 2025-09-28 12.04.32.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2025-09-28 12.04.32.excalidraw"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -190,7 +188,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -210,13 +208,31 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "obsidian-git:Open Git source control": false,
-      "remotely-save:Remotely Save": false
+      "remotely-save:Remotely Save": false,
+      "simple-mind-map:Create New Mind Map": false
     }
   },
-  "active": "536044a32a940a53",
+  "active": "f3aecc47e1557e55",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2025-10-09 14.44.46.excalidraw.md",
+    "文档/Vue.md",
+    "文档/Linux 加固指南.md",
+    "文档/内存模型.md",
+    "文档/wechat.md",
+    "内存模型.md",
+    "文档/LLM.md",
+    "文档/React.md",
+    "文档/monorepo.md",
+    "Linux 加固指南.md",
+    "LLM.md",
+    "micro.md",
+    "monorepo.md",
+    "React.md",
+    "Vue.md",
+    "文档/一个月最多可瘦十斤.png",
+    "文档/AGENT.md",
+    "文档/codex.md",
     "Excalidraw/Drawing 2025-09-28 12.04.32.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-09 14.44.46.excalidraw.md",
     "2025-10-09.md",
     "笔记/2025 年家庭实验室网络常见错误及避免方法.md",
     "kanban-demo.md",
@@ -227,31 +243,14 @@
     "初始化.md",
     "笔记/玻璃容器材质.md",
     "笔记/每日一读.md",
-    "笔记/键盘说明.md",
-    "笔记/基于角色的访问控制.md",
-    "笔记/防抖节流.md",
-    "笔记/常见和常用的数学定理及其应用领域.md",
-    "Git/alias_.md",
-    "Vim/vim 知识.md",
     "Untitled 2.base",
     "Untitled 1.base",
-    "原则/原则.md",
-    "原则/cupid 丘比特.md",
-    "CMD/7z.md",
-    "文档/tea.md",
-    "文档/一个月最多可瘦十斤.png",
-    "文档/AGENT.md",
     "文档/SOP.jpeg",
-    "文档/codex.md",
-    "文档/CLS.md",
     "文档/内存模型.xmind",
     "文档/LLM.xmind",
-    "Vim/vim 知识 2.md",
     "文档/wechat.xmind",
     "文档/Vue.xmind",
     "文档/linux 加固指南.xmind",
-    "文档/job.md",
-    "零知识/零知识证.md",
     "Linux",
     "文档/monorepo.xmind",
     "Protocol/HTTP/前端HTTP安全标头简介_640.webp",
