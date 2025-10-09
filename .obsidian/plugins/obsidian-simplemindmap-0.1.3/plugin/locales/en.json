@@ -1,0 +1,141 @@
+{
+  "common": {
+    "mindMap": "Mind Map",
+    "rootNodeDefaultText": "Root Node",
+    "secondNodeDefaultText": "Secondary node",
+    "branchNodeDefaultText": "Branch Topic"
+  },
+  "action": {
+    "createMindMap": "Create New Mind Map",
+    "createMindMapInsertToMd": "Create Mind Map and Insert into Current Document",
+    "openAsMd": "Open as Markdown Document",
+    "openAsMindMap": "Open as Mind Map Document",
+    "changeToOutline": "Switch to Outline Mode",
+    "changeToMindMap": "Switch to Mind Map Mode",
+    "printOutline": "Print Outline",
+    "import": "Import",
+    "export": "Export",
+    "saveAndUpdateImage": "Save and Update Image Data",
+    "insertCodeBlockToMd": "Insert Mind Map Code Block into Current Document",
+    "previewAsMindMap": "Preview as Mind Map",
+    "changeToReadonly": "Change to Readonly Mode",
+    "changeToEdit": "Change to Edit Mode",
+    "enterDemonstrate": "Enter Mind Map Demonstration Mode",
+    "changeToMdFile": "Convert to Markdown Document",
+    "changeToMindMapFile": "Convert to Mind Map Document"
+  },
+  "tip": {
+    "fileExist": "File already exists",
+    "createMindMapFail": "Failed to create mind map",
+    "fileIsNotMd": "Current file is not a Markdown document",
+    "fileIsEmpty": "File content is empty",
+    "fileFormatError": "File format error",
+    "onlyEnableSelectCurrentVaultFile": "Only files from the current vault can be added",
+    "saving": "Saving...",
+    "integerInputError": "Please enter a number greater than 0",
+    "noPreviewImage": "No preview image available",
+    "insertFail": "Insertion failed",
+    "noMatchResult": "No matching results",
+    "fileDeleted": "File has been deleted",
+    "noPreviewImageInFile": "No preview image in file",
+    "pluginNewVersion": "A new version of the plugin is available:",
+    "pluginNoNewVersion": "The current version is already the latest version",
+    "pluginVersionCheckError": "Check failed",
+    "changeSuccess": "Change completed",
+    "mdToMindMapFail": "Conversion failed, unable to parse data that can be converted into a mind map"
+  },
+  "setting": {
+    "title": {
+      "title1": "Basic",
+      "title2": "File",
+      "title3": "Image Compression",
+      "title4": "Embed",
+      "title5": "Other"
+    },
+    "themeMode": {
+      "title": "Theme Mode",
+      "desc": "Dark and light color modes",
+      "option1": "Follow Obsidian",
+      "option2": "Light Mode",
+      "option3": "Dark Mode"
+    },
+    "theme": {
+      "title": "Default theme (light color)",
+      "desc": "Default theme for creating a mind map file in light color mode",
+      "title2": "Default theme (dark color)",
+      "desc2": "Default theme for creating a mind map file in dark mode"
+    },
+    "layout": {
+      "title": "Default Layout",
+      "desc": "The default structure when creating a new mind map file"
+    },
+    "folder": {
+      "title4": "Mind Map File Storage Location",
+      "desc4": "Storage location for newly created SimpleMindMap files",
+      "title1": "Custom File Storage Directory",
+      "desc1": "Custom file storage directory, relative to vault root directory",
+      "title5": "Image Storage Location",
+      "desc5": "Storage location for uploaded image files (node images, background images)",
+      "title2": "Custom Image Storage Directory",
+      "desc2": "Custom image storage directory, relative to vault root directory",
+      "title6": "Custom Subfolder",
+      "desc6": "Custom subfolder, relative to current file's folder",
+      "title7": "File Storage Location",
+      "desc7": "Storage directory for local files selected in node hyperlinks",
+      "title3": "Custom File Storage Directory",
+      "desc3": "Custom file storage directory, relative to vault root directory",
+      "option1": "Vault root directory",
+      "option2": "Specified folder",
+      "option3": "Current file's folder",
+      "option4": "Specified subfolder under current file's folder",
+      "title8": "Support ob search",
+      "desc8": "Mind map data is stored after encoding and compression, so it cannot be searched in OB. If you want to search for the node text content of the mind map in OB, you can turn on this option. After turning it on, the text content of all nodes will be saved in the file for search. The side effect is that it will cause the file size to increase, which may affect the speed of file opening and saving",
+      "title9": "Store canvas position and scaling data",
+      "desc9": "After opening, the canvas position and zoom data will be saved in the file, so that the next time it is opened, it can be restored to the position and zoom state when it was closed last time. The disadvantage is that moving and scaling the canvas will cause file changes"
+    },
+    "compress": {
+      "title1": "Compress Images",
+      "desc1": "Whether to compress uploaded node images (locally selected images)",
+      "title2": "Maximum Compression Width",
+      "desc2": "Set the maximum width after image compression",
+      "title3": "Maximum Compression Height",
+      "desc3": "Set the maximum height after image compression",
+      "title4": "Image Quality",
+      "desc4": "The quality of compressed images is only valid for certain image formats, such as jpg",
+      "curValue": "Current Value",
+      "reset": "Reset to Default"
+    },
+    "autoSave": {
+      "title": "Auto-save Interval",
+      "desc": "Inactivity time before auto-save (seconds)"
+    },
+    "codeBlock": {
+      "title": "Code Block Initial Height",
+      "desc": "Initial height when embedding via smm code block (pixels)"
+    },
+    "linkInfo": {
+      "issues": "Bugs and Feature Requests",
+      "desktop": "Download independent client",
+      "community": "Community"
+    },
+    "embed": {
+      "title1": "Embed Preview Double Click to Open a New Window",
+      "desc1": "When embedding an MD document in format ![[]], double-click to preview the image and open the file in a new window",
+      "title2": "Embed Preview Background Transparent",
+      "desc2": "Set whether the background of the embedded preview image is transparent"
+    },
+    "file": {
+      "title1": "New Mind Map File Name Prefix",
+      "desc1": "Default naming format for new mind map files: Prefix + Space + Date Timestamp",
+      "title2": "Date Timestamp Format for New Mind Map Files",
+      "desc2": "Default format: YYYY-MM-DD HH.mm.ss, Example: 2025-01-01 23.59.59. For details on format meaning and modification, refer to: https://day.js.org/docs/en/parse/string-format"
+    },
+    "button": {
+      "select": "Select"
+    },
+    "other": {
+      "title1": "Check for new versions",
+      "desc1": "After activation, it will check if a new version is available when the plugin starts. If your network cannot access Github, it is recommended to disable this option"
+    }
+  }
+}

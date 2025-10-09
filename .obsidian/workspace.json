@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "b705d60ff446c547",
+        "id": "db7155af91d5ab0f",
         "type": "tabs",
         "children": [
           {
-            "id": "81880287e58bf868",
+            "id": "133e24ce4f8001ad",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "xmind-viewer",
               "state": {
-                "file": "Vim/vim 知识 2.md",
-                "mode": "source",
-                "source": false
+                "file": "文档/内存模型.xmind"
               },
-              "icon": "lucide-file",
-              "title": "vim 知识 2"
+              "icon": "brain",
+              "title": "XMind view: 内存模型"
             }
           }
         ]
@@ -214,8 +212,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "81880287e58bf868",
+  "active": "133e24ce4f8001ad",
   "lastOpenFiles": [
+    "文档/内存模型.xmind",
+    "文档/LLM.xmind",
+    "Vim/vim 知识 2.md",
     "Vim/vim 知识.md",
     "文档/wechat.xmind",
     "文档/Vue.xmind",
@@ -225,7 +226,6 @@
     "文档/CLS.md",
     "文档/AGENT.md",
     "文档/一个月最多可瘦十斤.png",
-    "文档/内存模型.xmind",
     "零知识/零知识证.md",
     "区块链/区块链 1.md",
     "区块链/区块链.md",
@@ -245,12 +245,9 @@
     "笔记/什么是多因子认证.md",
     "笔记/蔬果保存指南.md",
     "笔记/塑料容器材质.md",
-    "笔记/提示词方案.md",
-    "笔记/团队管理.md",
     "Linux",
     "Untitled.base",
     "文档/monorepo.xmind",
-    "文档/LLM.xmind",
     "Excalidraw",
     "文档/SOP.jpeg",
     "零知识",

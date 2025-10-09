@@ -1,0 +1,10 @@
+node_modules
+.DS_Store
+dist_electron
+simple-mind-map/dist
+simple-mind-map/types
+utools/dist
+main.js.LICENSE.txt
+/data.json
+/main.js
+/styles.css
