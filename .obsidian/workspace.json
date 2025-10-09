@@ -11,12 +11,14 @@
             "id": "81880287e58bf868",
             "type": "leaf",
             "state": {
-              "type": "xmind-viewer",
+              "type": "markdown",
               "state": {
-                "file": "文档/wechat.xmind"
+                "file": "Vim/vim 知识 2.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "brain",
-              "title": "XMind view: wechat"
+              "icon": "lucide-file",
+              "title": "vim 知识 2"
             }
           }
         ]
@@ -214,8 +216,9 @@
   },
   "active": "81880287e58bf868",
   "lastOpenFiles": [
-    "文档/Vue.xmind",
+    "Vim/vim 知识.md",
     "文档/wechat.xmind",
+    "文档/Vue.xmind",
     "文档/linux 加固指南.xmind",
     "文档/job.md",
     "文档/codex.md",
@@ -251,7 +254,6 @@
     "Excalidraw",
     "文档/SOP.jpeg",
     "零知识",
-    "编码",
     "Untitled.canvas",
     "Protocol/HTTP/前端HTTP安全标头简介_640.webp",
     "Protocol/HTTP/3_前端HTTP安全标头简介_640.webp",
