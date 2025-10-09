@@ -11,10 +11,14 @@
             "id": "b08e56217d009bdf",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Shell/基础.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "基础"
             }
           }
         ]
@@ -212,7 +216,7 @@
       "simple-mind-map:Create New Mind Map": false
     }
   },
-  "active": "8b536fcf20839aa1",
+  "active": "b08e56217d009bdf",
   "lastOpenFiles": [
     "Other/Bug 追踪系统.md",
     "Other/做机械键盘需要看的书.md",
