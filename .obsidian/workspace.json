@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/2025 年家庭实验室网络常见错误及避免方法.md",
+                "file": "CMD/atop.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025 年家庭实验室网络常见错误及避免方法"
+              "title": "atop"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:homelab",
+                "query": "tag:#获取状态",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 358.5
   },
   "right": {
     "id": "1d21b8b5aff8b2b8",
@@ -193,7 +193,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -215,13 +215,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7e7ab73cc512f79d",
+  "active": "57df1637a026c3e6",
   "lastOpenFiles": [
+    "初始化.md",
+    "CMD/atop.md",
+    "笔记/2025 年家庭实验室网络常见错误及避免方法.md",
+    "笔记/玻璃容器材质.md",
+    "笔记/每日一读.md",
+    "笔记/键盘说明.md",
     "笔记/基于角色的访问控制.md",
     "笔记/防抖节流.md",
     "笔记/常见和常用的数学定理及其应用领域.md",
-    "笔记/玻璃容器材质.md",
-    "笔记/2025 年家庭实验室网络常见错误及避免方法.md",
     "Git/alias_.md",
     "Vim/vim 知识.md",
     "Untitled.base",
@@ -247,12 +251,8 @@
     "区块链/区块链 1.md",
     "区块链/区块链.md",
     "编码/编码.md",
-    "笔记/键盘说明.md",
     "笔记/开源项目.md",
     "笔记/开源许可.md",
-    "笔记/每日一读.md",
-    "笔记/免费服务.md",
-    "笔记/权限控制.md",
     "Linux",
     "文档/monorepo.xmind",
     "Untitled.canvas",
