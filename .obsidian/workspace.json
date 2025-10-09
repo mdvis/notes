@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "db7155af91d5ab0f",
+        "id": "17cd620102559d24",
         "type": "tabs",
         "children": [
           {
-            "id": "133e24ce4f8001ad",
+            "id": "59bdb389df8c6895",
             "type": "leaf",
             "state": {
-              "type": "xmind-viewer",
+              "type": "markdown",
               "state": {
-                "file": "文档/内存模型.xmind"
+                "file": "笔记/2025 年家庭实验室网络常见错误及避免方法.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "brain",
-              "title": "XMind view: 内存模型"
+              "icon": "lucide-file",
+              "title": "2025 年家庭实验室网络常见错误及避免方法"
             }
           }
         ]
@@ -51,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:homelab",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -79,10 +81,11 @@
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "书签"
+              "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -212,45 +215,46 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "133e24ce4f8001ad",
+  "active": "7e7ab73cc512f79d",
   "lastOpenFiles": [
+    "笔记/基于角色的访问控制.md",
+    "笔记/防抖节流.md",
+    "笔记/常见和常用的数学定理及其应用领域.md",
+    "笔记/玻璃容器材质.md",
+    "笔记/2025 年家庭实验室网络常见错误及避免方法.md",
+    "Git/alias_.md",
+    "Vim/vim 知识.md",
+    "Untitled.base",
+    "Untitled 2.base",
+    "Untitled 1.base",
+    "原则/原则.md",
+    "原则/cupid 丘比特.md",
+    "CMD/7z.md",
+    "文档/tea.md",
+    "文档/一个月最多可瘦十斤.png",
+    "文档/AGENT.md",
+    "文档/SOP.jpeg",
+    "文档/codex.md",
+    "文档/CLS.md",
     "文档/内存模型.xmind",
     "文档/LLM.xmind",
     "Vim/vim 知识 2.md",
-    "Vim/vim 知识.md",
     "文档/wechat.xmind",
     "文档/Vue.xmind",
     "文档/linux 加固指南.xmind",
     "文档/job.md",
-    "文档/codex.md",
-    "文档/CLS.md",
-    "文档/AGENT.md",
-    "文档/一个月最多可瘦十斤.png",
     "零知识/零知识证.md",
     "区块链/区块链 1.md",
     "区块链/区块链.md",
     "编码/编码.md",
-    "笔记/2025 年家庭实验室网络常见错误及避免方法.md",
-    "笔记/玻璃容器材质.md",
-    "笔记/常见和常用的数学定理及其应用领域.md",
-    "笔记/防抖节流.md",
-    "笔记/基于角色的访问控制.md",
     "笔记/键盘说明.md",
     "笔记/开源项目.md",
     "笔记/开源许可.md",
     "笔记/每日一读.md",
     "笔记/免费服务.md",
     "笔记/权限控制.md",
-    "笔记/身份与访问管理.md",
-    "笔记/什么是多因子认证.md",
-    "笔记/蔬果保存指南.md",
-    "笔记/塑料容器材质.md",
     "Linux",
-    "Untitled.base",
     "文档/monorepo.xmind",
-    "Excalidraw",
-    "文档/SOP.jpeg",
-    "零知识",
     "Untitled.canvas",
     "Protocol/HTTP/前端HTTP安全标头简介_640.webp",
     "Protocol/HTTP/3_前端HTTP安全标头简介_640.webp",
