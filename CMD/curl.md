@@ -3,114 +3,36 @@
 ```shell
 curl [选项] [参数]
 ```
-### 选项
 
-```bash
--a   --append                                   # 上传文件时，附加到目标文件 
--anyauth                                        # 可以使用“任何”身份验证方法 
-     --basic                                    # 使用HTTP基本验证 
--B   --use-ascii                                # 使用ASCII /文本传输 
-     --data-ascii                               # 以ascii的方式post数据 
-     --data-binary                              # 以二进制的方式post数据 
-     --negotiate                                # 使用HTTP身份验证 
-     --disable-eprt                             # 禁止使用EPRT或LPRT 
-     --disable-epsv                             # 禁止使用EPSV 
--D   --dump-header                              # 把header信息写入到该文件中 
-     --egd-file                                 # 为随机数据(SSL)设置EGD socket路径 
-     --tcp-nodelay                              # 使用TCP\_NODELAY选项 
--E   --cert                                     # 客户端证书文件和密码 (SSL)
-     --cert-type                                # 证书文件类型 (DER/PEM/ENG) (SSL)
-     --key                                      # 私钥文件名 (SSL)
-     --key-type                                 # 私钥文件类型 (DER/PEM/ENG) (SSL)
-     --pass                                     # 私钥密码 (SSL)
-     --engine                                   # 加密引擎使用 (SSL)
-     --cacert                                   # CA证书 (SSL)
-     --capath                                   # CA目录 
-     --ciphers                                  # SSL密码 
-     --compressed                               # 要求返回是压缩的形势
-     --create-dirs                              # 建立本地目录的目录层次结构 
-     --crlf                                     # 上传是把LF转变成CRLF 
--f   --fail                                     # 连接失败时不显示http错误 
-     --ftp-create-dirs                          # 如果远程目录不存在，创建远程目录 
-     --ftp-method \[multicwd/nocwd/singlecwd]   # 控制CWD的使用 
-     --ftp-pasv                                 # 使用 PASV/EPSV 代替端口 
-     --ftp-skip-pasv-ip                         # 使用PASV的时候,忽略该IP地址 
-     --ftp-ssl                                  # 尝试用 SSL/TLS 来进行ftp数据传输 
-     --ftp-ssl-reqd                             # 要求用 SSL/TLS 来进行ftp数据传输 
--F   --form                                     # 模拟http表单提交数据 
-     --form-string                              # 模拟http表单提交数据 
--g   --globoff                                  # 禁用网址序列和范围使用{}和\[] 
--G   --get                                      # 以get的方式来发送数据 
-     --ignore-content-length                    # 忽略的HTTP头信息的长度 
--i   --include                                  # 输出时包括protocol头信息 
--j   --junk-session-cookies                     # 读取文件进忽略session cookie 
-     --interface                                # 使用指定网络接口/地址 
-     --krb4                                     # 使用指定安全级别的krb4 
--K   --config                                   # 指定的配置文件读取 
--l   --list-only                                # 列出ftp目录下的文件名称 
-     --local-port                               # 强制使用本地端口号 
-     --max-redirs                               # 设置最大读取的目录数 
-     --max-filesize                             # 设置最大下载的文件总量 
--M   --manual                                   # 显示全手动 
-     --netrc-optional                           # 使用 .netrc 或者 URL来覆盖-n 
-     --ntlm                                     # 使用 HTTP NTLM 身份验证 
--N   --no-buffer                                # 禁用缓冲输出 
--p   --proxytunnel                              # 使用HTTP代理 
-     --proxy-anyauth                            # 选择任一代理身份验证方法 
-     --proxy-basic                              # 在代理上使用基本身份验证 
-     --proxy-digest                             # 在代理上使用数字身份验证 
-     --proxy-ntlm                               # 在代理上使用ntlm身份验证 
--P   --ftp-port                                 # 使用端口地址，而不是使用PASV 
--q                                              # 作为第一个参数，关闭 .curlrc 
--Q   --quote                                    # 文件传输前，发送命令到服务器 
--r   --range                                    # 检索来自HTTP/1.1或FTP服务器字节范围 
---range-file                                    # 读取（SSL）的随机文件 
--R   --remote-time                              # 在本地生成文件时，保留远程文件时间 
-     --retry                                    # 传输出现问题时，重试的次数 
-     --retry-delay                              # 传输出现问题时，设置重试间隔时间 
-     --retry-max-time                           # 传输出现问题时，设置最大重试时间 
-     --socks4                                   # 用socks4代理给定主机和端口 
-     --socks5                                   # 用socks5代理给定主机和端口 
-     --stderr                                   #   
--t   --telnet-option                            # Telnet选项设置 
-     --trace                                    # 对指定文件进行debug 
-     --trace-ascii                              # Like --跟踪但没有hex输出 
-     --trace-time                               # 跟踪/详细输出时，添加时间戳 
-     --url <url>                                # 要使用的 URL
--U   --proxy-user                               # 设置代理用户名和密码 
--y   --speed-time                               # 放弃限速所要的时间，默认为30 
--Y   --speed-limit                              # 停止传输速度的限制，速度时间 
-```
-
-| 选项                                           | 作用                                     | 示例                                                                                                                             |
-| --------------------------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `-A [user-agent]`                            | 设置请求的 User-Agent 头                     | `curl -A "Mozilla/5.0" http://example.com`                                                                                     |
-| `-b`                                         | 发送指定的 Cookie                           | `curl -b "name=value" http://example.com`                                                                                      |
-| `-c [cookie 文件]`, `--cookie-jar [cookie 文件]` | 将服务器响应的 Cookie 保存到指定的文件中               | `curl -c cookies.txt http://example.com`                                                                                       |
-| `-C -`, `--continue-at`                      | 断点续传，继续上次未完成的下载                        | `curl -C - -O http://example.com/largefile.zip`                                                                                |
-| `-d`, `--data`                               | 发送 POST 请求并传递数据，可直接跟数据或从文件读取           | `curl -d "param1=value1&param2=value2" https://api.example.com/submit`  <br>`curl -d @data.txt https://api.example.com/submit` |
-| `-e [referer]`                               | 设置请求的 Referer 头                        | `curl -e http://referrer.com http://example.com`                                                                               |
-| `-H`, `--header`                             | 自定义 HTTP 请求头                           | `curl -H "Authorization: Bearer your_token" https://api.example.com/protected`                                                 |
-| `-I`                                         | 只显示 HTTP 响应头信息                         | `curl -I https://www.example.com`                                                                                              |
-| `-k`, `--insecure`                           | 在使用 HTTPS 时，忽略证书验证                     | `curl -k https://example.com`                                                                                                  |
-| `-L`                                         | 让 `curl` 跟随 HTTP 重定向                   | `curl -L https://example.com/redirect`                                                                                         |
-| `-m [秒数]`, `--max-time [秒数]`                           | 设置整个操作的最大允许时间（秒）                       | `curl --max-time 10 https://example.com/large_file`                                                                            |
-| `-n`, `--netrc`                              | 从用户主目录的 `.netrc` 文件中读取登录信息             | `curl -n http://example.com`                                                                                                   |
-| `-O`                                         | 将远程文件下载到当前目录，文件名保持不变                   | `curl -O https://example.com/file.zip`                                                                                         |
-| `-o`                                         | 指定下载文件的本地文件名                           | `curl -o local_name.zip https://example.com/file.zip`                                                                          |
-| `-s`, `--silent`                             | 静默模式，不显示进度信息和错误信息                      | `curl -s https://example.com`                                                                                                  |
-| `-S`, `--show-error`                         | 与 `-s` 一起使用时，若发生错误则显示错误信息              | `curl -sS https://nonexistent.example.com`                                                                                     |
-| `-T`, `--upload-file`                                         | 上传文件                                   | `curl -T file.txt ftp://example.com/upload/`                                                                                   |
-| `-u`, `--user`                               | 进行基本认证                                 | `curl -u username:password https://api.example.com/protected`                                                                  |
-| `-v`                                         | 显示详细的请求和响应过程，便于调试。                     | `curl -v http://example.com`                                                                                                   |
-| `-w "格式化字符串"`, `--write-out [format]`                            | 在操作完成后，输出指定的格式化信息                      | `curl -w "HTTP 状态码: %{http_code}\n" -o /dev/null -s http://example.com`                                                        |
-| `-x`, `--proxy`                              | 设置代理服务器                                | `curl --proxy http://proxy.example.com:8080 https://example.com`                                                               |
-| `-X`                                         | 指定请求方法，如 `GET`、`POST`、`PUT`、`DELETE` 等 | `curl -X PUT -d "data=updated" https://api.example.com/resource`                                                               |
-| `-z [时间]`                                    | 仅在文件比指定时间更新时才下载                        | `curl -z "2025-02-18" -O http://example.com/file.zip`                                                                          |
-| `-#`                                         | 显示下载或上传的进度条                            | `curl -# https://example.com/file.zip`                                                                                         |
-| `--connect-timeout`                          | 设置连接超时时间（秒）                            | `curl --connect-timeout 5 https://example.com`                                                                                 |
-| `--digest`                                   | 进行摘要认证，需结合 `-u` 使用                     | `curl --digest -u username:password https://api.example.com/protected`                                                         |
-| `--limit-rate`                               | 限制下载或上传的速度                             | `curl --limit-rate 100K https://example.com/large_file.zip`                                                                    |
+| 选项                                                 | 作用                                     | 示例                                                                                                                             |
+| -------------------------------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `-A [user-agent]`                                  | 设置请求的 User-Agent 头                     | `curl -A "Mozilla/5.0" http://example.com`                                                                                     |
+| `-b`, `--cookie`                                   | 发送指定的 Cookie                           | `curl -b "name=value" http://example.com`                                                                                      |
+| `-c [cookie 文件]`<br><br>`--cookie-jar [cookie 文件]` | 将服务器响应的 Cookie 保存到指定的文件中               | `curl -c cookies.txt http://example.com`                                                                                       |
+| `-C -`, `--continue-at`                            | 断点续传，继续上次未完成的下载                        | `curl -C - -O http://example.com/largefile.zip`                                                                                |
+| `-d`, `--data`                                     | 发送 POST 请求并传递数据，可直接跟数据或从文件读取           | `curl -d "param1=value1&param2=value2" https://api.example.com/submit`  <br>`curl -d @data.txt https://api.example.com/submit` |
+| `-e [referer]`                                     | 设置请求的 Referer 头                        | `curl -e http://referrer.com http://example.com`                                                                               |
+| `-H`, `--header`                                   | 自定义 HTTP 请求头                           | `curl -H "Authorization: Bearer your_token" https://api.example.com/protected`                                                 |
+| `-I`                                               | 只显示 HTTP 响应头信息                         | `curl -I https://www.example.com`                                                                                              |
+| `-k`, `--insecure`                                 | 在使用 HTTPS 时，忽略证书验证                     | `curl -k https://example.com`                                                                                                  |
+| `-L`                                               | 让 `curl` 跟随 HTTP 重定向                   | `curl -L https://example.com/redirect`                                                                                         |
+| `-m [秒数]`, `--max-time [秒数]`                       | 设置整个操作的最大允许时间（秒）                       | `curl --max-time 10 https://example.com/large_file`                                                                            |
+| `-n`, `--netrc`                                    | 从用户主目录的 `.netrc` 文件中读取登录信息             | `curl -n http://example.com`                                                                                                   |
+| `-O`                                               | 将远程文件下载到当前目录，文件名保持不变                   | `curl -O https://example.com/file.zip`                                                                                         |
+| `-o`                                               | 指定下载文件的本地文件名                           | `curl -o local_name.zip https://example.com/file.zip`                                                                          |
+| `-s`, `--silent`                                   | 静默模式，不显示进度信息和错误信息                      | `curl -s https://example.com`                                                                                                  |
+| `-S`, `--show-error`                               | 与 `-s` 一起使用时，若发生错误则显示错误信息              | `curl -sS https://nonexistent.example.com`                                                                                     |
+| `-T`, `--upload-file`                              | 上传文件                                   | `curl -T file.txt ftp://example.com/upload/`                                                                                   |
+| `-u`, `--user`                                     | 进行基本认证                                 | `curl -u username:password https://api.example.com/protected`                                                                  |
+| `-v`                                               | 显示详细的请求和响应过程，便于调试。                     | `curl -v http://example.com`                                                                                                   |
+| `-w "格式化字符串"`, `--write-out [format]`              | 在操作完成后，输出指定的格式化信息                      | `curl -w "HTTP 状态码: %{http_code}\n" -o /dev/null -s http://example.com`                                                        |
+| `-x`, `--proxy`                                    | 设置代理服务器                                | `curl --proxy http://proxy.example.com:8080 https://example.com`                                                               |
+| `-X`                                               | 指定请求方法，如 `GET`、`POST`、`PUT`、`DELETE` 等 | `curl -X PUT -d "data=updated" https://api.example.com/resource`                                                               |
+| `-z [时间]`                                          | 仅在文件比指定时间更新时才下载                        | `curl -z "2025-02-18" -O http://example.com/file.zip`                                                                          |
+| `-#`                                               | 显示下载或上传的进度条                            | `curl -# https://example.com/file.zip`                                                                                         |
+| `--connect-timeout`                                | 设置连接超时时间（秒）                            | `curl --connect-timeout 5 https://example.com`                                                                                 |
+| `--digest`                                         | 进行摘要认证，需结合 `-u` 使用                     | `curl --digest -u username:password https://api.example.com/protected`                                                         |
+| `--limit-rate`                                     | 限制下载或上传的速度                             | `curl --limit-rate 100K https://example.com/large_file.zip`                                                                    |
 ### 实例
 
 #### **文件下载**

@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e962b5fab553e200",
+        "id": "aa4b80fd3ad54d5c",
         "type": "tabs",
         "children": [
           {
-            "id": "2e31d496fd4ab5c5",
+            "id": "21900e8147c96de2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "CMD/curl.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "curl"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "curl",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,7 +84,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -212,8 +217,11 @@
       "simple-mind-map:Create New Mind Map": false
     }
   },
-  "active": "2e31d496fd4ab5c5",
+  "active": "21900e8147c96de2",
   "lastOpenFiles": [
+    "Nginx/配置.md",
+    "CMD/curl.md",
+    "OSX/Brewfile.md",
     "CMD/xxd.md",
     "CMD/hexdump.md",
     "Other/魔数.md",
@@ -238,10 +246,7 @@
     "LLM.md",
     "micro.md",
     "monorepo.md",
-    "React.md",
-    "Vue.md",
     "文档/一个月最多可瘦十斤.png",
-    "文档/AGENT.md",
     "canvas-demo.canvas",
     "base-demo.base",
     "Untitled 2.base",
