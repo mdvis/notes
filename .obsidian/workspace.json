@@ -218,6 +218,8 @@
   },
   "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
+    "HTTP/HTTP 接口设计指北.md",
+    "Vim/所需即所获：像 IDE 一样使用 vim.md",
     "CMD/curl.md",
     "Nginx/配置.md",
     "OSX/Brewfile.md",
@@ -243,8 +245,6 @@
     "文档/monorepo.md",
     "Linux 加固指南.md",
     "LLM.md",
-    "micro.md",
-    "monorepo.md",
     "文档/一个月最多可瘦十斤.png",
     "canvas-demo.canvas",
     "base-demo.base",
