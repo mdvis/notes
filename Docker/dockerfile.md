@@ -52,7 +52,7 @@ RUN --mount=type=cache,target=/root/.cache \
 	pip install -r requirements.txt
 ```
 ## `CMD` 
-设置启动时执行的默认命令及其参数
+设置启动时执行的默认命令及其参数，命令运行结束容器生命周期即结束
 如果在运行容器时未提供其他命令或参数，`CMD` 中指定的命令将被执行。 如果在运行容器时提供了命令或参数，`CMD` 中的内容将被这些命令或参数覆盖。
 ```dockerfile
 CMD ["java", "-jar", "app.jar"]
