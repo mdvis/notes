@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker/dockerfile.md",
+                "file": "Systemd/管理工具总览.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "dockerfile"
+              "title": "管理工具总览"
             }
           }
         ]
@@ -196,8 +196,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 302.5,
-    "collapsed": true
+    "width": 302.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -217,8 +216,17 @@
       "simple-mind-map:Create New Mind Map": false
     }
   },
-  "active": "e772582e33213bc7",
+  "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
+    "Systemd/Unit 文件.md",
+    "Systemd/组成(架构).md",
+    "Systemd/命令速览.md",
+    "Systemd/systemd.md",
+    "Systemd/优化.md",
+    "Systemd/简介.md",
+    "Systemd/架构.md",
+    "Systemd/管理工具总览.md",
+    "Docker/dockerfile.md",
     "Untitled.base",
     "Untitled 5.base",
     "Untitled 4.base",
@@ -226,7 +234,6 @@
     "Untitled 2.base",
     "Untitled 1.base",
     "Other/lvm 等.md",
-    "Docker/dockerfile.md",
     "Docker/docker.md",
     "DB/postgresql_基础操作.md",
     "DB/数据库对比.md",
@@ -243,21 +250,13 @@
     "Shell/IO.md",
     "Shell/SIGNAL.md",
     "Shell/shell.md",
-    "Shell/Here document.md",
-    "Shell/最佳实践.md",
-    "Shell/基础.md",
-    "Other/Bug 追踪系统.md",
-    "Other/做机械键盘需要看的书.md",
     "Other",
-    "文档/Vue.md",
-    "文档/Linux 加固指南.md",
     "文档/一个月最多可瘦十斤.png",
     "canvas-demo.canvas",
     "base-demo.base",
     "文档/SOP.jpeg",
     "文档/内存模型.xmind",
     "文档/LLM.xmind",
-    "文档/wechat.xmind",
     "Protocol/HTTP/前端HTTP安全标头简介_640.webp",
     "Protocol/HTTP/3_前端HTTP安全标头简介_640.webp",
     "Protocol/HTTP/2_前端HTTP安全标头简介_640.webp",
