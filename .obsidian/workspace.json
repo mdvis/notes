@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CMD/curl.md",
+                "file": "Pkgs/pacman.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "curl"
+              "title": "pacman"
             }
           }
         ]
@@ -218,6 +218,11 @@
   },
   "active": "e772582e33213bc7",
   "lastOpenFiles": [
+    "Pkgs/dnf.md",
+    "Pkgs/pacman.md",
+    "Pkgs/nixos.md",
+    "Pkgs/apt.md",
+    "CMD/curl.md",
     "Systemd/管理工具总览.md",
     "Systemd/Unit 文件.md",
     "Systemd/组成(架构).md",
@@ -242,14 +247,9 @@
     "Nginx/配置.md",
     "HTTP/HTTP 接口设计指北.md",
     "Vim/所需即所获：像 IDE 一样使用 vim.md",
-    "CMD/curl.md",
     "OSX/Brewfile.md",
     "CMD/xxd.md",
     "CMD/hexdump.md",
-    "Other/魔数.md",
-    "Shell/IO.md",
-    "Shell/SIGNAL.md",
-    "Shell/shell.md",
     "Other",
     "文档/一个月最多可瘦十斤.png",
     "canvas-demo.canvas",
