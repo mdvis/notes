@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pkgs/pacman.md",
+                "file": "CMD/setsebool.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pacman"
+              "title": "setsebool"
             }
           }
         ]
@@ -218,8 +218,11 @@
   },
   "active": "e772582e33213bc7",
   "lastOpenFiles": [
-    "Pkgs/dnf.md",
+    "CMD/rsync.md",
+    "CMD/setsebool.md",
+    "CMD/chcon.md",
     "Pkgs/pacman.md",
+    "Pkgs/dnf.md",
     "Pkgs/nixos.md",
     "Pkgs/apt.md",
     "CMD/curl.md",
@@ -247,9 +250,6 @@
     "Nginx/配置.md",
     "HTTP/HTTP 接口设计指北.md",
     "Vim/所需即所获：像 IDE 一样使用 vim.md",
-    "OSX/Brewfile.md",
-    "CMD/xxd.md",
-    "CMD/hexdump.md",
     "Other",
     "文档/一个月最多可瘦十斤.png",
     "canvas-demo.canvas",
