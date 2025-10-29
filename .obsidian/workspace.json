@@ -84,7 +84,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -216,7 +217,7 @@
       "simple-mind-map:Create New Mind Map": false
     }
   },
-  "active": "38f26fc752f8b92e",
+  "active": "7e7ab73cc512f79d",
   "lastOpenFiles": [
     "Git/checkout.md",
     "Git/cherry.md",
