@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/cherry.md",
+                "file": "Tips/在 Linux 中查看硬盘 UUID.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "cherry"
+              "title": "在 Linux 中查看硬盘 UUID"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "curl",
+                "query": "uuid",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -217,10 +217,12 @@
       "simple-mind-map:Create New Mind Map": false
     }
   },
-  "active": "7e7ab73cc512f79d",
+  "active": "38f26fc752f8b92e",
   "lastOpenFiles": [
-    "Git/checkout.md",
+    "CMD/blkid.md",
+    "Tips/在 Linux 中查看硬盘 UUID.md",
     "Git/cherry.md",
+    "Git/checkout.md",
     "Git/log.md",
     "CMD/cherry.md",
     "CMD/rsync.md",
@@ -249,8 +251,6 @@
     "Other/lvm 等.md",
     "Docker/docker.md",
     "DB/postgresql_基础操作.md",
-    "DB/数据库对比.md",
-    "DB/表结构优化.md",
     "Other",
     "文档/一个月最多可瘦十斤.png",
     "canvas-demo.canvas",
