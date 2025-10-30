@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "42741bc06f1d9600",
+        "id": "53c4c81aaf5c6b07",
         "type": "tabs",
         "children": [
           {
-            "id": "38f26fc752f8b92e",
+            "id": "1b3d8c4ebe828421",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "Tips/在 Linux 中查看硬盘 UUID.md",
-                "mode": "source",
-                "source": false
+                "aFile": ".obsidian/community-plugins.json",
+                "bFile": ".obsidian/community-plugins.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "在 Linux 中查看硬盘 UUID"
+              "icon": "diff",
+              "title": "Diff: community-plugins.json"
             }
           }
         ]
@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "文件列表"
             }
           },
           {
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "LVM",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -162,16 +162,6 @@
             }
           },
           {
-            "id": "21d88e4129d4eab2",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
-            }
-          },
-          {
             "id": "afa94deef2a0cac1",
             "type": "leaf",
             "state": {
@@ -190,9 +180,19 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "81584aab7ffbad61",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -200,26 +200,38 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:创建新数据库": false,
+      "obsidian-kanban:创建新看板": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "simple-mind-map:新建思维导图": false,
       "templater-obsidian:Templater": false,
-      "obsidian-kanban:Create new board": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
       "obsidian-git:Open Git source control": false,
-      "remotely-save:Remotely Save": false,
-      "simple-mind-map:Create New Mind Map": false
+      "remotely-save:Remotely Save": false
     }
   },
-  "active": "b4055fa59d5ae5ba",
+  "active": "1b3d8c4ebe828421",
   "lastOpenFiles": [
-    "CMD/blkid.md",
+    "2025-10-30.md",
+    "MindMap 2025-10-30 11.13.05.smm.md",
+    "Excalidraw/Drawing 2025-10-30 11.13.00.excalidraw.md",
+    "未命名看板.md",
+    "未命名 3.base",
+    "未命名 2.base",
+    "未命名 1.base",
+    "未命名.base",
+    "未命名.canvas",
+    "Tips/LVM.md",
+    "MindMap 2025-10-30 11.07.14.smm.md",
+    "Tips/磁盘and卷.md",
     "Tips/在 Linux 中查看硬盘 UUID.md",
+    "CMD/blkid.md",
     "Git/cherry.md",
     "Git/checkout.md",
     "Git/log.md",
@@ -237,26 +249,15 @@
     "Systemd/组成(架构).md",
     "Systemd/命令速览.md",
     "Systemd/systemd.md",
-    "Systemd/优化.md",
-    "Systemd/简介.md",
-    "Systemd/架构.md",
-    "Docker/dockerfile.md",
     "Untitled.base",
     "Untitled 5.base",
     "Untitled 4.base",
     "Untitled 3.base",
     "Untitled 2.base",
     "Untitled 1.base",
-    "Other/lvm 等.md",
-    "Docker/docker.md",
-    "DB/postgresql_基础操作.md",
-    "Other",
     "文档/一个月最多可瘦十斤.png",
     "canvas-demo.canvas",
-    "base-demo.base",
     "文档/SOP.jpeg",
-    "文档/内存模型.xmind",
-    "文档/LLM.xmind",
     "Protocol/HTTP/前端HTTP安全标头简介_640.webp",
     "Protocol/HTTP/3_前端HTTP安全标头简介_640.webp",
     "Protocol/HTTP/2_前端HTTP安全标头简介_640.webp",
@@ -264,7 +265,6 @@
     "Oth/Other/i3_102820uocpcshfuyf888yr.jpg",
     "Oth/Other/i3_103016y9ieq631zqxdipoo.png",
     "Oth/Other/i3_103017nc3ztxjpupuukthc.png",
-    "Oth/Other/i3_103019tz822cr0znt03zcr.png",
-    "未命名.canvas"
+    "Oth/Other/i3_103019tz822cr0znt03zcr.png"
   ]
 }

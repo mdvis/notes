@@ -2,7 +2,6 @@
   "templater-obsidian",
   "obsidian-kanban",
   "table-editor-obsidian",
-  "calendar",
   "dataview",
   "obsidian-excalidraw-plugin",
   "obsidian-outliner",
@@ -13,5 +12,6 @@
   "obsidian-mind-map",
   "tag-wrangler",
   "remotely-save",
-  "simple-mind-map"
+  "simple-mind-map",
+  "calendar"
 ]
