@@ -11,14 +11,14 @@
             "id": "1b3d8c4ebe828421",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/community-plugins.json",
-                "bFile": ".obsidian/community-plugins.json",
-                "aRef": ""
+                "file": "区块链/区块链.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: community-plugins.json"
+              "icon": "lucide-file",
+              "title": "区块链"
             }
           }
         ]
@@ -218,9 +218,20 @@
   },
   "active": "1b3d8c4ebe828421",
   "lastOpenFiles": [
+    "区块链/区块链 1.md",
+    "区块链/区块链开发.md",
+    "区块链/Untitled 1.md",
+    "Demos/kanban-demo.md",
+    "Demos/dataview-demo.md",
+    "Demos/canvas-demo.canvas",
+    "Demos/base-demo.base",
+    "Excalidraw/Drawing 2025-10-30 11.13.00.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-09 14.44.46.excalidraw.md",
+    "Excalidraw/Drawing 2025-09-28 12.04.32.excalidraw.md",
+    "Git/bisect.md",
+    "Git/archive.md",
     "2025-10-30.md",
     "MindMap 2025-10-30 11.13.05.smm.md",
-    "Excalidraw/Drawing 2025-10-30 11.13.00.excalidraw.md",
     "未命名看板.md",
     "未命名 3.base",
     "未命名 2.base",
@@ -240,21 +251,11 @@
     "CMD/setsebool.md",
     "CMD/chcon.md",
     "Pkgs/pacman.md",
-    "Pkgs/dnf.md",
-    "Pkgs/nixos.md",
-    "Pkgs/apt.md",
-    "CMD/curl.md",
-    "Systemd/管理工具总览.md",
-    "Systemd/Unit 文件.md",
-    "Systemd/组成(架构).md",
-    "Systemd/命令速览.md",
-    "Systemd/systemd.md",
     "Untitled.base",
     "Untitled 5.base",
     "Untitled 4.base",
     "Untitled 3.base",
     "Untitled 2.base",
-    "Untitled 1.base",
     "文档/一个月最多可瘦十斤.png",
     "canvas-demo.canvas",
     "文档/SOP.jpeg",
