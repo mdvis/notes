@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "uuid",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,8 +84,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -217,7 +216,7 @@
       "simple-mind-map:Create New Mind Map": false
     }
   },
-  "active": "38f26fc752f8b92e",
+  "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
     "CMD/blkid.md",
     "Tips/在 Linux 中查看硬盘 UUID.md",
