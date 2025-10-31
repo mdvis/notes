@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CMD/grep.md",
+                "file": "笔记/RAID 冗余独立磁盘阵列 redundant array.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "grep"
+              "title": "RAID 冗余独立磁盘阵列 redundant array"
             }
           }
         ]
@@ -218,6 +218,7 @@
   },
   "active": "1b3d8c4ebe828421",
   "lastOpenFiles": [
+    "CMD/grep.md",
     "区块链/区块链.md",
     "区块链/区块链 1.md",
     "区块链/区块链开发.md",
@@ -250,7 +251,6 @@
     "CMD/cherry.md",
     "CMD/rsync.md",
     "CMD/setsebool.md",
-    "CMD/chcon.md",
     "Untitled.base",
     "Untitled 5.base",
     "Untitled 4.base",
