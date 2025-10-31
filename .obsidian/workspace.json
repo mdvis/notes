@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "区块链/区块链.md",
+                "file": "CMD/grep.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "区块链"
+              "title": "grep"
             }
           }
         ]
@@ -218,6 +218,7 @@
   },
   "active": "1b3d8c4ebe828421",
   "lastOpenFiles": [
+    "区块链/区块链.md",
     "区块链/区块链 1.md",
     "区块链/区块链开发.md",
     "区块链/Untitled 1.md",
@@ -250,7 +251,6 @@
     "CMD/rsync.md",
     "CMD/setsebool.md",
     "CMD/chcon.md",
-    "Pkgs/pacman.md",
     "Untitled.base",
     "Untitled 5.base",
     "Untitled 4.base",
