@@ -190,9 +190,19 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
+          },
+          {
+            "id": "227722e5e55c0ed4",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
@@ -213,11 +223,27 @@
       "templater-obsidian:Templater": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-git:Open Git source control": false,
-      "remotely-save:Remotely Save": false
+      "remotely-save:Remotely Save": false,
+      "copilot:Open Copilot Chat": false
     }
   },
-  "active": "1b3d8c4ebe828421",
+  "active": "227722e5e55c0ed4",
   "lastOpenFiles": [
+    "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
+    "copilot/copilot-custom-prompts/Rewrite as tweet.md",
+    "copilot/copilot-custom-prompts/Remove URLs.md",
+    "copilot/copilot-custom-prompts/Generate glossary.md",
+    "copilot/copilot-custom-prompts/Generate table of contents.md",
+    "copilot/copilot-custom-prompts/Make longer.md",
+    "copilot/copilot-custom-prompts/Make shorter.md",
+    "copilot/copilot-custom-prompts/Emojify.md",
+    "copilot/copilot-custom-prompts/Explain like I am 5.md",
+    "copilot/copilot-custom-prompts/Simplify.md",
+    "copilot/copilot-custom-prompts/Summarize.md",
+    "copilot/copilot-custom-prompts/Translate to Chinese.md",
+    "copilot/copilot-custom-prompts/Fix grammar and spelling.md",
+    "copilot/copilot-custom-prompts",
+    "copilot",
     "CMD/grep.md",
     "区块链/区块链.md",
     "区块链/区块链 1.md",
@@ -233,29 +259,14 @@
     "Git/bisect.md",
     "Git/archive.md",
     "2025-10-30.md",
-    "MindMap 2025-10-30 11.13.05.smm.md",
-    "未命名看板.md",
     "未命名 3.base",
     "未命名 2.base",
     "未命名 1.base",
     "未命名.base",
     "未命名.canvas",
-    "Tips/LVM.md",
-    "MindMap 2025-10-30 11.07.14.smm.md",
-    "Tips/磁盘and卷.md",
-    "Tips/在 Linux 中查看硬盘 UUID.md",
-    "CMD/blkid.md",
-    "Git/cherry.md",
-    "Git/checkout.md",
-    "Git/log.md",
-    "CMD/cherry.md",
-    "CMD/rsync.md",
-    "CMD/setsebool.md",
     "Untitled.base",
     "Untitled 5.base",
     "Untitled 4.base",
-    "Untitled 3.base",
-    "Untitled 2.base",
     "文档/一个月最多可瘦十斤.png",
     "canvas-demo.canvas",
     "文档/SOP.jpeg",
