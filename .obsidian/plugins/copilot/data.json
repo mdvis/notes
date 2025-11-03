@@ -19,7 +19,7 @@
   "deepseekApiKey": "",
   "amazonBedrockApiKey": "",
   "amazonBedrockRegion": "",
-  "siliconflowApiKey": "",
+  "siliconflowApiKey": "sk-mcvcaggpzmfuzapdmoaliknmqtfkxdsoyajbqhwsdqvaycry",
   "defaultChainType": "llm_chain",
   "defaultModelKey": "google/gemini-2.5-flash|openrouterai",
   "embeddingModelKey": "text-embedding-3-small|openai",
@@ -186,8 +186,8 @@
       "enabled": true,
       "isBuiltIn": true,
       "capabilities": [
-        "vision",
-        "reasoning"
+        "reasoning",
+        "vision"
       ]
     },
     {
