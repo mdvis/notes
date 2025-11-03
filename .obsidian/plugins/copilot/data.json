@@ -259,7 +259,7 @@
       ]
     },
     {
-      "name": "deepseek-r1:latest",
+      "name": "qwen3:14b",
       "provider": "ollama",
       "enabled": true,
       "isBuiltIn": false,
@@ -270,7 +270,7 @@
         "reasoning"
       ],
       "stream": true,
-      "displayName": "deepseek-r1:latest"
+      "displayName": "qwen3:14b"
     }
   ],
   "activeEmbeddingModels": [

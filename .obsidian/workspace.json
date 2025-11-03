@@ -202,7 +202,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 302.5
+    "width": 1194.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -223,8 +223,9 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "5785f1371be6995f",
+  "active": "227722e5e55c0ed4",
   "lastOpenFiles": [
+    "copilot/copilot-conversations/LVM_做个要点总结@20251103_222836.md",
     "LLM/环境工程.md",
     "笔记/2025 年家庭实验室网络常见错误及避免方法.md",
     "copilot/copilot-conversations/文章主题@20251103_175714.md",
@@ -255,7 +256,6 @@
     "Demos/canvas-demo.canvas",
     "Demos/base-demo.base",
     "Excalidraw/Drawing 2025-10-30 11.13.00.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-09 14.44.46.excalidraw.md",
     "未命名 3.base",
     "未命名 2.base",
     "未命名 1.base",
