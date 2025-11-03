@@ -21,8 +21,8 @@
   "amazonBedrockRegion": "",
   "siliconflowApiKey": "sk-mcvcaggpzmfuzapdmoaliknmqtfkxdsoyajbqhwsdqvaycry",
   "defaultChainType": "llm_chain",
-  "defaultModelKey": "google/gemini-2.5-flash|openrouterai",
-  "embeddingModelKey": "text-embedding-3-small|openai",
+  "defaultModelKey": "deepseek-r1:latest|ollama",
+  "embeddingModelKey": "embeddinggemma:latest|ollama",
   "temperature": 0.1,
   "maxTokens": 6000,
   "contextTurns": 15,
@@ -257,6 +257,20 @@
       "capabilities": [
         "reasoning"
       ]
+    },
+    {
+      "name": "deepseek-r1:latest",
+      "provider": "ollama",
+      "enabled": true,
+      "isBuiltIn": false,
+      "baseUrl": "",
+      "apiKey": "",
+      "isEmbeddingModel": false,
+      "capabilities": [
+        "reasoning"
+      ],
+      "stream": true,
+      "displayName": "deepseek-r1:latest"
     }
   ],
   "activeEmbeddingModels": [
@@ -342,6 +356,17 @@
       "enabled": true,
       "isBuiltIn": true,
       "isEmbeddingModel": true
+    },
+    {
+      "name": "embeddinggemma:latest",
+      "provider": "ollama",
+      "enabled": true,
+      "isBuiltIn": false,
+      "baseUrl": "",
+      "apiKey": "",
+      "isEmbeddingModel": true,
+      "capabilities": [],
+      "displayName": "embeddinggemma:latest"
     }
   ],
   "embeddingRequestsPerMin": 60,

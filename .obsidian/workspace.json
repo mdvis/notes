@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "53c4c81aaf5c6b07",
+        "id": "ce4e4b6aa4c5742a",
         "type": "tabs",
         "children": [
           {
-            "id": "1b3d8c4ebe828421",
+            "id": "5785f1371be6995f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/RAID 冗余独立磁盘阵列 redundant array.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "RAID 冗余独立磁盘阵列 redundant array"
+              "title": "新标签页"
             }
           }
         ]
@@ -227,8 +223,13 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "227722e5e55c0ed4",
+  "active": "5785f1371be6995f",
   "lastOpenFiles": [
+    "LLM/环境工程.md",
+    "笔记/2025 年家庭实验室网络常见错误及避免方法.md",
+    "copilot/copilot-conversations/文章主题@20251103_175714.md",
+    "copilot/copilot-conversations",
+    "笔记/RAID 冗余独立磁盘阵列 redundant array.md",
     "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
     "copilot/copilot-custom-prompts/Rewrite as tweet.md",
     "copilot/copilot-custom-prompts/Remove URLs.md",
@@ -255,10 +256,6 @@
     "Demos/base-demo.base",
     "Excalidraw/Drawing 2025-10-30 11.13.00.excalidraw.md",
     "Excalidraw/Drawing 2025-10-09 14.44.46.excalidraw.md",
-    "Excalidraw/Drawing 2025-09-28 12.04.32.excalidraw.md",
-    "Git/bisect.md",
-    "Git/archive.md",
-    "2025-10-30.md",
     "未命名 3.base",
     "未命名 2.base",
     "未命名 1.base",
@@ -266,7 +263,6 @@
     "未命名.canvas",
     "Untitled.base",
     "Untitled 5.base",
-    "Untitled 4.base",
     "文档/一个月最多可瘦十斤.png",
     "canvas-demo.canvas",
     "文档/SOP.jpeg",
