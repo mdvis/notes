@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "区块链/区块链.md",
+                "file": "区块链/Untitled 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "区块链"
+              "title": "Untitled 1"
             }
           }
         ]
@@ -206,7 +206,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 1194.5
+    "width": 812.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -229,6 +229,9 @@
   },
   "active": "5785f1371be6995f",
   "lastOpenFiles": [
+    "区块链/区块链开发.md",
+    "区块链/区块链 1.md",
+    "区块链/区块链.md",
     "copilot/copilot-conversations/LVM_做个要点总结@20251103_222836.md",
     "LLM/环境工程.md",
     "笔记/2025 年家庭实验室网络常见错误及避免方法.md",
@@ -251,9 +254,6 @@
     "copilot/copilot-custom-prompts",
     "copilot",
     "CMD/grep.md",
-    "区块链/区块链.md",
-    "区块链/区块链 1.md",
-    "区块链/区块链开发.md",
     "区块链/Untitled 1.md",
     "Demos/kanban-demo.md",
     "Demos/dataview-demo.md",
