@@ -11,10 +11,14 @@
             "id": "5785f1371be6995f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "区块链/区块链.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "区块链"
             }
           }
         ]
@@ -223,7 +227,7 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "227722e5e55c0ed4",
+  "active": "5785f1371be6995f",
   "lastOpenFiles": [
     "copilot/copilot-conversations/LVM_做个要点总结@20251103_222836.md",
     "LLM/环境工程.md",
