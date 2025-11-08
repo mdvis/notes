@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "区块链/Untitled 1.md",
+                "file": "Docker/docker.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled 1"
+              "title": "docker"
             }
           }
         ]
@@ -227,8 +227,10 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "8b536fcf20839aa1",
+  "active": "5785f1371be6995f",
   "lastOpenFiles": [
+    "Docker/compose.md",
+    "区块链/Untitled 1.md",
     "区块链/区块链开发.md",
     "区块链/区块链 1.md",
     "区块链/区块链.md",
@@ -254,12 +256,10 @@
     "copilot/copilot-custom-prompts",
     "copilot",
     "CMD/grep.md",
-    "区块链/Untitled 1.md",
     "Demos/kanban-demo.md",
     "Demos/dataview-demo.md",
     "Demos/canvas-demo.canvas",
     "Demos/base-demo.base",
-    "Excalidraw/Drawing 2025-10-30 11.13.00.excalidraw.md",
     "未命名 3.base",
     "未命名 2.base",
     "未命名 1.base",
