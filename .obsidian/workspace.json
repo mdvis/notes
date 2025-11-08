@@ -202,11 +202,11 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 812.5
+    "width": 318.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -227,7 +227,7 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "5785f1371be6995f",
+  "active": "8b536fcf20839aa1",
   "lastOpenFiles": [
     "区块链/区块链开发.md",
     "区块链/区块链 1.md",
