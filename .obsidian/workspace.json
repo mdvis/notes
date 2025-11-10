@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker/docker.md",
+                "file": "Systemd/命令速览.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "docker"
+              "title": "命令速览"
             }
           }
         ]
@@ -229,6 +229,8 @@
   },
   "active": "5785f1371be6995f",
   "lastOpenFiles": [
+    "Systemd/管理工具总览.md",
+    "Docker/docker.md",
     "Docker/compose.md",
     "区块链/Untitled 1.md",
     "区块链/区块链开发.md",
@@ -256,8 +258,6 @@
     "copilot/copilot-custom-prompts",
     "copilot",
     "CMD/grep.md",
-    "Demos/kanban-demo.md",
-    "Demos/dataview-demo.md",
     "Demos/canvas-demo.canvas",
     "Demos/base-demo.base",
     "未命名 3.base",
