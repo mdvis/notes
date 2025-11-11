@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "ce4e4b6aa4c5742a",
+        "id": "51b21e8b15ecbf77",
         "type": "tabs",
         "children": [
           {
-            "id": "5785f1371be6995f",
+            "id": "3fdab0379b651f56",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": ".obsidian/types.json",
-                "bFile": ".obsidian/types.json",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: types.json"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ]
@@ -227,7 +223,7 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "5785f1371be6995f",
+  "active": "8b536fcf20839aa1",
   "lastOpenFiles": [
     "Systemd/命令速览.md",
     "Systemd/管理工具总览.md",
