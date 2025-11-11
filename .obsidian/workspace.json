@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "51b21e8b15ecbf77",
+        "id": "88f2cf8ba8f969b8",
         "type": "tabs",
         "children": [
           {
-            "id": "3fdab0379b651f56",
+            "id": "a3c2db3489cafb8d",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "LVM",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,7 +57,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "搜索"
             }
           },
           {
@@ -223,8 +223,9 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "8b536fcf20839aa1",
+  "active": "a3c2db3489cafb8d",
   "lastOpenFiles": [
+    "Tips/pandoc.md",
     "Systemd/命令速览.md",
     "Systemd/管理工具总览.md",
     "Docker/docker.md",
@@ -251,7 +252,6 @@
     "copilot/copilot-custom-prompts/Simplify.md",
     "copilot/copilot-custom-prompts/Summarize.md",
     "copilot/copilot-custom-prompts/Translate to Chinese.md",
-    "copilot/copilot-custom-prompts/Fix grammar and spelling.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "Demos/canvas-demo.canvas",
