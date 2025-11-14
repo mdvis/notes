@@ -229,8 +229,9 @@
   },
   "active": "a3c2db3489cafb8d",
   "lastOpenFiles": [
-    "Nix/nix-shell.md",
+    "Nix/config.md",
     "Nix/nix-env.md",
+    "Nix/nix-shell.md",
     "Tips/pandoc.md",
     "Systemd/命令速览.md",
     "Systemd/管理工具总览.md",
@@ -255,7 +256,6 @@
     "copilot/copilot-custom-prompts/Make shorter.md",
     "copilot/copilot-custom-prompts/Emojify.md",
     "copilot/copilot-custom-prompts/Explain like I am 5.md",
-    "copilot/copilot-custom-prompts/Simplify.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "Demos/canvas-demo.canvas",
