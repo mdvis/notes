@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Nix/nix-env.md",
+                "file": "Docker/compose.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nix-env"
+              "title": "compose"
             }
           }
         ]
@@ -88,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 227.5
+    "width": 200
   },
   "right": {
     "id": "1d21b8b5aff8b2b8",
@@ -206,7 +206,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 318.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -229,8 +229,8 @@
   },
   "active": "a3c2db3489cafb8d",
   "lastOpenFiles": [
-    "Nix/config.md",
     "Nix/nix-env.md",
+    "Nix/config.md",
     "Nix/nix-shell.md",
     "Tips/pandoc.md",
     "Systemd/命令速览.md",
