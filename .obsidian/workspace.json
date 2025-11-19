@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/环境工程.md",
+                "file": "OS/nix.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "环境工程"
+              "title": "nix"
             }
           }
         ]
@@ -227,8 +227,9 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "b4055fa59d5ae5ba",
+  "active": "a3c2db3489cafb8d",
   "lastOpenFiles": [
+    "LLM/环境工程.md",
     "DB/msql基础操作.md",
     "MySQL/msql基础操作.md",
     "Other/知识图谱.md",
@@ -254,7 +255,6 @@
     "Lang/HTTP.md_go.md",
     "Lang/gvm.md_go.md",
     "Lang/go汇编.md_go.md",
-    "Lang/generics.md_go.md",
     "Lang/Kotlin",
     "Lang/Golang",
     "Lang",
