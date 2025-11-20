@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/nix.md",
+                "file": "Git/archive.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nix"
+              "title": "archive"
             }
           }
         ]
@@ -229,6 +229,7 @@
   },
   "active": "a3c2db3489cafb8d",
   "lastOpenFiles": [
+    "OS/nix.md",
     "LLM/环境工程.md",
     "DB/msql基础操作.md",
     "MySQL/msql基础操作.md",
@@ -254,7 +255,6 @@
     "Lang/import.md_go.md",
     "Lang/HTTP.md_go.md",
     "Lang/gvm.md_go.md",
-    "Lang/go汇编.md_go.md",
     "Lang/Kotlin",
     "Lang/Golang",
     "Lang",
