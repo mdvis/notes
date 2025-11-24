@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "BPF",
+                "query": "B",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,8 +84,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -228,7 +227,7 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "7e7ab73cc512f79d",
+  "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
     "Git/log.md",
     "Git/cherry.md",
