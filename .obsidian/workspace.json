@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/log.md",
+                "file": "OS/nix.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "log"
+              "title": "nix"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "BPF",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,7 +84,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -227,8 +228,9 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "a3c2db3489cafb8d",
+  "active": "7e7ab73cc512f79d",
   "lastOpenFiles": [
+    "Git/log.md",
     "Git/cherry.md",
     "Git/archive.md",
     "OS/nix.md",
@@ -254,7 +256,6 @@
     "Lang/mod.md_go.md",
     "Lang/link.md_go.md",
     "Lang/JSON.md_go.md",
-    "Lang/import.md_go.md",
     "Lang/Kotlin",
     "Lang/Golang",
     "Lang",
