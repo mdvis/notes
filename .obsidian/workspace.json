@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ImageMagick/ImageMagick 常用命令速查表.md",
+                "file": "OS/nix.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ImageMagick 常用命令速查表"
+              "title": "nix"
             }
           }
         ]
@@ -229,6 +229,7 @@
   },
   "active": "a3c2db3489cafb8d",
   "lastOpenFiles": [
+    "ImageMagick/ImageMagick 常用命令速查表.md",
     "OS/nix.md",
     "Git/log.md",
     "Git/cherry.md",
@@ -254,7 +255,6 @@
     "Lang/net.md_go.md",
     "Lang/mod.md_go.md",
     "Lang/link.md_go.md",
-    "Lang/JSON.md_go.md",
     "Lang/Kotlin",
     "Lang/Golang",
     "Lang",
