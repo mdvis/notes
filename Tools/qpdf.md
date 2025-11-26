@@ -28,14 +28,18 @@ qpdf --encrypt "user-pwd" "owner-pwd" 128 -- file.pdf encrypted.pdf
 qpdf --password --decrypt encrypted.pdf decrypted.pdf
 
 # 提取页面
-qpdf --pages file.pdf 1-5 -- -- out.pdf
+qpdf --pages file.pdf 1-5 -- out.pdf
 
 # 删除页面
-qpdf --pages file.pdf 1-3,6-z -- -- out.pdf
+qpdf --pages file.pdf 1-3,6-z -- out.pdf
 
 # 合并页面
 qpdf --empty --pages file1.pdf file2.pdf -- merged.pdf
 
 # 旋转
 qpdf --rotate=+90:2-5 file.pdf rotated.pdf
+
+# 分割
+qpdf --split-pages file.pdf page-%d.pdf
+
 ```
