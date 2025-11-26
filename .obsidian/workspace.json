@@ -84,8 +84,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -228,8 +227,9 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "7e7ab73cc512f79d",
+  "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
+    "sambe",
     "ImageMagick/ImageMagick 常用命令速查表.md",
     "OS/nix.md",
     "Git/log.md",
@@ -255,7 +255,6 @@
     "Lang/oop.md_go.md",
     "Lang/net.md_go.md",
     "Lang/mod.md_go.md",
-    "Lang/link.md_go.md",
     "Lang/Kotlin",
     "Lang/Golang",
     "Lang",
