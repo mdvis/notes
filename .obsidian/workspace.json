@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/nix.md",
+                "file": "Tools/qpdf.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nix"
+              "title": "qpdf"
             }
           }
         ]
@@ -227,11 +227,13 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "b4055fa59d5ae5ba",
+  "active": "a3c2db3489cafb8d",
   "lastOpenFiles": [
+    "OS/nix.md",
+    "Tools/qpdf.md",
+    "Tools",
     "sambe",
     "ImageMagick/ImageMagick 常用命令速查表.md",
-    "OS/nix.md",
     "Git/log.md",
     "Git/cherry.md",
     "Git/archive.md",
@@ -263,8 +265,6 @@
     "Network",
     "OS/Unix",
     "OS/OSX",
-    "OS/Nix",
-    "OS",
     "Demos/canvas-demo.canvas",
     "未命名.canvas",
     "文档/一个月最多可瘦十斤.png",
