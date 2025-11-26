@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "B",
+                "query": "samba",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,7 +84,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -227,7 +228,7 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "a3c2db3489cafb8d",
+  "active": "7e7ab73cc512f79d",
   "lastOpenFiles": [
     "ImageMagick/ImageMagick 常用命令速查表.md",
     "OS/nix.md",
