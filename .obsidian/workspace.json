@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "540eb4a96921c0d2",
+        "id": "d48edd79e080030b",
         "type": "tabs",
         "children": [
           {
-            "id": "c3e22f788ebfff1f",
+            "id": "45351c0f1defb8a7",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -223,7 +223,7 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "c3e22f788ebfff1f",
+  "active": "45351c0f1defb8a7",
   "lastOpenFiles": [
     "Tools/qpdf.md",
     "OS/nix.md",
