@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d48edd79e080030b",
+        "id": "36887a44cae9ce09",
         "type": "tabs",
         "children": [
           {
-            "id": "45351c0f1defb8a7",
+            "id": "643f396ec6838685",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Other/包管理.md",
+                "file": "Other/磁盘and卷.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "包管理"
+              "title": "磁盘and卷"
             }
           }
         ]
@@ -227,8 +227,20 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "45351c0f1defb8a7",
+  "active": "643f396ec6838685",
   "lastOpenFiles": [
+    "Other/包管理.md",
+    "Code/文本字符编码.md",
+    "Code/文件魔数.md",
+    "Code/通信线路编码.md",
+    "Code/数据序列化格式编码.md",
+    "Code/二进制传输编码.md",
+    "Code/多媒体编码.md",
+    "Other/多媒体编码.md",
+    "Other/二进制传输编码.md",
+    "Other/通信线路编码.md",
+    "Other/数据序列化格式编码.md",
+    "Other/文本字符编码.md",
     "Tools/qpdf.md",
     "OS/nix.md",
     "Tools",
@@ -245,18 +257,6 @@
     "Lang/toolchan.md_go.md",
     "Lang/test.md_go.md",
     "Lang/struct_tag.md_go.md",
-    "Lang/SQL.md_go.md",
-    "Lang/source.md_go.md",
-    "Lang/session.md_go.md",
-    "Lang/safe.md_go.md",
-    "Lang/runtime.md_go.md",
-    "Lang/regexp.md_go.md",
-    "Lang/project.md_go.md",
-    "Lang/packages.md_go.md",
-    "Lang/package.md_go.md",
-    "Lang/oop.md_go.md",
-    "Lang/net.md_go.md",
-    "Lang/mod.md_go.md",
     "Lang/Kotlin",
     "Lang/Golang",
     "Lang",
