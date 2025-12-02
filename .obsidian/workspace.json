@@ -11,14 +11,12 @@
             "id": "643f396ec6838685",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "smm",
               "state": {
-                "file": "Other/磁盘and卷.md",
-                "mode": "source",
-                "source": false
+                "file": "Xmind/mind-monorepo.md"
               },
-              "icon": "lucide-file",
-              "title": "磁盘and卷"
+              "icon": "smm-icon",
+              "title": "mind-monorepo"
             }
           }
         ]
@@ -53,7 +51,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "samba",
+                "query": "mono",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -229,6 +227,7 @@
   },
   "active": "643f396ec6838685",
   "lastOpenFiles": [
+    "Other/磁盘and卷.md",
     "Other/包管理.md",
     "Code/文本字符编码.md",
     "Code/文件魔数.md",
@@ -256,7 +255,6 @@
     "Lang/Ver.md_go.md",
     "Lang/toolchan.md_go.md",
     "Lang/test.md_go.md",
-    "Lang/struct_tag.md_go.md",
     "Lang/Kotlin",
     "Lang/Golang",
     "Lang",
