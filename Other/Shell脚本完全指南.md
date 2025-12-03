@@ -417,3 +417,150 @@ exec path/script.sh
 source path/script.sh
 ```
 无子shell，在同一个shell中执行。被调用脚本变量和环境变量都可在主脚本中进行
+
+| Name            | File Desc. | Desc. | Abbr.  |
+| --------------- | ---------- | ----- | ------ |
+| Standard Input  | 0          |       | stdin  |
+| Standard Output | 1          |       | stdout |
+| Standard Error  | 2          |       | stderr |
+## 输出重定向
+`File_Desc >& Pointer`
+
+`0<` 标准输入
+`1>` 标准输出，简写 `>`
+`2>` 错误输出
+`&>` 为 `2>&1` 缩写这段内容详细介绍了编写高效、可靠和用户友好的 Shell 脚本的最佳实践。以下是对其内容的总结和概括：
+### **1. 提供帮助信息 (--help)**
+- 脚本应支持 `--help` 或 `-h` 参数，打印使用说明。
+- 示例：
+  ```sh
+  if [ ${#@} -ne 0 ] && [ "${@#"--help"}" = "" ]; then
+    printf -- '...help...\n';
+    exit 0;
+  fi;
+  ```
+### **2. 检查命令的可用性**
+- 使用 `command -v` 检查依赖命令是否存在。
+- 如果命令不可用，提示用户如何安装并退出脚本。
+- 示例：
+  ```sh
+  _=$(command -v docker);
+  if [ "$?" != "0" ]; then
+    printf -- 'You don'\''t seem to have Docker installed.\n';
+    printf -- 'Get it: https://www.docker.com/community-edition\n';
+    exit 127;
+  fi;
+  ```
+### **3. 独立于当前工作目录**
+- 使用绝对路径或脚本相对路径（`dirname $0`）避免路径问题。
+- 示例：
+  ```sh
+  CURR_DIR="$(dirname $0)";
+  mv "${CURR_DIR}/application.jar" /opt/app.jar;
+  ```
+### **4. 输入方式：环境变量 vs. 标记**
+- **环境变量**：用于不影响脚本行为的值（如访问令牌）。
+  ```sh
+  export AWS_ACCESS_TOKEN='xxxxxxxxxxxx';
+  ./provision-everything
+  ```
+- **标记**：用于影响脚本行为的值（如异步模式、实例数量）。
+  ```sh
+  ./provision-everything --async --instance-count 400
+  ```
+### **5. 打印操作步骤**
+- 在终端上打印脚本执行的操作步骤，方便用户回溯。
+- 示例：
+  ```sh
+  printf -- 'Downloading required document to ./downloaded... ';
+  wget -o ./downloaded https://some.site.com/downloaded;
+  printf -- 'Moving ./downloaded to /opt/downloaded... ';
+  mv ./downloaded /opt/;
+  ```
+### **6. 提供静默模式 (--silent)**
+- 使用 `stty -echo` 和 `trap` 实现静默模式，并在必要时恢复输出。
+- 示例：
+  ```sh
+  if [ ${#@} -ne 0 ] && [ "${@#"--silent"}" = "" ]; then
+    stty -echo;
+    trap 'stty echo' EXIT;
+  fi;
+  ```
+### **7. 显示进度**
+- 使用循环和动画显示长时间任务的进度。
+- 示例：
+  ```sh
+  printf -- 'Performing asynchronous action..';
+  DONE=0;
+  while [ $DONE -eq 0 ]; do
+    ./async-checker;
+    if [ "$?" = "0" ]; then
+      DONE=1;
+    fi;
+    printf -- '.';
+    sleep 1;
+  done;
+  printf -- ' DONE!\n';
+  ```
+### **8. 颜色编码输出**
+- 使用 ANSI 转义序列为输出添加颜色，区分成功、警告和错误。
+- 示例：
+  ```sh
+  printf -- '\033[32m SUCCESS: yay \033[0m\n';
+  printf -- '\033[31m ERROR: fubar \033[0m\n';
+  ```
+### **9. 错误处理**
+- 使用 `set -e` 让脚本在出现错误时立即退出。
+- 使用 `trap` 捕获信号并执行清理工作。
+- 示例：
+  ```sh
+  set -e;
+  trap 'handle_exit_code' EXIT;
+  ```
+### **10. 清理工作**
+- 在脚本结束时执行清理操作。
+- 示例：
+  ```sh
+  handle_exit_code() {
+    printf -- "Cleaning up now... ";
+    # 清理代码
+    printf -- "DONE.\n";
+  }
+  trap "handle_exit_code" EXIT;
+  ```
+### **11. 使用不同的错误码**
+- 为不同错误分配唯一错误码，便于调试。
+- 示例：
+  ```sh
+  if [ "$?" != "0" ]; then
+    printf -- 'X happened. Exiting with status code 1.\n';
+    exit 1;
+  fi;
+  ```
+### **12. 打印新行**
+- 在脚本结束时打印一个新行，保持控制台整洁。
+- 示例：
+  ```sh
+  printf -- '\n';
+  exit 0;
+  ```
+### **13. 其他最佳实践**
+- **本地变量**：在函数内部使用 `local` 定义变量。
+- **只读变量**：使用 `readonly` 定义不可修改的变量。
+- **`$()` 替代反引号**：更易读且嵌套方便。
+- **双中括号 `[[ ]]`**：支持更多条件操作符（如 `&&`, `||`）。
+- **数组**：支持复杂数据结构。
+  ```sh
+  Arr=(1 2 3 4);
+  echo "${#Arr[@]}";  # 输出数组长度
+  ```
+### **14. 调试和跟踪**
+- 使用 `set -x` 打印每条命令的执行内容。
+- 使用 `set -e` 在错误时立即退出。
+- 使用 `set -o pipefail` 解决管道问题。
+### **15. 不适合使用 Bash 脚本的场景**
+- 脚本过长（几百行以上）。
+- 需要复杂数据结构或大量字符串操作。
+- 性能要求高。
+### **总结**
+这些最佳实践旨在提高脚本的可读性、可靠性和用户体验，同时减少潜在的错误和维护成本。遵循这些原则，可以编写出更专业、高效的 Shell 脚本。

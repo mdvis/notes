@@ -11,14 +11,10 @@
             "id": "643f396ec6838685",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CMD/01-基础命令/find.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "find"
+              "title": "新标签页"
             }
           }
         ]
