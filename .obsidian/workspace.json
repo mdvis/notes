@@ -11,12 +11,14 @@
             "id": "643f396ec6838685",
             "type": "leaf",
             "state": {
-              "type": "smm",
+              "type": "markdown",
               "state": {
-                "file": "Xmind/mind-monorepo.md"
+                "file": "CMD/01-基础命令/find.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "smm-icon",
-              "title": "mind-monorepo"
+              "icon": "lucide-file",
+              "title": "find"
             }
           }
         ]
@@ -227,6 +229,17 @@
   },
   "active": "643f396ec6838685",
   "lastOpenFiles": [
+    "Other/📋_文件分类分析报告.md",
+    "用所选项目新建的文件夹/浏览器 API 指南.md",
+    "用所选项目新建的文件夹/前端开发指南.md",
+    "用所选项目新建的文件夹/nginx 指南.md",
+    "用所选项目新建的文件夹/macOS 工具指南.md",
+    "用所选项目新建的文件夹/Systemd 指南.md",
+    "用所选项目新建的文件夹/SSH完整指南.md",
+    "用所选项目新建的文件夹/Linux 系统管理指南.md",
+    "用所选项目新建的文件夹/HTTP 综合指南.md",
+    "用所选项目新建的文件夹",
+    "Xmind/mind-monorepo.md",
     "Other/磁盘and卷.md",
     "Other/包管理.md",
     "Code/文本字符编码.md",
@@ -245,16 +258,6 @@
     "Tools",
     "sambe",
     "ImageMagick/ImageMagick 常用命令速查表.md",
-    "Git/log.md",
-    "Git/cherry.md",
-    "Git/archive.md",
-    "LLM/环境工程.md",
-    "DB/msql基础操作.md",
-    "MySQL/msql基础操作.md",
-    "Other/知识图谱.md",
-    "Lang/Ver.md_go.md",
-    "Lang/toolchan.md_go.md",
-    "Lang/test.md_go.md",
     "Lang/Kotlin",
     "Lang/Golang",
     "Lang",
@@ -262,7 +265,6 @@
     "笔记/用所选项目新建的文件夹",
     "Network",
     "OS/Unix",
-    "OS/OSX",
     "Demos/canvas-demo.canvas",
     "未命名.canvas",
     "文档/一个月最多可瘦十斤.png",
