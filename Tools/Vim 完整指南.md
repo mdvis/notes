@@ -49,8 +49,7 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 | Select       | 鼠标选择（替换式）    | `gh`                              |
 | Command-line | 命令行输入        | `:`                               |
 | Ex           | Ex模式（多行命令）   | `Q` (仅Vim支持)                      |
-## 代码分析
-### 折叠快捷键
+## 折叠快捷键
 | 快捷键     | 描述        |
 | ------- | --------- |
 | `za`    | 开/关当前折叠   |
@@ -61,434 +60,7 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 | `zd/zE` | 删除当前/所有   |
 | `zj/zk` | 下一个/上一个折叠 |
 | `zn/zN` | 禁用/启用折叠   |
-
-### 4.4 接口与实现快速切换
-```vim
-Plug 'derekwyatt/vim-fswitch'
-
-" *.cpp 和 *.h 间切换
-nmap <silent> <Leader>sw :FSHere<cr>
-```
-
-### 4.5 代码收藏
-```vim
-Plug 'kshenoy/vim-signature'
-
-" 设置 vim-signature 快捷键
-let g:SignatureMap = {
-        \ 'Leader'             :  "m",
-        \ 'PlaceNextMark'      :  "m,",
-        \ 'ToggleMarkAtLine'   :  "m.",
-        \ 'PurgeMarksAtLine'   :  "m-",
-        \ 'DeleteMark'         :  "dm",
-        \ 'PurgeMarks'         :  "mda",
-        \ 'PurgeMarkers'       :  "m<BS>",
-        \ 'GotoNextLineAlpha'  :  "']",
-        \ 'GotoPrevLineAlpha'  :  "'[",
-        \ 'GotoNextSpotAlpha'  :  "`]",
-        \ 'GotoPrevSpotAlpha'  :  "`[",
-        \ 'GotoNextLineByPos'  :  "]'",
-        \ 'GotoPrevLineByPos'  :  "['",
-        \ 'GotoNextSpotByPos'  :  "mn",
-        \ 'GotoPrevSpotByPos'  :  "mp",
-        \ 'GotoNextMarker'     :  "[+",
-        \ 'GotoPrevMarker'     :  "[-",
-        \ 'GotoNextMarkerAny'  :  "]=",
-        \ 'GotoPrevMarkerAny'  :  "[=",
-        \ 'ListLocalMarks'     :  "ms",
-        \ 'ListLocalMarkers'   :  "m?"
-        \ }
-```
-
-### 4.6 标识符列表
-
-#### 基于 Tagbar
-```vim
-Plug 'majutsushi/tagbar'
-
-" 设置 tagbar 子窗口的位置出现在主编辑区的左边
-let tagbar_left=1
-" 设置显示／隐藏标签列表子窗口的快捷键。速记：identifier list by tag
-nnoremap <Leader>ilt :TagbarToggle<CR>
-" 设置标签子窗口的宽度
-let tagbar_width=32
-" tagbar 子窗口中不显示冗余帮助信息
-let g:tagbar_compact=1
-```
-
-### 4.7 声明/定义跳转
-
-#### 基于标签的跳转
-```vim
-" 正向遍历同名标签
-nmap <Leader>tn :tnext<CR>
-" 反向遍历同名标签
-nmap <Leader>tp :tprevious<CR>
-```
-
-#### 基于语义的跳转
-```vim
-" 需要安装 YCM 或 coc.nvim
-nnoremap <leader>jc :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
-```
-
-### 4.8 内容查找
-
-#### 使用 ctrlsf.vim
-```vim
-Plug 'dyng/ctrlsf.vim'
-
-" 使用 ctrlsf.vim 插件在工程内全局查找光标所在关键字
-nnoremap <Leader>sp :CtrlSF<CR>
-```
-
-### 4.9 内容替换
-
-#### 快捷替换
-```vim
-Plug 'terryma/vim-multiple-cursors'
-
-let g:multi_cursor_next_key='<S-n>'
-let g:multi_cursor_skip_key='<S-k>'
-```
-
-#### 精确替换函数
-```vim
-function! Replace(confirm, wholeword, replace)
-    wa
-    let flag = ''
-    if a:confirm
-        let flag .= 'gc'
-    else
-        let flag .= 'g'
-    endif
-    let search = ''
-    if a:wholeword
-        let search .= '\<' . escape(expand('<cword>'), '/\.*$^[]') . '\>'
-    else
-        let search .= expand('<cword>')
-    endif
-    let replace = escape(a:replace, '/\&~')
-    execute 'argdo %s/' . search . '/' . replace . '/' . flag . '| update'
-endfunction
-
-" 不确认、非整词
-nnoremap <Leader>R :call Replace(0, 0, input('Replace '.expand('<cword>').' with: '))<CR>
-" 不确认、整词
-nnoremap <Leader>rw :call Replace(0, 1, input('Replace '.expand('<cword>').' with: '))<CR>
-" 确认、非整词
-nnoremap <Leader>rc :call Replace(1, 0, input('Replace '.expand('<cword>').' with: '))<CR>
-" 确认、整词
-nnoremap <Leader>rcw :call Replace(1, 1, input('Replace '.expand('<cword>').' with: '))<CR>
-```
-
----
-
-## 5 代码开发
-
-### 5.1 快速开关注释
-
-#### NERD Commenter
-```vim
-Plug 'scrooloose/nerdcommenter'
-
-" 常用操作：
-" <leader>cc - 注释当前选中文本
-" <leader>cu - 取消选中文本块的注释
-```
-
-### 5.2 模板补全
-
-#### UltiSnips
-```vim
-Plug 'SirVer/ultisnips'
-
-" UltiSnips 的 tab 键与 YCM 冲突，重新设定
-let g:UltiSnipsExpandTrigger="<leader><tab>"
-let g:UltiSnipsJumpForwardTrigger="<leader><tab>"
-let g:UltiSnipsJumpBackwardTrigger="<leader><s-tab>"
-
-" 设置自定义 snippets 目录
-let g:UltiSnipsSnippetDirectories=["mysnippets"]
-```
-
-#### C++ snippets 示例
-```vim
-snippet if "if statement"
-if (${1:/* condition */}) {
-    ${2:TODO}
-}
-endsnippet
-
-snippet for "for loop"
-for (auto ${2:iter} = ${1:c}.begin(); ${3:$2} != $1.end(); ${4:++iter}) {
-    ${5:TODO}
-}
-endsnippet
-
-snippet class "class definition"
-class ${1:`Filename('$1_t', 'name')`}
-{
-    public:
-        $1 ();
-        virtual ~$1 ();
-
-    private:
-};
-endsnippet
-```
-
-### 5.3 智能补全
-
-#### YouCompleteMe (YCM)
-```vim
-Plug 'Valloric/YouCompleteMe'
-
-" YCM 补全菜单配色
-highlight Pmenu ctermfg=2 ctermbg=3 guifg=#005f87 guibg=#EEE8D5
-" 选中项
-highlight PmenuSel ctermfg=2 ctermbg=3 guifg=#AFD700 guibg=#106900
-" 补全功能在注释中同样有效
-let g:ycm_complete_in_comments=1
-" 允许 vim 加载 .ycm_extra_conf.py 文件，不再提示
-let g:ycm_confirm_extra_conf=0
-" 开启 YCM 标签补全引擎
-let g:ycm_collect_identifiers_from_tags_files=1
-" 补全内容不以分割子窗口形式出现，只显示补全列表
-set completeopt-=preview
-" 从第一个键入字符就开始罗列匹配项
-let g:ycm_min_num_of_chars_for_completion=1
-" 禁止缓存匹配项，每次都重新生成匹配项
-let g:ycm_cache_omnifunc=0
-" 语法关键字补全
-let g:ycm_seed_identifiers_with_syntax=1
-```
-
-#### coc.nvim (LSP 支持)
-```vim
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" 设置 coc.nvim
-set hidden
-set nobackup
-set nowritebackup
-set cmdheight=2
-set updatetime=300
-set shortmess+=c
-set signcolumn=yes
-
-" 使用 tab 触发补全
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" 使用 Enter 确认补全
-inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-```
-
-### 5.4 由接口快速生成实现框架
-```vim
-Plug 'derekwyatt/vim-protodef'
-
-" 成员函数的实现顺序与声明顺序一致
-let g:disable_protodef_sorting=1
-" 设置 pullproto.pl 脚本路径
-let g:protodefprotogetter='~/.vim/plugged/vim-protodef/pullproto.pl'
-```
-
-### 5.5 库信息参考
-
-#### Man 页面查看
-```vim
-" 启用:Man命令查看各类man信息
-source $VIMRUNTIME/ftplugin/man.vim
-" 定义:Man命令查看各类man信息的快捷键
-nmap <Leader>man :Man 3 <cword><CR>
-```
-
----
-
-## 6 工程管理
-
-### 6.1 工程文件浏览
-
-#### NERDTree
-```vim
-Plug 'preservim/nerdtree'
-
-" 使用 NERDTree 插件查看工程文件。设置快捷键，速记：file list
-nmap <Leader>fl :NERDTreeToggle<CR>
-" 设置NERDTree子窗口宽度
-let NERDTreeWinSize=32
-" 设置NERDTree子窗口位置
-let NERDTreeWinPos="right"
-" 显示隐藏文件
-let NERDTreeShowHidden=1
-" NERDTree 子窗口中不显示冗余帮助信息
-let NERDTreeMinimalUI=1
-" 删除文件时自动删除文件对应 buffer
-let NERDTreeAutoDeleteBuffer=1
-```
-
-### 6.2 多文档编辑
-
-#### MiniBufExplorer
-```vim
-Plug 'fholgado/minibufexpl.vim'
-
-" 显示/隐藏 MiniBufExplorer 窗口
-map <Leader>bl :MBEToggle<cr>
-" buffer 切换快捷键
-map <C-Tab> :MBEbn<cr>
-map <C-S-Tab> :MBEbp<cr>
-```
-
-### 6.3 环境恢复
-
-#### 会话管理
-```vim
-" 设置环境保存项
-set sessionoptions="blank,buffers,globals,localoptions,tabpages,sesdir,folds,help,options,resize,winpos,winsize"
-" 保存 undo 历史
-set undodir=~/.undo_history/
-set undofile
-" 保存快捷键
-map <leader>ss :mksession! my.vim<cr> :wviminfo! my.viminfo<cr>
-" 恢复快捷键
-map <leader>rs :source my.vim<cr> :rviminfo my.viminfo<cr>
-```
-
----
-
-## 7 工具链集成
-
-### 7.1 编译器/构建工具集成
-
-#### 一键编译配置
-```vim
-" 一键编译及运行
-nmap <Leader>m :wa<CR>:make<CR><CR>:cw<CR>
-nmap <Leader>g :!rm -rf main<CR>:wa<CR>:make<CR><CR>:cw<CR><CR>:!./main<CR>
-```
-
-#### CMake 集成
-```vim
-" CMakeLists.txt 示例
-PROJECT(main)
-SET(SRC_LIST main.cpp)
-SET(CMAKE_CXX_COMPILER "clang++")
-SET(CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++ -Werror -Weverything -Wno-deprecated-declarations -Wno-disabled-macro-expansion -Wno-float-equal -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-global-constructors -Wno-exit-time-destructors -Wno-missing-prototypes -Wno-padded -Wno-old-style-cast")
-SET(CMAKE_EXE_LINKER_FLAGS "-lc++ -lc++abi")
-SET(CMAKE_BUILD_TYPE Debug)
-ADD_EXECUTABLE(main ${SRC_LIST})
-```
-
-### 7.2 静态分析器集成
-
-#### ALE (Asynchronous Lint Engine)
-```vim
-Plug 'dense-analysis/ale'
-
-" ALE 设置
-let g:ale_linters = {
-\   'cpp': ['clang++', 'clangtidy', 'cppcheck'],
-\   'c': ['clang', 'clangtidy', 'cppcheck'],
-\}
-let g:ale_cpp_clang_options = '-std=c++11 -Wall -Wextra'
-let g:ale_c_clang_options = '-std=c11 -Wall -Wextra'
-let g:ale_set_highlights = 1
-let g:ale_set_signs = 1
-let g:ale_sign_column_always = 1
-let g:ale_statusline_format = '[%d%d]'
-```
-
----
-
-## 8 高级技巧
-
-### 8.1 快速移动
-
-#### Easymotion
-```vim
-Plug 'Lokaltog/vim-easymotion'
-
-" 设置 easymotion
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-nmap s <Plug>(easymotion-s)
-xmap s <Plug>(easymotion-s)
-omap z <Plug>(easymotion-t2)
-
-" 跳转到任意单词
-map <Leader><Leader>s <Plug>(easymotion-s2)
-map <Leader><Leader>jd <Plug>(easymotion-jd)
-map <Leader><Leader>jk <Plug>(easymotion-jk)
-map <Leader><Leader>jw <Plug>(easymotion-jw)
-map <Leader><Leader>f <Plug>(easymotion-fl)
-map <Leader><Leader>F <Plug>(easymotion-F)
-```
-
-### 8.2 支持分支的 undo
-
-#### Gundo
-```vim
-Plug 'sjl/gundo.vim'
-
-" 调用 gundo 树
-nnoremap <Leader>ud :GundoToggle<CR>
-" 开启保存 undo 历史功能
-set undofile
-" undo 历史保存路径
-set undodir=~/.undo_history/
-```
-
-### 8.3 快速编辑结对符
-
-#### Wildfire
-```vim
-Plug 'gcmt/wildfire.vim'
-
-" 快捷键
-map <SPACE> <Plug>(wildfire-fuel)
-vmap <S-SPACE> <Plug>(wildfire-water)
-" 适用于哪些结对符
-let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}", "i>", "ip"]
-```
-
-### 8.4 markdown 即时预览
-
-#### vim-instant-markdown
-```vim
-Plug 'suan/vim-instant-markdown'
-
-" 启用即时预览
-let g:instant_markdown_autostart = 0
-let g:instant_markdown_slow = 0
-let g:instant_markdown_browser = "firefox"
-" 快捷键启动预览
-map <Leader>md :InstantMarkdownPreview<CR>
-```
-
-### 8.5 中/英输入平滑切换
-
-#### fcitx.vim
-```vim
-Plug 'lilydjwg/fcitx.vim'
-```
-
----
-
-## 9 Vim 脚本编程
-
-### 9.1 基本语法
-
+## Vim 脚本编程
 #### 数据类型
 ```vim
 " 基本类型
@@ -498,7 +70,6 @@ let flag = v:true
 let list = [1, 2, 3]
 let dict = {'key': 'value'}
 ```
-
 #### 函数定义
 ```vim
 function! MyFunction(arg)
@@ -506,7 +77,6 @@ function! MyFunction(arg)
     return 42
 endfunction
 ```
-
 #### 自动命令
 ```vim
 augroup MyGroup
@@ -514,16 +84,13 @@ augroup MyGroup
     autocmd BufWritePre * :%s/\s\+$//e
 augroup END
 ```
-
 #### 按键映射
 ```vim
 nmap <Leader>w :w<CR>
 imap jk <Esc>
 vmap <C-c> "+y
 ```
-
-### 9.2 高级功能
-
+### 高级功能
 #### 寄存器系统
 ```vim
 ""     # 无名寄存器
@@ -532,14 +99,12 @@ vmap <C-c> "+y
 "*     # 系统剪贴板
 "_     # 黑洞寄存器
 ```
-
 #### 标记系统
 ```vim
 ma     # 设置标记a
 'a     # 跳转到标记a
 :marks # 显示所有标记
 ```
-
 #### 折叠功能
 ```vim
 zc     # 关闭折叠
@@ -548,13 +113,7 @@ za     # 切换折叠
 zm     # 增加折叠级别
 zr     # 减少折叠级别
 ```
-
----
-
-## 10 实用技巧
-
-### 10.1 快捷键推荐
-
+## 实用技巧
 #### 基础快捷键
 ```vim
 " 保存退出
