@@ -114,54 +114,7 @@ zm     # 增加折叠级别
 zr     # 减少折叠级别
 ```
 ## 实用技巧
-#### 基础快捷键
-```vim
-" 保存退出
-nmap <Leader>w :w<CR>
-nmap <Leader>q :q<CR>
-nmap <Leader>x :x<CR>
-
-" 窗口操作
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
-
-" 缓冲区操作
-nmap <Leader>bn :bnext<CR>
-nmap <Leader>bp :bprevious<CR>
-nmap <Leader>bd :bdelete<CR>
-
-" 标签页操作
-nmap <Leader>tn :tabnext<CR>
-nmap <Leader>tp :tabprevious<CR>
-nmap <Leader>tc :tabclose<CR>
-```
-
-#### 高级快捷键
-```vim
-" 快速移动到行首/行尾
-nmap <Leader>h 0
-nmap <Leader>l $
-
-" 复制粘贴到系统剪贴板
-vnoremap <Leader>y "+y
-nmap <Leader>p "+p
-
-" 删除不保存字符
-nmap <Leader>x "_x
-
-" 替换模式
-nnoremap <Leader>r :%s/
-vnoremap <Leader>r :s/
-
-" 搜索
-nnoremap <Leader>/ :<C-r>=expand('<cword>')<CR>
-```
-
-### 10.2 性能优化
-
-#### 大文件处理
+### 大文件处理
 ```vim
 " 禁用某些功能以提高大文件处理性能
 autocmd BufReadPre *.log set nowrap
@@ -173,49 +126,8 @@ autocmd BufReadPre *.log set noundofile
 autocmd BufReadPre *.log set noswapfile
 autocmd BufReadPre *.log set nobackup
 ```
-
-### 10.3 调试技巧
-
-#### 调试配置
-```vim
-" 显示函数调用栈
-map <F8> :echo expand('%:t') . ':' . line('.') . ':' . getline('.')<CR>
-
-" 调试模式
-set verbosefile=~/vim_debug.log
-set verbose=15
-```
-
-### 10.4 常见问题解决
-
-#### 编码问题
-```vim
-set encoding=utf-8
-set fileencoding=utf-8
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,latin1
-```
-
-#### 权限问题
+### 权限问题
 ```vim
 " 无权限时保存
 :w !sudo tee % > /dev/null
 ```
-
----
-
-## 结语
-
-Vim 是一个极其强大和灵活的编辑器，通过合理配置和插件选择，可以打造成接近现代 IDE 的开发环境。本文档提供了从基础到高级的全面配置指南，帮助你充分利用 Vim 的强大功能。
-
-记住，最好的 Vim 配置是适合你自己工作习惯的配置。不要害怕尝试新的插件和配置，找到最适合你的开发工作流。
-
-### 推荐学习资源
-
-1. **官方文档**: `:help` 命令是最好的学习资源
-2. **书籍**: 《Practical Vim》和《Vim 8 文本处理实战》
-3. **网站**: vim.org, github.com 上的优秀 Vim 插件
-4. **实践**: 全力使用 Vim，不断优化你的配置
-
----
-
-*最后更新: 2024年12月*

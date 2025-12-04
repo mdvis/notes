@@ -1,22 +1,3 @@
-这个错误非常典型 👍  
-原因是：
-
-> 你的 Markdown 文件里有 **中文（或其他非 ASCII 字符）**，而 Pandoc 默认使用的 **LaTeX 引擎（pdflatex）** 不支持 Unicode。
-
----
-
-## ✅ 解决方案：使用 XeLaTeX 或 LuaLaTeX 引擎
-
-在命令中加上：
-
-```bash
---pdf-engine=xelatex
-```
-
-同时要指定一个支持中文的字体，例如 `"Noto Sans CJK SC"` 或 `"SimSun"`。
-
----
-
 ### 🚀 完整示例命令（推荐）
 
 ```bash
