@@ -1,30 +1,8 @@
-# Vim 完整指南
-
-> 所需即所获：像 IDE 一样使用 vim
-
-## 目录
-
-1. [Vim 基础](#1-vim-基础)
-2. [插件管理](#2-插件管理)
-3. [界面美化](#3-界面美化)
-4. [代码分析](#4-代码分析)
-5. [代码开发](#5-代码开发)
-6. [工程管理](#6-工程管理)
-7. [工具链集成](#7-工具链集成)
-8. [高级技巧](#8-高级技巧)
-9. [Vim 脚本编程](#9-vim-脚本编程)
-10. [实用技巧](#10-实用技巧)
-
----
-
-## 1 Vim 基础
-
-### 1.1 启动与基本命令
-
+## Vim 基础
 #### 启动选项
 ```vim
-vim -p filename1 filename2    # 以标签页方式打开多个文件
-vim -p *                      # 编辑当前目录所有文件
+vim -p filename1 filename2     # 以标签页方式打开多个文件
+vim -p *                       # 编辑当前目录所有文件
 vim -r                         # 恢复会话
 vim -o                         # 水平分割窗口打开文件
 vim -O                         # 垂直分割窗口打开文件
@@ -35,7 +13,6 @@ vim -c "命令" file              # 执行命令后打开文件
 gvim -c 'normal ggdG"*p' file  # 从系统剪贴板粘贴内容
 mvim --servername VIM3 --remote-tab foobar.txt  # 在MacVim中远程打开标签页
 ```
-
 #### 保存与退出
 ```vim
 ZZ 或 :x          # 保存并退出当前窗口（未修改文件不保存）
@@ -49,9 +26,6 @@ ZQ 或 :q!         # 不保存直接退出
 :w !sudo tee %    # 以sudo保存只读文件
 :e!               # 强制重载当前文件（丢弃未保存内容）
 ```
-
-### 1.2 Vim 配置系统
-
 #### 配置路径
 ```vim
 ~/.vim/colors/       # 配色方案
@@ -60,103 +34,22 @@ ZQ 或 :q!         # 不保存直接退出
 ~/.vim/ftplugin/     # 文件类型插件
 ~/.vim/autoload/     # 按需加载
 ```
-
-#### 基本配置
-```vim
-" 前缀键设置
-let mapleader=";"
-
-" 文件类型侦测
-filetype on
-filetype plugin on
-
-" 基本设置
-set nocompatible          # 关闭兼容模式
-set incsearch            # 开启实时搜索功能
-set ignorecase           # 搜索时大小写不敏感
-set wildmenu             # vim 自身命令行模式智能补全
-set cursorline           # 高亮当前行
-set number               # 显示行号
-set expandtab            # 将制表符转换为空格
-set tabstop=4            # 设置编辑时制表符占用空格数
-set shiftwidth=4         # 设置格式化时制表符占用空格数
-set softtabstop=4       # 让 vim 把连续数量的空格视为一个制表符
-set wrap                 # 设置自动折行
-set laststatus=2         # 总是显示状态栏
-set ruler                # 显示光标当前位置
-set hlsearch             # 高亮显示搜索结果
-set nowrap               # 禁止折行
-set syntax=on            # 开启语法高亮功能
-set autoindent           # 开启自动缩进
-set smartindent          # 开启智能缩进
-set cindent              # 开启 C/C++ 风格缩进
-set showmatch            # 高亮显示匹配的括号
-set scrolloff=3          # 设置光标离顶部和底部3行时开始滚动
-set history=1000         # 设置历史命令记录数量
-set autoread             # 设置文件被外部修改时自动加载
-set mouse=a              # 设置鼠标模式
-set encoding=utf-8       # Vim内部编码
-set fileencoding=utf-8   # 文件编码
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,latin1  # 自动识别编码
-```
-
 #### 配置立即生效
 ```vim
 " 让配置变更立即生效
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 ```
-
 ### 1.3 模式介绍
 
-| 模式          | 描述                          | 进入方式                  |
-|---------------|-------------------------------|---------------------------|
-| Normal       | 默认普通模式                  | 启动时 / `<Esc>`         |
-| Visual       | 可视选择（字符/行/块）         | `v` (字符) / `V` (行) / `Ctrl-v` (块) |
-| Insert       | 插入编辑                      | `i` / `a` / `o` 等        |
-| Select       | 鼠标选择（替换式）            | `gh`                      |
-| Command-line | 命令行输入                    | `:`                       |
-| Ex           | Ex模式（多行命令）            | `Q` (仅Vim支持)           |
-
----
-
-## 2 插件管理
-
-### 2.1 vim-plug 管理
-
-#### 安装
-```bash
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
-#### 配置
-```vim
-" vim-plug 环境设置
-call plug#begin('~/.vim/plugged')
-
-" 在这里添加插件
-Plug 'preservim/nerdtree'
-Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-Plug 'jiangmiao/auto-pairs'
-Plug 'ycm-core/YouCompleteMe'
-Plug 'neoclide/coc.nvim'
-Plug 'tpope/vim-fugitive'
-
-call plug#end()
-```
-
-#### 命令
-```vim
-:PlugInstall    # 安装插件
-:PlugUpdate     # 更新插件
-:PlugClean      # 删除插件
-:PlugUpgrade    # 升级 vim-plug 本身
-```
-
-### 2.2 常用插件推荐
-
+| 模式           | 描述           | 进入方式                              |
+| ------------ | ------------ | --------------------------------- |
+| Normal       | 默认普通模式       | 启动时 / `<Esc>`                     |
+| Visual       | 可视选择（字符/行/块） | `v` (字符) / `V` (行) / `Ctrl-v` (块) |
+| Insert       | 插入编辑         | `i` / `a` / `o` 等                 |
+| Select       | 鼠标选择（替换式）    | `gh`                              |
+| Command-line | 命令行输入        | `:`                               |
+| Ex           | Ex模式（多行命令）   | `Q` (仅Vim支持)                      |
+## 常用插件
 #### 文件管理
 ```vim
 Plug 'preservim/nerdtree'          " 文件树
