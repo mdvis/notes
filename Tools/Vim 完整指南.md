@@ -49,167 +49,18 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 | Select       | 鼠标选择（替换式）    | `gh`                              |
 | Command-line | 命令行输入        | `:`                               |
 | Ex           | Ex模式（多行命令）   | `Q` (仅Vim支持)                      |
-## 常用插件
-#### 文件管理
-```vim
-Plug 'preservim/nerdtree'          " 文件树
-Plug 'junegunn/fzf.vim'           " 模糊查找
-Plug 'scrooloose/nerdtree-git'     " NERDTree Git 集成
-Plug 'tpope/vim-vinegar'          " 目录跳转
-```
-
-#### 编辑增强
-```vim
-Plug 'tpope/vim-surround'         " 包围字符操作
-Plug 'tpope/vim-commentary'       " 快速注释
-Plug 'jiangmiao/auto-pairs'       " 自动配对
-Plug 'Raimondi/delimitMate'       " 自动配对（替代方案）
-Plug 'easymotion/vim-easymotion'  " 快速移动
-Plug 'terryma/vim-multiple-cursors' " 多光标编辑
-```
-
-#### 状态栏和界面
-```vim
-Plug 'vim-airline/vim-airline'           " 状态栏
-Plug 'vim-airline/vim-airline-themes'    " 状态栏主题
-Plug 'ryanoasis/vim-devicons'             " 文件图标
-Plug 'majutsushi/tagbar'                  " 标签栏
-```
-
-#### Git 集成
-```vim
-Plug 'tpope/vim-fugitive'           " Git 操作
-Plug 'airblade/vim-gitgutter'       " Git 状态显示
-Plug 'Xuyuanp/nerdtree-git-plugin'  " NERDTree Git 集成
-```
-
-#### 语法检查和补全
-```vim
-Plug 'ycm-core/YouCompleteMe'     " 智能补全
-Plug 'neoclide/coc.nvim'          " LSP 客户端
-Plug 'dense-analysis/ale'         " 异步语法检查
-Plug 'scrooloose/syntastic'        " 语法检查
-```
-
-#### 主题
-```vim
-Plug 'morhetz/gruvbox'             " Gruvbox 主题
-Plug 'altercation/vim-colors-solarized' " Solarized 主题
-Plug 'nanotech/jellybeans.vim'     " Jellybeans 主题
-```
-
----
-
-## 3 界面美化
-
-### 3.1 主题风格
-```vim
-" 配色方案
-set background=dark
-colorscheme gruvbox
-" colorscheme solarized
-" colorscheme molokai
-" colorscheme jellybeans
-```
-
-### 3.2 营造专注氛围
-```vim
-" 禁止光标闪烁
-set guicursor=a:block-blinkon0
-" 禁止显示滚动条
-set guioptions-=l
-set guioptions-=L
-set guioptions-=r
-set guioptions-=R
-" 禁止显示菜单和工具条
-set guioptions-=m
-set guioptions-=T
-```
-
-### 3.3 添加辅助信息
-```vim
-" 显示光标当前位置
-set ruler
-" 开启行号显示
-set number
-" 高亮显示当前行/列
-set cursorline
-set cursorcolumn
-" 高亮显示搜索结果
-set hlsearch
-```
-
-### 3.4 字体设置
-```vim
-" 设置 gvim 显示字体
-set guifont=YaHei\ Consolas\ Hybrid\ 11.5
-```
-
-### 3.5 全屏模式
-```vim
-" 将外部命令 wmctrl 控制窗口最大化的命令行参数封装成一个 vim 的函数
-fun! ToggleFullscreen()
-    call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")
-endfun
-" 全屏开/关快捷键
-map <silent> <F11> :call ToggleFullscreen()<CR>
-" 启动 vim 时自动全屏
-autocmd VimEnter * call ToggleFullscreen()
-```
-
----
-
-## 4 代码分析
-
-### 4.1 语法高亮
-```vim
-" 开启语法高亮功能
-syntax enable
-" 允许用指定语法高亮配色方案替换默认方案
-syntax on
-```
-
-#### C++ 增强语法高亮
-```vim
-Plug 'octol/vim-cpp-enhanced-highlight'
-```
-
-### 4.2 代码缩进
-
-#### 缩进可视化
-```vim
-Plug 'nathanaelkane/vim-indent-guides'
-
-" 随 vim 自启动
-let g:indent_guides_enable_on_vim_startup=1
-" 从第二层开始可视化显示缩进
-let g:indent_guides_start_level=2
-" 色块宽度
-let g:indent_guides_guide_size=1
-" 快捷键 i 开/关缩进可视化
-nmap <silent> <Leader>i <Plug>IndentGuidesToggle
-```
-
-### 4.3 代码折叠
-```vim
-" 基于缩进或语法进行代码折叠
-" set foldmethod=indent
-set foldmethod=syntax
-" 启动 vim 时关闭折叠代码
-set nofoldenable
-```
-
-#### 折叠快捷键
-| 快捷键 | 描述                  |
-|--------|-----------------------|
-| `za`   | 开/关当前折叠          |
-| `zc`   | 关闭当前               |
-| `zo`   | 打开当前               |
-| `zm/zM`| 关闭所有/嵌套          |
-| `zr/zR`| 打开所有/嵌套          |
-| `zd/zE`| 删除当前/所有          |
-| `zj/zk`| 下一个/上一个折叠      |
-| `zn/zN`| 禁用/启用折叠          |
+## 代码分析
+### 折叠快捷键
+| 快捷键     | 描述        |
+| ------- | --------- |
+| `za`    | 开/关当前折叠   |
+| `zc`    | 关闭当前      |
+| `zo`    | 打开当前      |
+| `zm/zM` | 关闭所有/嵌套   |
+| `zr/zR` | 打开所有/嵌套   |
+| `zd/zE` | 删除当前/所有   |
+| `zj/zk` | 下一个/上一个折叠 |
+| `zn/zN` | 禁用/启用折叠   |
 
 ### 4.4 接口与实现快速切换
 ```vim
