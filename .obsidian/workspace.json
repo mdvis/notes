@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tools/qpdf 常用命令速查表.md",
+                "file": "DB/数据库指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "qpdf 常用命令速查表"
+              "title": "数据库指南"
             }
           }
         ]
@@ -229,6 +229,7 @@
   },
   "active": "0c2932aa2707d30a",
   "lastOpenFiles": [
+    "Tools/qpdf 常用命令速查表.md",
     "Tools/openssl 使用指南.md",
     "Tools/Nginx服务器配置指南.md",
     "DB/数据库指南.md",
@@ -254,7 +255,6 @@
     "Other/每日一读.md",
     "Other/开源许可.md",
     "Other/零知识证明.md",
-    "Other/环境工程.md",
     "用所选项目新建的文件夹",
     "Tools",
     "sambe",
