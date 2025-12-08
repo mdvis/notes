@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "mono",
+                "query": "uv",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,7 +84,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -227,7 +228,7 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "0c2932aa2707d30a",
+  "active": "7e7ab73cc512f79d",
   "lastOpenFiles": [
     "Tools/Nginx服务器配置指南.md",
     "Tools/openssl 使用指南.md",
