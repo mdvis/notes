@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tools/openssl 使用指南.md",
+                "file": "Tools/qpdf 常用命令速查表.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "openssl 使用指南"
+              "title": "qpdf 常用命令速查表"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "uv",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,8 +84,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -228,10 +227,10 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "7e7ab73cc512f79d",
+  "active": "0c2932aa2707d30a",
   "lastOpenFiles": [
-    "Tools/Nginx服务器配置指南.md",
     "Tools/openssl 使用指南.md",
+    "Tools/Nginx服务器配置指南.md",
     "DB/数据库指南.md",
     "Golang/01-基础语法与数据类型.md",
     "Other/SSH完整指南.md",
