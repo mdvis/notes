@@ -11,10 +11,14 @@
             "id": "0c2932aa2707d30a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Tools/openssl 使用指南.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "openssl 使用指南"
             }
           }
         ]
@@ -223,8 +227,9 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "0c2932aa2707d30a",
+  "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
+    "Tools/openssl 使用指南.md",
     "DB/数据库指南.md",
     "Golang/01-基础语法与数据类型.md",
     "Other/SSH完整指南.md",
@@ -250,7 +255,6 @@
     "Other/零知识证明.md",
     "Other/环境工程.md",
     "Other/技术岗位描述.md",
-    "Other/包管理.md",
     "用所选项目新建的文件夹",
     "Tools",
     "sambe",
