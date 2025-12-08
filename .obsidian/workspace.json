@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "f96363fc5d274961",
+        "id": "16ccf2fd5059d1b9",
         "type": "tabs",
         "children": [
           {
-            "id": "0c2932aa2707d30a",
+            "id": "0036f46d4b200a7d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DB/数据库指南.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "数据库指南"
+              "title": "新标签页"
             }
           }
         ]
@@ -227,12 +223,13 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "0c2932aa2707d30a",
+  "active": "0036f46d4b200a7d",
   "lastOpenFiles": [
+    "Other/Linux 进程状态.md",
+    "DB/数据库指南.md",
     "Tools/qpdf 常用命令速查表.md",
     "Tools/openssl 使用指南.md",
     "Tools/Nginx服务器配置指南.md",
-    "DB/数据库指南.md",
     "Golang/01-基础语法与数据类型.md",
     "Other/SSH完整指南.md",
     "Other/Shell脚本完全指南.md",
@@ -254,7 +251,6 @@
     "Other/前端开发指南.md",
     "Other/每日一读.md",
     "Other/开源许可.md",
-    "Other/零知识证明.md",
     "用所选项目新建的文件夹",
     "Tools",
     "sambe",
