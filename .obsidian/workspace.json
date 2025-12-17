@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CMD/磁盘与文件系统/shred.md",
+                "file": "Java/数据类型.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "shred"
+              "title": "数据类型"
             }
           }
         ]
@@ -229,8 +229,10 @@
   },
   "active": "61631b54aeb21962",
   "lastOpenFiles": [
-    "CMD/文件操作与处理/find.md",
     "CMD/磁盘与文件系统/shred.md",
+    "Java/数据类型.md",
+    "Java",
+    "CMD/文件操作与处理/find.md",
     "CMD/网络与通信/tcpdump.md",
     "Other/包管理.md",
     "Other/Linux 进程状态.md",
@@ -254,7 +256,6 @@
     "Other/项目与团队管理.md",
     "Other/网络基础完全指南.md",
     "Other/设计哲学完全指南.md",
-    "Other/软件设计原则：CUPID.md",
     "用所选项目新建的文件夹",
     "Tools",
     "sambe",
@@ -264,7 +265,6 @@
     "未命名文件夹",
     "笔记/用所选项目新建的文件夹",
     "Network",
-    "OS/Unix",
     "Demos/canvas-demo.canvas",
     "未命名.canvas",
     "文档/一个月最多可瘦十斤.png",
