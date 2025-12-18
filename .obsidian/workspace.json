@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/数据类型.md",
+                "file": "CMD/网络与通信/telnet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "数据类型"
+              "title": "telnet"
             }
           }
         ]
@@ -230,8 +230,8 @@
   },
   "active": "61631b54aeb21962",
   "lastOpenFiles": [
-    "CMD/磁盘与文件系统/shred.md",
     "Java/数据类型.md",
+    "CMD/磁盘与文件系统/shred.md",
     "Java",
     "CMD/文件操作与处理/find.md",
     "CMD/网络与通信/tcpdump.md",
