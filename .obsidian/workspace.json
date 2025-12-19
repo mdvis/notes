@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "77f2bce7b6dd140e",
+        "id": "f7ff9f1b8a3d75d0",
         "type": "tabs",
         "children": [
           {
-            "id": "61631b54aeb21962",
+            "id": "ca6df105290e370f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CMD/网络与通信/telnet.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "telnet"
+              "title": "新标签页"
             }
           }
         ]
@@ -152,13 +148,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Golang/01-基础语法与数据类型.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "01-基础语法与数据类型 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -202,12 +197,11 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -228,8 +222,10 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "61631b54aeb21962",
+  "active": "ca6df105290e370f",
   "lastOpenFiles": [
+    "Other/macOS 工具指南.md",
+    "CMD/网络与通信/telnet.md",
     "Java/数据类型.md",
     "CMD/磁盘与文件系统/shred.md",
     "Java",
@@ -247,7 +243,6 @@
     "Other/Python -m 命令行选项详解.md",
     "Other/nginx 指南.md",
     "Other/Make 构建工具指南.md",
-    "Other/macOS 工具指南.md",
     "Other/Linux 系统管理指南.md",
     "Other/Linux 日志.md",
     "Other/知识图谱.md",
@@ -256,7 +251,6 @@
     "Other/阅读源码.md",
     "Other/项目与团队管理.md",
     "Other/网络基础完全指南.md",
-    "Other/设计哲学完全指南.md",
     "用所选项目新建的文件夹",
     "Tools",
     "sambe",
