@@ -202,7 +202,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -227,7 +227,7 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "ca6df105290e370f",
+  "active": "8b536fcf20839aa1",
   "lastOpenFiles": [
     "Other/macOS 工具指南.md",
     "CMD/网络与通信/telnet.md",
