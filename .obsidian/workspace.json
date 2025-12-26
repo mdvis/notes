@@ -11,10 +11,14 @@
             "id": "62b51a6f9d9a1e9b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Tools/FFmpeg 常用命令速查表.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "FFmpeg 常用命令速查表"
             }
           }
         ]
@@ -224,6 +228,7 @@
   },
   "active": "62b51a6f9d9a1e9b",
   "lastOpenFiles": [
+    "Tools/Tmux完全指南.md",
     "Tools/qpdf 常用命令速查表.md",
     "Other/macOS 工具指南.md",
     "CMD/网络与通信/telnet.md",
@@ -250,7 +255,6 @@
     "Other/AI Agent Instructions.md",
     "Other/阅读源码.md",
     "Other/项目与团队管理.md",
-    "Other/网络基础完全指南.md",
     "用所选项目新建的文件夹",
     "Tools",
     "sambe",
