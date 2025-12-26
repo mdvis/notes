@@ -87,7 +87,7 @@ ffmpeg -f concat -safe 0 -i file_list.txt -c copy output.mp4
 ```
 
 ```
-ffmpeg -i file -i file --fi
+ffmpeg -i file -i file -filter_complex "[0:a][1:a][2:a]:"
 ```
 ### 2. 重新编码合并
 ```bash
