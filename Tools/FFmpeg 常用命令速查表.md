@@ -85,6 +85,10 @@ ffmpeg -i input.mkv -map 0:s:0 subs.srt
 # file 'part2.mp4'
 ffmpeg -f concat -safe 0 -i file_list.txt -c copy output.mp4
 ```
+
+```
+ffmpeg -i file -i file --fi
+```
 ### 2. 重新编码合并
 ```bash
 ffmpeg -i part1.mp4 -i part2.mp4 -filter_complex "[0:v][0:a][1:v][1:a]concat=n=2:v=1:a=1" output.mp4
