@@ -11,10 +11,12 @@
             "id": "a8c5358023e69721",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "新标签页"
+              "type": "smm",
+              "state": {
+                "file": "MindMap 2025-12-30 10.03.34.smm.md"
+              },
+              "icon": "smm-icon",
+              "title": "MindMap 2025-12-30 10.03.34.smm"
             }
           }
         ]
@@ -177,7 +179,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -202,8 +204,9 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "a8c5358023e69721",
+  "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
+    "MindMap 2025-12-30 10.03.34.smm.md",
     "未命名.md",
     "2025-12-30.md",
     "Tools/FFmpeg 常用命令速查表.md",
@@ -230,7 +233,6 @@
     "Other/Linux 系统管理指南.md",
     "Other/Linux 日志.md",
     "Other/知识图谱.md",
-    "Other/AI-ML 模型文件结构指南.md",
     "用所选项目新建的文件夹",
     "Tools",
     "sambe",
