@@ -195,11 +195,9 @@
       "obsidian-kanban:创建新看板": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
       "simple-mind-map:新建思维导图": false,
-      "templater-obsidian:Templater": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-git:Open Git source control": false,
-      "remotely-save:Remotely Save": false,
-      "copilot:Open Copilot Chat": false
+      "remotely-save:Remotely Save": false
     }
   },
   "active": "8b536fcf20839aa1",
