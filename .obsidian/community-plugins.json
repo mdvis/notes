@@ -1,18 +1,11 @@
 [
-  "templater-obsidian",
   "obsidian-kanban",
   "table-editor-obsidian",
   "dataview",
   "obsidian-excalidraw-plugin",
   "obsidian-outliner",
-  "quickadd",
-  "obsidian-style-settings",
-  "obsidian-tasks-plugin",
   "obsidian-git",
   "obsidian-mind-map",
-  "tag-wrangler",
   "remotely-save",
-  "simple-mind-map",
-  "calendar",
-  "copilot"
+  "simple-mind-map"
 ]

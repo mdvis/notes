@@ -11,14 +11,10 @@
             "id": "a8c5358023e69721",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2025-12-30.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "2025-12-30"
+              "title": "新标签页"
             }
           }
         ]
@@ -179,26 +175,6 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
-          },
-          {
-            "id": "81584aab7ffbad61",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
-            }
-          },
-          {
-            "id": "227722e5e55c0ed4",
-            "type": "leaf",
-            "state": {
-              "type": "copilot-chat-view",
-              "state": {},
-              "icon": "message-square",
-              "title": "Copilot"
-            }
           }
         ],
         "currentTab": 5
@@ -228,6 +204,7 @@
   },
   "active": "a8c5358023e69721",
   "lastOpenFiles": [
+    "未命名.md",
     "2025-12-30.md",
     "Tools/FFmpeg 常用命令速查表.md",
     "Tools/Tmux完全指南.md",
@@ -254,7 +231,6 @@
     "Other/Linux 日志.md",
     "Other/知识图谱.md",
     "Other/AI-ML 模型文件结构指南.md",
-    "Other/AI Agent Instructions.md",
     "用所选项目新建的文件夹",
     "Tools",
     "sambe",
