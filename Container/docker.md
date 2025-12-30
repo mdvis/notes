@@ -1052,7 +1052,6 @@ docker-compose save -o my-compose-images.tar
 ---
 title: Docker
 date: 2020-12-30 10:55:24
-background: bg-[#488fdf]
 tags:
   - container
   - virtual

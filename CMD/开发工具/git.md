@@ -63,11 +63,11 @@ tag              创建，列出，删除或验证使用GPG签名的标签对象
 
 init
 
-`git init` #初始化  
+`git init #初始化`
 
 status
 
-`git status` #获取状态  
+`git status #获取状态`
 
 add
 
@@ -77,11 +77,11 @@ add
 
 commit
 
-`git commit -m "message"` #此处注意乱码  
+`git commit -m "message" #此处注意乱码`
 
 remote
 
-`git remote add origin git@github.com:JSLite/test.git` #添加源  
+`git remote add origin git@github.com:JSLite/test.git #添加源`
 
 push
 
@@ -94,8 +94,8 @@ git push -f origin master # 强制推送文件，缩写 -f（全写--force）
 clone
 
 `git clone git://github.com/JSLite/JSLite.js.git`  
-`git clone git://github.com/JSLite/JSLite.js.git mypro` #克隆到自定义文件夹  
-`git clone [user@]example.com:path/to/repo.git/` #SSH协议还有另一种写法。  
+`git clone git://github.com/JSLite/JSLite.js.git mypro #克隆到自定义文件夹`
+`git clone [user@]example.com:path/to/repo.git/ #SSH协议还有另一种写法。`
 
 git clone支持多种协议，除了HTTP(s)以外，还支持SSH、Git、本地文件协议等，下面是一些例子。`git clone <版本库的网址> <本地目录名>`  
 
@@ -156,7 +156,7 @@ ssh -T git@github.com # 测试是否成功
 
 **3.修改config文件**
 
-`vim ~/.ssh/config` #修改config文件，如果没有创建 `config`  
+`vim ~/.ssh/config #修改config文件，如果没有创建 config`  
 
 ```shell
 Host jslite.github.com
@@ -634,25 +634,25 @@ git config --global core.quotepath false
 
 ### init
 
-`git init` #初始化  
+`git init #初始化 ` 
 
 ### status
 
-`git status` #获取状态  
+`git status #获取状态 ` 
 
 ### add
 
-`git add file` # .或*代表全部添加  
-`git rm --cached <added_file_to_undo>` # 在commit之前撤销git add操作  
-`git reset head` # 好像比上面`git rm --cached`更方便  
+`git add file # .或*代表全部添加`  
+`git rm --cached <added_file_to_undo> # 在commit之前撤销git add操作  `
+`git reset head # 好像比上面`git rm --cached`更方便  `
 
 ### commit
 
-`git commit -m "message"` #此处注意乱码  
+`git commit -m "message" #此处注意乱码`  
 
 ### remote
 
-`git remote add origin git@github.com:JSLite/test.git` #添加源  
+`git remote add origin git@github.com:JSLite/test.git #添加源  `
 
 ### push
 
@@ -665,8 +665,8 @@ git push -f origin master # 强制推送文件，缩写 -f（全写--force）
 ## clone
 
 `git clone git://github.com/JSLite/JSLite.js.git`  
-`git clone git://github.com/JSLite/JSLite.js.git mypro` #克隆到自定义文件夹  
-`git clone [user@]example.com:path/to/repo.git/` #SSH协议还有另一种写法。  
+`git clone git://github.com/JSLite/JSLite.js.git mypro #克隆到自定义文件夹`
+`git clone [user@]example.com:path/to/repo.git/ #SSH协议还有另一种写法。  `
 
 git clone支持多种协议，除了HTTP(s)以外，还支持SSH、Git、本地文件协议等，下面是一些例子。`git clone <版本库的网址> <本地目录名>`  
 
@@ -817,7 +817,7 @@ git push -u origin branchName # 提交分支到远程origin主机中
 
 ### 拉取
 
-`git fetch -p` #拉取远程分支时，自动清理 远程分支已删除，本地还存在的对应同名分支。  
+`git fetch -p #拉取远程分支时，自动清理 远程分支已删除，本地还存在的对应同名分支。  `
 
 ### 分支合并
 
@@ -830,7 +830,7 @@ git merge test            # 将test分支合并到当前分支
 
 ### 重命名
 
-`git branch -m old new` #重命名分支  
+`git branch -m old new #重命名分支  `
 
 ### 查看
 

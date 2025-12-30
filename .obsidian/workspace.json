@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "528a2c839fce957e",
+        "id": "ab333e1aa01ccd13",
         "type": "tabs",
         "children": [
           {
-            "id": "a8c5358023e69721",
+            "id": "c70dfcfc7d13638c",
             "type": "leaf",
             "state": {
-              "type": "smm",
-              "state": {
-                "file": "MindMap 2025-12-30 10.03.34.smm.md"
-              },
-              "icon": "smm-icon",
-              "title": "MindMap 2025-12-30 10.03.34.smm"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ]
@@ -141,7 +139,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Tags"
+              "title": "标签"
             }
           },
           {
@@ -179,7 +177,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -204,11 +202,22 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "b4055fa59d5ae5ba",
+  "active": "8b536fcf20839aa1",
   "lastOpenFiles": [
+    "CMD/开发工具/git.md",
+    "Golang/08-模块与项目管理.md",
+    "Git/配置与其他/git.md",
+    "CMD/进程与任务管理/atop.md",
+    "Excalidraw/Drawing 2025-12-30 10.03.40.excalidraw.md",
+    "Git/标签与版本/tag.md",
+    "Container/docker.md",
+    "2025-12-30.md",
+    "未命名.canvas",
+    "未命名.base",
+    "未命名看板.md",
+    "Excalidraw",
     "MindMap 2025-12-30 10.03.34.smm.md",
     "未命名.md",
-    "2025-12-30.md",
     "Tools/FFmpeg 常用命令速查表.md",
     "Tools/Tmux完全指南.md",
     "Tools/qpdf 常用命令速查表.md",
@@ -225,14 +234,6 @@
     "Tools/openssl 使用指南.md",
     "Tools/Nginx服务器配置指南.md",
     "Golang/01-基础语法与数据类型.md",
-    "Other/SSH完整指南.md",
-    "Other/Shell脚本完全指南.md",
-    "Other/Python -m 命令行选项详解.md",
-    "Other/nginx 指南.md",
-    "Other/Make 构建工具指南.md",
-    "Other/Linux 系统管理指南.md",
-    "Other/Linux 日志.md",
-    "Other/知识图谱.md",
     "用所选项目新建的文件夹",
     "Tools",
     "sambe",
@@ -240,10 +241,7 @@
     "Lang/Golang",
     "Lang",
     "未命名文件夹",
-    "笔记/用所选项目新建的文件夹",
-    "Network",
     "Demos/canvas-demo.canvas",
-    "未命名.canvas",
     "文档/一个月最多可瘦十斤.png",
     "canvas-demo.canvas",
     "文档/SOP.jpeg",
