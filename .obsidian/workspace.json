@@ -11,10 +11,14 @@
             "id": "c70dfcfc7d13638c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "CMD/系统管理/sudo.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "sudo"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "mtr",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -200,8 +204,17 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "8b536fcf20839aa1",
+  "active": "c70dfcfc7d13638c",
   "lastOpenFiles": [
+    "CMD/系统管理/su.md",
+    "CMD/网络与通信/mtr.md",
+    "CMD/网络与通信/nslookup.md",
+    "CMD/网络与通信/dig.md",
+    "CMD/网络与通信/netstat.md",
+    "CMD/网络与通信/ip.md",
+    "CMD/网络与通信/traceroute.md",
+    "Other/网络基础完全指南.md",
+    "CMD/网络与通信/ping.md",
     "CMD/开发工具/git.md",
     "Golang/08-模块与项目管理.md",
     "Git/配置与其他/git.md",
@@ -222,16 +235,7 @@
     "Other/macOS 工具指南.md",
     "CMD/网络与通信/telnet.md",
     "Java/数据类型.md",
-    "CMD/磁盘与文件系统/shred.md",
     "Java",
-    "CMD/文件操作与处理/find.md",
-    "CMD/网络与通信/tcpdump.md",
-    "Other/包管理.md",
-    "Other/Linux 进程状态.md",
-    "DB/数据库指南.md",
-    "Tools/openssl 使用指南.md",
-    "Tools/Nginx服务器配置指南.md",
-    "Golang/01-基础语法与数据类型.md",
     "用所选项目新建的文件夹",
     "Tools",
     "sambe",
