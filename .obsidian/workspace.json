@@ -11,10 +11,14 @@
             "id": "0f6a22333cfa637d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Tools/qpdf 常用命令速查表.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "qpdf 常用命令速查表"
             }
           }
         ]
