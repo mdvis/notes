@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tools/qpdf 常用命令速查表.md",
+                "file": "Tools/Taskwarrior 指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "qpdf 常用命令速查表"
+              "title": "Taskwarrior 指南"
             }
           }
         ]
@@ -206,8 +206,8 @@
   },
   "active": "0f6a22333cfa637d",
   "lastOpenFiles": [
-    "Tools/Taskwarrior.md",
     "Tools/qpdf 常用命令速查表.md",
+    "Tools/Taskwarrior 指南.md",
     "CMD/系统管理/sudo.md",
     "CMD/系统管理/su.md",
     "CMD/网络与通信/mtr.md",
