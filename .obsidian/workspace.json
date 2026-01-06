@@ -206,6 +206,8 @@
   },
   "active": "0f6a22333cfa637d",
   "lastOpenFiles": [
+    "Tools/Taskwarrior.md",
+    "Tools/qpdf 常用命令速查表.md",
     "CMD/系统管理/sudo.md",
     "CMD/系统管理/su.md",
     "CMD/网络与通信/mtr.md",
@@ -232,9 +234,7 @@
     "未命名.md",
     "Tools/FFmpeg 常用命令速查表.md",
     "Tools/Tmux完全指南.md",
-    "Tools/qpdf 常用命令速查表.md",
     "Other/macOS 工具指南.md",
-    "CMD/网络与通信/telnet.md",
     "Java",
     "用所选项目新建的文件夹",
     "Tools",
