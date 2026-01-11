@@ -205,8 +205,11 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "0f6a22333cfa637d",
+  "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
+    "Tools/NixOS 指南.md",
+    "Tools/Nix 指南.md",
+    "Tools/nix 指南.md",
     "nix 指南.md",
     "Tools/SSH安全实践指南.md",
     "Tools/SSH完整指南.md",
@@ -230,9 +233,6 @@
     "CMD/系统管理/su.md",
     "CMD/网络与通信/mtr.md",
     "CMD/网络与通信/nslookup.md",
-    "CMD/网络与通信/dig.md",
-    "CMD/网络与通信/netstat.md",
-    "CMD/网络与通信/ip.md",
     "未命名.canvas",
     "未命名.base",
     "Excalidraw",
