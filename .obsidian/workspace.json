@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Code/编码分类总结.md",
+                "file": "Tools/SSH完整指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "编码分类总结"
+              "title": "SSH完整指南"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Code/编码分类总结_重构版.md",
+                "file": "Tools/SSH 指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "编码分类总结_重构版"
+              "title": "SSH 指南"
             }
           }
         ],
@@ -222,32 +222,32 @@
   },
   "active": "a4bfe73e0f777753",
   "lastOpenFiles": [
-    "Code/编码分类总结.md",
-    "Code/编码分类总结_重构版.md",
-    "Code/多媒体编码.md",
-    "Code/文件魔数.md",
-    "Code/文件魔数精简版.md",
-    "Code/文件魔数列表版.md",
     "Tools/SSH完整指南.md",
+    "Tools/SSH 指南.md",
+    "Tools/Systemd 指南.md",
+    "Tools/Taskwarrior 指南.md",
+    "Tools/Vim 指南.md",
+    "Tools/Tmux 指南.md",
+    "Tools/Samba 指南.md",
+    "Tools/Qpdf 指南.md",
+    "Tools/QEMU 指南.md",
+    "Tools/Pandoc 指南.md",
+    "Tools/Openssl 指南.md",
     "Tools/NixOS 指南.md",
-    "Tools/Nix 指南.md",
-    "Tools/nix 指南.md",
-    "nix 指南.md",
-    "Tools/SSH安全实践指南.md",
-    "Other/每日一读.md",
-    "Other/开源许可.md",
-    "Other/环境工程.md",
-    "Other/包管理.md",
-    "Tools/GnuPG完整使用指南.md",
-    "Tools/FFmpeg 常用命令速查表.md",
+    "Tools/Nginx 指南.md",
+    "Tools/ImageMagick 指南.md",
+    "Tools/GnuPG 指南.md",
+    "Tools/FFmpeg 指南.md",
     "Tools/Docker 指南.md",
-    "Tools/ImageMagick 常用命令速查表.md",
-    "Tools/Nginx服务器配置指南.md",
-    "Tools/Openssl 使用指南.md",
-    "Tools/Qpdf 常用命令速查表.md",
-    "CMD/系统管理/journalctl.md",
-    "DB/postgresql.md",
-    "DB/数据库指南.md",
+    "Other/玻璃容器材质.md",
+    "Other/塑料容器材质.md",
+    "Other/蔬果保存指南.md",
+    "Java/数据类型.md",
+    "Git/文件管理/restore_.md",
+    "Git/文件管理/restore.md",
+    "DDD/02-战略设计.md",
+    "DDD/01-DDD核心思想.md",
+    "DDD/10-实践建议.md",
     "未命名.canvas",
     "未命名.base",
     "Excalidraw",
