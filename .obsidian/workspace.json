@@ -207,6 +207,8 @@
   },
   "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
+    "Code/编码分类总结.md",
+    "Code/多媒体编码.md",
     "Tools/NixOS 指南.md",
     "Tools/Nix 指南.md",
     "Tools/nix 指南.md",
@@ -231,8 +233,6 @@
     "Tools/Taskwarrior 指南.md",
     "CMD/系统管理/sudo.md",
     "CMD/系统管理/su.md",
-    "CMD/网络与通信/mtr.md",
-    "CMD/网络与通信/nslookup.md",
     "未命名.canvas",
     "未命名.base",
     "Excalidraw",
