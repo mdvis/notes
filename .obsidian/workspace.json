@@ -207,6 +207,7 @@
   },
   "active": "0f6a22333cfa637d",
   "lastOpenFiles": [
+    "nix 指南.md",
     "Tools/SSH安全实践指南.md",
     "Tools/SSH完整指南.md",
     "Other/每日一读.md",
@@ -232,7 +233,6 @@
     "CMD/网络与通信/dig.md",
     "CMD/网络与通信/netstat.md",
     "CMD/网络与通信/ip.md",
-    "CMD/网络与通信/traceroute.md",
     "未命名.canvas",
     "未命名.base",
     "Excalidraw",
