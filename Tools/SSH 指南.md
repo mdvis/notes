@@ -37,6 +37,13 @@ ssh [选项] 用户名@主机名
 - `-F` 指定配置文件：`ssh -F ~/custom_ssh_config user@hostname`
 - `-b` 使用本机指定地址作为对应连接的源ip地址
 - `-g` 允许远程主机连接主机的转发端口
+- `-1` 强制使用ssh协议版本1
+- `-2` 强制使用ssh协议版本2
+#### 跳板机/代理
+- `-J` 代理跳转（跳板机），通过跳板机连接到目标主机：
+  - `ssh -J jump_user@jump_host user@target_host`
+  - `ssh -J proxy_host1 remote_host2`
+  - `ssh -J user@proxy_host1:port1,user@proxy_host2:port2 user@remote_host3`
 ### 实用示例
 ```bash
 # 保持连接心跳，防止自动断开
@@ -47,6 +54,12 @@ ssh -J jump_user@jump_host user@target_host
 ssh -C user@hostname
 # 调试模式连接
 ssh -vv user@hostname
+# 使用pem文件连接（权限需为0400）
+ssh -i /path/file.pem root@192.168.1.5
+# 执行远程命令
+ssh user@hostname "ls -l"
+# 调用本地脚本
+ssh root@192.168.1.5 bash < script.sh
 ```
 ## SSH密钥管理
 ### 生成密钥对
@@ -71,6 +84,18 @@ ssh-keygen -t ecdsa -b 521
 # 生成Ed25519密钥（现代、安全、快速）
 ssh-keygen -t ed25519
 ```
+
+#### 密钥类型推荐
+
+**推荐的类型：**
+
+1. **Ed25519**（优先）：适用于新部署环境，兼顾安全性和效率
+2. **RSA 4096**：如需兼容旧系统（如 CentOS 7 等），或机构策略要求
+3. **检查兼容性**：确认 SSH 服务端和客户端是否支持 Ed25519（OpenSSH 6.5+ 通常支持）
+
+**不推荐的类型：**
+- **DSA**：已过时，OpenSSH 7.0+ 默认禁用，存在安全风险
+- **RSA 2048 或更短**：不再满足现代安全标准
 ### 密钥管理命令
 #### ssh-keygen参数详解
 ```bash
@@ -96,6 +121,95 @@ ssh-keygen -p -f ~/.ssh/id_rsa
 ssh-keygen -y -f ~/.ssh/id_rsa
 # 显示密钥指纹
 ssh-keygen -l -f ~/.ssh/id_rsa.pub
+# 交互式生成密钥
+ssh-keygen
+# 指定文件名
+ssh-keygen -f ~/.ssh/filename
+# 从私钥生成公钥
+ssh-keygen -y -f private.key > public.pub
+# 修改密钥注释
+ssh-keygen -c -f ~/.ssh/id_rsa
+# 搜索 known_hosts
+ssh-keygen -F <ip/hostname>
+# 从 known_hosts 移除
+ssh-keygen -R <ip/hostname>
+```
+
+### SSH密钥管理工具
+
+#### ssh-agent 命令
+后台进程，安全存储私钥，避免重复输入密码。SSH 密钥管理器。
+
+**ssh-agent** 是一种控制用来保存公钥身份验证所使用的私钥的程序。ssh-agent 在 X 会话或登录会话之初启动，所有其他窗口或程序则以客户端程序的身份启动并加入到 ssh-agent 程序中。通过使用环境变量，可定位代理并在登录到其他使用 ssh 机器上时使用代理自动进行身份验证。
+
+其实 ssh-agent 就是一个密钥管理器，运行 ssh-agent 以后，使用 ssh-add 将私钥交给 ssh-agent 保管，其他程序需要身份验证的时候可以将验证申请交给 ssh-agent 来完成整个认证过程。
+
+##### 语法
+```bash
+ssh-agent [-c | -s] [-d] [-a bind_address] [-t life] [command [arg ...]]
+ssh-agent [-c | -s] -k
+```
+
+##### 选项
+- `-a bind_address` 绑定代理到指定的 UNIX 域套接字
+- `-c` 生成 C-shell 风格的命令输出
+- `-d` 调试模式
+- `-k` 把 ssh-agent 进程杀掉
+- `-s` 生成 Bourne shell 风格的命令输出
+- `-t life` 设置默认值添加到代理人的身份最大寿命
+
+##### 使用示例
+运行 ssh-agent
+```bash
+ssh-agent
+```
+运行 ssh-agent，它会打印出来它使用的环境和变量。
+
+#### ssh-add 命令
+把专用密钥添加到 ssh-agent 的高速缓存中。
+
+##### 语法
+```bash
+ssh-add [-cDdLlXx] [-t life] [file ...]
+ssh-add -s pkcs11
+ssh-add -e pkcs11
+```
+
+##### 选项
+- `-D` 删除 ssh-agent 中的所有密钥
+- `-d <秘钥>` 从 ssh-agent 中删除密钥
+- `-e pkcs11` 删除 PKCS#11 共享库 pkcs1 提供的钥匙
+- `-s pkcs11` 添加 PKCS#11 共享库 pkcs1 提供的钥匙
+- `-L` 显示 ssh-agent 中的公钥
+- `-l` 显示 ssh-agent 中的密钥
+- `-t <秒数>` 对加载的密钥设置超时时间，超时 ssh-agent 将自动卸载密钥
+- `-X` 对 ssh-agent 进行解锁
+- `-x` 对 ssh-agent 进行加锁
+
+##### 使用示例
+把专用密钥添加到 ssh-agent 的高速缓存中
+```bash
+ssh-add ~/.ssh/id_dsa
+```
+
+从 ssh-agent 中删除密钥
+```bash
+ssh-add -d ~/.ssh/id_xxx.pub
+```
+
+查看 ssh-agent 中的密钥
+```bash
+ssh-add -l
+```
+
+显示 ssh-agent 中的公钥
+```bash
+ssh-add -L
+```
+
+对加载的密钥设置超时时间（秒数）
+```bash
+ssh-add -t 3600 ~/.ssh/id_dsa
 ```
 ### 公钥分发
 #### ssh-copy-id
@@ -119,7 +233,58 @@ rm ~/id_rsa.pub
 chmod 600 ~/.ssh/authorized_keys
 chmod 700 ~/.ssh
 ```
+
+### SCP 文件传输
+#### 从远程复制到本地
+```bash
+scp user@server:/dir/file.ext dest/
+```
+
+#### 在两个服务器之间复制
+```bash
+scp user@server:/file user@server:/dir
+```
+
+#### 从本地复制到远程
+```bash
+scp dest/file.ext user@server:/dir
+```
+
+#### 递归复制整个文件夹
+```bash
+scp -r user@server:/dir dest/
+```
+
+#### 复制文件夹中的所有文件
+```bash
+scp user@server:/dir/* dest/
+```
+
+#### 从服务器文件夹复制到当前文件夹
+```bash
+scp user@server:/dir/* .
+```
+
+### SCP 选项
+| 选项      | 说明                     |
+| --------- | ------------------------ |
+| scp `-r`  | 递归复制整个目录         |
+| scp `-C`  | 压缩数据                 |
+| scp `-v`  | 显示详细信息             |
+| scp `-P`  | 指定端口                 |
+| scp `-B`  | 批处理模式（无密码提示） |
+| scp `-p`  | 保留文件时间和权限       |
 ## SSH安全配置
+### 配置文件位置
+| 文件路径                 | 说明             |
+| ------------------------ | ---------------- |
+| `/etc/ssh/ssh_config`    | 系统范围配置     |
+| `~/.ssh/config`          | 用户特定配置     |
+| `~/.ssh/id_{type}`       | 私钥             |
+| `~/.ssh/id_{type}.pub`   | 公钥             |
+| `~/.ssh/known_hosts`     | 已知服务器       |
+| `~/.ssh/authorized_keys` | 授权登录密钥     |
+
 ### 客户端配置 (~/.ssh/config)
 ```bash
 # 示例配置文件
@@ -147,6 +312,20 @@ Host internal-*
     ProxyJump jumpserver
     User internaluser
     IdentityFile ~/.ssh/internal_key
+```
+
+### 配置示例
+```bash
+Host server1
+    HostName 192.168.1.5
+    User root
+    Port 22
+    IdentityFile ~/.ssh/server1.key
+```
+
+通过别名连接
+```bash
+ssh server1
 ```
 ### 服务器端配置 (/etc/ssh/sshd_config)
 ```bash
@@ -243,6 +422,9 @@ Host db-server
 ssh -L 8080:final-target:80 user@middle-server \
     -t ssh -L 8080:final-target:80 user@jump-server
 ```
+
+### SSH 隧道
+SSH 的 `-L` 和 `-R` 选项允许你在两台机器之间建立加密的"隧道"，将本地 TCP 端口映射到远程机器或反之。这常用于访问受限网络内的服务或增强其他不安全协议的安全性。
 ## SSH登录记录监控
 ### 查看登录记录的方法
 #### 1. last命令
@@ -277,6 +459,7 @@ tail -f /var/log/auth.log | grep ssh
 # 查看特定日期的日志
 grep "Dec  1" /var/log/auth.log | grep ssh
 ```
+
 ##### CentOS/RHEL系统
 ```bash
 # 查看安全日志
@@ -285,6 +468,12 @@ cat /var/log/secure | grep ssh
 tail -f /var/log/secure | grep ssh
 # 查看失败的登录尝试
 grep "Failed password" /var/log/secure
+```
+
+##### 其他系统日志文件
+```bash
+# 查看系统日志文件 (syslog)
+cat /var/log/syslog | grep ssh
 ```
 #### 4. 使用journalctl（Systemd系统）
 ```bash
@@ -375,6 +564,21 @@ echo "auth required pam_google_authenticator.so" >> /etc/pam.d/sshd
 # 在sshd_config中启用
 ChallengeResponseAuthentication yes
 ```
+
+#### 7. SSH 服务端配置增强
+在 `/etc/ssh/sshd_config` 文件中，你还可以考虑以下安全选项：
+
+*   **禁用密码认证**（在启用密钥认证后）：将 `PasswordAuthentication` 设置为 `no` 可以彻底杜绝密码暴力破解。
+*   **更改默认端口**：将 `Port` 改为一个非标准端口（如 6000）可以减少自动化攻击。
+*   **限制用户登录**：使用 `AllowUsers` 或 `AllowGroups` 指令只允许特定的用户或组进行SSH登录。
+*   **设置空闲超时间隔**：`ClientAliveInterval` 可以设置一个空闲超时时间间隔，在一段时间无活动后自动断开连接。
+*   **限制连接数**：`MaxStartups` 可以限制并发连接数，防止资源耗尽攻击。
+*   **使用更安全的加密算法**：
+```bash
+Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com
+MACs hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com
+KexAlgorithms curve25519-sha256@libssh.org,ecdh-sha2-nistp521
+```
 ### 性能优化
 #### 1. 启用连接复用
 ```bash
@@ -428,4 +632,27 @@ sshd -T
 # 测试特定认证方式
 ssh -o PreferredAuthentications=publickey user@hostname
 ```
+
+#### 常见问题排查
+*   **权限问题**：确保服务器上相应用户的 `~/.ssh` 目录和 `~/.ssh/authorized_keys` 文件的权限设置正确（`.ssh` 目录为 `700`，`authorized_keys` 文件为 `600`）。
+
+*   **配置未生效**：每次修改 `/etc/ssh/sshd_config` 后，**必须重启 SSH 服务**。
+
+*   **防火墙阻挡**：确保服务器防火墙放行了 SSH 所使用的端口（通常是 22 或你自定义的端口）。
+    *   若使用 `ufw`（Debian 常见）：`sudo ufw allow port_number/tcp`
+    *   若使用 `firewalld`（Rocky Linux 常见）：`sudo firewall-cmd --permanent --add-port=port_number/tcp && sudo firewall-cmd --reload`
+
+*   **SELinux/AppArmor**：在某些严格策略下，SELinux（Rocky Linux）或 AppArmor（Debian）可能会阻止 SSH 操作，必要时需调整策略或放行。
+### 安全最佳实践注意事项
+
+1. **安全第一**：尽量避免直接允许 root 用户通过 SSH 远程登录。建议**使用普通用户登录后，再通过 `su` 或 `sudo` 切换权限**。
+
+2. **密钥管理**：妥善保管你的私钥，如同保管你的密码一样。建议对私钥设置强密码（passphrase）。
+
+3. **服务更新**：定期更新系统以及 SSH 服务软件包，以获取安全补丁。
+
+4. **定期审查**：定期检查 SSH 日志文件（通常在 `/var/log/auth.log` 或 `/var/log/secure`）以发现异常活动。
+
+5. **限制访问**：尽可能限制能访问 SSH 的 IP 地址或网络。
+
 通过遵循这些最佳实践，可以大大提高SSH连接的安全性、可靠性和性能。
