@@ -153,13 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DB/postgresql.md",
+                "file": "Tools/Vim 指南.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "postgresql 的大纲"
+              "title": "Vim 指南 的大纲"
             }
           },
           {
@@ -206,7 +206,7 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "06a027fdeeab6f6f",
+  "active": "8b536fcf20839aa1",
   "lastOpenFiles": [
     "Other/Python -m 命令行选项详解.md",
     "Other/nginx 指南.md",
