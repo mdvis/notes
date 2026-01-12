@@ -84,8 +84,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -206,7 +205,7 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "8b536fcf20839aa1",
+  "active": "06a027fdeeab6f6f",
   "lastOpenFiles": [
     "Other/Python -m 命令行选项详解.md",
     "Other/nginx 指南.md",
