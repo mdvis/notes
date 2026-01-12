@@ -97,3 +97,73 @@ Arguments: ['arg1', 'arg2']
 - 确保使用正确的 Python 解释器和模块版本；
 - 提供统一的命令行接口，方便集成到脚本或工具链中。
 通过理解其工作原理和常见用法，可以更好地利用 `-m` 选项来简化开发和部署流程。
+
+## expand
+核心作用是：将包含特殊通配符（如 %, #, ~）的字符串扩展为具体的路径、文件名或环境变量。
+### 核心语法
+`expand({expr} [, {nosuf} [, {list}]])`
+- {expr}: 想要扩展的字符串（如 "%" 代表当前文件）。
+- {nosuf}: 可选。如果为真，忽略 ‘suffixes’ 设置。
+- {list}: 可选。如果为真，返回一个列表（用于匹配多个文件时）。
+### 最常用的修饰符
+expand() 最强大的地方在于可以配合修饰符（Modifiers） 来提取路径的具体部分。
+假设当前编辑的文件全路径为：`/home/user/project/src/main.py`
+- `expand("%")` `src/main.py 当前文件（相对路径）
+- `expand("%:p")` `/home/user/project/src/main.py 完整绝对路径
+- `expand("%:t")` `main.py 文件名 (Tail)
+- `expand("%:r")` `src/main 移除后缀 (Root)
+- `expand("%:e")` `py 仅扩展名 (Extension)
+- `expand("%:h")` `src 所在目录 (Head)
+- e`xpand("%:p:h")` `/home/user/project/src` 绝对路径的目录
+1. 常见使用场景
+A. 获取特殊路径
+除了当前文件 %，还可以获取其他系统信息：
+- expand("~"): 用户主目录（如 /home/user）。
+- expand("$HOME"): 扩展环境变量。
+- expand("#"): 扩展为 交替文件（上一个编辑的文件）。
+- expand("<cword>"): 扩展为光标下的 单词（常用于自定义搜索快捷键）。
+- expand("<cfile>"): 扩展为光标下的 文件名路径。
+
+1B. 在脚本中动态生成路径
+
+如果你想在 .vimrc 中根据当前打开的文件创建一个备份或编译后的文件：
+
+" Python
+
+nnoremap <F5> :exe "!python3 " . expand("%:p")<CR>
+
+C. 获取多个文件 (Wildcards)
+
+如果你想获取当前目录下所有的 .txt 文件：
+
+let files = expand("*.txt", 0, 1)
+
+" : ['a.txt', 'b.txt']
+
+4. 避坑指南：expand 与命令行 ! 的区别
+
+在 Vim 命令行模式（:）下，% 会被 shell 自动识别。但如果你是在写 Vim
+
+脚本逻辑，必须显式调用 expand()。
+
+• 错误示例（在脚本中）： let my_file = % (报错：Vim 不认识单独的
+
+%)
+
+• 正确示例： let my_file = expand("%")
+
+5. 进阶技巧：组合使用
+
+修饰符可以链式叠加，例如： expand("%:p:h:t")
+
+1. :p 变成绝对路径。
+
+2. :h 取目录部分。
+
+3. :t 取该目录的名字。 结果：当前文件所属的文件夹名称。
+
+您是想在编写插件时使用 expand()，还是想为特定文件类型配置自动命令（autocmd）？
+
+如果有具体的需求，我可以为您提供更精准的代码片段。
+
+2
