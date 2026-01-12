@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Other/开源许可.md",
+                "file": "Other/每日一读.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "开源许可"
+              "title": "每日一读"
             }
           }
         ]
@@ -207,8 +207,8 @@
   },
   "active": "06a027fdeeab6f6f",
   "lastOpenFiles": [
-    "Other/环境工程.md",
     "Other/开源许可.md",
+    "Other/环境工程.md",
     "Tools/Vim 指南.md",
     "Other/Python -m 命令行选项详解.md",
     "Other/nginx 指南.md",
