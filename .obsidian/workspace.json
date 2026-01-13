@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tools/NixOS 指南.md",
+                "file": "Git/提交与历史/stage.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NixOS 指南"
+              "title": "stage"
             }
           }
         ]
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tools/NixOS 指南.md",
+                "file": "Git/提交与历史/stage.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "NixOS 指南 的大纲"
+              "title": "stage 的大纲"
             }
           },
           {
@@ -182,7 +182,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -205,8 +205,10 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "7486ff4d5fe99554",
+  "active": "8b536fcf20839aa1",
   "lastOpenFiles": [
+    "Tools/NixOS 指南.md",
+    "Git/提交与历史/stage.md",
     "CMD/磁盘与文件系统/lsblk.md",
     "Other/每日一读.md",
     "Other/开源许可.md",
@@ -234,8 +236,6 @@
     "用所选项目新建的文件夹",
     "Other/玻璃容器材质.md",
     "Other/编码分类总结.md",
-    "Other/包管理.md",
-    "Other/包管理对比指南.md",
     "未命名.canvas",
     "未命名.base",
     "Excalidraw",
