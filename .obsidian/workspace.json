@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Other/macOS 工具指南.md",
+                "file": "Other/Make 构建工具指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "macOS 工具指南"
+              "title": "Make 构建工具指南"
             }
           }
         ],
@@ -195,13 +195,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Other/macOS 工具指南.md",
+                "file": "Other/Make 构建工具指南.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "macOS 工具指南 的大纲"
+              "title": "Make 构建工具指南 的大纲"
             }
           },
           {
@@ -248,14 +248,16 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "7486ff4d5fe99554",
+  "active": "9a98f2c4be307368",
   "lastOpenFiles": [
-    "Other/macOS_工具指南_organized.md",
+    "Other/Make_构建工具指南_organized.md",
+    "Other/知识图谱.md",
+    "Other/已整理/macOS 工具指南.md",
+    "Other/已整理/macOS 工具指南.md",
     "Other/前端开发指南.md",
     "Other/开源许可.md",
     "Other/环境工程.md",
     "Other/已整理/每日一读.md",
-    "Other/知识图谱.md",
     "Other/阅读源码.md",
     "Linux/Linux 进程状态.md",
     "Linux/Linux 日志.md",
@@ -263,7 +265,6 @@
     "Other/Make 构建工具指南.md",
     "Linux",
     "未命名.md",
-    "Other/macOS 工具指南.md",
     "Tools/Nginx 指南.md",
     "Tools/FFmpeg 指南.md",
     "Tools/Docker 指南.md",
@@ -277,7 +278,6 @@
     "Tools/Openssl 指南.md",
     "Tools/Pandoc 指南.md",
     "Tools/QEMU 指南.md",
-    "Tools/Qpdf 指南.md",
     "Other/已整理",
     "Other/用所选项目新建的文件夹",
     "用所选项目新建的文件夹",
