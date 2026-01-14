@@ -1,16 +1,9 @@
-declare
-===
-
 声明变量，设置或显示变量的值和属性。
-
 ## 语法
-
 ```shell
 declare [-aAfFgilnrtux] [-p] [name[=value] ...]
 ```
-
 ## 主要用途
-
 - 显示包含指定属性的全部变量和值
 - 显示包含指定属性的一到多个变量和值
 - 显示一到多个变量的属性和值
@@ -24,15 +17,12 @@ declare [-aAfFgilnrtux] [-p] [name[=value] ...]
 - 声明全局变量（可选：赋值）
 - 声明变量（可选：赋值、属性）
 - 增加、删除变量的属性（可选：赋值）
-
 ##  选项
-
 ```shell
 -f 将操作或显示限制为函数名及函数定义。
 -F 只显示函数名（调试时附加行号和源文件）。
 -g 在shell函数中使用时创建全局变量；其他情况下忽略。
 -p 显示每个名称的属性和值。
-
 *设置属性的选项:
 -a 创建数组（如果支持）。
 -A 创建关联数组（如果支持）。
@@ -50,24 +40,17 @@ declare [-aAfFgilnrtux] [-p] [name[=value] ...]
 -x 增加导出属性。
 +x 删除导出属性。
 ```
-
 ## 参数
-
 ```shell
 name（可选）：变量名或函数名。
 value（可选）：变量的值。
 ```
-
 ## 返回值
-
 declare 返回true除非你提供了非法选项或赋值错误。具体导致异常的情况请查看**讨论**章节的**关于异常情况**。
-
 ## 例子
-
 ```shell
 # 声明变量，当然也欢迎您在这个网站（感谢本项目发起人 @jaywcjlove）查询linux命令。
 declare reference_website='https://wangchujiang.com/linux-command/'
-
 # 显示所有包含整型属性的变量和值。
 declare -i
 # 定义变量b并赋值为3，具有整型属性。
@@ -84,7 +67,6 @@ declare -l lc_var='ABC'
 # 显示'ABC abc';
 echo "${uc_var} ${lc_var}"
 ```
-
 ```shell
 # 定义函数内的全局变量
 function test(){
@@ -102,7 +84,6 @@ test
 # declare -- a="3"
 # declare -- b="3"
 # declare -- c="3"
-
 # 定义函数外的全局变量
 declare a=3
 b=3
@@ -110,7 +91,6 @@ declare –p a b
 # 返回结果如下。
 # declare -- a="3"
 # declare -- b="3"
-
 # 定义局部变量
 function test2(){
   local -i a=3
@@ -122,10 +102,8 @@ echo "${a} ${b}"
 # 因此，我们日常脚本中最常见的类似于'a=3'实际上是声明并赋值了一个全局变量。
 # 在接下来的 **讨论** 环节会延伸讨论全局和局部变量问题。
 ```
-
 ```shell
 # 注意，不能使用 `+a` 或 `+A` 取消数组，也不能使用 `+r` 取消只读属性。
-
 # 定义只读数组，设置属性的同时定义赋值。
 declare -ar season=('Spring' 'Summer' 'Autumn' 'Winter')
 # 或者这样。
@@ -134,12 +112,10 @@ declare -ar season
 # 显示所有数组。
 declare -a
 # 定义关联数组。
-
 declare -A fruits=(['apple']='red' ['banana']='yellow')
 # 显示所有关联数组。
 declare -A
 ```
-
 ```shell
 # 显示所有变量的属性和值并显示函数的定义，输出很长。
 declare
@@ -148,13 +124,11 @@ declare -p
 # 显示所有全局变量的属性和值。
 declare -g
 ```
-
 ```shell
 # 显示全部函数名和函数定义。
 declare -f
 # 只显示全部函数名。
 declare -F
-
 # 定义两个函数。
 function func_a(){ echo $(date +"%F %T"); }
 function func_b(){ cd /; ls -lh --sort=time; }
@@ -164,10 +138,7 @@ declare -f func_a func_b
 declare -F func_a func_b
 # 最好不要让函数名和变量名相同。
 ```
-
-
 ## 讨论
-
 1. 全局和局部变量
    
    正如上面**例子**指出的情况，我们在日常编写程序的时候需要了解这些概念，在这里
@@ -199,15 +170,11 @@ declare -F func_a func_b
    `typeset`和`declare`命令一样。
    
 3. 关于异常情况
-
    有多种原因导致`declare`失败，关于这些情况可以参考[bash在线文档declare部分\(最新版\)](https://www.gnu.org/software/bash/manual/bash.html#index-declare)，或执行 `info bash`
    查看`declare`部分最后一大串`an attempt is`开头的句子。
    
 ### 注意
-
 1. 该命令是bash内建命令，相关的帮助信息请查看`help`命令。
 2. 导出属性的相关介绍请查看'export'命令。
 3. 只读属性的相关介绍请查看'readonly'命令。
 4. 引用属性的相关介绍请查看'unset'命令的例子部分。
-
-

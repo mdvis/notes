@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tools/NixOS 指南.md",
+                "file": "CMD/进程与任务管理/atop.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NixOS 指南"
+              "title": "atop"
             }
           }
         ]
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tools/NixOS 指南.md",
+                "file": "CMD/进程与任务管理/atop.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "NixOS 指南 的大纲"
+              "title": "atop 的大纲"
             }
           },
           {
@@ -207,33 +207,33 @@
   },
   "active": "06ba0615de2edf17",
   "lastOpenFiles": [
-    "Other/网络与Web开发/Web安全与认证机制.md",
-    "Other/网络与Web开发/浏览器核心机制与性能.md",
-    "Other/网络与Web开发/网络基础与命令工具.md",
-    "CMD/网络与通信/whois.md",
-    "CMD/网络与通信/tracepath.md",
-    "Linux/Linux 日志.md",
-    "Linux/Linux 系统管理指南.md",
-    "Linux/Linux 进程状态.md",
-    "Other/已整理/开源许可.md",
-    "Other/已整理/项目与团队管理.md",
-    "Other/网络基础完全指南.md",
-    "Other/网络与Web开发/RESTful接口设计指北.md",
-    "Other/网络与Web开发/HTTP协议核心手册.md",
-    "Other/网络与Web开发",
-    "Other/浏览器核心机制与性能.md",
-    "Other/Web安全与认证机制.md",
-    "Other/RESTful接口设计指北.md",
-    "Other/HTTP协议核心手册.md",
-    "Other/网络基础与命令工具.md",
-    "Other/知识图谱.md",
-    "Tools/Make 指南.md",
-    "Other/Make 构建工具指南.md",
-    "Other/Make_构建工具指南_organized.md",
-    "Other/已整理/macOS 工具指南.md",
-    "Other/已整理/macOS 工具指南.md",
-    "Other/前端开发指南.md",
-    "Other/开源许可.md",
+    "CMD/开发工具/docker.md",
+    "CMD/软件包管理/apk.md",
+    "CMD/时间与调度/at.md",
+    "CMD/网络工具/finger.md",
+    "CMD/网络与通信/arp.md",
+    "CMD/文本处理/awk.md",
+    "CMD/文件操作与处理/basename.md",
+    "CMD/文件归档与压缩/7z.md",
+    "CMD/系统管理/who.md",
+    "CMD/系统管理/whoami.md",
+    "CMD/系统信息/arch.md",
+    "CMD/系统信息/dmesg.md",
+    "CMD/系统信息/free.md",
+    "CMD/系统信息/hostname.md",
+    "CMD/系统信息/hostnamectl.md",
+    "CMD/系统信息/last.md",
+    "CMD/系统信息/lscpu.md",
+    "CMD/系统信息/lsmod.md",
+    "CMD/系统信息/lsof.md",
+    "CMD/系统信息/lspci.md",
+    "CMD/系统信息/lsusb.md",
+    "CMD/系统信息/nproc.md",
+    "CMD/系统信息/sysctl.md",
+    "CMD/系统信息/uname.md",
+    "CMD/系统信息与配置/cal.md",
+    "CMD/系统信息与配置/date.md",
+    "Other/未整理",
     "Linux",
     "Python",
     "Other/已整理",

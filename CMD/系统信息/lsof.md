@@ -1,22 +1,12 @@
-lsof
-===
-
 显示Linux系统当前已打开的所有文件列表 `lsof -p pid`
-
 ## 补充说明
-
 **lsof命令** 用于查看你进程打开的文件，打开文件的进程，进程打开的端口(TCP、UDP)。找回/恢复删除的文件。是十分方便的系统监视工具，因为lsof命令需要访问核心内存和各种文件，所以需要root用户执行。
-
 在linux环境下，任何事物都以文件的形式存在，通过文件不仅仅可以访问常规数据，还可以访问网络连接和硬件。所以如传输控制协议 (TCP) 和用户数据报协议 (UDP) 套接字等，系统在后台都为该应用程序分配了一个文件描述符，无论这个文件的本质如何，该文件描述符为应用程序与基础操作系统之间的交互提供了通用接口。因为应用程序打开文件的描述符列表提供了大量关于这个应用程序本身的信息，因此通过lsof工具能够查看这个列表对系统监测以及排错将是很有帮助的。
-
 ### 语法
-
 ```shell
 lsof (选项)
 ```
-
 ### 选项
-
 ```shell
 -a：列出打开文件存在的进程；
 -c<进程名>：列出指定进程所打开的文件；
@@ -31,9 +21,7 @@ lsof (选项)
 -h：显示帮助信息；
 -v：显示版本信息
 ```
-
 ### 实例
-
 ```shell
 lsof
 command     PID USER   FD      type             DEVICE     SIZE       NODE NAME
@@ -63,7 +51,6 @@ events/0      6 root  rtd       DIR                8,2     4096          2 /
 events/0      6 root  txt   unknown                                        /proc/6/exe
 events/1      7 root  cwd       DIR                8,2     4096          2 /
 ```
-
 **lsof输出各列信息的意义如下：**
 
 标识 | 说明
@@ -74,7 +61,6 @@ events/1      7 root  cwd       DIR                8,2     4096          2 /
 `USER` | 进程所有者
 `PGID` | 进程所属组
 `FD` | 文件描述符，应用程序通过它识别该文件
-
 文件描述符列表：
 
 标识 | 说明
@@ -96,7 +82,6 @@ events/1      7 root  cwd       DIR                8,2     4096          2 /
 `0`    | 表示标准输出
 `1`    | 表示标准输入
 `2`    | 表示标准错误
-
 一般在标准输出、标准错误、标准输入后还跟着文件状态模式：
 
 标识 | 说明
@@ -106,7 +91,6 @@ events/1      7 root  cwd       DIR                8,2     4096          2 /
 `w` | 表示该文件被打开并处于写入模式
 `空格` | 表示该文件的状态模式为 unknow，且没有锁定
 `-` | 表示该文件的状态模式为 unknow，且被锁定
-
 同时在文件状态模式后面，还跟着相关的锁：
 
 标识 | 说明
@@ -121,8 +105,6 @@ events/1      7 root  cwd       DIR                8,2     4096          2 /
 `x`     | 对于文件部分的SCO OpenServer Xenix锁
 `X`     | 对于整个文件的SCO OpenServer Xenix锁
 `space` | 如果没有锁
-
-
 **文件类型**
 
 标识 | 说明
@@ -138,128 +120,87 @@ events/1      7 root  cwd       DIR                8,2     4096          2 /
 `NODE` | 索引节点（文件在磁盘上的标识）
 `NAME` | 打开文件的确切名称
 `REG` | 常规文件
-
 列出指定进程号所打开的文件:
-
 ```shell
 lsof -p $pid
 ```
-
 获取端口对应的进程ID=>pid
-
 ```shell
 lsof -i:9981 -P -t -sTCP:LISTEN
 ```
-
 列出打开文件的进程:
-
 ```shell
 lsof $filename
 ```
-
 查看端口占用
 ```shell
 lsof -i:$port
 ```
-
 **查看所有打开的文件：**
-
 ```
 lsof
 ```
-
 **查看指定进程打开的文件：**
-
 ```
 lsof -p <PID>
 ```
-
 **查看指定用户打开的文件：**
-
 ```
 lsof -u <username>
 ```
-
 **查看指定文件名相关的进程：**
-
 ```
 lsof <filename>
 ```
-
 **查看网络连接相关的进程：**
-
 ```
 lsof -i
 ```
-
 **查看指定端口相关的进程：**
-
 ```
 lsof -i :<port>
 ```
-
 **查看正在使用某个目录的进程：**
-
 ```
 lsof +D /path/to/directory
 ```
-
 **查看被删除但仍然被某个进程打开的文件：**
-
 ```
 lsof -u +L1
 ```
-
 **查看某个文件系统上被打开的文件：**
-
 ```
 lsof /mountpoint
 ```
-
 **以列表形式显示结果：**
-
 ```
 lsof -F
 ```
-
 **显示结果中不包含主机名：**
-
 ```
 lsof -n
 ```
-
 **显示结果中不包含进程路径：**
-
 ```
 lsof -b
 ```
-
 **以逆序显示结果：**
-
 ```
 lsof -r
 ```
-
 **以特定间隔时间循环显示结果：**
-
 ```
 lsof -r <interval>
 ```
-
 **以持续模式显示结果：**
-
 ```
 lsof -t <interval>
 ```
-
-
 ---
-
 title: Lsof  
 date: 2021-02-05 16:12:47  
 background: bg-blue-400  
 tags:
-
 - port
 - processes
 - utility  
@@ -269,22 +210,15 @@ tags:
     This quick reference cheat sheet provides various for using lsof command.  
     plugins:
 - copyCode
-
 ---
-
 ## Getting Started
-
 ### Introduction
-
 **lsof** meaning `L`i`S`t `O`pen `F`iles is used to find out which files are open by which process
-
 ```
 $ lsof
 $ sudo lsof -u root
 ```
-
 ### Port-specific
-
 ```
 $ lsof -i :8080
 $ lsof -i :80 -i :22
@@ -293,9 +227,7 @@ $ lsof -i TCP:1-1024
 $ lsof -i UDP
 $ lsof -i @192.168.1.5
 ```
-
 ### Process-specific
-
 ```
 $ lsof -c mysql
 $ lsof -c java
@@ -303,44 +235,32 @@ $ lsof -c ssh
 $ lsof -c nginx
 $ lsof -c ssh -c httpd
 ```
-
 ### User-specific
-
 ```
 $ lsof -u www-data
 $ lsof -u www-data -u ubuntu
 $ lsof -i -u ^root # Except certain user
 ```
-
 ### Network-specific
-
 ```
 $ lsof -i 4   # IPv4 only
 $ lsof -i 6   # IPv6 only
 ```
-
 ### PID-specific
-
 ```
 $ lsof -p 1753
 $ lsof -p ^3  # Except certain pids
 ```
-
 ### Filename-specific
-
 ```
 $ lsof /var/log/messages
 $ lsof /etc/passwd
 ```
-
 ### Directory-specific
-
 ```
 $ lsof +D /var/log # Within a directory
 ```
-
 ### Kill
-
 ```
 $ kill -9 `lsof -t -u apache`
 $ kill -9 $(lsof -t -i :8080)

@@ -1,20 +1,11 @@
-lscpu
-===
-
 显示有关CPU架构的信息
-
 ## 补充说明
-
 **lscpu命令** 是显示有关CPU架构的信息。
-
 ###  语法
-
 ```shell
 lscpu [选项]
 ```
-
 ###  选项
-
 ```shell
  -a, --all               # 打印在线和离线CPU（默认为-e）
  -b, --online            # 仅打印在线CPU（-p的默认值）
@@ -23,13 +14,10 @@ lscpu [选项]
  -p, --parse[=<list>]    # 打印出可解析的格式
  -s, --sysroot <dir>     # 将指定的目录用作系统根目录
  -x, --hex               # 打印十六进制掩码，而不是CPU列表
-
  -h, --help     # 显示此帮助并退出
  -V, --version  # 输出版本信息并退出
 ```
-
 ###  参数
-
 ```shell
 可用列：
            CPU  逻辑CPU编号
@@ -43,9 +31,7 @@ lscpu [选项]
     CONFIGURED  显示管理程序是否分配了CPU
         ONLINE  显示Linux是否正在使用CPU
 ```
-
 ### 例子
-
 ```shell
 [root@localhost ~]# lscpu
 Architecture:          x86_64
@@ -84,4 +70,3 @@ CPU NODE SOCKET CORE L1d:L1i:L2:L3 ONLINE MAXMHZ    MINMHZ
 6   0    0      2    2:2:2:0       是     3600.0000 800.0000
 7   0    0      3    3:3:3:0       是     3600.0000 800.0000
 ```
-

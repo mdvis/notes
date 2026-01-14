@@ -29,7 +29,6 @@ set(选项)(参数)
 ### **1. 基础功能**
 #### **查看所有选项状态**
 单独执行 `set -o`（不带参数）会列出所有可用的 Shell 选项及其当前状态（`on` 或 `off`）：
-
 ```bash
 $ set -o
 allexport       off
@@ -37,31 +36,23 @@ braceexpand     on
 errexit         off
 ...（其他选项）
 ```
-
 输出示例：
 - **选项名称**（如 `errexit`、`nounset`）对应长格式选项。
 - 状态 `on` 表示启用，`off` 表示禁用。
-
 ---
-
 #### **启用/禁用选项**
 `-o` 后跟选项名称，用于控制选项的开关：
 - **启用选项**：`set -o <option_name>`
 - **禁用选项**：`set +o <option_name>`
-
 ```bash
 # 启用错误退出（等价于 set -e）
 set -o errexit
-
 # 禁用通配符扩展（等价于 set -f）
 set -o noglob
-
 # 关闭错误退出（等价于 set +e）
 set +o errexit
 ```
-
 ---
-
 ### **2. 常见选项详解**
 以下是一些高频使用的 `-o` 选项及其作用：
 
@@ -76,9 +67,7 @@ set +o errexit
 | `noexec`           | `-n`   | 仅检查脚本语法，不执行命令。                                           |
 | `verbose`          | `-v`   | 打印 Shell 读取的原始输入行（不展开变量）。                             |
 | `monitor`          | `-m`   | 启用作业控制（允许后台任务管理，如 `fg`/`bg`）。                        |
-
 ---
-
 ### **3. 特殊用法**
 #### **动态生成选项配置**
 `-o` 可与变量结合，动态控制选项：
@@ -87,36 +76,28 @@ set +o errexit
 DEBUG=true
 [ "$DEBUG" = true ] && set -o xtrace
 ```
-
 #### **保存和恢复选项状态**
 通过 `$-` 变量保存当前选项组合，之后恢复：
 ```bash
 # 保存当前选项
 original_flags=$-
-
 # 修改选项（例如启用 xtrace）
 set -o xtrace
-
 # 恢复原始选项
 set -$- $original_flags
 ```
-
 ---
-
 ### **4. 与短格式选项的关系**
 `-o` 的长格式选项与短格式选项一一对应，例如：
 - `set -o errexit` ⇨ `set -e`
 - `set -o nounset` ⇨ `set -u`
 - `set -o xtrace`  ⇨ `set -x`
-
 但部分选项**只有长格式**（如 `pipefail`），需通过 `-o` 启用：
 ```bash
 # 必须使用长格式启用 pipefail
 set -o pipefail
 ```
-
 ---
-
 ### **5. 实际应用场景**
 #### **提升脚本健壮性**
 ```bash
@@ -125,22 +106,18 @@ set -o errexit   # 任何命令失败即终止
 set -o nounset   # 使用未定义变量时报错
 set -o pipefail  # 管道中任意命令失败则终止
 ```
-
 #### **调试脚本**
 ```bash
 # 启用详细调试输出
 set -o xtrace -o verbose
 ```
-
 #### **避免文件覆盖**
 ```bash
 set -o noclobber
 echo "text" > file.txt    # 若 file.txt 存在则报错
 echo "text" >| file.txt   # 强制覆盖
 ```
-
 ---
-
 ### **6. 注意事项**
 1. **作用范围**：`set -o` 的修改仅对当前 Shell 或脚本生效。
 2. **兼容性**：不同 Shell（如 Bash、Zsh、Dash）支持的选项可能略有不同，建议通过 `man set` 确认。
