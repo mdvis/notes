@@ -1,23 +1,15 @@
-gpg
-===
-
 可用于签名、检查、加密或解密的工具
-
 ### 支持算法:
-
 Pubkey: `RSA`, `ELG`, `DSA`, `ECDH`, `ECDSA`, `EDDSA`
 Cipher: `IDEA`, `3DES`, `CAST5`, `BLOWFISH`, `AES`, `AES192`, `AES256`, `TWOFISH`,
         `CAMELLIA128`, `CAMELLIA192`, `CAMELLIA256`
 Hash: `SHA1`, `RIPEMD160`, `SHA256`, `SHA384`, `SHA512`, `SHA224`
 Compression: `Uncompressed`, `ZIP`, `ZLIB`, `BZIP2`
-
 ### 语法
 ```shell
 gpg [选项] [文件...]
 ```
-
 ### 参数:
-
 ```shell
  -s, --sign                  签名
      --clear-sign            生成明文签名
@@ -61,9 +53,7 @@ gpg [选项] [文件...]
      --server                以服务器模式运行
      --tofu-policy VALUE     为密钥设置TOFU策略
 ```
-
 ### 选项:
-
 ```shell
  -a, --armor                 指定ascii格式的输出
  -r, --recipient USER-ID     对特定用户ID的加密
@@ -76,9 +66,7 @@ gpg [选项] [文件...]
  -i, --interactive           在覆盖前提示
      --openpgp               使用严格的OpenPGP行为
 ```
-
 ### 示例:
-
 ```shell
  -se -r Bob [file]          为用户Bob签名并加密
  --clear-sign [file]        生成明文签名

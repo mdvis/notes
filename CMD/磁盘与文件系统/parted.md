@@ -1,45 +1,27 @@
-parted
-===
-
 磁盘分区和分区大小调整工具
-
 ## 补充说明
-
 **parted命令** 是由GNU组织开发的一款功能强大的磁盘分区和分区大小调整工具，与fdisk不同，它支持调整分区的大小。作为一种设计用于Linux的工具，它没有构建成处理与fdisk关联的多种分区类型，但是，它可以处理最常见的分区格式，包括：ext2、ext3、fat16、fat32、NTFS、ReiserFS、JFS、XFS、UFS、HFS以及Linux交换分区。
-
 ###  语法
-
 ```shell
 parted(选项)(参数)
 ```
-
 ###  选项
-
 ```shell
 -h：显示帮助信息；
 -i：交互式模式；
 -s：脚本模式，不提示用户；
 -v：显示版本号。
 ```
-
 ###  参数
-
 *   设备：指定要分区的硬盘所对应的设备文件；
 *   命令：要执行的parted命令。
-
 ###  实例
-
 从串行技术出现以来，越来越多用户选择使用大容量的SATA硬盘创建磁盘阵列；特别是MD1000/MD3000，很轻易就突破2T的LUN，故在此给大家一些指引。
-
 红帽企业 Linux 4 Update 4供对大于 2 terabytes（TB）的磁盘设备的支持。
-
 请参考以下操作步骤：
-
 注：
-
 *   绿色代表你需要使用的命令。
 *   红色代表你需要注意到的输出信息，在后续需要使用。
-
 ```shell
 [root@localhost ~]# fdisk -l
 Disk /dev/sda: 35.8 GB, 35862976512 bytes
@@ -54,7 +36,6 @@ Disk /dev/sdb: 2147 MB, 2147483648 bytes
 Units = cylinders of 16065 * 512 = 8225280 bytes
 Disk /dev/sdb doesn't contain a valid partition table
 ```
-
 ```shell
 [root@localhost ~]# parted /dev/sdb
 GNU Parted Copyright (C) 1998 - 2004 free Software Foundation, Inc.
@@ -76,9 +57,7 @@ Minor   起始点       终止点 文件系统   名称                 标志
 1          0.017   2047.983
 (parted)quit
 ```
-
 如果必要，不要忘记更新`/etc/fstab`。
-
 ```shell
 [root@localhost ~]# fdisk -l
 Disk /dev/sda: 35.8 GB, 35862976512 bytes
@@ -89,7 +68,6 @@ Units = cylinders of 16065 * 512 = 8225280 bytes
 /dev/sda2              14         144     1052257+  82  Linux swap
 /dev/sda3             145        4360    33865020   83  Linux
 WARNING: GPT (GUID Partition Table) detected on '/dev/sdb'! The util fdisk doesn't support GPT. Use GNU Parted.
-
 Disk /dev/sdb: 2147 MB, 2147483648 bytes
 255 heads, 63 sectors/track, 261 cylinders
 Units = cylinders of 16065 * 512 = 8225280 bytes
@@ -100,7 +78,6 @@ Partition 1 has different physical/logical beginnings (non-Linux?):
 Partition 1 has different physical/logical endings:
      phys=(1023, 254, 63) logical=(261, 21, 16)
 ```
-
 ```shell
 [root@localhost ~]# mkfs.ext3 /dev/sdb1
 mke2fs 1.35 (28-Feb-2004)
@@ -123,7 +100,6 @@ Writing superblocks and filesystem accounting information: done
 This filesystem will be automatically checked every 28 mounts or
 180 days, whichever comes first.  Use tune2fs -c or -i to override.
 ```
-
 ```shell
 [root@localhost ~]# mount /dev/sdb1 /mnt
 [root@localhost ~]# df -h
@@ -133,5 +109,3 @@ Filesystem            容量  已用 可用 已用% 挂载点
 none                  252M     0  252M   0% /dev/shm
 /dev/sdb1             2.0G   36M  1.9G   2% /mnt
 ```
-
-

@@ -1,25 +1,15 @@
-mount
-===
-
 用于挂载Linux系统外的文件
-
 ## 补充说明
-
 **mount命令** Linux mount命令是经常会使用到的命令，它用于挂载Linux系统外的文件。
-
 如果通过webdav协议挂载网络磁盘，需要运行指令`apt install davfs2`安装必要的组件
-
 ###  语法
-
 ```shell
 mount [-hV]
 mount -a [-fFnrsvw] [-t vfstype]
 mount [-fnrsvw] [-o options [,...]] device | dir
 mount [-fnrsvw] [-t vfstype] [-o options] device dir
 ```
-
 ###  选项
-
 ```shell
 -V：显示程序版本
 -h：显示辅助讯息
@@ -46,39 +36,27 @@ mount [-fnrsvw] [-t vfstype] [-o options] device dir
 -o rw：用可读写模式挂上。
 -o loop=：使用 loop 模式用来将一个档案当成硬盘分割挂上系统。
 ```
-
 ###  实例1
-
 将 `/dev/hda1` 挂在 `/mnt` 之下。
-
 ```shell
 mount /dev/hda1 /mnt
 ```
-
 将 `/dev/hda1` 用唯读模式挂在 `/mnt` 之下。
-
 ```shell
 mount -o ro /dev/hda1 /mnt
 ```
-
 将 `/tmp/image.iso` 这个光碟的 `image` 档使用 `loop` 模式挂在 `/mnt/cdrom` 之下。用这种方法可以将一般网络上可以找到的 `Linux` 光碟 ISO 档在不烧录成光碟的情况下检视其内容。
-
 ```shell
 mount -o loop /tmp/image.iso /mnt/cdrom
 ```
-
 ### 实例2
 通过 webdav 协议挂载网络硬盘
-
 将`https://your.webdav.link.here`的网络存储以网络磁盘的形式挂载到系统路径`/path/to/mount`
-
 ```shell
 mount -t davfs https://your.webdav.link.here /path/to/mount
 ```
-
 ### 实例3 
 挂载 Android 系统 system 分区到 `/dev/loopX`，在知道文件格式的情况下，可以用 -t 来指定文件格式，比如 ext4。
-
 ```shell
 mount -t ext4 /dev/loopX /mnt/system
 ```

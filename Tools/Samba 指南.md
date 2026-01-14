@@ -1,5 +1,3 @@
-# 🧩 一、什么是 Samba？
-
 **Samba** 是 Linux/Unix 系统实现 **SMB（Server Message Block）协议** 的软件，用来：
 
 * 让 Linux 与 Windows **互相共享文件**
@@ -11,7 +9,7 @@
 
 ---
 
-# 🧰 二、Samba 在系统中的主要组件
+## 二、Samba 在系统中的主要组件
 
 | 组件            | 作用                  |
 | ------------- | ------------------- |
@@ -20,19 +18,16 @@
 | **testparm**  | 检查配置文件语法            |
 | **smbclient** | 命令行方式访问 SMB 共享      |
 | **pdbedit**   | Samba 用户管理          |
+## 三、安装 Samba
 
----
-
-# 🛠 三、安装 Samba
-
-## 1. 在 Debian/Ubuntu 系列
+### 1. 在 Debian/Ubuntu 系列
 
 ```bash
 sudo apt update
 sudo apt install samba samba-common
 ```
 
-## 2. 在 CentOS/Rocky/RedHat
+### 2. 在 CentOS/Rocky/RedHat
 
 ```bash
 sudo yum install samba samba-common samba-client
@@ -44,9 +39,7 @@ sudo yum install samba samba-common samba-client
 /etc/samba/smb.conf
 ```
 
----
-
-# 🏗 四、基本配置 smb.conf
+## 四、基本配置 smb.conf
 
 编辑配置文件：
 
@@ -69,9 +62,7 @@ sudo nano /etc/samba/smb.conf
 * **security = user**：使用账号密码访问（推荐）
 * **map to guest = bad user**：无效用户自动转为 guest（可选）
 
----
-
-# 📁 五、创建共享目录
+## 五、创建共享目录
 
 下面以 `/srv/share` 为例。
 
@@ -99,7 +90,7 @@ sudo chmod -R 777 /srv/share   # 测试阶段先给全权限
 
 ---
 
-# 👤 六、Samba 用户管理（密码访问方式）
+## 六、Samba 用户管理（密码访问方式）
 
 如果你想用账号/密码访问 Samba：
 
@@ -138,9 +129,7 @@ sudo chown -R smbuser:smbuser /srv/share
    browseable = yes
 ```
 
----
-
-# ▶ 七、重启 Samba 服务
+## 七、重启 Samba 服务
 
 修改配置后必须重启：
 
@@ -155,9 +144,7 @@ sudo systemctl enable smbd
 sudo systemctl status smbd
 ```
 
----
-
-# 🖥 八、从 Windows 连接 Samba
+## 八、从 Windows 连接 Samba
 
 在 Windows 资源管理器地址栏输入：
 
@@ -181,10 +168,7 @@ sudo systemctl status smbd
 
 * 用户名：smbuser
 * 密码：你设置的 Samba 密码
-
----
-
-# 🐧 九、从 Linux 连接 Samba
+## 九、从 Linux 连接 Samba
 
 ## 1. 使用 smbclient（类似 FTP）
 
@@ -216,9 +200,7 @@ sudo mount -t cifs //192.168.1.10/share /mnt/smb -o username=smbuser,password=�
 sudo umount /mnt/smb
 ```
 
----
-
-# 📌 十、常用 Samba 命令（最常用的都在这里）
+## 十、常用 Samba 命令（最常用的都在这里）
 
 ### 1. 检查配置语法：
 
@@ -254,7 +236,7 @@ sudo systemctl restart smbd
 
 ---
 
-# 🧯 十一、常见问题与解决方法
+## 十一、常见问题与解决方法
 
 ### ❗ Windows 访问时提示 “无法访问”
 
@@ -305,7 +287,7 @@ path = /srv/share
 
 ---
 
-# 📚 十二、示例 smb.conf（完整示例）
+## 十二、示例 smb.conf（完整示例）
 
 适合新手复制使用：
 
@@ -329,5 +311,3 @@ path = /srv/share
    read only = no
    browseable = yes
 ```
-
----
