@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Other/Make 构建工具指南.md",
+                "file": "Linux/Linux 进程状态.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Make 构建工具指南"
+              "title": "Linux 进程状态"
             }
           },
           {
@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Other/Make 构建工具指南.md",
+                "file": "Other/网络基础完全指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Make 构建工具指南"
+              "title": "网络基础完全指南"
             }
           }
         ],
@@ -195,13 +195,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Other/Make 构建工具指南.md",
+                "file": "Other/网络基础完全指南.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Make 构建工具指南 的大纲"
+              "title": "网络基础完全指南 的大纲"
             }
           },
           {
@@ -250,8 +250,13 @@
   },
   "active": "9a98f2c4be307368",
   "lastOpenFiles": [
-    "Other/Make_构建工具指南_organized.md",
+    "Other/HTTP协议核心手册.md",
+    "Other/网络基础与命令工具.md",
+    "Other/已整理/项目与团队管理.md",
     "Other/知识图谱.md",
+    "Tools/Make 指南.md",
+    "Other/Make 构建工具指南.md",
+    "Other/Make_构建工具指南_organized.md",
     "Other/已整理/macOS 工具指南.md",
     "Other/已整理/macOS 工具指南.md",
     "Other/前端开发指南.md",
@@ -262,7 +267,6 @@
     "Linux/Linux 进程状态.md",
     "Linux/Linux 日志.md",
     "Linux/Linux 系统管理指南.md",
-    "Other/Make 构建工具指南.md",
     "Linux",
     "未命名.md",
     "Tools/Nginx 指南.md",
@@ -274,10 +278,6 @@
     "Tools/Shell 指南.md",
     "Tools/GnuPG 指南.md",
     "Tools/ImageMagick 指南.md",
-    "Tools/NixOS 指南.md",
-    "Tools/Openssl 指南.md",
-    "Tools/Pandoc 指南.md",
-    "Tools/QEMU 指南.md",
     "Other/已整理",
     "Other/用所选项目新建的文件夹",
     "用所选项目新建的文件夹",
