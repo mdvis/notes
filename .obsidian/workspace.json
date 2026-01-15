@@ -8,35 +8,36 @@
         "type": "tabs",
         "children": [
           {
-            "id": "26e6e800e78abbff",
+            "id": "1adacd2372610d65",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CMD/系统管理/sudo.md",
+                "file": "未命名.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "sudo"
-            }
-          },
-          {
-            "id": "7a0407e5deee9510",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tools/NixOS 指南.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "NixOS 指南"
+              "title": "未命名"
             }
           }
-        ],
-        "currentTab": 1
+        ]
+      },
+      {
+        "id": "750484a16ba335bc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "136e2b3b528b52b2",
+            "type": "leaf",
+            "state": {
+              "type": "mindmap",
+              "state": {},
+              "icon": "dot-network",
+              "title": "Mind Map of 未命名"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -220,10 +221,13 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "7a0407e5deee9510",
+  "active": "1adacd2372610d65",
   "lastOpenFiles": [
-    "CMD/系统管理/sudo.md",
     "Tools/NixOS 指南.md",
+    "未命名.md",
+    "未命名.base",
+    "未命名 1.md",
+    "CMD/系统管理/sudo.md",
     "CMD/系统管理/su.md",
     "CMD/用户与权限/usermod.md",
     "CMD/进程与任务管理/atop.md",
@@ -245,9 +249,6 @@
     "CMD/系统信息/last.md",
     "CMD/系统信息/lscpu.md",
     "CMD/系统信息/lsmod.md",
-    "CMD/系统信息/lsof.md",
-    "CMD/系统信息/lspci.md",
-    "CMD/系统信息/lsusb.md",
     "Other/未整理",
     "Linux",
     "Python",
@@ -255,7 +256,6 @@
     "Other/用所选项目新建的文件夹",
     "用所选项目新建的文件夹",
     "未命名.canvas",
-    "未命名.base",
     "Excalidraw",
     "Java",
     "Tools",
