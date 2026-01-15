@@ -11,12 +11,14 @@
             "id": "26e6e800e78abbff",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.11.4"
+                "file": "CMD/系统管理/sudo.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.11.4"
+              "icon": "lucide-file",
+              "title": "sudo"
             }
           }
         ]
@@ -79,7 +81,7 @@
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Bookmarks"
+              "title": "书签"
             }
           }
         ]
@@ -183,7 +185,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -204,6 +207,10 @@
   },
   "active": "26e6e800e78abbff",
   "lastOpenFiles": [
+    "CMD/系统管理/su.md",
+    "CMD/系统管理/sudo.md",
+    "Tools/NixOS 指南.md",
+    "CMD/用户与权限/usermod.md",
     "CMD/进程与任务管理/atop.md",
     "CMD/开发工具/docker.md",
     "CMD/软件包管理/apk.md",
@@ -226,10 +233,6 @@
     "CMD/系统信息/lsof.md",
     "CMD/系统信息/lspci.md",
     "CMD/系统信息/lsusb.md",
-    "CMD/系统信息/nproc.md",
-    "CMD/系统信息/sysctl.md",
-    "CMD/系统信息/uname.md",
-    "CMD/系统信息与配置/cal.md",
     "Other/未整理",
     "Linux",
     "Python",

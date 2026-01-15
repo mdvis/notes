@@ -46,33 +46,10 @@ Nix 是一个革命性的包管理器和构建系统，采用声明式、可复�
     ```bash
     sudo -i
     ```
-
-2.  **配置代理 (可选)**:
-    如果你处于必须使用代理的网络环境：
-    ```bash
-    export http_proxy=http://127.0.0.1:7890
-    export https_proxy=http://127.0.0.1:7890
-    export all_proxy=socks5://127.0.0.1:7890
-    ```
-
-3.  **配置 Live 环境的镜像源** (解决安装时下载慢的问题):
-    编辑 `/etc/nix/nix.conf`：
-    ```bash
-    nano /etc/nix/nix.conf
-    ```
-    **全部内容替换为：**
+2.  **配置 Live 环境的镜像源** (解决安装时下载慢的问题):
     ```ini
-    experimental-features = nix-command flakes
-    substituters = https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store https://cache.nixos.org
-    trusted-public-keys = mirrors.tuna.tsinghua.edu.cn-1:9y0vJ0Dg4+9oZ5g0hFJqf9N7k1E+P4p8p6b8zL2yY= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
+    nixos-install --option substituters "tsinghua"
     ```
-
-4.  **重启 Nix 守护进程并验证**:
-    ```bash
-    systemctl restart nix-daemon
-    nix-channel --update  # 应该飞快
-    ```
-
 ### 3.2 磁盘分区 (UEFI + GPT)
 
 假设目标磁盘为 `/dev/sda` (请先用 `lsblk` 确认)。
