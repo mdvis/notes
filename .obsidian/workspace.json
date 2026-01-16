@@ -181,12 +181,11 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -205,7 +204,7 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "50de66944ae07c6d",
+  "active": "afa94deef2a0cac1",
   "lastOpenFiles": [
     "NixOS/Nix 语言.md",
     "NixOS/flakes.md",
