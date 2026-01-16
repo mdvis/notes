@@ -120,3 +120,18 @@ in
 	"${x} + ${x} = ${x+x}" # error: cannot coerce an integer to a string
 	"${toString x} + ${toString x} = ${toString(x + x)}"
 ```
+## 函数
+- 参数和函数体由冒号分隔
+- 匿名函数`x:x+1`
+- 匿名函数调用`(x:x+1) 2`
+- 每个函数只能有一个形参，多参用属性集变通实现(只包含属性名，逗号分隔)
+```
+let
+  f = x: x + 1
+in
+  f 2
+```
+
+```
+{x, y}: (3 * x) + (y / 2)
+```
