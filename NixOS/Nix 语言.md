@@ -96,7 +96,7 @@ in
 ## 路径（一种数据类型，不同于字符串）
 - 路径中至少包含一个`/`
 - 路径不能以`/`结尾，如果需要要在`.`后面加`.`
--  支持字符串插值
+-  支持字符串插值 `"${./foo.txt}"`
 ## 检索路径`<>`尖括号语法
 通过系统变量来获取路径的语法，以一对尖括号`<`和`>`包裹内容
 ## 字符串
@@ -212,3 +212,11 @@ pkgs.lib.strings.removePrefix "I" "I see you!"
 a = http://example.org
 b = "http://example.org"
 ```
+## 条件判断
+```
+if <exprCond> then <exprThen> else <exprElse>
+
+if <exprCond> then <exprThen> else if <exprCond> else <exprElse>
+```
+## 循环
+- 没有`while/for`，基于递归的高阶函数
