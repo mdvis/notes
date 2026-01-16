@@ -236,17 +236,28 @@ in
   imports = [
     # 导入模块
   ];
+  
   options = {
     # 声明选项供其他模块设置
-	## myModule 
+	# myModule 模块名字，使用小驼峰
+	# 模块名取决于这里，而不是文件名
     myModule.enable = mkOption {
 		type = types.bool;
 		default = false;
 		description = "描述模块";
     };
   };
-  config = {
+
+  # mkIf 使得后面的选项为 true 时执行
+  config = mkIf config.myModule.enable {
     # 选项激活后进行的动作
+	systemd.services.myService = {
+		wanteedBy = ["multi-user.target"];
+		script = ''
+		  # 服务启动时运行此脚本
+		  each "Hello, NixOS"
+		'';
+	};
   };
 }
 ```
