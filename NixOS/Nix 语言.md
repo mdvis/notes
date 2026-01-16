@@ -136,3 +136,13 @@ in
 {x, y}: (3 * x) + (y / 2)
 ```
 ### 属性默认值
+```
+let
+  greet = { greeting ? "Hello, ", object}:greeting + object + "!";
+in
+{
+	greet {object="world";}
+	greet {greeting = "Welcome, ";object = "my friend" }
+	# Hello, world! 和 Welcome my friend!
+}
+```
