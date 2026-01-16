@@ -16,3 +16,6 @@ nix flake show templates
 
 nix flake init -t templates#full
 ```
+## inputs
+它是一个属性集，定义 flake 所有依赖，依赖被拉取后作为参数传递给 outputs 函数
+## outputs
