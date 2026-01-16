@@ -96,6 +96,7 @@ in
 ## 路径（一种数据类型，不同于字符串）
 - 路径中至少包含一个`/`
 - 路径不能以`/`结尾，如果需要要在`.`后面加`.`
+-  支持字符串插值
 ## 检索路径`<>`尖括号语法
 通过系统变量来获取路径的语法，以一对尖括号`<`和`>`包裹内容
 ## 字符串
@@ -189,3 +190,25 @@ in
 ### 函数库
 - `+`、`-`、`*`、`/`、` == `、`&&`
 - 内建函数可以通过常量 `builtins` 访问
+- import
+- toString
+- map
+- `pksg.lib` 
+
+```
+let 
+	pkgs = import <nixpkgs> {};
+in
+pkgs.lib.strings.toUpper "Have a good day!"
+```
+pkgs 通常被作为参数传递给函数，按约定其指向 nixpkgs 属性集
+```
+{ pkgs, ... }:
+pkgs.lib.strings.removePrefix "I" "I see you!"
+```
+## URL
+```
+# 两种形式均可
+a = http://example.org
+b = "http://example.org"
+```
