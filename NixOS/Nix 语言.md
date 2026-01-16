@@ -220,3 +220,33 @@ if <exprCond> then <exprThen> else if <exprCond> else <exprElse>
 ```
 ## 循环
 - 没有`while/for`，基于递归的高阶函数
+### 递归函数
+```
+let 
+  recurse = n: if n <= 0 then [] else recurse(n - 1) ++ [n];
+in
+  recurse 5
+```
+## 模块
+### 工作原理
+三个组成：导入（imports）、选项（options）、配置（config）
+```
+{ config, pkgs, ... }:
+{
+  imports = [
+    # 导入模块
+  ];
+  options = {
+    # 声明选项供其他模块设置
+	## myModule 
+    myModule.enable = mkOption {
+		type = types.bool;
+		default = false;
+		description = "描述模块";
+    };
+  };
+  config = {
+    # 选项激活后进行的动作
+  };
+}
+```
