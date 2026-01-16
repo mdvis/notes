@@ -99,8 +99,19 @@ in
 通过系统变量来获取路径的语法，以一对尖括号`<`和`>`包裹内容
 ## 字符串
 - `" "` 双引号包裹
-- 插值 `${...}`
+- `'' ''` 两组单引号包裹，多行字符串
+- 插值 `${...}`，其只支持字符串类型的变量
 ```
 let
   name = "Nix";
+in
+  "hello ${name}"
+```
+
+```
+let
+	x = 1;
+in
+	"${x} + ${x} = ${x+x}" # error: cannot coerce an integer to a string
+	"${toString x} + ${toString x} = ${toString(x + x)}"
 ```
