@@ -27,7 +27,7 @@ nix-instantiate --eval --strict *.nix
 	b={
 		c=2;
 	};
-	b.d=3; // 属性访问，赋值取值jy'ke
+	b.d=3; // 属性访问，赋值取值均可
 }
 ```
 #### 递归属性集`rec{}`
@@ -56,4 +56,38 @@ let
 	b=2;
 in
 	a+b
+```
+### with 和 inherit
+with
+```
+let
+	a={x=1;y=2;}
+in
+{
+	R1 = [a.x a.y]
+	R2 = with a;[x y] # [1 2]
+}
+```
+
+```
+let
+	x=0
+	a={x=1;y=2;}
+in
+{
+	R1 = [a.x a.y]
+	# with 表达式的就近性
+	# x 可以直接取到，无需去嵌套中取
+	R2 = with a;[x y] # [0 2]
+}
+```
+inherit
+```
+let
+	a=1;
+	b=2;
+in
+{
+	inherit a b;
+}
 ```
