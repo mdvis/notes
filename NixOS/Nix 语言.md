@@ -146,3 +146,21 @@ in
 	# Hello, world! 和 Welcome my friend!
 }
 ```
+### 额外属性
+```
+let
+  concat2 = {a, b, ...}: a + b
+in
+  concat2 {a=""; b=""; c=""} # 多了c，不会报错
+```
+### 命名属性集
+```
+let
+  a = {a,b}: a+b
+  b = A:A.a + A.b
+  c = {a,...}@A:a+A.b
+in
+  {
+  
+  }
+```
