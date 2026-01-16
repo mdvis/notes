@@ -261,3 +261,6 @@ in
   };
 }
 ```
+引入的模块只有 options 是对外可见的。
+
+模块最常见的输入: config、lib、pkgs、options、specialArgs、utils、modulesPath
