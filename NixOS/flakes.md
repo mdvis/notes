@@ -16,16 +16,28 @@ nix flake show templates
 
 nix flake init -t templates#full
 ```
+
+```
+{
+inputs = {
+	nixpkgs.url = "git+https://mirrors.nju.edu.cn/git/nixpkgs.git?ref=nixos-25.11&shallow=1";
+};
+
+outputs = {self, nixpkgs, ... }@inputs: {
+
+};
+}
+```
 ## inputs
 它是一个属性集，定义 flake 所有依赖，依赖被拉取后作为参数传递给 outputs 函数
 ## outputs
 其为一个以 inputs 依赖项作为参数的函数，返回一个属性集，这个属性集即为该 flake 的构建结果
-### nix packages
+### nix packages: nix 的包，一个个的应用程序
 - `apps.<system>.<name>`
 - `packages.<system>.<name>`
 - `legacyPackages.<system>.<name>`
 
-`nix build .#name`
+`nix build .#name` 来构建某个包
 ### nix helper functions(lib)
 ### nix development environments(devShells)
 ### nixos configurations(`nixosConfigurations.<hostname>`)
