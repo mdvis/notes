@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NixOS/flakes.md",
+                "file": "NixOS/示例.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "flakes"
+              "title": "示例"
             }
           }
         ]
@@ -207,8 +207,9 @@
   },
   "active": "12c3d1bbe7d28068",
   "lastOpenFiles": [
-    "NixOS/NixOS 指南.md",
     "NixOS/flakes.md",
+    "NixOS/示例.md",
+    "NixOS/NixOS 指南.md",
     "Other/macOS 工具指南.md",
     "Tools/Taskwarrior 指南.md",
     "NixOS/Nix 语言.md",
@@ -234,7 +235,6 @@
     "CMD/系统信息/arch.md",
     "CMD/系统信息/dmesg.md",
     "CMD/系统信息/free.md",
-    "CMD/系统信息/hostname.md",
     "Other/未整理",
     "Linux",
     "Python",
