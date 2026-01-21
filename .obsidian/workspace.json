@@ -11,10 +11,14 @@
             "id": "6ee8bdfdb228d628",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "未命名.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "未命名"
             }
           }
         ]
@@ -202,6 +206,7 @@
   },
   "active": "6ee8bdfdb228d628",
   "lastOpenFiles": [
+    "未命名.md",
     "silverblue.md",
     "NixOS/NixOS 指南.md",
     "NixOS/Nix 语言.md",
@@ -227,7 +232,6 @@
     "CMD/grep.md",
     "CMD/wc.md",
     "CMD/xargs.md",
-    "CMD/uniq.md",
     "CMD/Tier4_Others/Specific_Scenario",
     "CMD/Tier4_Others/Shell_Internal",
     "CMD/Tier4_Others/Misc",
