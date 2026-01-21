@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CMD/No.1.md",
+                "file": "Git/Git 指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "No.1"
-            }
-          },
-          {
-            "id": "03d9ca84a4db30dc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CMD/No.2.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "No.2"
+              "title": "Git 指南"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -200,7 +185,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -219,45 +205,45 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "b4055fa59d5ae5ba",
+  "active": "d79e6ccf541904d1",
   "lastOpenFiles": [
-    "CMD/CMD 指南.md",
-    "Git/Git学习建议.md",
-    "CMD/学习指南.md",
-    "vscode shortcut.md",
-    "未命名.md",
-    "CMD/No.2.md",
-    "CMD/No.1.md",
-    "NixOS/示例.md",
+    "Git/worktree.md",
+    "Git/tag.md",
+    "Git/subtree.md",
+    "Git/submodule.md",
+    "Git/status.md",
+    "Git/stash.md",
+    "Git/revert.md",
+    "Git/restore.md",
+    "Git/reset.md",
+    "Git/remote.md",
+    "Git/rebase.md",
+    "Git/push.md",
+    "Git/pull.md",
+    "Git/merge.md",
+    "Git/log.md",
+    "Git/init.md",
+    "Git/grep.md",
+    "Git/fetch.md",
+    "Git/diff.md",
+    "Git/config.md",
+    "Git/clone.md",
+    "Git/clean.md",
+    "Git/cherry-pick.md",
+    "Git/checkout.md",
+    "Git/branch.md",
+    "Git/bisect.md",
+    "Git/待整理",
+    "Git/用所选项目新建的文件夹",
+    "CMD/待整理",
+    "CMD/用所选项目新建的文件夹",
     "未命名",
-    "NixOS/flakes.md",
-    "NixOS/NixOS 指南.md",
-    "NixOS/Nix 语言.md",
-    "Tools/sioyek 指南.md",
-    "Other/macOS 工具指南.md",
-    "Tools/Taskwarrior 指南.md",
     "NixOS",
-    "Tools/Nginx 指南.md",
     "未命名.base",
-    "CMD/系统管理/sudo.md",
-    "CMD/系统管理/su.md",
-    "CMD/用户与权限/usermod.md",
-    "CMD/进程与任务管理/atop.md",
-    "CMD/开发工具/docker.md",
-    "CMD/软件包管理/apk.md",
-    "CMD/时间与调度/at.md",
-    "CMD/网络工具/finger.md",
-    "CMD/网络与通信/arp.md",
-    "CMD/文本处理/awk.md",
-    "CMD/文件操作与处理/basename.md",
     "Other/未整理",
     "Linux",
     "Python",
-    "Other/已整理",
-    "Other/用所选项目新建的文件夹",
-    "用所选项目新建的文件夹",
     "未命名.canvas",
-    "Excalidraw",
     "Demos/canvas-demo.canvas",
     "文档/一个月最多可瘦十斤.png",
     "canvas-demo.canvas",
