@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "788a71ef70c180b1",
+        "id": "954b67daae1e79f2",
         "type": "tabs",
         "children": [
           {
-            "id": "d79e6ccf541904d1",
+            "id": "f1b4e72a6c0ba919",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CMD/CMD 指南.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "CMD 指南"
+              "title": "新标签页"
             }
           }
         ]
@@ -206,34 +202,34 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "d79e6ccf541904d1",
+  "active": "f1b4e72a6c0ba919",
   "lastOpenFiles": [
-    "CMD/xxd.md",
-    "CMD/xrandr.md",
-    "CMD/xinit.md",
-    "CMD/XDG.md",
-    "CMD/whois.md",
-    "CMD/whoami.md",
-    "CMD/who.md",
-    "CMD/which.md",
-    "CMD/whereis.md",
-    "CMD/wget.md",
-    "CMD/wait.md",
-    "CMD/version.md",
-    "CMD/usermod.md",
-    "CMD/userdel.md",
-    "CMD/useradd.md",
-    "CMD/uptime.md",
-    "CMD/unset.md",
-    "CMD/unlink.md",
-    "CMD/uname.md",
-    "CMD/unalias.md",
-    "CMD/umount.md",
-    "CMD/umask.md",
-    "CMD/ulimit.md",
-    "CMD/type.md",
-    "CMD/tty.md",
-    "CMD/tree.md",
+    "CMD/CMD 指南.md",
+    "CMD/待整理/nohup.md",
+    "CMD/待整理/netstat.md",
+    "CMD/待整理/parted.md",
+    "CMD/待整理/passwd.md",
+    "CMD/待整理/route.md",
+    "CMD/待整理/rmdir.md",
+    "CMD/待整理/read.md",
+    "CMD/待整理/pstree.md",
+    "CMD/待整理/pkill.md",
+    "CMD/待整理/pgrep.md",
+    "CMD/待整理/xxd.md",
+    "CMD/待整理/xrandr.md",
+    "CMD/待整理/xinit.md",
+    "CMD/待整理/XDG.md",
+    "CMD/待整理/whois.md",
+    "CMD/待整理/whoami.md",
+    "CMD/待整理/who.md",
+    "CMD/待整理/which.md",
+    "CMD/待整理/whereis.md",
+    "CMD/待整理/wget.md",
+    "CMD/待整理/wait.md",
+    "CMD/待整理/version.md",
+    "CMD/待整理/usermod.md",
+    "CMD/待整理/userdel.md",
+    "CMD/待整理/useradd.md",
     "Git/待整理",
     "Git/用所选项目新建的文件夹",
     "CMD/待整理",
