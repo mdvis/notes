@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "76a8eb8816c40532",
+        "id": "602e2b35090fa7e8",
         "type": "tabs",
         "children": [
           {
-            "id": "c964a1844e7ef75a",
+            "id": "8cc7caf3f0ed8329",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Other/未整理/HTTP协议核心手册.md",
-                "mode": "source",
-                "source": false
+                "file": "未整理/运气表面积公式.png"
               },
-              "icon": "lucide-file",
-              "title": "HTTP协议核心手册"
+              "icon": "lucide-image",
+              "title": "运气表面积公式"
             }
           }
         ]
@@ -152,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Other/未整理/HTTP协议核心手册.md",
+                "file": "未整理/运气表面积公式.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "HTTP协议核心手册 的大纲"
+              "title": "运气表面积公式 的大纲"
             }
           },
           {
@@ -182,7 +180,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -205,34 +203,35 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "c964a1844e7ef75a",
+  "active": "8b536fcf20839aa1",
   "lastOpenFiles": [
-    "Other/未整理/HTTP 接口设计指南.md",
+    "未整理/cc 九条实战技巧.png",
+    "未整理/random-seed.md",
+    "未整理/运气表面积公式.png",
+    "未整理/word.md",
+    "未整理/disk-flags.md",
+    "未整理/learn.md",
+    "未整理/makefile.md",
+    "未整理/个人规划.md",
+    "未整理/5+2 轻断食.md",
+    "未整理/sop 体系.md",
+    "未整理/前端开发指南.md",
+    "未整理/浏览器核心机制与性能.md",
+    "未整理/环境工程.md",
+    "项目与团队管理.md",
+    "Web 安全与认证机制.md",
+    "HTTP 接口设计指南.md",
     "Other/未整理/HTTP协议核心手册.md",
-    "Other/Web 安全与认证机制.md",
     "Linux/linux-commands-guide.md",
     "Other/未整理/网络基础与命令工具.md",
     "Linux/Linux 系统管理指南.md",
-    "Other/未整理/浏览器核心机制与性能.md",
-    "Other/未整理/环境工程.md",
-    "Other/项目与团队管理.md",
-    "Other/每日一读.md",
-    "Other/塑料容器材质.md",
-    "Other/蔬果保存指南.md",
+    "每日一读.md",
+    "塑料容器材质.md",
+    "蔬果保存指南.md",
     "ImageMagick 指南.md",
     "macOS 指南.md",
     "PostgreSQL 指南.md",
     "PostgreSQL/psql.md",
-    "Docker 指南.md",
-    "DB/msql.md",
-    "DB/redis.md",
-    "NixOS/示例.md",
-    "NixOS/Nix 语言.md",
-    "NixOS/flakes.md",
-    "Python 指南.md",
-    "GRUB 指南.md",
-    "Silverblue 指南.md",
-    "NixOS/NixOS 指南.md",
     "CMD/Tier4_Others/Specific_Scenario",
     "CMD/Tier4_Others/Shell_Internal",
     "CMD/Tier4_Others/Misc",
@@ -254,7 +253,6 @@
     "Protocol/HTTP/1_前端HTTP安全标头简介_640.webp",
     "Oth/Other/i3_102820uocpcshfuyf888yr.jpg",
     "Oth/Other/i3_103016y9ieq631zqxdipoo.png",
-    "Oth/Other/i3_103017nc3ztxjpupuukthc.png",
-    "Oth/Other/i3_103019tz822cr0znt03zcr.png"
+    "Oth/Other/i3_103017nc3ztxjpupuukthc.png"
   ]
 }
