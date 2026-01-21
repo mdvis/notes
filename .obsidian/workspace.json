@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d4570575fe1a63f9",
+        "id": "7508c508a243bd75",
         "type": "tabs",
         "children": [
           {
-            "id": "3d439ee7954ed5eb",
+            "id": "fefa43729b8bc05f",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -200,8 +200,12 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "3d439ee7954ed5eb",
+  "active": "fefa43729b8bc05f",
   "lastOpenFiles": [
+    "PROMPT.md",
+    "AGENT.md",
+    "k8s.md",
+    "RLVR.md",
     "未整理/运气表面积公式.png",
     "VSCode 指南.md",
     "未整理/cc 九条实战技巧.png",
@@ -226,9 +230,6 @@
     "每日一读.md",
     "塑料容器材质.md",
     "蔬果保存指南.md",
-    "ImageMagick 指南.md",
-    "macOS 指南.md",
-    "PostgreSQL 指南.md",
     "CMD/Tier4_Others/Specific_Scenario",
     "CMD/Tier4_Others/Shell_Internal",
     "CMD/Tier4_Others/Misc",
