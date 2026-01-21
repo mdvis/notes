@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "7508c508a243bd75",
+        "id": "a104b4ec5fb5dcb9",
         "type": "tabs",
         "children": [
           {
-            "id": "fefa43729b8bc05f",
+            "id": "aba6a8c44f1d297b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "未整理/word.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "word"
+              "title": "新标签页"
             }
           }
         ]
@@ -205,8 +201,10 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "fefa43729b8bc05f",
+  "active": "aba6a8c44f1d297b",
   "lastOpenFiles": [
+    "未整理/word.md",
+    "系统设计 7 原则.md",
     "PROMPT.md",
     "AGENT.md",
     "k8s.md",
@@ -215,7 +213,6 @@
     "VSCode 指南.md",
     "未整理/cc 九条实战技巧.png",
     "未整理/random-seed.md",
-    "未整理/word.md",
     "未整理/disk-flags.md",
     "未整理/learn.md",
     "未整理/makefile.md",
@@ -234,7 +231,6 @@
     "Linux/Linux 系统管理指南.md",
     "每日一读.md",
     "塑料容器材质.md",
-    "蔬果保存指南.md",
     "CMD/Tier4_Others/Specific_Scenario",
     "CMD/Tier4_Others/Shell_Internal",
     "CMD/Tier4_Others/Misc",
