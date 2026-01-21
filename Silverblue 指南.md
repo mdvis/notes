@@ -1,5 +1,3 @@
-### Fedora Silverblue 完整使用流程指南
-
 Fedora Silverblue 是 Fedora 的不可变（immutable）桌面变体，核心系统以原子方式更新，高度稳定且易于回滚。设计理念是：
 
 - **主机系统保持最小化、不可变**：只包含核心组件，避免直接用 `dnf` 安装 RPM 污染系统。
@@ -9,7 +7,7 @@ Fedora Silverblue 是 Fedora 的不可变（immutable）桌面变体，核心系
 
 以下是**从新安装到日常维护的完整使用流程**，按阶段组织，全部基于官方推荐方式（2026 年最新实践基本不变）。
 
-#### 1. 首次启动与基础配置（安装后立即做）
+## 1. 首次启动与基础配置（安装后立即做）
 - **更新系统**（必须第一步）：
   ```bash
   rpm-ostree update
@@ -30,8 +28,8 @@ Fedora Silverblue 是 Fedora 的不可变（immutable）桌面变体，核心系
   flatpak install flathub org.gnome.Extensions  # 或 Extension Manager
   ```
 
-#### 2. 日常应用管理
-##### GUI 应用（推荐全部用 Flatpak）
+## 2. 日常应用管理
+### GUI 应用（推荐全部用 Flatpak）
 - **搜索应用**：
   ```bash
   flatpak search <关键词>
@@ -47,7 +45,7 @@ Fedora Silverblue 是 Fedora 的不可变（immutable）桌面变体，核心系
   flatpak install flathub com.github.tchx84.Flatseal
   ```
 
-##### CLI 与开发工具（推荐 Toolbox 或 Distrobox）
+### CLI 与开发工具（推荐 Toolbox 或 Distrobox）
 **Toolbox**（官方首选，紧密集成 Fedora）：
 - 创建容器（默认与主机同版本）：
   ```bash
@@ -81,7 +79,7 @@ Fedora Silverblue 是 Fedora 的不可变（immutable）桌面变体，核心系
 - 用 Toolbox：最简单、官方推荐、性能最好。
 - 用 Distrobox：需要其他发行版工具链时。
 
-#### 3. 系统更新与维护
+## 3. 系统更新与维护
 - **日常更新**（每周或需要时）：
   ```bash
   rpm-ostree update          # 检查并应用新系统映像
@@ -99,7 +97,7 @@ Fedora Silverblue 是 Fedora 的不可变（immutable）桌面变体，核心系
   rpm-ostree override remove --clean  # 清理 layering（如果用过）
   ```
 
-#### 4. 系统回滚与故障恢复（Silverblue 最大优势）
+## 4. 系统回滚与故障恢复（Silverblue 最大优势）
 - **查看历史部署**：
   ```bash
   rpm-ostree status
@@ -116,7 +114,7 @@ Fedora Silverblue 是 Fedora 的不可变（immutable）桌面变体，核心系
   rpm-ostree rebase fedora:fedora/41/x86_64/silverblue  # 换到特定版本
   ```
 
-#### 5. 高级/可选操作（谨慎使用）
+## 5. 高级/可选操作（谨慎使用）
 - **Layering RPM**（不推荐，只在 Flatpak/Toolbox 无法满足时）：
   ```bash
   rpm-ostree install <package>      # 会创建新部署，重启生效
@@ -134,7 +132,7 @@ Fedora Silverblue 是 Fedora 的不可变（immutable）桌面变体，核心系
 
 - **Podman/Docker**：直接在主机用 Podman（无特权），或在 Toolbox 内用 Docker。
 
-#### 6. 最佳实践总结
+## 6. 最佳实践总结
 - **优先级**：Flatpak > Toolbox/Distrobox > layering RPM（尽量避免）。
 - **数据备份**：用户文件在 `/home`，定期备份到外部或云端。
 - **性能**：Silverblue 启动快、更新原子化，几乎不会因为软件冲突崩溃。
