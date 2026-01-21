@@ -130,6 +130,53 @@ echo ${STR#*/}      # path/to/foo.cpp
 echo ${STR##*/}     # foo.cpp
 echo ${STR/foo/bar} # /path/to/bar.cpp
 ```
+### String case conversion
+```
+STR="hello world"
+echo ${STR^}     # => Hello world
+echo ${STR^^}    # => HELLO WORLD
+echo ${STR,}     # => hello world
+echo ${STR,,}    # => HELLO WORLD
+```
+### String pattern matching
+```
+STR="path/to/file.txt"
+[[ $STR == *.txt ]] && echo "Text file"   # True
+[[ $STR == */* ]]   && echo "Has path"    # True
+[[ $STR == f* ]]    && echo "Starts with f"# True
+```
+### String trimming
+```
+# Remove leading whitespace
+var="   hello   "
+echo "${var#"${var%%[![:space:]]*}"}"  # => hello
+
+# Remove trailing whitespace
+echo "${var%"${var##*[![:space:]]}"}"   # => hello
+
+# Remove both
+trimmed="${var#"${var%%[![:space:]]*}"}"
+trimmed="${trimmed%"${trimmed##*[![:space:]]}"}"
+echo "$trimmed"  # => hello
+```
+### String length
+```
+STR="Hello"
+echo ${#STR}      # => 5
+
+# Array length
+arr=(a b c)
+echo ${#arr[@]}   # => 3
+echo ${#arr}      # => 1 (length of first element)
+```
+### Character class matching
+```
+[[ $STR =~ [a-z] ]] && echo "Contains lowercase"
+[[ $STR =~ [A-Z] ]] && echo "Contains uppercase"
+[[ $STR =~ [0-9] ]] && echo "Contains numbers"
+[[ $STR =~ ^[A-Z] ]] && echo "Starts with uppercase"
+[[ $STR =~ [A-Z]$ ]] && echo "Ends with uppercase"
+```
 ### Slicing
 ```
 name="John"
@@ -441,6 +488,69 @@ cat file.txt | while read line; do
     echo $line
 done
 ```
+## Bash Process Management
+### Process control
+```
+# Run in background
+command &
+
+# Process ID
+echo $!  # PID of last background process
+
+# Wait for process
+wait $PID
+
+# Kill process
+kill $PID           # SIGTERM
+kill -9 $PID        # SIGKILL
+kill -15 $PID       # SIGTERM (default)
+```
+### Job control
+```
+# Suspend current job
+Ctrl+Z
+
+# List jobs
+jobs
+
+# Bring job to foreground
+fg %1
+
+# Send job to background
+bg %1
+```
+### Process substitution
+```
+# Process as file
+diff <(sort file1.txt) <(sort file2.txt)
+
+# Process as array
+files=($(ls))
+```
+### Parallel execution
+```
+# Run commands in parallel
+{
+    command1 &
+    command2 &
+    command3 &
+    wait
+}
+
+# xargs for parallel
+find . -name "*.txt" | xargs -P4 -I{} grep "pattern" {}
+```
+### Signal handling
+```
+trap 'echo "Signal received"' SIGINT SIGTERM
+
+# Custom cleanup function
+cleanup() {
+    echo "Cleaning up..."
+    # Cleanup code here
+}
+trap cleanup EXIT
+```
 ## Bash Functions
 ### Defining functions
 ```
@@ -510,6 +620,90 @@ shopt -s dotglob
 # ('lib/**/*.rb' => 'lib/a/b/c.rb')
 shopt -s globstar
 ```
+## Bash Configuration Files
+### Configuration file order
+```bash
+# Interactive login shells (in order):
+/etc/profile          # System-wide settings
+~/.bash_profile       # User-specific settings (if exists)
+~/.bash_login         # Fallback to ~/.bash_profile
+~/.profile            # Fallback if neither above exist
+
+# Interactive non-login shells:
+/etc/bash.bashrc      # System-wide rc
+~/.bashrc             # User-specific rc
+
+# Non-interactive shells:
+/etc/bash.bashrc      # System-wide rc
+~/.bashrc             # User-specific rc
+```
+### Common .bashrc configurations
+```bash
+# Aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias grep='grep --color=auto'
+
+# Environment variables
+export EDITOR=vim
+export PAGER=less
+export PS1='\u@\h:\w\$ '
+
+# History settings
+export HISTCONTROL=ignoredups:erasedups  # No duplicates
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+shopt -s histappend  # Append to history, don't overwrite
+
+# Better completion
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
+# Colored man pages
+man() {
+    LESS_TERMCAP_md=$'\e[01;31m' \
+    LESS_TERMCAP_me=$'\e[0m' \
+    LESS_TERMCAP_se=$'\e[0m' \
+    LESS_TERMCAP_so=$'\e[01;33m' \
+    LESS_TERMCAP_ue=$'\e[0m' \
+    LESS_TERMCAP_us=$'\e[01;32m' \
+    command man "$@"
+}
+```
+### Shell startup functions
+```bash
+# Function to add to PATH
+add_to_path() {
+    if [[ -d "$1" ]] && [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH="$1${PATH:+:$PATH}"
+    fi
+}
+
+# Function to load completion
+load_completion() {
+    if [[ -f "$1/completion.bash" ]]; then
+        source "$1/completion.bash"
+    fi
+}
+
+# Example usage
+add_to_path "$HOME/.local/bin"
+add_to_path "$HOME/.rbenv/bin"
+load_completion "$HOME/.completions"
+```
+### Shell types
+```bash
+# Check shell type
+echo $0                    # Current shell name
+echo $SHELL                # Default shell
+ps -p $$ -o comm=          # Current shell process name
+
+# Switch shell
+bash -l                    # Start login shell
+bash -c "echo 'non-interactive'"  # Non-interactive
+zsh                        # Switch to zsh (if installed)
+```
 ## Bash History {.cols-2}
 ### Commands
 |Command|Description|
@@ -573,6 +767,47 @@ python hello.py &>/dev/null    # stdout and stderr to (null)
 ```
 python hello.py < foo.txt      # feed foo.txt to stdin for python
 ```
+### Advanced redirection
+```
+# Tee - read from stdin and write to stdout and files
+command | tee output.txt          # stdout to file and screen
+command | tee -a output.txt       # append to file
+command | tee file1.txt file2.txt # write to multiple files
+
+# Redirect only stderr to screen, stdout to file
+command 2>&1 >/dev/null
+
+# Swap stdout and stderr
+command 3>&1 1>&2 2>&3-
+
+# Here documents
+cat <<EOF
+This is a here document
+Multiple lines
+EOF
+
+# Here strings
+cmd <<< "input string"
+
+# Process file line by line
+while IFS= read -r line; do
+    echo "Processing: $line"
+done < input.txt
+```
+### Redirection with file descriptors
+```
+# Save file descriptors
+exec 3>&1  # Save stdout to fd 3
+exec 1>output.txt  # Redirect stdout to file
+echo "This goes to file"  # Goes to output.txt
+exec 1>&3  # Restore stdout
+echo "This goes to screen"  # Goes to screen
+
+# Named pipes
+mkfifo my_pipe
+command1 > my_pipe &
+command2 < my_pipe &
+```
 ### Source relative
 ```
 source "${0%/*}/../share/foo.sh"
@@ -591,6 +826,88 @@ case "$1" in
     echo "Usage: $0 {start|stop|ssh}"
     ;;
 esac
+```
+### Debugging options
+```
+# Enable debugging
+set -x              # Print commands as they are executed
+set -v              # Print shell input lines as they are read
+set -n              # Read commands but don't execute them
+
+# Debug specific function
+debug_function() {
+    local func_name="$1"
+    shift
+    bash -xvc "source '$0'; $func_name $*"
+}
+```
+### Error handling strategies
+```
+# Strict mode (recommended for production)
+set -euo pipefail
+IFS=$'\n\t'
+
+# Custom error handler
+error_handler() {
+    local exit_code=$?
+    local line_number=$1
+    echo "Error on line $line_number with exit code $exit_code" >&2
+    echo "Command failed: $(history 1 | sed -e 's/^[ ]*//;s/[ ]*$//')" >&2
+    exit $exit_code
+}
+trap 'error_handler $LINENO' ERR
+
+# Validate required variables
+check_required_vars() {
+    local var
+    for var in "$@"; do
+        if [[ -z "${!var}" ]]; then
+            echo "Error: Required variable '$var' is not set" >&2
+            exit 1
+        fi
+    done
+}
+
+# Example usage
+check_required_vars DB_HOST DB_USER DB_PASS
+```
+### Logging
+```
+# Simple logging
+log() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" >&2
+}
+
+# Logging with levels
+log_level=INFO
+
+log_with_level() {
+    local level="$1"
+    shift
+    if [[ $level == $log_level ]] || [[ $level == "ERROR" ]]; then
+        echo "[$(date '+%Y-%m-%d %H:%M:%S')] [$level] $*" >&2
+    fi
+}
+
+log_with_level "INFO" "Starting script"
+log_with_level "DEBUG" "Debug information"
+log_with_level "ERROR" "Something went wrong"
+```
+### Assertion
+```
+assert() {
+    local condition="$1"
+    local message="$2"
+    if ! eval "$condition"; then
+        echo "Assertion failed: $message" >&2
+        echo "Condition: $condition" >&2
+        exit 1
+    fi
+}
+
+# Usage
+assert "$count -gt 0" "Count must be positive"
+assert "[[ -f '$file' ]]" "File must exist"
 ```
 ### Trap errors {.col-span-2}
 ```
@@ -716,6 +1033,127 @@ args+=(bar)
 echo "${args[@]}"
 ```
 Put the arguments into an array and then append
+### Practical Shell Tips
+### File operations
+```
+# Safe copy with progress
+cp -v source.txt dest.txt
+
+# Find and delete files older than 30 days
+find /path -name "*.log" -mtime +30 -delete
+
+# Create directory with parent directories
+mkdir -p /path/to/directory
+
+# Create archive with progress
+tar -czf archive.tar.gz --verbose /path/to/directory/
+
+# Show disk usage sorted by size
+du -sh * | sort -rh
+```
+### Text processing
+```
+# Remove duplicate lines, keeping order
+sort -u file.txt > file_unique.txt
+
+# Count lines, words, characters
+wc -l file.txt  # lines
+wc -w file.txt  # words
+wc -c file.txt  # characters
+
+# Extract columns
+cut -d',' -f2,4 data.csv
+
+# Replace text in files
+sed -i 's/old/new/g' file.txt
+
+# Convert text to uppercase
+tr '[:lower:]' '[:upper:]' < input.txt
+```
+### System monitoring
+```
+# Monitor system resources
+top -b -n 1 | head -20
+
+# Show network connections
+netstat -tuln
+
+# Show open files
+lsof -i :8080
+
+# Monitor filesystem usage
+df -h
+
+# Show recent system logs
+tail -f /var/log/syslog
+```
+### Time operations
+```
+# Measure command execution time
+time command
+
+# Sleep with countdown
+for i in {10..1}; do echo -n "$i "; sleep 1; done; echo "GO!"
+
+# Date calculations
+date +%Y%m%d_%H%M%S  # Timestamp format
+
+# Calculate age of file
+file="test.txt"
+if [[ -f $file ]]; then
+    age=$(( $(date +%s) - $(stat -f %m "$file") ))
+    echo "File is $age seconds old"
+fi
+```
+### Quick calculations
+```
+# Convert units
+echo "1024" | numfmt --to=iec       # 1.0K
+echo "1K" | numfmt --from=iec --to=bytes  # 1024
+
+# Calculate percentages
+awk '{printf "%.2f%%\n", $1/$2*100}' <(echo 75) <(echo 100)
+
+# Math operations
+echo "scale=2; 10/3" | bc  # 3.33
+
+# Random number
+echo $((RANDOM % 100 + 1))
+```
+### Conditional shortcuts
+```
+# Check if command exists
+command -v git >/dev/null && echo "Git installed"
+
+# Check if port is open
+nc -z localhost 8080 && echo "Port 8080 is open"
+
+# Check if string contains substring
+[[ "hello world" == *"world"* ]] && echo "Contains"
+
+# Check if array contains element
+arr=(a b c)
+if [[ " ${arr[@]} " =~ " b " ]]; then
+    echo "Array contains b"
+fi
+```
+### Path operations
+```
+# Get absolute path
+realpath relative/path
+
+# Get directory of current script
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Get filename without extension
+filename="archive.tar.gz"
+basename="${filename##*/}"
+echo "${basename%.*}"  # archive.tar
+
+# Join path parts
+printf -v joined "%s/%s" "/path/to" "file.txt"
+echo $joined  # /path/to/file.txt
+```
 ## Also see {.cols-1}
 - [Devhints](https://devhints.io/bash "https://devhints.io/bash") _(devhints.io)_
 - [Bash-hackers wiki](http://wiki.bash-hackers.org/ "http://wiki.bash-hackers.org/") _(bash-hackers.org)_

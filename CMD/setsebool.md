@@ -1,1 +1,0 @@
-setsebool命令是用来修改SElinux策略内各项规则的布尔值。  
