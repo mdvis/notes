@@ -1,4 +1,3 @@
-# HTTP 接口设计指北
 文档主要目的是为大家在设计接口时提供建议，给大家参考 HTTP 或者其他协议/指南已经设计过的内容
 **只是建议，不是必须遵从的要求**
 大家有什么问题想法或者建议欢迎 [创建 Issue](https://github.com/bolasblack/http-api-guide/issues/new) 或者 [提交 Pull Request](https://github.com/bolasblack/http-api-guide/compare/)
