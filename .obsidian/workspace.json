@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "602e2b35090fa7e8",
+        "id": "d4570575fe1a63f9",
         "type": "tabs",
         "children": [
           {
-            "id": "8cc7caf3f0ed8329",
+            "id": "3d439ee7954ed5eb",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "未整理/运气表面积公式.png"
-              },
-              "icon": "lucide-image",
-              "title": "运气表面积公式"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ]
@@ -150,13 +148,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "未整理/运气表面积公式.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "运气表面积公式 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -203,11 +200,12 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "8b536fcf20839aa1",
+  "active": "3d439ee7954ed5eb",
   "lastOpenFiles": [
+    "未整理/运气表面积公式.png",
+    "VSCode 指南.md",
     "未整理/cc 九条实战技巧.png",
     "未整理/random-seed.md",
-    "未整理/运气表面积公式.png",
     "未整理/word.md",
     "未整理/disk-flags.md",
     "未整理/learn.md",
@@ -231,7 +229,6 @@
     "ImageMagick 指南.md",
     "macOS 指南.md",
     "PostgreSQL 指南.md",
-    "PostgreSQL/psql.md",
     "CMD/Tier4_Others/Specific_Scenario",
     "CMD/Tier4_Others/Shell_Internal",
     "CMD/Tier4_Others/Misc",
@@ -252,7 +249,6 @@
     "Protocol/HTTP/2_前端HTTP安全标头简介_640.webp",
     "Protocol/HTTP/1_前端HTTP安全标头简介_640.webp",
     "Oth/Other/i3_102820uocpcshfuyf888yr.jpg",
-    "Oth/Other/i3_103016y9ieq631zqxdipoo.png",
-    "Oth/Other/i3_103017nc3ztxjpupuukthc.png"
+    "Oth/Other/i3_103016y9ieq631zqxdipoo.png"
   ]
 }
