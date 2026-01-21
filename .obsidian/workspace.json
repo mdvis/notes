@@ -204,6 +204,8 @@
   },
   "active": "f1b4e72a6c0ba919",
   "lastOpenFiles": [
+    "CMD/must-know-linux-commands.md",
+    "CMD/开发人员必须掌握的Linux命令.md",
     "CMD/host.md",
     "CMD/firewall-cmd.md",
     "CMD/iptables.md",
@@ -228,8 +230,6 @@
     "CMD/cron.md",
     "CMD/bg.md",
     "CMD/fg.md",
-    "CMD/jobs.md",
-    "CMD/unzip.md",
     "CMD/Tier4_Others/Specific_Scenario",
     "CMD/Tier4_Others/Shell_Internal",
     "CMD/Tier4_Others/Misc",
