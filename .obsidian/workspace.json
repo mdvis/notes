@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a104b4ec5fb5dcb9",
+        "id": "9e8e3f2e7f3f3907",
         "type": "tabs",
         "children": [
           {
-            "id": "aba6a8c44f1d297b",
+            "id": "bb59b9cfb61af9fd",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -201,11 +201,13 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "aba6a8c44f1d297b",
+  "active": "8b536fcf20839aa1",
   "lastOpenFiles": [
+    "PROMPT.md",
+    "LLM.md",
+    "前端监控手册.md",
     "未整理/word.md",
     "系统设计 7 原则.md",
-    "PROMPT.md",
     "AGENT.md",
     "k8s.md",
     "RLVR.md",
@@ -229,8 +231,6 @@
     "Linux/linux-commands-guide.md",
     "Other/未整理/网络基础与命令工具.md",
     "Linux/Linux 系统管理指南.md",
-    "每日一读.md",
-    "塑料容器材质.md",
     "CMD/Tier4_Others/Specific_Scenario",
     "CMD/Tier4_Others/Shell_Internal",
     "CMD/Tier4_Others/Misc",
