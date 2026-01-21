@@ -11,10 +11,14 @@
             "id": "f1b4e72a6c0ba919",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "DDD/10-实践建议.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "10-实践建议"
             }
           }
         ]
@@ -84,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "1d21b8b5aff8b2b8",
@@ -182,8 +185,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -204,6 +206,7 @@
   },
   "active": "f1b4e72a6c0ba919",
   "lastOpenFiles": [
+    "Linux/shell 基础.md",
     "CMD/must-know-linux-commands.md",
     "CMD/开发人员必须掌握的Linux命令.md",
     "CMD/host.md",
@@ -229,7 +232,6 @@
     "CMD/crontab.md",
     "CMD/cron.md",
     "CMD/bg.md",
-    "CMD/fg.md",
     "CMD/Tier4_Others/Specific_Scenario",
     "CMD/Tier4_Others/Shell_Internal",
     "CMD/Tier4_Others/Misc",
