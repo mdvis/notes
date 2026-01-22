@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/git-commands-guide.md",
+                "file": "Git/reset.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "git-commands-guide"
+              "title": "reset"
             }
           }
         ]
@@ -207,6 +207,8 @@
   },
   "active": "bb59b9cfb61af9fd",
   "lastOpenFiles": [
+    "Git/git-commands-guide.md",
+    "Git/reset.md",
     "PROMPT.md",
     "LLM.md",
     "前端监控手册.md",
@@ -233,8 +235,6 @@
     "HTTP 接口设计指南.md",
     "Other/未整理/HTTP协议核心手册.md",
     "Linux/linux-commands-guide.md",
-    "Other/未整理/网络基础与命令工具.md",
-    "Linux/Linux 系统管理指南.md",
     "CMD/Tier4_Others/Specific_Scenario",
     "CMD/Tier4_Others/Shell_Internal",
     "CMD/Tier4_Others/Misc",

@@ -1,0 +1,3 @@
+- `--mixed` 默认选项，移动 HEAD，重置暂存区，内容在工作区（撤销至 add 之前）
+- `--soft` 把 HEAD 指向另一个提交，内容在暂存区（撤销至 add 之后）
+- `--hard` 完全回退，HEAD、Stage、Modify 均还原
