@@ -182,8 +182,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -202,8 +201,9 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "b4055fa59d5ae5ba",
+  "active": "8b536fcf20839aa1",
   "lastOpenFiles": [
+    "NixOS/示例.md",
     "Linux/Linux 日志指南.md",
     "Linux/linux 命令指南.md",
     "Linux/Linux 进程指南.md",
@@ -229,7 +229,6 @@
     "Linux/shell_basic_part3.md",
     "Linux/shell_basic_part2.md",
     "git 命令指南.md",
-    "Git/git 命令指南.md",
     "未整理/运气表面积公式.png",
     "未整理/cc 九条实战技巧.png",
     "CMD/Tier4_Others/Specific_Scenario",
