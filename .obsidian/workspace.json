@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Taskwarrior 指南.md",
+                "file": "NixOS/示例.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Taskwarrior 指南"
+              "title": "示例"
             }
           }
         ]
@@ -208,6 +208,10 @@
   },
   "active": "bb59b9cfb61af9fd",
   "lastOpenFiles": [
+    "NixOS/flakes.md",
+    "NixOS/Nix 语言.md",
+    "NixOS/NixOS 指南.md",
+    "Taskwarrior 指南.md",
     "NixOS/示例.md",
     "Git/reset.md",
     "Git/git-commands-guide.md",
@@ -232,10 +236,6 @@
     "未整理/前端开发指南.md",
     "未整理/浏览器核心机制与性能.md",
     "未整理/环境工程.md",
-    "项目与团队管理.md",
-    "Web 安全与认证机制.md",
-    "HTTP 接口设计指南.md",
-    "Other/未整理/HTTP协议核心手册.md",
     "CMD/Tier4_Others/Specific_Scenario",
     "CMD/Tier4_Others/Shell_Internal",
     "CMD/Tier4_Others/Misc",
