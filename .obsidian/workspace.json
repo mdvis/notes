@@ -206,8 +206,9 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "bb59b9cfb61af9fd",
+  "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
+    "NixOS/指南.md",
     "NixOS/flakes.md",
     "NixOS/Nix 语言.md",
     "NixOS/NixOS 指南.md",
@@ -235,7 +236,6 @@
     "未整理/sop 体系.md",
     "未整理/前端开发指南.md",
     "未整理/浏览器核心机制与性能.md",
-    "未整理/环境工程.md",
     "CMD/Tier4_Others/Specific_Scenario",
     "CMD/Tier4_Others/Shell_Internal",
     "CMD/Tier4_Others/Misc",
