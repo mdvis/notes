@@ -1,12 +1,5 @@
-Would you like me to proceed with implementation based on these assumptions, or would you like to adjust any aspect of the plan?
+# Regarding Your Copilot Access
 
-Do you want me to execute based on these assumptions, or do you want to adjust any aspect of the plan?
-
-implementation 实施 执行 实现
-assumptions 假设 推测
-aspect 方面 特征 外观
-
-## Regarding Your Copilot Access
 ## 关于您的 Copilot 访问权限
 
 **Hello @mdeveis,**
@@ -42,15 +35,15 @@ GitHub 安全团队
 
 ### Key Vocabulary (关键词汇)
 
-1.  **Extend our gratitude**: 表达我们的感谢 (Extend在此处表示给予、致以)
-2.  **Abuse-detection systems**: 滥用检测系统
-3.  **Scripted interactions**: 脚本交互 (指使用程序代码自动执行的操作)
-4.  **Deliberately**: 故意地，蓄意地
-5.  **Strenuous**: 费力的，繁重的 (在此语境下指对服务器造成巨大压力的)
-6.  **Unsupported clients**: 不受支持的客户端
-7.  **Circumvent**: 规避，绕过 (通常指规则或限制)
-8.  **Billing and usage limits**: 计费和使用限制
-9.  **Suspended**: 暂停，中止 (常用于账户或权限)
+1. **Extend our gratitude**: 表达我们的感谢 (Extend在此处表示给予、致以)
+2. **Abuse-detection systems**: 滥用检测系统
+3. **Scripted interactions**: 脚本交互 (指使用程序代码自动执行的操作)
+4. **Deliberately**: 故意地，蓄意地
+5. **Strenuous**: 费力的，繁重的 (在此语境下指对服务器造成巨大压力的)
+6. **Unsupported clients**: 不受支持的客户端
+7. **Circumvent**: 规避，绕过 (通常指规则或限制)
+8. **Billing and usage limits**: 计费和使用限制
+9. **Suspended**: 暂停，中止 (常用于账户或权限)
 10. **Rate limits**: 速率限制 (限制单位时间内请求的次数)
 11. **Excessive automated bulk activity**: 过度的自动化批量活动
 12. **Undue burden**: 不当负担，过重的负担
