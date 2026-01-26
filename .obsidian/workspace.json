@@ -11,10 +11,14 @@
             "id": "bb59b9cfb61af9fd",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "NixOS 指南.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "NixOS 指南"
             }
           }
         ]
@@ -148,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "未整理/word.md",
+                "file": "NixOS 指南.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "word 的大纲"
+              "title": "NixOS 指南 的大纲"
             }
           },
           {
@@ -178,7 +182,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -201,7 +205,7 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "8b536fcf20839aa1",
+  "active": "7486ff4d5fe99554",
   "lastOpenFiles": [
     "NixOS/示例.md",
     "Linux/Linux 日志指南.md",
