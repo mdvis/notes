@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "未整理/知识图谱.md",
+                "file": "DDD 指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "知识图谱"
+              "title": "DDD 指南"
             }
           }
         ]
@@ -205,9 +205,11 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "bb59b9cfb61af9fd",
+  "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
-    "合并文档.md",
+    "DDD 指南.md",
+    "DDD 指南.md",
+    "未整理/知识图谱.md",
     "未整理/learn.md",
     "未整理/cc 九条实战技巧.png",
     "前端开发指南.md",
@@ -232,8 +234,6 @@
     "Linux_信号与进程.md",
     "Linux_错误码详解.md",
     "Linux_安全指南.md",
-    "Linux_Systemd服务管理.md",
-    "Linux_磁盘阵列_RAID.md",
     "未整理/运气表面积公式.png",
     "CMD/Tier4_Others/Specific_Scenario",
     "CMD/Tier4_Others/Shell_Internal",
