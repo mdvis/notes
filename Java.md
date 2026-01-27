@@ -1,4 +1,5 @@
-## 基本类型（8个）
+## 数据类型
+### 基本类型（8个）
 `int/short/long/byte/float/double/char/boolean`
 - 整型
 	1. int           4b    -2,147,483,648 ~ 2,147,483,647

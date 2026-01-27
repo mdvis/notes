@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Make 指南.md",
+                "file": "未整理/知识图谱.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Make 指南"
+              "title": "知识图谱"
             }
           }
         ]
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Make 指南.md",
+                "file": "未整理/知识图谱.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Make 指南 的大纲"
+              "title": "知识图谱 的大纲"
             }
           },
           {
@@ -207,34 +207,33 @@
   },
   "active": "bb59b9cfb61af9fd",
   "lastOpenFiles": [
+    "未整理/learn.md",
+    "未整理/cc 九条实战技巧.png",
+    "前端开发指南.md",
+    "未整理/浏览器核心机制与性能.md",
+    "环境工程.md",
+    "5+2 轻断食.md",
+    "未整理/个人规划.md",
+    "Java.md",
+    "Linux 进程指南.md",
+    "Linux_存储基础.md",
+    "Linux/disk-flags.md",
     "未整理/Regarding Your Copilot Access.md",
+    "Make 指南.md",
     "未整理/makefile.md",
     "NixOS 指南.md",
     "NixOS/示例.md",
-    "Linux/Linux 日志指南.md",
-    "Linux/linux 命令指南.md",
-    "Linux/Linux 进程指南.md",
-    "Linux/Linux_shell.md",
-    "Linux/Linux_区域设置.md",
-    "Linux/Linux_用户权限管理.md",
-    "Linux/Linux_信号与进程.md",
-    "Linux/Linux_错误码详解.md",
-    "Linux/Linux_安全指南.md",
-    "Linux/Linux_Systemd服务管理.md",
-    "Linux/Linux_磁盘阵列_RAID.md",
-    "Linux/Linux_逻辑卷管理_LVM.md",
-    "Linux/Linux_存储基础.md",
-    "Linux/Linux_User_Permissions.md",
-    "Linux/Linux_Locale.md",
-    "Linux/Linux_Signals_Processes.md",
-    "Linux/Linux_Systemd.md",
-    "Linux/Linux_Security.md",
-    "Linux/Linux_Error_Codes.md",
-    "Linux/Linux_RAID.md",
-    "Linux/Linux_LVM.md",
-    "Linux/Linux_Storage_Basics.md",
+    "Linux 日志指南.md",
+    "linux 命令指南.md",
+    "Linux_shell.md",
+    "Linux_区域设置.md",
+    "Linux_用户权限管理.md",
+    "Linux_信号与进程.md",
+    "Linux_错误码详解.md",
+    "Linux_安全指南.md",
+    "Linux_Systemd服务管理.md",
+    "Linux_磁盘阵列_RAID.md",
     "未整理/运气表面积公式.png",
-    "未整理/cc 九条实战技巧.png",
     "CMD/Tier4_Others/Specific_Scenario",
     "CMD/Tier4_Others/Shell_Internal",
     "CMD/Tier4_Others/Misc",
