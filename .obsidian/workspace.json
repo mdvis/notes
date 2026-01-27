@@ -11,12 +11,14 @@
             "id": "bb59b9cfb61af9fd",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "未整理/cc 九条实战技巧.png"
+                "file": "每日一读.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "cc 九条实战技巧"
+              "icon": "lucide-file",
+              "title": "每日一读"
             }
           }
         ]
@@ -150,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "未整理/cc 九条实战技巧.png",
+                "file": "每日一读.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "cc 九条实战技巧 的大纲"
+              "title": "每日一读 的大纲"
             }
           },
           {
@@ -203,15 +205,18 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "bb59b9cfb61af9fd",
+  "active": "8b536fcf20839aa1",
   "lastOpenFiles": [
+    "未整理/Regarding Your Copilot Access.md",
+    "每日一读.md",
+    "设计哲学完全指南.md",
+    "未整理/learn.md",
+    "软件开发日志最佳实践.md",
+    "浏览器核心机制与性能.md",
     "未整理/运气表面积公式.png",
-    "未整理/软件开发日志最佳实践.md",
-    "未整理/浏览器核心机制与性能.md",
+    "未整理/cc 九条实战技巧.png",
     "DDD 指南.md",
     "未整理/知识图谱.md",
-    "未整理/learn.md",
-    "未整理/cc 九条实战技巧.png",
     "前端开发指南.md",
     "环境工程.md",
     "5+2 轻断食.md",
@@ -220,7 +225,6 @@
     "Linux 进程指南.md",
     "Linux_存储基础.md",
     "Linux/disk-flags.md",
-    "未整理/Regarding Your Copilot Access.md",
     "Make 指南.md",
     "未整理/makefile.md",
     "NixOS 指南.md",
@@ -231,7 +235,6 @@
     "Linux_区域设置.md",
     "Linux_用户权限管理.md",
     "Linux_信号与进程.md",
-    "Linux_错误码详解.md",
     "CMD/Tier4_Others/Specific_Scenario",
     "CMD/Tier4_Others/Shell_Internal",
     "CMD/Tier4_Others/Misc",
