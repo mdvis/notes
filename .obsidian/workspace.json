@@ -11,14 +11,12 @@
             "id": "bb59b9cfb61af9fd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "DDD 指南.md",
-                "mode": "source",
-                "source": false
+                "file": "未整理/cc 九条实战技巧.png"
               },
-              "icon": "lucide-file",
-              "title": "DDD 指南"
+              "icon": "lucide-image",
+              "title": "cc 九条实战技巧"
             }
           }
         ]
@@ -152,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "未整理/知识图谱.md",
+                "file": "未整理/cc 九条实战技巧.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "知识图谱 的大纲"
+              "title": "cc 九条实战技巧 的大纲"
             }
           },
           {
@@ -205,15 +203,16 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "b4055fa59d5ae5ba",
+  "active": "bb59b9cfb61af9fd",
   "lastOpenFiles": [
-    "DDD 指南.md",
+    "未整理/运气表面积公式.png",
+    "未整理/软件开发日志最佳实践.md",
+    "未整理/浏览器核心机制与性能.md",
     "DDD 指南.md",
     "未整理/知识图谱.md",
     "未整理/learn.md",
     "未整理/cc 九条实战技巧.png",
     "前端开发指南.md",
-    "未整理/浏览器核心机制与性能.md",
     "环境工程.md",
     "5+2 轻断食.md",
     "未整理/个人规划.md",
@@ -233,8 +232,6 @@
     "Linux_用户权限管理.md",
     "Linux_信号与进程.md",
     "Linux_错误码详解.md",
-    "Linux_安全指南.md",
-    "未整理/运气表面积公式.png",
     "CMD/Tier4_Others/Specific_Scenario",
     "CMD/Tier4_Others/Shell_Internal",
     "CMD/Tier4_Others/Misc",
