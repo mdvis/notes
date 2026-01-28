@@ -128,12 +128,26 @@ NixOS 配置的基础结构：
 1.  **LiveCD 网络优化**:
     ```bash
     sudo -i
+    
     nixos-install --option substituters "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
     ```
 2.  **分区 (UEFI + GPT)**:
-    *   `/dev/sda1` (Boot): FAT32, 512MB, 挂载到 `/mnt/boot`
-    *   `/dev/sda2` (Root): EXT4/Btrfs, 剩余空间, 挂载到 `/mnt`
-    *   生成配置: `nixos-generate-config --root /mnt`
+```
+parted /dev/sda -- mklabel gpt
+parted /dev/sda -- mkpart primary fat32 512MiB 100%
+parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB
+parted /dev/sda -- set 2 esp on
+
+mkfs.fat -F 32 -n boot /dev/sda2
+mkfa.ext4 -L nixos /dev/sda1
+
+mount /dev/sda1 /mnt
+mkdir -p /mnt/boot
+mount /dev/sda2 /mnt/boot
+
+# 生成配置
+nixos-generate-config --root /mnt
+```
 
 ### 3.2 配置文件 (`configuration.nix`)
 编辑 `/mnt/etc/nixos/configuration.nix`，关键是添加国内源：
