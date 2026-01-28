@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7eb04fff78d1323a",
+        "id": "a481852ef2b864d4",
         "type": "tabs",
         "children": [
           {
-            "id": "86d7c7db397f0bbc",
+            "id": "3d0e0b7677d29969",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -200,7 +200,7 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "86d7c7db397f0bbc",
+  "active": "3d0e0b7677d29969",
   "lastOpenFiles": [
     "CLAUDE.md",
     "NixOS 指南.md",
