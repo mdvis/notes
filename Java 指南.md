@@ -1,5 +1,18 @@
 ## 概念
-- 字节码：
+- 字节码：java 编译后的中间代码格式，平台无关，jvm，class 形式存在
+- 机器码：CPU 理解的二进制指令，硬件相关，执行快，不同平台机器码不同
+- 即时编译：将执行最频繁的字节码序列转换成机器码称为即时编译
+- JDK 编写 java 时，使用的程序 java development kit
+- JRE 运行 java 时，使用的程序 java runtime environment
+- SE 标准版 standard editor
+- ME 微型版 micro editor
+- EE 企业版 enterprise editor
+- SJRE server jre
+- openJDK java SE 免费开源实现
+- java FX 图形化界面备选工具包
+- 过时术语 
+	- java2 98-06
+	- sdk software development kit 98-06
 ## 数据类型
 ### 基本类型（8个）
 `int/short/long/byte/float/double/char/boolean`
