@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "68b6db30742a1d5e",
+        "id": "7eb04fff78d1323a",
         "type": "tabs",
         "children": [
           {
-            "id": "d42f7fa885a7f2cf",
+            "id": "86d7c7db397f0bbc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CLAUDE.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "CLAUDE"
+              "title": "新标签页"
             }
           }
         ]
@@ -152,13 +148,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CLAUDE.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "CLAUDE 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -205,10 +200,10 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "d42f7fa885a7f2cf",
+  "active": "86d7c7db397f0bbc",
   "lastOpenFiles": [
-    "NixOS 指南.md",
     "CLAUDE.md",
+    "NixOS 指南.md",
     "LLM/langchain.md",
     "SQL/pgvector.md",
     "LLM",
