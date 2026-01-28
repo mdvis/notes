@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/langchain.md",
+                "file": "CLAUDE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "langchain"
+              "title": "CLAUDE"
             }
           }
         ],
@@ -262,10 +262,10 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "b4055fa59d5ae5ba",
+  "active": "f4c322bc87a7f6ac",
   "lastOpenFiles": [
-    "SQL/pgvector.md",
     "LLM/langchain.md",
+    "SQL/pgvector.md",
     "LLM",
     "Nodejs",
     "Rust",
