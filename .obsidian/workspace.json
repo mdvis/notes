@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM 指南.md",
+                "file": "Java 指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LLM 指南"
+              "title": "Java 指南"
             }
           }
         ],
@@ -222,9 +222,9 @@
   },
   "active": "d00a5837e19922cf",
   "lastOpenFiles": [
+    "LLM 指南.md",
     "区块链指南.md",
     "Linux_shell.md",
-    "LLM 指南.md",
     "RLVR.md",
     "PROMPT.md",
     "AGENT 技术指南.md",

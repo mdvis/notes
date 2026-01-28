@@ -1,3 +1,5 @@
+## 概念
+- 字节码：
 ## 数据类型
 ### 基本类型（8个）
 `int/short/long/byte/float/double/char/boolean`
