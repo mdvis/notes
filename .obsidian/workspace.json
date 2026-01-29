@@ -11,10 +11,14 @@
             "id": "3d0e0b7677d29969",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "5+2 轻断食.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "5+2 轻断食"
             }
           }
         ]
@@ -148,12 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "5+2 轻断食.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "5+2 轻断食 的大纲"
             }
           },
           {
@@ -201,23 +206,24 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "8b536fcf20839aa1",
+  "active": "3d0e0b7677d29969",
   "lastOpenFiles": [
+    "编码分类总结.md",
+    "SQL/SQLite.md",
+    "SQL/Redis.md",
+    "SQL/Pgvector.md",
+    "SQL/MongoDB.md",
+    "SQL/Milvus.md",
+    "LLM/Langchain.md",
     "CLAUDE.md",
     "NixOS 指南.md",
-    "LLM/langchain.md",
-    "SQL/pgvector.md",
     "LLM",
     "Nodejs",
     "Rust",
     "Go",
     "Java",
-    "SQL/milvus.md",
-    "SQL/Redis.md",
     "Shell",
     "Python",
-    "SQL/mongoDB.md",
-    "SQL/SQLite.md",
     "SQL/PostgreSQL.md",
     "SQL/未命名 3.md",
     "SQL/未命名 2.md",
@@ -237,7 +243,6 @@
     "每日一读.md",
     "未整理/Regarding Your Copilot Access.md",
     "设计哲学完全指南.md",
-    "未整理/learn.md",
     "未整理/运气表面积公式.png",
     "未整理/cc 九条实战技巧.png",
     "CMD/Tier4_Others/Specific_Scenario",
