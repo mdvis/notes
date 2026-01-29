@@ -256,6 +256,18 @@ Flake 是 Nix 的现代标准，用于解决可重现性问题。它通过 `flak
 3.  **系统集成类**: `nixosConfigurations` (系统配置), `nixosModules` (复用模块).
 4.  **工程辅助类**: `checks` (测试), `formatter` (格式化), `templates` (模板).
 
+#### pkgs
+- pkgs.mkShell
+	1. 创建临时开发 shell
+	2. 修改当前 shell PATH，需进入环境
+	3. 不生成独立可执行命令
+	4. 用于 `nix develop`，不可用于`nix profile`
+- pkgs.writeShellApplication
+	1. 包装脚本成独立可执行文件
+	2. 仅运行脚本内部
+- pkgs.writeShellScriptBin
+- pkgs.sylinkJoin
+
 ### 5.3 常用操作
 *   **初始化**: `nix flake init -t templates#full`
 *   **查看详情**: `nix flake show`
