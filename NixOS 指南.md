@@ -264,9 +264,36 @@ Flake 是 Nix 的现代标准，用于解决可重现性问题。它通过 `flak
 	4. 用于 `nix develop`，不可用于`nix profile`
 - pkgs.writeShellApplication
 	1. 包装脚本成独立可执行文件
-	2. 仅运行脚本内部
+	2. 仅运行脚本内部 PATH 受影响
+	3. 生成独立运行命令
+	4. 可以用于`nix profile`，打包 CLI 工具/脚本 
 - pkgs.writeShellScriptBin
+	1. 轻量版脚本`$out/bin/xxx`
+	2. 不改变 PATH
+	3. 生成独立命令
+	4. 可用于`nix profile`，简单脚本
 - pkgs.sylinkJoin
+	1. 合并多个包的 bin 成一个打包
+	2. 不改变 PATH
+	3. 暴露多个命令，不生成独立执行脚本
+	4. 用于 `nix profile` ，工具集全局安装
+
+```
+toolList = pkg with; [
+  claude-code
+  gemini
+  codex
+];
+
+# nix profile add .#toolList
+# 所有 toolList 中的命令 symlink 到 ~/.nix-profile/bin
+# 全局可用无需develop
+# 
+packages.toolList = pkgs.symlinkJoin {
+  name = "name";
+  path = toolList;
+}
+```
 
 ### 5.3 常用操作
 *   **初始化**: `nix flake init -t templates#full`
