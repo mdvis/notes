@@ -187,8 +187,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -208,7 +207,7 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "3d0e0b7677d29969",
+  "active": "8b536fcf20839aa1",
   "lastOpenFiles": [
     "5+2 轻断食.md",
     "编码分类总结.md",

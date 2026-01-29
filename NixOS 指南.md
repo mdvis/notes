@@ -288,7 +288,7 @@ toolList = pkg with; [
 # nix profile add .#toolList
 # 所有 toolList 中的命令 symlink 到 ~/.nix-profile/bin
 # 全局可用无需develop
-# 
+# 随时 profile remove 或 rollback
 packages.toolList = pkgs.symlinkJoin {
   name = "name";
   path = toolList;
