@@ -177,7 +177,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -201,7 +201,7 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "3d0e0b7677d29969",
+  "active": "8b536fcf20839aa1",
   "lastOpenFiles": [
     "CLAUDE.md",
     "NixOS 指南.md",
