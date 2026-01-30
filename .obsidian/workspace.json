@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NixOS 指南.md",
+                "file": "AGENT 技术指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NixOS 指南"
+              "title": "AGENT 技术指南"
             }
           }
         ]
@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "1d21b8b5aff8b2b8",
@@ -207,8 +206,9 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "8b536fcf20839aa1",
+  "active": "3d0e0b7677d29969",
   "lastOpenFiles": [
+    "NixOS 指南.md",
     "5+2 轻断食.md",
     "编码分类总结.md",
     "SQL/SQLite.md",
@@ -218,7 +218,6 @@
     "SQL/Milvus.md",
     "LLM/Langchain.md",
     "CLAUDE.md",
-    "NixOS 指南.md",
     "LLM",
     "Nodejs",
     "Rust",
