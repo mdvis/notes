@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AGENT 技术指南.md",
+                "file": "Systemd 指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AGENT 技术指南"
+              "title": "Systemd 指南"
             }
           }
         ]
@@ -208,6 +208,7 @@
   },
   "active": "3d0e0b7677d29969",
   "lastOpenFiles": [
+    "AGENT 技术指南.md",
     "NixOS 指南.md",
     "5+2 轻断食.md",
     "编码分类总结.md",
@@ -239,7 +240,6 @@
     "Linux_shell.md",
     "RLVR.md",
     "PROMPT.md",
-    "AGENT 技术指南.md",
     "k8s 指南.md",
     "每日一读.md",
     "未整理/Regarding Your Copilot Access.md",
