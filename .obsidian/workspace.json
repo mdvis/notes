@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NixOS 指南.md",
+                "file": "SSH 指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NixOS 指南"
+              "title": "SSH 指南"
             }
           }
         ]
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NixOS 指南.md",
+                "file": "SSH 指南.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "NixOS 指南 的大纲"
+              "title": "SSH 指南 的大纲"
             }
           },
           {
@@ -206,12 +206,12 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "b4055fa59d5ae5ba",
+  "active": "3d0e0b7677d29969",
   "lastOpenFiles": [
+    "NixOS 指南.md",
     "CLAUDE.md",
     "Systemd 指南.md",
     "AGENT 技术指南.md",
-    "NixOS 指南.md",
     "5+2 轻断食.md",
     "编码分类总结.md",
     "SQL/SQLite.md",
