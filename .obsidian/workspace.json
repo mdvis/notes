@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "grep",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,8 +84,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -207,7 +206,7 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "7e7ab73cc512f79d",
+  "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
     "CLAUDE.md",
     "Systemd 指南.md",
