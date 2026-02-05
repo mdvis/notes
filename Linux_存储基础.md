@@ -266,6 +266,7 @@ sudo xfs_growfs /dev/vg_centos/root   # XFS
 ```
 
 ### LVM 命令
+pv 值得是分区或磁盘（被 pvcreate 初始化为物理卷的分区或磁盘）
 - 查看
 ```
 pvs/pvdisplay
@@ -291,20 +292,29 @@ lvremove <lv_name>
 pvmove <pv_name> #将指定物理卷 pv_name上的数据移动到卷组中的其他空闲位置
 pvmove <pv_name1> <pv_name2> # 将前面物理卷中的内容移动到后面物理卷
 pvmove -n <lv_name> <pv_name> # 移动 pv_name 中属于逻辑卷 lv_name 中的内容
+
+# 选项
+# -b 后台运行
+# -i <time> 每 time 秒报告一次进度
+# --abort 终止操作
+# 不带参数可以从意外中断的检查点恢复
 ```
 - 添加扩展移除物理卷
 ```
 # 添加一个新物理卷进卷组
-vgextend <vg_name> <pv>
-vgreduce 
+vgextend <vg_name> <pv_name>
+# 操作前需先使用 pvmove 移动数据
+vgreduce <vg_name> <pv_name>
 ```
 - 扩容缩容逻辑卷
 ```
 lvextend -L <+/-size> -l +100%
-lvreduce
+# 缩小逻辑卷之前要先缩小文件系统
+# 缩小 ext 文件系统使用 resize2fs
+lvreduce -L <+/-size> <lv_name>
 ```
-- resize2fs
-- e2fsck
+- resize2fs 调整文件系统大小
+- e2fsck 检查并修复文件系统错误（未挂载或只读才可使用）
 通过本指南，您可安全完成 Linux 系统下的磁盘扩容操作。根据实际环境选择 LVM 或非 LVM 方案，严格遵循操作顺序，确保数据安全。
 
 ## 在 Linux 中查看硬盘 UUID
