@@ -265,7 +265,25 @@ sudo xfs_growfs /dev/vg_centos/root   # XFS
 [添加磁盘] → [pvcreate] → [vgextend] → [lvextend] → [resize2fs/xfs_growfs]
 ```
 
----
+### LVM 命令
+- 查看
+```
+pvs/pvdisplay
+vgs/vgdisplay
+lvs/lvdisplay
+```
+- 创建
+```
+pvcreate <disk or part
+vgcreate
+lvcreate
+```
+- 删除
+```
+pvremove
+vgremove
+lvremove
+```
 
 通过本指南，您可安全完成 Linux 系统下的磁盘扩容操作。根据实际环境选择 LVM 或非 LVM 方案，严格遵循操作顺序，确保数据安全。
 
