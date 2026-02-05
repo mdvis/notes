@@ -288,7 +288,9 @@ lvremove <lv_name>
 ```
 - 转移
 ```
-pvmove
+pvmove <pv_name> #将指定物理卷 pv_name上的数据移动到卷组中的其他空闲位置
+pvmove <pv_name1> <pv_name2> # 将前面物理卷中的内容移动到后面物理卷
+pvmove -n <lv_name> <pv_name> # 移动 pv_name 中属于逻辑卷 lv_name 中的内容
 ```
 - 添加扩展移除物理卷
 ```
@@ -298,8 +300,11 @@ vgreduce
 ```
 - 扩容缩容逻辑卷
 ```
-
+lvextend -L <+/-size> -l +100%
+lvreduce
 ```
+- resize2fs
+- e2fsck
 通过本指南，您可安全完成 Linux 系统下的磁盘扩容操作。根据实际环境选择 LVM 或非 LVM 方案，严格遵循操作顺序，确保数据安全。
 
 ## 在 Linux 中查看硬盘 UUID
