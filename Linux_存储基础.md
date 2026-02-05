@@ -329,12 +329,23 @@ resize2fs <lv_name> <size>
 ```
 -p 自动修复可安全修复的问题
 -y 交互式提问，避免手动确认
--b <superblock> 使用备用超级块；当主超级块（记录文件系统元数据的核心结构）损坏时
+-b <superblock> 使用备用超级块；当主超级块（记录文件系统元数据的核心结构）损坏时，指定一个备份超级块来恢复。备份超级块的位置取决于文件系统创建时的块大小
 -f 强制检查
 -c 检查坏道
 ```
 通过本指南，您可安全完成 Linux 系统下的磁盘扩容操作。根据实际环境选择 LVM 或非 LVM 方案，严格遵循操作顺序，确保数据安全。
-
+### Btrfs 命令
+- 扩容
+```
+btrfs filesystem resize <+size> /mount/point
+btrfs filesystem resize max /mount/point
+```
+- 缩容
+```
+btrfs filesystem resize <-size> /mount/point
+# 缩容后重新平衡（回收）数据块，不强制，推荐
+btrfs balance /mount/point
+```
 ## 在 Linux 中查看硬盘 UUID
 
 在 Linux 系统中，UUID（通用唯一识别码）用于唯一标识磁盘分区或文件系统。UUID 是一个 128 位的数字，通常表示为 32 个十六进制数字，并用连字符分割为 5 组，总共 36 个字符的格式

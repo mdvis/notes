@@ -182,7 +182,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -206,7 +206,7 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "b4055fa59d5ae5ba",
+  "active": "8b536fcf20839aa1",
   "lastOpenFiles": [
     "SSH 指南.md",
     "NixOS 指南.md",
