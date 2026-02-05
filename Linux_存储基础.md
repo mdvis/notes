@@ -274,17 +274,32 @@ lvs/lvdisplay
 ```
 - 创建
 ```
-pvcreate <disk or part
-vgcreate
-lvcreate
+pvcreate <disk or partition>
+# pv 即上一步初始化过的磁盘或分区
+vgcreate <vg_name> <pv>
+# -L 增减 -l 指定
+lvcreate -L <+/-size> -n <name> -l <size>
 ```
 - 删除
 ```
-pvremove
-vgremove
-lvremove
+pvremove <pv_name>
+vgremove <vg_name>
+lvremove <lv_name>
+```
+- 转移
+```
+pvmove
+```
+- 添加扩展移除物理卷
+```
+# 添加一个新物理卷进卷组
+vgextend <vg_name> <pv>
+vgreduce 
+```
+- 扩容缩容逻辑卷
 ```
 
+```
 通过本指南，您可安全完成 Linux 系统下的磁盘扩容操作。根据实际环境选择 LVM 或非 LVM 方案，严格遵循操作顺序，确保数据安全。
 
 ## 在 Linux 中查看硬盘 UUID
