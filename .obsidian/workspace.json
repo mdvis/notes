@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Linux_存储基础"
             }
+          },
+          {
+            "id": "41d847accab7f47a",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.11.7"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -84,8 +97,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -207,7 +219,7 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "323af4e627aca67f",
+  "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
     "SSH 指南.md",
     "NixOS 指南.md",
