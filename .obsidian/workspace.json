@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker 指南.md",
+                "file": "PostgreSQL 指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Docker 指南"
+              "title": "PostgreSQL 指南"
             }
           }
         ]
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Docker 指南.md",
+                "file": "PostgreSQL 指南.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Docker 指南 的大纲"
+              "title": "PostgreSQL 指南 的大纲"
             }
           },
           {
@@ -208,6 +208,8 @@
   },
   "active": "323af4e627aca67f",
   "lastOpenFiles": [
+    "SQL/PostgreSQL.md",
+    "Docker 指南.md",
     "macOS 指南.md",
     "Linux_存储基础.md",
     "每日一读.md",
@@ -232,7 +234,6 @@
     "Java",
     "Shell",
     "Python",
-    "SQL/PostgreSQL.md",
     "SQL/未命名 3.md",
     "SQL/未命名 2.md",
     "SQL/未命名 1.md",
@@ -242,7 +243,6 @@
     "电脑启动流程解析.md",
     "Java 指南.md",
     "LLM 指南.md",
-    "区块链指南.md",
     "未整理/运气表面积公式.png",
     "未整理/cc 九条实战技巧.png",
     "CMD/Tier4_Others/Specific_Scenario",
