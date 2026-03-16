@@ -1,7 +1,36 @@
 Linux 系统拥有强大的日志功能，能够记录系统和应用程序的各种运行信息，帮助管理员监控系统状态、诊断问题并进行故障排除。
 ## 主流日志体系
 ### `rsyslog` 常见服务器日志系统
-###`systemd-journald` 现代 linux 日志系统
+ - 配置文件 `/etc/rsyslog.conf` `/etc/rsyslog.d/*.conf`
+ - 特点
+	 1. 高性能
+	 2. 支持 TCP/UDP
+	 3. 支持日志转发
+	 4. 支持数据库
+	 5. 支持 Kafka/Elasticsearch
+- 日志级别
+	1. emerg 系统不可用
+	2. alert 需立即处理
+	3. crit 严重错误
+	4. err 错误
+	5. warning 警告
+	6. notice 正常但重要
+	7. info 信息
+	8. debug 调试
+- 日志来源
+	1. auth 认证
+	2. authpriv 私密认证
+	3. cron 计划任务
+	4. daemon 守护进程
+	5. kern 内核
+	6. mail 邮件
+	7. user 用户程序
+	8. local0-7 自定义
+### `systemd-journald` 现代 linux 日志系统
+- 结构化日志系统
+- yi'ui'ri'vi
+
+
 **常见日志文件：**
 - `/var/log/messages`：记录系统的常规信息和错误，是诊断系统问题的首要日志文件。
 - `/var/log/secure`：记录与安全相关的事件，如用户认证、授权等操作。
