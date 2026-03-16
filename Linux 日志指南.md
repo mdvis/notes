@@ -51,14 +51,15 @@ ForwardToSyslog=yes
     compress # gzip 压缩
 }
 ```
-
-
-**常见日志文件：**
-- `/var/log/messages`：记录系统的常规信息和错误，是诊断系统问题的首要日志文件。
-- `/var/log/secure`：记录与安全相关的事件，如用户认证、授权等操作。
+### 常见日志文件
+- `/var/log/syslog` 系统日志
+- `/var/log/messages`：记录系统的常规信息和错误，是诊断系统问题的首要日志文件。（系统消息）
+- `/var/log/auth.log`：认证日志
+- `/var/log/secure`：记录与安全相关的事件，如用户认证、授权等操作。（登录日志）
+- `/var/log/kern.log`：内核日志
+- `/var/log/dmesg`：记录系统启动时内核产生的消息，可使用 `dmesg` 命令查看。（启动日志）
 - `/var/log/cron`：记录定时任务（如 cron 作业）的执行情况。
-- `/var/log/dmesg`：记录系统启动时内核产生的消息，可使用 `dmesg` 命令查看。
-- `/var/log/boot.log`：记录系统引导过程中的事件。
+- `/var/log/boot.log`：记录系统引导过程中的事件。（启动）
 - `/var/log/maillog`：记录邮件相关的信息。
 - `/var/log/btmp`：记录失败的登录尝试，可使用 `lastb` 命令查看。
 - `/var/log/wtmp`：永久记录所有用户的登录、注销信息，以及系统的启动、重启、关机事件，可使用 `last` 命令查看。
