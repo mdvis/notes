@@ -1,91 +1,144 @@
-## Taskwarrior 使用指南
+**Taskwarrior** 是一个功能强大、完全命令行的开源任务管理工具，适合喜欢终端操作、需要高度自定义的用户。下面是从官方 man page（task.1）提炼出的**核心实用使用方法**总结，聚焦最常用、最核心的操作方式。
 
-Taskwarrior 是一个强大的开源命令行任务管理工具（TODO list manager），它灵活、快
-速、高效，适合喜欢在终端工作的用户。它支持任务添加、优先级、截止日期、标签、项
-目、依赖关系、报告、同步等功能，完全免费开源。
+### 1. 基本任务操作（最常用）
 
-### 常用命令
+| 操作          | 命令示例                                      | 说明                              |
+|---------------|-----------------------------------------------|-----------------------------------|
+| 添加任务      | `task add 买牛奶 due:tomorrow project:家 +购物` | 最基本用法，支持直接加属性         |
+| 添加已完成    | `task log 整理旧手机`                         | 直接记录已经完成的事情            |
+| 查看任务      | `task list` 或 `task`                         | 默认显示 pending 任务（最常用）   |
+| 详细查看      | `task long` / `task next` / `task ready`      | 更详细信息 / 下一个最紧急 / 可立即行动 |
+| 查看逾期      | `task overdue`                                | 非常实用                          |
+| 查看单个任务  | `task 42` 或 `task 42 info`                   | 显示 ID=42 的详细信息             |
+| 完成任务      | `task 3 done` / `task project:家 done`        | 可批量                            |
+| 删除任务      | `task 5 delete`                               | 软删除，可 undo                   |
+| 永久删除      | `task 5 purge`                                | 已 delete 的任务彻底清除          |
+| 撤销上一步    | `task undo`                                   | 后悔药，非常好用                  |
 
-- **添加任务**：`task add [描述] [属性...]`
+### 2. 过滤器写法（核心技能，必须掌握）
 
-  - 项目：`project:工作`
-  - 优先级：`priority:H`（High）、`M`（Medium）、`L`（Low）
-  - 截止日期：`due:2026-01-10` 或 `due:tomorrow`、`due:eom`（月末）
-  - 标签：`+重要 +紧急`
-  - 依赖：`depends:1`（依赖任务 ID 1）
+过滤器几乎所有命令都支持，写在命令前面。
 
-- **修改任务**：`task <ID 或过滤> modify [属性...]`
+常用过滤写法示例：
 
-  ```
-  task 1 modify priority:H due:today +紧急
-  ```
+```bash
+# 项目 + 标签组合
+task project:工作 +urgent list
+task project:学习 -考试 list
 
-- **删除任务**：`task <ID> delete`
+# 日期相关（非常常用）
+task due:today list           # 今天到期
+task due.before:today list    # 已逾期（等价于 overdue）
+task due.after:eow list       # 下周之后到期
+task wait:tomorrow list       # 明天才可见的任务
 
-- **注解（注释）**：`task <ID> annotate "备注内容"`
+# 优先级
+task priority:H list          # 高优先级
+task priority.not:L list      # 非低优先级
 
-- **开始/停止任务**：`task <ID> start` / `task <ID> stop`（用于计时）
+# 状态
+task +OVERDUE list
+task +WAITING list
+task +BLOCKED list
 
-- **报告**：
+# 逻辑组合（括号很重要）
+task '(project:工作 or project:个人) +review due.before:eom' list
+task 'priority:H or +urgent' ready
 
-  - `task list`：所有待办
-  - `task next`：最紧急的
-  - `task completed`：已完成
-  - `task projects`：显示所有项目
-  - `task tags`：显示所有标签
-  - `task burndown.daily`：每日燃尽图（图形化）
+# ID 范围
+task 12-18 done               # 完成 12 到 18 号任务
+```
 
-- **过滤**：
-  ```
-  task project:工作 list
-  task +紧急 next
-  task due.before:today overdue  # 逾期任务
-  ```
-## taskwarrior-tui 使用指南
+### 3. 常用修改操作（modify 是最强命令）
 
-taskwarrior-tui 是 Taskwarrior 的终端用户界面（TUI），用 Rust 编写，提供 Vim 风
-格的导航、实时过滤、任务管理等功能，比纯命令行更直观高效。它直接调用 
-Taskwarrior 的命令，所以所有 Taskwarrior 功能都可用。
+```bash
+# 修改属性（最常用）
+task 7 modify due:friday priority:M project:家
+task 1-4 modify +review       # 批量加标签
 
-### 界面概览
-启动后，界面分为几个区域：
-- 上部：任务报告列表（默认 next 或自定义报告）
-- 下部：任务详情、注解、上下文信息
-- 右侧：有时显示日历（due 日期高亮）
-- 底部：状态栏、提示
+# 追加/前置描述
+task 23 append "（记得带发票）"
+task 23 prepend "【紧急】"
 
-支持多任务选择（用空格）、实时过滤、Tab 补全。
+# 替换描述文字
+task 15 modify /旧手机/新手机/g     # 全局替换
 
-### 主要快捷键（Keybindings）
-- **导航**：
-  - `j` / `k`：向下/向上移动
-  - `J` / `K`：翻页向下/向上
-  - `g`：跳到顶部
-  - `G`：跳到底部
-  - `Ctrl+d` / `Ctrl+u`：半页翻页
+# 添加注释
+task 8 annotate "老板说可以延期到下周三"
 
-- **任务操作**（选中任务后）：
-  - `a`：添加新任务（输入描述，支持属性如 project:xxx +tag）
-  - `m`：修改选中任务（输入 modify 参数）
-  - `d`：标记为完成（done）
-  - `Delete` 或 `D`：删除任务
-  - `s`：启动任务（start）
-  - `p`：停止任务（stop）
-  - `e`：在编辑器中编辑任务（用 $EDITOR）
-  - `A`：添加注解（annotate）
-  - `y`：复制任务（duplicate）
-  - `l`：日志新任务（log，已完成但不计入待办）
+# 开始/停止计时
+task 19 start
+task 19 stop
 
-- **过滤与报告**：
-  - `/`：实时过滤任务（输入过滤条件，如 project:工作）
-  - `c`：切换到日历视图（Calendar，显示 due 日期）
-  - `t`：切换标签视图
-  - `Tab`：切换不同面板（任务列表、详情、日历等）
+# 设置等待（隐藏到指定日期）
+task 41 wait:someday
+task 41 wait:eom
 
-- **其他**：
-  - `?`：显示帮助（所有快捷键）
-  - `q`：退出
-  - `1-9`：自定义快捷脚本（见高级配置）
-  - `Esc`：取消输入或返回
+# 设置依赖（阻塞关系）
+task 55 modify depends:52,53
+task 55 modify depends:     # 清除依赖
+```
 
-多选：用空格选中多个任务，然后操作（如批量 done 或 modify）。
+### 4. 递归任务（Recurring）
+
+```bash
+task add "周会" recur:weekly due:friday
+task add "备份代码" recur:monthly due:eom
+task add "体检" recur:yearly due:apr-15
+```
+
+### 5. 上下文（Context）——极大提高效率
+
+```bash
+# 定义上下文
+task context define home   project:家
+task context define work   project:工作 +office
+task context define review '( +review or +weekly )'
+
+# 切换 / 查看 / 清除
+task context home
+task context list
+task context show
+task context none
+```
+
+上下文会自动附加到 `add`、`list`、`modify` 等命令，非常适合按场景切换。
+
+### 6. 报告与统计（最常用的几个）
+
+```bash
+task next           # 下一个最该做的事（按 urgency 排序）
+task calendar       # 月历视图（看哪些天有到期）
+task projects       # 项目列表 + 任务数
+task tags           # 所有标签统计
+task summary        # 按项目汇总
+task stats          # 整体数据统计
+task burndown.weekly   # 周燃尽图（ASCII）
+task history.monthly   # 每月任务历史
+```
+
+### 7. 快速上手推荐命令组合（日常最常用 Top 10）
+
+1. `task add ...`  
+2. `task list` / `task`  
+3. `task next`  
+4. `task <id> done`  
+5. `task <filter> modify ...`  
+6. `task overdue`  
+7. `task due:today`  
+8. `task context <name>`  
+9. `task projects` / `task tags`  
+10. `task undo`
+
+### 8. 同步（Sync）简单说明
+
+```bash
+task sync    # 与 Taskserver 同步（需先配置证书和 taskd 服务器）
+```
+
+多设备同步时，通常一台机器开启 recurrence，另一台关闭，避免重复生成任务。
+
+掌握以上内容，80% 的日常任务管理已经足够。  
+建议把最常用的过滤器和上下文写进 `~/.taskrc` 或做成 shell alias，进一步提效。
+
+需要更详细的某个部分（如自定义报告、UDA、颜色主题、Hook 脚本等）可以继续问！
