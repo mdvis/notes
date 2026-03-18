@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux 日志指南.md",
+                "file": "ripgrep 指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux 日志指南"
+              "title": "ripgrep 指南"
             }
           }
         ]
@@ -208,6 +208,7 @@
   },
   "active": "c0f1ed466f70aab1",
   "lastOpenFiles": [
+    "Linux 日志指南.md",
     "Colima 指南.md",
     "ripgrep 指南.md",
     "sioyek 指南.md",
@@ -240,7 +241,6 @@
     "Shell",
     "Python",
     "SQL/未命名 3.md",
-    "SQL/未命名 2.md",
     "SQL",
     "PostgreSQL",
     "未整理/运气表面积公式.png",
