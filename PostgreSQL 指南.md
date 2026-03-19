@@ -17,24 +17,24 @@ psql -U postgres
 1. 列举数据库：`\l`
 2. 选择数据库：`\c 数据库名`
 3. 切换数据库：`\c interface`
-4. 查看某个库中某个表的记录：`select * from apps limit 1;`
-5. 显示字符集：`\encoding`
-6. 重设用户密码：`\password <user>`
-7. 显示当前数据库和连接信息`\conninfo`
-8. 精细显示SQL命令中的select命令的使用方：`\h select`
-9. 退出psgl：`\quit` `\q`
-10. 进入记事本sql脚本编辑状态`\e`
-11. 提示用户设定内部变数`\prompt \[文本\] 名称`
-12. 将aaa.sql导入(到当前数据库)`\i aaa.sql`
-13.  获取版本信息`select version();` 
-14. 删除用户`drop User 用户名` 
-15. 获取系统用户信息 `select usename from pg_user;` 
-16. 查看某一存储过程`\df+ name`
-17. 查看所有存储过程（函数）`\df` 
-18. 查看索引(要建立关联)`\di`
-19. 显示所用用户：`\du`
-20. 查看该某个库中的所有表：`\dt`
-21. 查看某个库中的表或某个表的结构：`\d 表名` `\d 库名`
+4. 查看某个库中的表或某个表的结构：`\d 表名` `\d 库名`
+5. 查看某个库中某个表的记录：`select * from apps limit 1;`
+6. 显示字符集：`\encoding`
+7. 重设用户密码：`\password <user>`
+8. 显示当前数据库和连接信息`\conninfo`
+9. 精细显示SQL命令中的select命令的使用方：`\h select`
+10. 退出psgl：`\quit` `\q`
+11. 进入记事本sql脚本编辑状态`\e`
+12. 提示用户设定内部变数`\prompt \[文本\] 名称`
+13. 将aaa.sql导入(到当前数据库)`\i aaa.sql`
+14.  获取版本信息`select version();` 
+15. 删除用户`drop User 用户名` 
+16. 获取系统用户信息 `select usename from pg_user;` 
+17. 查看某一存储过程`\df+ name`
+18. 查看所有存储过程（函数）`\df` 
+19. 查看索引(要建立关联)`\di`
+20. 显示所用用户：`\du`
+21. 查看该某个库中的所有表：`\dt`
 22. `\df <t|i|s|v|S|u>`
 	- t 表
 	- i 索引
