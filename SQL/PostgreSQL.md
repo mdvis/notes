@@ -295,10 +295,7 @@ SELECT <field> FROM <table_name> WHERE <condition> ORDER BY <field1> ASC, <field
 ### 分页
 
 ```sql
--- LIMIT：第一个参数是起始位置，第二个参数是条目数量
-SELECT <field> FROM <table_name> LIMIT <start>, <items>;
-
--- OFFSET：参数位置与 LIMIT 互换
+-- OFFSET：开始位置 LIMIT：条目
 SELECT <field> FROM <table_name> LIMIT <items> OFFSET <start>;
 ```
 
