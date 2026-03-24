@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "taskwa",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -203,7 +203,7 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "6836cd1beea45bf6",
+  "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
     "PostgreSQL 指南.md",
     "5+2 轻断食.md",
