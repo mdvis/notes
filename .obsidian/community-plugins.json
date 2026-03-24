@@ -1,11 +1,9 @@
 [
-  "obsidian-kanban",
   "table-editor-obsidian",
-  "obsidian-excalidraw-plugin",
   "obsidian-outliner",
   "obsidian-git",
   "obsidian-mind-map",
   "remotely-save",
-  "simple-mind-map",
-  "omnisearch"
+  "omnisearch",
+  "templater-obsidian"
 ]

@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "47d7116bb012564b",
+        "id": "443c2b8ca7b4f30c",
         "type": "tabs",
         "children": [
           {
-            "id": "9d23055d4f3c6cfa",
+            "id": "4175e909de7368d3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SQL/PostgreSQL.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "PostgreSQL"
+              "title": "新标签页"
             }
           }
         ]
@@ -206,11 +202,12 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "9d23055d4f3c6cfa",
+  "active": "4175e909de7368d3",
   "lastOpenFiles": [
+    "未命名看板.md",
+    "SQL/PostgreSQL.md",
     "SQL/SQLite.md",
     "SQL/Redis.md",
-    "SQL/PostgreSQL.md",
     "SQL/Pgvector.md",
     "SQL/MongoDB.md",
     "SQL/Milvus.md",
