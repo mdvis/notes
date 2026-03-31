@@ -11,10 +11,14 @@
             "id": "964f2c7315d5134d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Git/CMD/diff.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "diff"
             }
           }
         ]
@@ -202,6 +206,10 @@
   },
   "active": "964f2c7315d5134d",
   "lastOpenFiles": [
+    "Git/CMD/ls-files.md",
+    "Git/CMD/diff.md",
+    "Git/CMD",
+    "Git",
     "CMD/网络连接/curl.md",
     "linux 命令指南.md",
     "CMD/网络连接",
@@ -229,15 +237,11 @@
     "Taskwarrior 指南.md",
     "Linux_存储基础.md",
     "上下文工程.md",
-    "SSH 指南.md",
-    "CLAUDE.md",
     "LLM",
     "Nodejs",
     "Rust",
     "Go",
     "Java",
-    "Shell",
-    "Python",
     "未整理/运气表面积公式.png",
     "未整理/cc 九条实战技巧.png",
     "未命名.canvas",
