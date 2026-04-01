@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/CMD/diff.md",
+                "file": "ripgrep 指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "diff"
+              "title": "ripgrep 指南"
             }
           }
         ]
@@ -207,8 +207,8 @@
   },
   "active": "964f2c7315d5134d",
   "lastOpenFiles": [
-    "Git/CMD/ls-files.md",
     "Git/CMD/diff.md",
+    "Git/CMD/ls-files.md",
     "Git/CMD",
     "Git",
     "CMD/网络连接/curl.md",
