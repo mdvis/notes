@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ripgrep 指南.md",
+                "file": "Git/CMD/diff.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ripgrep 指南"
+              "title": "diff"
             }
           }
         ]
@@ -207,8 +207,9 @@
   },
   "active": "964f2c7315d5134d",
   "lastOpenFiles": [
-    "Git/CMD/diff.md",
     "Git/CMD/ls-files.md",
+    "Git/CMD/diff.md",
+    "ripgrep 指南.md",
     "Git/CMD",
     "Git",
     "CMD/网络连接/curl.md",
@@ -232,7 +233,6 @@
     "5+2 轻断食.md",
     "每日一读.md",
     "Linux 日志指南.md",
-    "ripgrep 指南.md",
     "Colima 指南.md",
     "sioyek 指南.md",
     "Taskwarrior 指南.md",

@@ -11,3 +11,17 @@
 - `-W` 查看整个函数的（改动）上下文
 - `-G "string"` 包含指定字符的改动
 - `-M` 查看重命名
+- 忽略某些文件 `git diff -- . ':(exclude)package-lock.json'` （`--` 告诉 Git，后面全部都是“路径”，不是参数）
+# Pathspec 魔法语法（重点理解）
+Git 支持这种高级写法：
+```
+:(<magic>)<pattern>
+```
+常见的：
+
+|写法 |含义|
+|---|---|
+|`:(exclude)file`|排除|
+|`:(icase)file`|忽略大小写|
+|`:(glob)*.js`|glob 模式|
+|`:(top)file`|从 repo 根路径匹配|
