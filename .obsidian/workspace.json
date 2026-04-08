@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "343908362a889f71",
+        "id": "7dd3ad135d0d2bed",
         "type": "tabs",
         "children": [
           {
-            "id": "964f2c7315d5134d",
+            "id": "bf64a67b61ea7ff9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "linux 命令指南.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "linux 命令指南"
+              "title": "新标签页"
             }
           }
         ]
@@ -53,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "awk",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,8 +80,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -205,15 +200,16 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "964f2c7315d5134d",
+  "active": "bf64a67b61ea7ff9",
   "lastOpenFiles": [
+    "FFmpeg 指南.md",
+    "linux 命令指南.md",
     "Git/CMD/ls-files.md",
     "Git/CMD/diff.md",
     "ripgrep 指南.md",
     "Git/CMD",
     "Git",
     "CMD/网络连接/curl.md",
-    "linux 命令指南.md",
     "CMD/网络连接",
     "CMD",
     "HTTP 接口设计指南.md",
@@ -237,7 +233,6 @@
     "sioyek 指南.md",
     "Taskwarrior 指南.md",
     "Linux_存储基础.md",
-    "上下文工程.md",
     "LLM",
     "Nodejs",
     "Rust",
