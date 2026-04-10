@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CMD/网络连接/curl.md",
+                "file": "linux 命令指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "curl"
+              "title": "linux 命令指南"
             }
           }
         ]
@@ -84,8 +84,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -205,16 +204,18 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7e7ab73cc512f79d",
+  "active": "bf64a67b61ea7ff9",
   "lastOpenFiles": [
-    "FFmpeg 指南.md",
+    "CMD/文本处理/awk.md",
+    "CMD/文本处理",
     "linux 命令指南.md",
+    "CMD/网络连接/curl.md",
+    "FFmpeg 指南.md",
     "Git/CMD/ls-files.md",
     "Git/CMD/diff.md",
     "ripgrep 指南.md",
     "Git/CMD",
     "Git",
-    "CMD/网络连接/curl.md",
     "CMD/网络连接",
     "CMD",
     "HTTP 接口设计指南.md",
@@ -236,13 +237,10 @@
     "Linux 日志指南.md",
     "Colima 指南.md",
     "sioyek 指南.md",
-    "Taskwarrior 指南.md",
-    "Linux_存储基础.md",
     "LLM",
     "Nodejs",
     "Rust",
     "Go",
-    "Java",
     "未整理/运气表面积公式.png",
     "未整理/cc 九条实战技巧.png",
     "未命名.canvas",
