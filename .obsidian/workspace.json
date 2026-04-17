@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "awk",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,7 +80,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -200,7 +201,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "98c1adb133984eca",
+  "active": "7e7ab73cc512f79d",
   "lastOpenFiles": [
     "linux 命令指南.md",
     "CMD/文本处理/awk.md",
