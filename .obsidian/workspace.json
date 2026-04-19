@@ -11,10 +11,14 @@
             "id": "98c1adb133984eca",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "塑料容器材质.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "塑料容器材质"
             }
           }
         ]
@@ -80,8 +84,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -201,8 +204,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7e7ab73cc512f79d",
+  "active": "98c1adb133984eca",
   "lastOpenFiles": [
+    "玻璃容器材质.md",
     "linux 命令指南.md",
     "CMD/文本处理/awk.md",
     "CMD/文本处理",
