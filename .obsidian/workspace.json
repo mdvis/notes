@@ -11,14 +11,13 @@
             "id": "98c1adb133984eca",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "塑料容器材质.md",
-                "mode": "source",
-                "source": false
+                "file": "未命名.base",
+                "viewName": "表格"
               },
-              "icon": "lucide-file",
-              "title": "塑料容器材质"
+              "icon": "lucide-table",
+              "title": "未命名"
             }
           }
         ]
@@ -205,8 +204,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7e7ab73cc512f79d",
+  "active": "98c1adb133984eca",
   "lastOpenFiles": [
+    "塑料容器材质.md",
+    "未命名.base",
     "玻璃容器材质.md",
     "linux 命令指南.md",
     "CMD/文本处理/awk.md",
@@ -238,11 +239,9 @@
     "每日一读.md",
     "Linux 日志指南.md",
     "Colima 指南.md",
-    "sioyek 指南.md",
     "LLM",
     "Nodejs",
     "Rust",
-    "Go",
     "未整理/运气表面积公式.png",
     "未整理/cc 九条实战技巧.png",
     "未命名.canvas",
