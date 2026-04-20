@@ -84,7 +84,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -204,7 +205,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "98c1adb133984eca",
+  "active": "7e7ab73cc512f79d",
   "lastOpenFiles": [
     "玻璃容器材质.md",
     "linux 命令指南.md",
