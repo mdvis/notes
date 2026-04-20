@@ -83,8 +83,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -204,7 +203,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "98c1adb133984eca",
+  "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
     "塑料容器材质.md",
     "未命名.base",
