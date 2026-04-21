@@ -4,20 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "1e1d0c9fcca1e672",
+        "id": "271d4154d0fc6d2c",
         "type": "tabs",
         "children": [
           {
-            "id": "98c1adb133984eca",
+            "id": "f8911e6dff1b0c34",
             "type": "leaf",
             "state": {
-              "type": "bases",
-              "state": {
-                "file": "未命名.base",
-                "viewName": "表格"
-              },
-              "icon": "lucide-table",
-              "title": "未命名"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ]
@@ -203,10 +200,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b4055fa59d5ae5ba",
+  "active": "f8911e6dff1b0c34",
   "lastOpenFiles": [
-    "塑料容器材质.md",
+    "5+2 轻断食.md",
     "未命名.base",
+    "塑料容器材质.md",
     "玻璃容器材质.md",
     "linux 命令指南.md",
     "CMD/文本处理/awk.md",
@@ -234,10 +232,8 @@
     "SQL/Milvus.md",
     "SQL",
     "PostgreSQL 指南.md",
-    "5+2 轻断食.md",
     "每日一读.md",
     "Linux 日志指南.md",
-    "Colima 指南.md",
     "LLM",
     "Nodejs",
     "Rust",
