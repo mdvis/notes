@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker 指南.md",
+                "file": "Linux_shell.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Docker 指南"
+              "title": "Linux_shell"
             }
           }
         ]
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Docker 指南.md",
+                "file": "Linux_shell.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Docker 指南 的大纲"
+              "title": "Linux_shell 的大纲"
             }
           },
           {
@@ -204,8 +204,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7486ff4d5fe99554",
+  "active": "4186717f1c02f895",
   "lastOpenFiles": [
+    "Docker 指南.md",
     "5+2 轻断食.md",
     "未命名.base",
     "塑料容器材质.md",
@@ -223,7 +224,6 @@
     "CMD/网络连接",
     "CMD",
     "HTTP 接口设计指南.md",
-    "Docker 指南.md",
     "macOS 指南.md",
     "NixOS 指南.md",
     "LLM/Langchain.md",
