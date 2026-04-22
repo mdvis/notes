@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "271d4154d0fc6d2c",
+        "id": "fcf279b0c63b50d4",
         "type": "tabs",
         "children": [
           {
-            "id": "f8911e6dff1b0c34",
+            "id": "4186717f1c02f895",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Docker 指南.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "Docker 指南"
             }
           }
         ]
@@ -200,7 +204,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f8911e6dff1b0c34",
+  "active": "4186717f1c02f895",
   "lastOpenFiles": [
     "5+2 轻断食.md",
     "未命名.base",
