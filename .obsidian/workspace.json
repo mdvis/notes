@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "每日一读.md",
+                "file": "git 命令指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "每日一读"
+              "title": "git 命令指南"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "worktree",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,7 +84,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -204,8 +205,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8b536fcf20839aa1",
+  "active": "c4948e12c43f6975",
   "lastOpenFiles": [
+    "每日一读.md",
     "未命名看板.md",
     "未命名.base",
     "TS",
@@ -240,7 +242,6 @@
     "SQL/Milvus.md",
     "SQL",
     "PostgreSQL 指南.md",
-    "每日一读.md",
     "未整理/运气表面积公式.png",
     "未整理/cc 九条实战技巧.png",
     "未命名.canvas",
