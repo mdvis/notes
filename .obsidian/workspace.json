@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "git 命令指南.md",
+                "file": "Vim 指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "git 命令指南"
+              "title": "Vim 指南"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "worktree",
+                "query": "vim",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -207,6 +207,9 @@
   },
   "active": "c4948e12c43f6975",
   "lastOpenFiles": [
+    "Linux_逻辑卷管理_LVM.md",
+    "linux 命令指南.md",
+    "git 命令指南.md",
     "每日一读.md",
     "未命名看板.md",
     "未命名.base",
@@ -218,7 +221,6 @@
     "5+2 轻断食.md",
     "塑料容器材质.md",
     "玻璃容器材质.md",
-    "linux 命令指南.md",
     "CMD/文本处理/awk.md",
     "CMD/文本处理",
     "CMD/网络连接/curl.md",
@@ -241,7 +243,6 @@
     "SQL/MongoDB.md",
     "SQL/Milvus.md",
     "SQL",
-    "PostgreSQL 指南.md",
     "未整理/运气表面积公式.png",
     "未整理/cc 九条实战技巧.png",
     "未命名.canvas",
