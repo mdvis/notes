@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a2913d9b3d29209e",
+        "id": "78071ffc30df9d05",
         "type": "tabs",
         "children": [
           {
-            "id": "c4948e12c43f6975",
+            "id": "b8fec4b9ad63fd9c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "每日一读.md",
+                "file": "CMD/文本处理/grep.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "每日一读 的大纲"
+              "title": "grep 的大纲"
             }
           },
           {
@@ -182,7 +182,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -204,11 +204,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "c4948e12c43f6975",
+  "active": "b8fec4b9ad63fd9c",
   "lastOpenFiles": [
-    "linux 命令指南.md",
+    "CMD/文本处理/grep2.md",
     "CMD/文本处理/grep.md",
     "CMD/文本处理/awk.md",
+    "linux 命令指南.md",
     "CMD/网络连接/curl.md",
     "ripgrep 指南.md",
     "Vim 指南.md",
@@ -240,7 +241,6 @@
     "SQL/PostgreSQL.md",
     "SQL/SQLite.md",
     "SQL/Redis.md",
-    "SQL/Pgvector.md",
     "SQL",
     "未整理/运气表面积公式.png",
     "未整理/cc 九条实战技巧.png",
