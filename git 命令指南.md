@@ -6,8 +6,8 @@
 
 - **`git init`** - 初始化新仓库
 - **`git clone`** - 克隆远程仓库
-- **`git status`** - 查看工作区状态
-- **`git diff`** - 查看文件差异
+- [archived]**`git status`** - 查看工作区状态
+- [archived]**`git diff`** - 查看文件差异
 
 ### 提交流程
 
