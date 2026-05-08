@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "git",
+                "query": "magic",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,7 +80,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -199,7 +200,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "317f296881238a60",
+  "active": "7e7ab73cc512f79d",
   "lastOpenFiles": [
     "Git/CMD/status.md",
     "Git/CMD/diff.md",
