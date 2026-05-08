@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "faf201bcec645d0e",
+        "id": "fa1688d45ead0f6b",
         "type": "tabs",
         "children": [
           {
-            "id": "317f296881238a60",
+            "id": "0da3de0a53f72994",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "magic",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,8 +80,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -178,7 +177,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -200,8 +199,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7e7ab73cc512f79d",
+  "active": "8b536fcf20839aa1",
   "lastOpenFiles": [
+    "libvips.md",
     "Git/CMD/status.md",
     "Git/CMD/diff.md",
     "Git/CMD/ls-files.md",
@@ -236,7 +236,6 @@
     "NixOS 指南.md",
     "LLM/Langchain.md",
     "SQL/PostgreSQL.md",
-    "SQL/SQLite.md",
     "SQL",
     "未整理/运气表面积公式.png",
     "未整理/cc 九条实战技巧.png",
