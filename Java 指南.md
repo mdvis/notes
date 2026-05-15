@@ -46,9 +46,21 @@
 100_100  // 下划线可以做分割，编译器会去除
 ```
 ### 集合
-- List：有序可重复
-- Set：无序不可重复
-- Map：键值对存储
+集合分为两大体系：Collection（单一元素）和 Map（键值对）
+- List：有序可重复，继承自 Collection 接口，是其子接口
+	- ArrayList：基于动态数组，查询快，增删慢(涉及扩容和位移)
+	- LinkedList：基于双向链表，查询慢，增删快
+- Set：无序不可重复，继承自 Collection 接口，是其子接口
+	- HashSet：基于哈希表，存取最快无序
+	- TreeSet：基于红黑树，元素处于排序状态
+	- LinkedHashSet：维护插入顺序
+- Queue:FIFO，继承自 Collection 接口，是其子接口
+	- PriorityQueue：优先级队列
+- Map：键值对存储，不继承 Collection 接口
+	- HashMap：最常用 Map，允许 null 键和 null 值，无序
+	- TreeMap：基于红黑树实现，键处于自然排序或指定比较器排序状态
+	- Hashtable：古老线程安全类，现在通常用 ConcurrentHashMap 代替
+	- LinkedHashMap：维护键值对的插入uy
 
 ## 常量
 `final`
