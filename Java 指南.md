@@ -116,4 +116,7 @@ try (FileReader fr = new FileReader("input.txt");
 - interface
 - obstract class
 ## 泛型
-
+参数化类型
+```
+List<String>
+```
