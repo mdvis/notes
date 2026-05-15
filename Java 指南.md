@@ -59,11 +59,19 @@ final int score; // 常量
 0B1001   // 2进制
 100_100  // 下划线可以做分割，编译器会去除
 ```
+### 数组
+```java
+// 定长
+new int[5];
+{1,2,3}
+```
 ### 集合
 集合分为两大体系：Collection（单一元素）和 Map（键值对）
 - List：有序可重复，继承自 Collection 接口，是其子接口
 	- ArrayList：基于动态数组，查询快，增删慢(涉及扩容和位移)
 	- LinkedList：基于双向链表，查询慢，增删快
+		- Queue:FIFO，继承自 Collection 接口，是其子接口
+			- PriorityQueue：优先级队列
 ```java
 new ArrayList<>(); // add()
 Arrays.asList(...) //  j8+,长度固定不能执行 add，remove
@@ -78,8 +86,6 @@ new HashSet<>(); //add()
 Set.of(...); // j9+,推荐方式，不可变集合，元素不能重复，不能有 null
 new HashSet<>(list) // 列表转集合，去重
 ```
-- Queue:FIFO，继承自 Collection 接口，是其子接口
-	- PriorityQueue：优先级队列
 ```java
 
 ```
@@ -96,7 +102,7 @@ new HashMap<>(){{put(k,v)[,...]}} // 匿名内部类，不推荐
 ```
 
 经常增删改用 `new ArrayList<>();new HashSet<>();new HashMap<>()`
-只读常量集合 `List.of`
+只读常量集合 `List.of();Set.of();Map.of();`
 #### 线程安全问题
 大部分基础集合类都是**非线程安全**的。如果需要在多线程环境下使用，可以使用：
 1. `Collections.synchronizedList()` 等包装方法。
@@ -194,3 +200,6 @@ public class Util {
 	}
 }
 ```
+
+##  注解
+本身不包含业务逻辑，也不能改变代码执行行为。作用在类、方法、变量uh
