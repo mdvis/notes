@@ -116,7 +116,42 @@ try (FileReader fr = new FileReader("input.txt");
 - interface
 - obstract class
 ## 泛型
-参数化类型
+参数化类型；可用于类、接口和方法上；常用标识 (T)ype, (E)lement, (K)ey, (V)alue.
+```java
+public class Box<T>{
+	private T data;
+	
+	public void set(T data) {this.data = data;}
+	public T get(){return data;}
+}
+
+Box<Integer> intBox = new Box();
+intBox.set(123)
 ```
-List<String>
+
+```java
+public interface Generator<T> {
+	T next()
+}
+
+public class StringGenerator implements Generator<String> {
+	@Override
+	public String next(){return "Hello";}
+}
+
+public class GenericGenerator implements Generator<T> {
+	@Override
+	public T next(){return null;}
+}
+```
+
+```java
+public class Util {
+	public static <E> void printArray(E[] inputArray) {
+		for (E element:inputArray) {
+			System.out.printf("%s", element);
+		}
+		System.out.println();
+	}
+}
 ```
