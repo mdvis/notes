@@ -14,8 +14,22 @@
 	- java2 98-06
 	- sdk software development kit 98-06
 ## 数据类型
+```java
+int score; // 变量
+final int score; // 常量
+```
 ### 基本类型（8个）
 `int/short/long/byte/float/double/char/boolean`
+
+```
+100l
+100L
+3.14f
+3.14F
+0.0d
+'A'
+```
+
 - 整型
 	1. int           4b    -2,147,483,648 ~ 2,147,483,647
 	2. short      2b     -32,768 ~ 32,767
@@ -61,19 +75,24 @@
 	- TreeMap：基于红黑树实现，键处于自然排序或指定比较器排序状态
 	- Hashtable：古老线程安全类，现在通常用 ConcurrentHashMap 代替
 	- LinkedHashMap：维护键值对的插入顺序
+```java
+int[] numbers = new int[5];
+
+int[] numbers = {1,2,3}
+```
 #### 线程安全问题
 大部分基础集合类都是**非线程安全**的。如果需要在多线程环境下使用，可以使用：
 1. `Collections.synchronizedList()` 等包装方法。
 2. **JUC (java.util.concurrent) 包**：如 `ConcurrentHashMap`, `CopyOnWriteArrayList`。
-## 常量
-`final`
 ## 控制流程
-- if-else
-- switch-case
-- for
-- while
+- if-else 同 js
+- switch-case 同 js
+- for 同 js
+- while 同 js
 - do-while
-- for-each
+- for-each `for (type`
+```java
+```
 ## 异常处理
 所有异常均继承自`java.lang.Throwable`类，分为 `Error`（严重问题，通常无法处理）和 `Exception`（可处理的问题；Checked Exception 受检异常；Unchecked Exception/RuntimeException 运行时异常）
 - try-catch-finally
