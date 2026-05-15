@@ -75,8 +75,10 @@
 - do-while
 - for-each
 ## 异常处理
-所有异常均继承自`Throwable`类，分为 `Error`（严重问题）和 `Exception`（可处理的问题）
+所有异常均继承自`java.lang.Throwable`类，分为 `Error`（严重问题，通常无法处理）和 `Exception`（可处理的问题；Checked Exception 受检异常；Unchecked Exception/RuntimeException 运行时异常）
 - try-catch-finally
+- throw 手动抛出异常
+- throws 在方法签名上声明该方法可能抛出的异常，交给调用者处理
 ## OOP
 - 类：一个蓝图或模版，定义行为和属性
 - 对象：类的实例
