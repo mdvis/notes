@@ -60,8 +60,11 @@
 	- HashMap：最常用 Map，允许 null 键和 null 值，无序
 	- TreeMap：基于红黑树实现，键处于自然排序或指定比较器排序状态
 	- Hashtable：古老线程安全类，现在通常用 ConcurrentHashMap 代替
-	- LinkedHashMap：维护键值对的插入uy
-
+	- LinkedHashMap：维护键值对的插入顺序
+#### 线程安全问题
+大部分基础集合类都是**非线程安全**的。如果需要在多线程环境下使用，可以使用：
+1. `Collections.synchronizedList()` 等包装方法。
+2. **JUC (java.util.concurrent) 包**：如 `ConcurrentHashMap`, `CopyOnWriteArrayList`。
 ## 常量
 `final`
 ## 控制流程
