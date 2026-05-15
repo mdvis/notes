@@ -45,3 +45,27 @@
 0B1001   // 2进制
 100_100  // 下划线可以做分割，编译器会去除
 ```
+
+## 常量
+`final`
+## 封装
+## 继承
+## 多态
+## 抽象
+## 控制流程
+- if-else
+- switch-case
+- for
+- while
+- do-while
+- for-each
+## 集合
+- List：有序可重复
+- Set：无序不可重复
+- Map：键值对存储
+## 异常处理
+所有异常均继承自`Throwable`类，分为 `Error`（严重问题）和 `Exception`（可处理的问题）
+- try-catch-finally
+## OOP
+- 类：一个蓝图或模版，定义行为和属性
+- 
