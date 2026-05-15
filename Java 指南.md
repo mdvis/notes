@@ -65,7 +65,7 @@ final int score; // 常量
 	- ArrayList：基于动态数组，查询快，增删慢(涉及扩容和位移)
 	- LinkedList：基于双向链表，查询慢，增删快
 ```java
-new ArrayList<>()
+new ArrayList<>(); // add()
 Arrays.asList(...) //  j8+,长度固定不能执行 add，remove
 List.of(...) // j9+, 推荐方式，完全不可变长度元素均不能改，不允许 null 元素
 ```
@@ -74,7 +74,7 @@ List.of(...) // j9+, 推荐方式，完全不可变长度元素均不能改，�
 	- TreeSet：基于红黑树，元素处于排序状态
 	- LinkedHashSet：维护插入顺序
 ```java
-new HashSet<>();
+new HashSet<>(); //add()
 Set.of(...); // j9+,推荐方式，不可变集合，元素不能重复，不能有 null
 new HashSet<>(list) // 列表转集合，去重
 ```
@@ -89,11 +89,14 @@ new HashSet<>(list) // 列表转集合，去重
 	- Hashtable：古老线程安全类，现在通常用 ConcurrentHashMap 代替
 	- LinkedHashMap：维护键值对的插入顺序
 ```java
-
+new HashMap<>(); // put 方法
+Map.of(...); // j9+,适用少量数据最多 20 个变量（10 个键值对）k:v 不可变
+Map.ofEntries(entry(k,v)[,...]) // j9+,较多数据
+new HashMap<>(){{put(k,v)[,...]}} // 匿名内部类，不推荐
 ```
-```java
 
-```
+经常增删改用 `new ArrayList<>();new HashSet<>();new HashMap<>()`
+只读常量集合 `List.of`
 #### 线程安全问题
 大部分基础集合类都是**非线程安全**的。如果需要在多线程环境下使用，可以使用：
 1. `Collections.synchronizedList()` 等包装方法。
