@@ -45,13 +45,13 @@
 0B1001   // 2进制
 100_100  // 下划线可以做分割，编译器会去除
 ```
+### 集合
+- List：有序可重复
+- Set：无序不可重复
+- Map：键值对存储
 
 ## 常量
 `final`
-## 封装
-## 继承
-## 多态
-## 抽象
 ## 控制流程
 - if-else
 - switch-case
@@ -59,13 +59,25 @@
 - while
 - do-while
 - for-each
-## 集合
-- List：有序可重复
-- Set：无序不可重复
-- Map：键值对存储
 ## 异常处理
 所有异常均继承自`Throwable`类，分为 `Error`（严重问题）和 `Exception`（可处理的问题）
 - try-catch-finally
 ## OOP
 - 类：一个蓝图或模版，定义行为和属性
-- 
+- 对象：类的实例
+### 封装
+隐藏细节，保护数据
+- private
+- public
+- getter/setter
+### 继承
+代码复用
+- extends
+### 多态
+一个接口，多种形态;@Override，接口引用指向子类对象
+- 编译时多态：方法重载，方法名相同参数不同
+- 运行时多态：方法重写，子类覆盖父类方法
+### 抽象
+关注做什么，不关注怎么做
+- interface
+- obstract class
