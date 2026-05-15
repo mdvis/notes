@@ -64,21 +64,35 @@ final int score; // 常量
 - List：有序可重复，继承自 Collection 接口，是其子接口
 	- ArrayList：基于动态数组，查询快，增删慢(涉及扩容和位移)
 	- LinkedList：基于双向链表，查询慢，增删快
+```java
+new ArrayList<>()
+Arrays.asList(...) //  j8+,长度固定不能执行 add，remove
+List.of(...) // j9+, 推荐方式，完全不可变长度元素均不能改，不允许 null 元素
+```
 - Set：无序不可重复，继承自 Collection 接口，是其子接口
 	- HashSet：基于哈希表，存取最快无序
 	- TreeSet：基于红黑树，元素处于排序状态
 	- LinkedHashSet：维护插入顺序
+```java
+new HashSet<>();
+Set.of(...); // j9+,推荐方式，不可变集合，元素不能重复，不能有 null
+new HashSet<>(list) // 列表转集合，去重
+```
 - Queue:FIFO，继承自 Collection 接口，是其子接口
 	- PriorityQueue：优先级队列
+```java
+
+```
 - Map：键值对存储，不继承 Collection 接口
 	- HashMap：最常用 Map，允许 null 键和 null 值，无序
 	- TreeMap：基于红黑树实现，键处于自然排序或指定比较器排序状态
 	- Hashtable：古老线程安全类，现在通常用 ConcurrentHashMap 代替
 	- LinkedHashMap：维护键值对的插入顺序
 ```java
-int[] numbers = new int[5];
 
-int[] numbers = {1,2,3}
+```
+```java
+
 ```
 #### 线程安全问题
 大部分基础集合类都是**非线程安全**的。如果需要在多线程环境下使用，可以使用：
@@ -90,8 +104,11 @@ int[] numbers = {1,2,3}
 - for 同 js
 - while 同 js
 - do-while
-- for-each `for (type`
+- for-each `for (<type> <var>:<obj>){}` 直接取元素没有索引概念
 ```java
+for (int score : scores){
+	System.out.println(score);
+}
 ```
 ## 异常处理
 所有异常均继承自`java.lang.Throwable`类，分为 `Error`（严重问题，通常无法处理）和 `Exception`（可处理的问题；Checked Exception 受检异常；Unchecked Exception/RuntimeException 运行时异常）
