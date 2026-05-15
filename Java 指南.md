@@ -79,6 +79,23 @@
 - try-catch-finally
 - throw 手动抛出异常
 - throws 在方法签名上声明该方法可能抛出的异常，交给调用者处理
+**try-with-resources** 任何实现了 `AutoCloseable` 接口的类，只要在 `try(...)` 的括号中被声明和初始化，**在 `try` 代码块执行完毕后（无论是有异常退出还是正常结束），Java 都会自动调用该资源的 `close()` 方法。**
+下面是 try-with-resources 实例
+```java
+try (FileWriter fw = new FileWriter("test.txt")) {
+    fw.write("Hello");
+} catch (IOException e) {
+    e.printStackTrace();
+} // fw 自动关闭，无需写 finally
+
+// 支持多个资源，‘；’分隔
+try (FileReader fr = new FileReader("input.txt");
+     FileWriter fw = new FileWriter("output.txt")) {
+    // 业务逻辑
+} catch (IOException e) {
+    // 异常处理
+} // 先关闭 fw，再关闭 fr
+```
 ## OOP
 - 类：一个蓝图或模版，定义行为和属性
 - 对象：类的实例
@@ -98,3 +115,5 @@
 关注做什么，不关注怎么做
 - interface
 - obstract class
+## 泛型
+
