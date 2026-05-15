@@ -210,4 +210,137 @@ public class Util {
 2. 元注解（meta-annotations）；用来修饰其他注解的注解
 - `@Target`：定义注解可以贴在谁头上
 - `@Retention`：定义注解的生命周期（编译有效还是运行期也保留）
-1. 运行期留存的注解（高级框架的灵魂）
+3. 运行期留存的注解（高级框架的灵魂）
+- 这类注解会被保留到程序运行的时候。框架（如 Spring Boot）利用 **反射机制（Reflection）** 去读取这些标签，从而实现类似装饰器的神奇效果。
+```java
+// 定义注解
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Target(ElementType.METHOD)          // 告诉编译器：这个注解只能贴在方法上
+@Retention(RetentionPolicy.RUNTIME)  // 告诉编译器：程序运行的时候这个标签也要留着
+public @interface AdminOnly {
+    String reason() default "此操作需要管理员权限"; // 注解可以带属性
+}
+
+// 使用注解
+class UserService {
+    public void viewProfile() {
+        System.out.println("普通用户：查看个人资料。");
+    }
+
+    @AdminOnly(reason = "删库跑路太危险，必须是管理员！") // 贴上我们的自定义标签
+    public void deleteDatabase() {
+        System.out.println("管理员：成功删除数据库。");
+    }
+}
+
+// 反射机制
+import java.lang.reflect.Method;
+
+public class SecurityCheck {
+    public static void main(String[] args) throws Exception {
+        UserService service = new UserService();
+        
+        // 假设当前登录的用户是普通用户 "Jack"
+        String currentUserRole = "NORMAL_USER"; 
+
+        // 模拟执行 deleteDatabase 方法前的权限拦截
+        Method method = UserService.class.getMethod("deleteDatabase");
+
+        // 检查这个方法上是否贴了 @AdminOnly 标签
+        if (method.isAnnotationPresent(AdminOnly.class)) {
+            if (!"ADMIN".equals(currentUserRole)) {
+                // 读取标签里写着的理由
+                AdminOnly annotation = method.getAnnotation(AdminOnly.class);
+                System.out.println("【权限拦截】拒绝访问！原因: " + annotation.reason());
+            } else {
+                service.deleteDatabase();
+            }
+        }
+    }
+}
+
+// 伪装饰器
+@RestController
+public class OrderController {
+
+    @Autowired
+    private OrderService orderService;
+
+    // @LogExecutionTime 是框架/我们自定义的运行时注解
+    // 只要贴上它，Spring 就会在后台悄悄把这个方法包装起来（类似装饰器）
+    // 在方法执行前记录时间，执行后计算差值并打印日志
+    @GetMapping("/createOrder")
+    @LogExecutionTime 
+    public String createOrder() {
+        orderService.doSomeHeavyLyfting(); // 模拟耗时业务
+        return "订单创建成功！";
+    }
+}
+```
+###  ElementType（决定注解能贴在哪里）
+`ElementType` 是一个枚举类，它定义了注解可以应用在 Java 源代码的哪些语法部位。如果你试图把注解贴在未允许的地方，编译器会直接报错。
+常用的取值包括：
+- **`ElementType.TYPE`**：可以贴在 **类、接口（包括注解类型）或枚举声明** 上。
+- **`ElementType.METHOD`**：可以贴在 **方法** 上（最常用，比如 `@Override`、Spring 的 `@GetMapping`）。
+- **`ElementType.FIELD`**：可以贴在 **成员变量（属性）** 上（包括枚举常量）。
+- **`ElementType.PARAMETER`**：可以贴在 **方法参数** 上。
+- **`ElementType.CONSTRUCTOR`**：可以贴在 **构造方法** 上。
+- **`ElementType.LOCAL_VARIABLE`**：可以贴在 **局部变量** 上。
+```java
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Target;
+
+// 限制这个注解只能贴在 类/接口 上，或者 方法 上
+@Target({ElementType.TYPE, ElementType.METHOD}) 
+public @interface MyWebTag {
+    String value();
+}
+
+// 使用场景：
+@MyWebTag("Controller级") // 正确：TYPE 允许贴在类上
+class OrderController {
+
+    @MyWebTag("Method级")   // 正确：METHOD 允许贴在方法上
+    public void save() {}
+
+    // @MyWebTag("Field级")  // ❌ 错误：编译报错！因为没有指定 ElementType.FIELD
+    private String orderId;
+}
+```
+### RetentionPolicy（决定注解能活多久）
+`RetentionPolicy` 同样是一个枚举类，它定义了注解的 **生命周期（留存策略）**。Java 程序的生命周期会经历：`源码 (Source) -> 字节码 (Class) -> 内存运行 (Runtime)` 三个阶段。
+它只有三个取值，对应这三个阶段：
+### ① `RetentionPolicy.SOURCE`（只活在源码阶段）
+- **特性**：注解只保留在 `.java` 源码文件中。当编译器把源码编译成 `.class` 字节码文件时，这个注解就会被**彻底抹去**。
+- **用途**：纯粹给**编译器**看，用来做语法检查或代码生成。
+- **经典代表**：`@Override`、`@SuppressWarnings`。
+### ② `RetentionPolicy.CLASS`（活到字节码阶段 —— 默认选项）
+- **特性**：注解会被编译器记录在 `.class` 字节码文件中。但是，当 JVM（虚拟机）加载这个字节码文件到内存中运行时，JVM **不会**把它读入内存。
+- **用途**：给**编译工具**或**类加载器**做静态分析。通常在底层字节码处理工具（如 ASM、AspectJ）中才会用到，普通业务开发极少手动指定它。
+### ③ `RetentionPolicy.RUNTIME`（活到运行阶段 —— 最常用）
+- **特性**：注解不仅会被编译进 `.class` 文件，在程序运行期间，JVM 也会将它加载并保留在内存中。
+- **用途**：可以通过 **反射机制（Reflection）** 在程序运行的时候动态读取注解的信息。
+- **经典代表**：Spring 框架中几乎所有的注解（如 `@Service`、`@Autowired`）、所有的权限拦截标签。
+```java
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+@Retention(RetentionPolicy.RUNTIME) // 告诉 JVM：程序运行的时候这个标签也要留着
+public @interface AuthCheck {
+    String role() default "USER";
+}
+```
+
+| **元注解**                               | **核心解决的问题**           | **常见搭配示范**                         |
+| ------------------------------------- | --------------------- | ---------------------------------- |
+| **`@Target(ElementType.xxx)`**        | **Where**：这个标签能贴在哪？   | 方法（`METHOD`）、属性（`FIELD`）、类（`TYPE`） |
+| **`@Retention(RetentionPolicy.xxx)`** | **When**：这个标签能活到什么时候？ | 编译完就丢（`SOURCE`）、运行期还能读（`RUNTIME`）  |
+```
+@Target({ElementType.METHOD, ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+public @interface 你的自定义注解 { ... }
+```
