@@ -55,7 +55,7 @@
 
 - **`git tag`** - 标签管理
 - **`git submodule`** - 子模块管理
-- **`git worktree`** - 工作树管理
+- [archived]**`git worktree`** - 工作树管理
 
 ### 调试和维护
 
