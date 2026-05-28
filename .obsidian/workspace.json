@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "fa1688d45ead0f6b",
+        "id": "98b7a3c41b15abf9",
         "type": "tabs",
         "children": [
           {
-            "id": "0da3de0a53f72994",
+            "id": "d31daa7b54a1a71d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java 指南.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Java 指南"
+              "title": "新标签页"
             }
           }
         ]
@@ -88,8 +84,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "1d21b8b5aff8b2b8",
@@ -205,8 +200,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "0da3de0a53f72994",
+  "active": "d31daa7b54a1a71d",
   "lastOpenFiles": [
+    "Java 指南.md",
     "Tmux 指南.md",
     "CMD/网络连接/curl.md",
     "libvips.md",
@@ -241,7 +237,6 @@
     "HTTP 接口设计指南.md",
     "macOS 指南.md",
     "NixOS 指南.md",
-    "LLM/Langchain.md",
     "SQL",
     "未整理/运气表面积公式.png",
     "未整理/cc 九条实战技巧.png",
