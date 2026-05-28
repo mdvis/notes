@@ -11,10 +11,14 @@
             "id": "d31daa7b54a1a71d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "git 命令指南.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "git 命令指南"
             }
           }
         ]
@@ -202,6 +206,7 @@
   },
   "active": "d31daa7b54a1a71d",
   "lastOpenFiles": [
+    "Docker 指南.md",
     "Java 指南.md",
     "Tmux 指南.md",
     "CMD/网络连接/curl.md",
@@ -224,7 +229,6 @@
     "Docker + K8S",
     "C++",
     "Linux_shell.md",
-    "Docker 指南.md",
     "5+2 轻断食.md",
     "塑料容器材质.md",
     "玻璃容器材质.md",
