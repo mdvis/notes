@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "git 命令指南.md",
+                "file": "Docker 指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "git 命令指南"
+              "title": "Docker 指南"
             }
           }
         ]
@@ -205,8 +205,8 @@
   },
   "active": "b7f3d66f0fd345be",
   "lastOpenFiles": [
-    "Git/CMD/worktree.md",
     "git 命令指南.md",
+    "Git/CMD/worktree.md",
     "Docker 指南.md",
     "Java 指南.md",
     "Tmux 指南.md",
