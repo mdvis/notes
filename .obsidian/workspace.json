@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tmx",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,7 +84,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -203,7 +204,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b7f3d66f0fd345be",
+  "active": "7e7ab73cc512f79d",
   "lastOpenFiles": [
     "git 命令指南.md",
     "Git/CMD/worktree.md",
