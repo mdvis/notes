@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tmux 指南.md",
+                "file": "Linux_shell_参数扩展.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tmux 指南"
+              "title": "Linux_shell_参数扩展"
             }
           }
         ]
@@ -203,13 +203,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b4055fa59d5ae5ba",
+  "active": "b7f3d66f0fd345be",
   "lastOpenFiles": [
+    "Linux_shell_参数扩展.md",
+    "Linux_shell.md",
+    "Tmux 指南.md",
     "Docker 指南.md",
     "git 命令指南.md",
     "Git/CMD/worktree.md",
     "Java 指南.md",
-    "Tmux 指南.md",
     "CMD/网络连接/curl.md",
     "libvips.md",
     "Git/CMD/status.md",
@@ -228,7 +230,6 @@
     "TS",
     "Docker + K8S",
     "C++",
-    "Linux_shell.md",
     "5+2 轻断食.md",
     "塑料容器材质.md",
     "玻璃容器材质.md",
@@ -239,7 +240,6 @@
     "CMD/网络连接",
     "CMD",
     "HTTP 接口设计指南.md",
-    "macOS 指南.md",
     "SQL",
     "未整理/运气表面积公式.png",
     "未整理/cc 九条实战技巧.png",
