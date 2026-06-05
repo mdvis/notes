@@ -84,8 +84,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -204,7 +203,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b7f3d66f0fd345be",
+  "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
     "Docker 指南.md",
     "git 命令指南.md",
