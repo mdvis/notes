@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "4632f59c3f89925f",
+        "id": "5da1603299d25a5f",
         "type": "tabs",
         "children": [
           {
-            "id": "b7f3d66f0fd345be",
+            "id": "419a78505c8f6d18",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Git/CMD/worktree.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "worktree"
+              "title": "新标签页"
             }
           }
         ]
@@ -203,15 +199,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b7f3d66f0fd345be",
+  "active": "419a78505c8f6d18",
   "lastOpenFiles": [
+    "Git/CMD/worktree.md",
     "Git/CMD/switch.md",
     "Git/CMD/status.md",
     "Git/CMD/ls-files.md",
     "Git/CMD/diff.md",
     "Git/CMD/checkout.md",
     "Git/CMD/branch.md",
-    "Git/CMD/worktree.md",
     "Web 安全与认证机制.md",
     "Linux_shell_参数扩展.md",
     "Linux_shell.md",
