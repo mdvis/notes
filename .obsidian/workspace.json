@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5da1603299d25a5f",
+        "id": "4192f258a6747b02",
         "type": "tabs",
         "children": [
           {
-            "id": "419a78505c8f6d18",
+            "id": "6938ff061f758ed1",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -200,7 +200,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7e7ab73cc512f79d",
+  "active": "6938ff061f758ed1",
   "lastOpenFiles": [
     "Git/CMD/worktree.md",
     "Git/CMD/switch.md",

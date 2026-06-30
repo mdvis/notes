@@ -1,0 +1,110 @@
+**Transformer的自注意力机制（Self-Attention）** 是Transformer模型的核心创新，它彻底取代了传统RNN/CNN中用于捕捉序列依赖的循环或卷积操作，让模型能够**并行地**处理整个序列，同时有效捕捉**长距离依赖关系**。
+
+### 1. 为什么需要自注意力？
+
+在处理一句话时（如“The animal didn't cross the street because it was too tired”），模型需要理解“it”指代的是“animal”而不是“street”。传统RNN逐个处理词语，容易遗忘远距离信息；CNN的感受野有限。
+
+**自注意力**让序列中的**每个词（token）**都能同时“看”到序列中**所有其他词**（包括自己），并根据相关性（注意力权重）来“吸收”它们的信息，从而为当前词生成一个**上下文相关的表示**。
+
+这实现了：
+
+- **全局依赖捕捉**：无论两个词相距多远，都能直接交互。
+- **并行计算**：不像RNN需要顺序处理，所有位置同时计算，大幅加速训练。
+
+### 2. 自注意力的核心思想：Q、K、V三个向量
+
+对于输入序列（假设有n个token，每个token的嵌入维度为d），自注意力首先通过三个可学习的线性变换，将输入X投影成三个矩阵：
+
+- **Query (Q)**：当前token的“查询”向量，代表“我想找什么信息”。
+- **Key (K)**：所有token的“键”向量，代表“别人有什么信息”。
+- **Value (V)**：所有token的“值”向量，代表“别人实际提供的信息”。
+
+数学上：
+
+- Q = X · W_Q
+- K = X · W_K
+- V = X · W_V
+
+其中 W_Q、W_K、W_V 是可训练的权重矩阵（维度通常为 d × d_k，d_k 常设为64）。
+
+### 3. Scaled Dot-Product Attention（缩放点积注意力）计算步骤
+
+这是论文《Attention is All You Need》中提出的具体实现，公式为：
+
+**Attention(Q, K, V) = softmax( (Q K^T) / √d_k ) V**
+
+步骤分解如下（以一个token为例，但实际是矩阵运算，全并行）：
+
+1. **计算注意力分数（Attention Scores）**：
+   - 对当前token的 Query 与所有token的 Key 做**点积**（Q_i · K_j）。
+   - 点积越大，表示当前token与该token越相关。
+
+2. **缩放（Scaling）**：
+   - 将分数除以 √d_k（d_k 是 Key向量的维度）。
+   - 原因：当维度d_k较大时，点积值会很大，导致softmax梯度极小（梯度消失）。缩放使分布更稳定。
+
+3. **Softmax归一化**：
+   - 将分数转为概率分布（所有权重和为1）。
+   - 权重高的token会贡献更多信息。
+
+4. **加权求和**：
+   - 用这些权重对所有 Value 向量加权求和，得到当前token的**新表示**。
+
+整个过程对序列中**每个token**都这样做，最终输出一个与输入形状相同的矩阵，每个位置都融入了全局上下文。
+
+下面是一些直观的图示，帮助理解流程：
+
+（左图展示单个token生成Q/K/V并计算；右图是整体Scaled Dot-Product Attention流程：Q×K → Scale → Softmax → ×V）
+
+### 4. 多头注意力（Multi-Head Attention）
+
+单一自注意力只能捕捉一种“关注模式”。**多头注意力**并行运行多个（论文中常用8头或12头）独立的注意力机制：
+
+- 每个头使用不同的 W_Q、W_K、W_V，将Q/K/V投影到更低的维度（d_k = d_model / h，h为头数）。
+- 每个头独立计算注意力，捕捉不同方面的关系（例如：句法关系、语义关系、指代关系等）。
+- 最后将所有头的输出**拼接**（Concat），再通过一个线性层融合。
+
+公式：
+**MultiHead(Q, K, V) = Concat(head_1, ..., head_h) · W_O**
+
+其中 head*i = Attention(Q W*{Q*i}, K W*{K*i}, V W*{V_i})
+
+这大大提升了模型的表达能力。
+
+多头注意力可视化示例：
+
+（展示多个头并行计算注意力分数，最后合并）
+
+### 5. 在Transformer中的位置
+
+- **Encoder**：每层只有 **Self-Attention**（输入来自同一序列） + Feed-Forward Network。
+- **Decoder**：有 **Masked Self-Attention**（防止看到未来token） + **Cross-Attention**（Query来自Decoder，Key/Value来自Encoder） + Feed-Forward。
+
+自注意力在Encoder中帮助构建丰富的输入表示，在Decoder中帮助生成输出时参考上下文。
+
+### 6. 简单例子直观感受
+
+句子：“The cat sat on the mat because it was comfortable.”
+
+当模型处理“it”时：
+
+- 自注意力会计算“it”与“cat”、“mat”等词的注意力分数。
+- “cat”可能得到很高权重（指代关系），于是“it”的新表示中会融入“cat”的信息。
+- 多头中，不同头可能分别关注语法、位置、语义等不同方面。
+
+### 7. 优点与注意事项
+
+**优点**：
+
+- 并行性强，训练更快。
+- 能捕捉任意距离的依赖。
+- 可解释性相对好（注意力权重可以可视化，看到模型“关注”了哪里）。
+
+**注意**：
+
+- 计算复杂度是 O(n²)（n为序列长度），长序列时开销大（后来有Linear Attention等改进）。
+- 需要结合 **位置编码（Positional Encoding）**，因为注意力本身不考虑词序。
+
+这就是Transformer自注意力机制的核心。如果你想看**代码实现**（PyTorch从零实现）、**具体数值例子**、**与RNN的对比**，或者深入**Masked Self-Attention / Cross-Attention**，告诉我，我可以继续详细展开！
+
+有哪个部分需要更细致的公式推导或图解吗？
