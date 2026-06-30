@@ -11,10 +11,14 @@
             "id": "6938ff061f758ed1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Tmp/markdown/agent.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "agent"
             }
           }
         ]
@@ -80,8 +84,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -202,6 +205,7 @@
   },
   "active": "6938ff061f758ed1",
   "lastOpenFiles": [
+    "Tmp/markdown/0to1M.md",
     "Git/CMD/worktree.md",
     "Git/CMD/switch.md",
     "Git/CMD/status.md",
@@ -231,7 +235,6 @@
     "TS",
     "Docker + K8S",
     "C++",
-    "5+2 轻断食.md",
     "CMD/文本处理",
     "Git/CMD",
     "Git",
