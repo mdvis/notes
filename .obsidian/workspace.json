@@ -11,10 +11,14 @@
             "id": "876cf7f78b135459",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Tmp/markdown/maven.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "maven"
             }
           }
         ]
@@ -199,8 +203,18 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b4055fa59d5ae5ba",
+  "active": "876cf7f78b135459",
   "lastOpenFiles": [
+    "Tmp/markdown/ostree.md",
+    "Tmp/markdown/本体.md",
+    "CMD/文件处理/ls.md",
+    "CMD/文件处理",
+    "Tmp/markdown/maven.md",
+    "Tmp/markdown/mime.md",
+    "Tmp/markdown/net.md",
+    "Tmp/markdown/OSI.md",
+    "Tmp/markdown/nix.md",
+    "Git/CMD/show1.md",
     "Tmp/用所选项目新建的文件夹/nix3.md",
     "Tmp/用所选项目新建的文件夹/nix2.md",
     "Tmp/用所选项目新建的文件夹/nix.md",
@@ -210,24 +224,15 @@
     "Tmp/nix.md",
     "Tmp/markdown/nix2.md",
     "Tmp/markdown/nix3.md",
-    "Tmp/markdown/ostree.md",
     "Tmp/markdown/onto.md",
     "Tmp/markdown/stream.md",
     "Tmp/markdown/sch.md",
-    "Tmp/markdown/本体.md",
-    "Tmp/markdown/OSI.md",
     "Tmp/markdown/postsql.md",
     "Tmp/markdown/pron.md",
     "Tmp/markdown/safe.md",
     "Tmp/markdown/shell.md",
     "Git/CMD/show.md",
     "Git/CMD/ls-files.md",
-    "Tmp/markdown/show3.md",
-    "Tmp/markdown/show2.md",
-    "Tmp/markdown/uv.md",
-    "Tmp/markdown/sys-eng.md",
-    "Tmp/markdown/vue.md",
-    "Tmp/markdown/视频识别.md",
     "未命名.base",
     "TS",
     "Docker + K8S",
@@ -236,7 +241,6 @@
     "Git/CMD",
     "Git",
     "CMD/网络连接",
-    "CMD",
     "未整理/运气表面积公式.png",
     "未整理/cc 九条实战技巧.png",
     "未命名.canvas",
