@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tmp/markdown/log.md",
+                "file": "Tmp/markdown/goods.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "log"
+              "title": "goods"
             }
           }
         ]
@@ -205,20 +205,27 @@
   },
   "active": "876cf7f78b135459",
   "lastOpenFiles": [
+    "Tmp/markdown/law.md",
+    "Tmp/markdown/httpcode.md",
+    "Tmp/markdown/log.md",
     "Tmp/markdown/maven.md",
+    "Tmp/markdown/mime.md",
+    "Tmp/markdown/nix.md",
+    "Tmp/用所选项目新建的文件夹/nix.md",
+    "Tmp/用所选项目新建的文件夹/nix-all.md",
+    "Tmp/markdown/java2.md",
+    "Tmp/markdown/java.md",
+    "Tmp/markdown/llm-learn.md",
     "Tmp/markdown/long-term.md",
     "Tmp/markdown/ostree.md",
     "Tmp/markdown/本体.md",
     "CMD/文件处理/ls.md",
     "CMD/文件处理",
-    "Tmp/markdown/mime.md",
     "Tmp/markdown/net.md",
     "Tmp/markdown/OSI.md",
-    "Tmp/markdown/nix.md",
     "Git/CMD/show1.md",
     "Tmp/用所选项目新建的文件夹/nix3.md",
     "Tmp/用所选项目新建的文件夹/nix2.md",
-    "Tmp/用所选项目新建的文件夹/nix.md",
     "Tmp/用所选项目新建的文件夹",
     "Tmp/nix3.md",
     "Tmp/nix2.md",
@@ -226,13 +233,6 @@
     "Tmp/markdown/nix2.md",
     "Tmp/markdown/nix3.md",
     "Tmp/markdown/onto.md",
-    "Tmp/markdown/stream.md",
-    "Tmp/markdown/sch.md",
-    "Tmp/markdown/postsql.md",
-    "Tmp/markdown/pron.md",
-    "Tmp/markdown/safe.md",
-    "Tmp/markdown/shell.md",
-    "Git/CMD/show.md",
     "未命名.base",
     "TS",
     "Docker + K8S",

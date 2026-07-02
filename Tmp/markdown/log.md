@@ -6,23 +6,11 @@
 - RHEL. journalctl + rsyslog  /var/log/messages
 - Debian  journalctl + rsyslog  /var/log/syslog   (默认没有 rsyslog,需要单装)
 - SUSE  journalctl + rsyslog  /var/log/messages
-## 桌面常用发行版日志系统现状
-
-| 发行版                            | 默认主要日志查看工具   | rsyslog 是否默认开启 | 传统文本日志是否丰富 | 备注 / 用户实际习惯                    |
-| ------------------------------ | ------------ | -------------- | ---------- | ------------------------------ |
-| Ubuntu Desktop                 | journalctl   | 通常不装（可选）       | 较少         | 大多数普通用户只用journalctl或gnome-logs |
-| Fedora Workstation             | journalctl   | 是（但journal为主）  | 有          | journald体验最好，rsyslog辅助         |
-| Linux Mint                     | journalctl   | 通常不装           | 较少         | 继承Ubuntu风格                     |
-| Pop!\_OS                       | journalctl   | 可选             | 较少         | 与Ubuntu类似                      |
-| Arch / Manjaro                 | journalctl   | 可选（很多人装）       | 看用户配置      | 极度灵活，想纯文本日志就装rsyslog           |
-| openSUSE Tumbleweed / KDE Neon | journalctl   | 是              | 有          | journal + rsyslog 都很完整         |
-| Deepin / UOS                   | journalctl为主 | 一般有rsyslog     | 有          | 国内发行版通常两者都有                    |
-
 ## 快速记忆口诀（2025–2026年现状）
 - 只要是**systemd**发行版（几乎全部现代发行版）→ journalctl 永远都能用
 - 服务器生产环境 → **90%+** 都会装rsyslog并保留传统文本日志
 - 桌面普通用户 → 越来越多人只看journalctl（或图形化的Logs工具）
-- 还想保留经典 /var/log/messages、/var/log/secure 等文件？ → 装rsyslog（或syslog-ng）
+- 还想保留经典 /var/log/messages、/var/log/secure 等文件, 装rsyslog（或syslog-ng）
 - 极少数非systemd发行版（如Alpine、Void、Gentoo不强制systemd）→ 基本还是rsyslog / syslog-ng / busybox-syslog
 ## 查看当前系统日志方式对比
 ```bash
