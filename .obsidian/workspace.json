@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/CMD/show.md",
+                "file": "Tmp/markdown/本体.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "show"
+              "title": "本体"
             }
           }
         ]
@@ -203,13 +203,20 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "876cf7f78b135459",
+  "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
-    "Git/CMD/ls-files.md",
+    "Tmp/markdown/ostree.md",
+    "Tmp/markdown/OSI.md",
+    "Tmp/markdown/sch.md",
+    "Tmp/markdown/postsql.md",
+    "Tmp/markdown/pron.md",
+    "Tmp/markdown/safe.md",
+    "Tmp/markdown/shell.md",
+    "Tmp/markdown/stream.md",
     "Git/CMD/show.md",
+    "Git/CMD/ls-files.md",
     "Tmp/markdown/show3.md",
     "Tmp/markdown/show2.md",
-    "Tmp/markdown/stream.md",
     "Tmp/markdown/uv.md",
     "Tmp/markdown/sys-eng.md",
     "Tmp/markdown/vue.md",
@@ -224,13 +231,6 @@
     "Docker + K8S/Docker 指南.md",
     "Tmp/markdown/agent.md",
     "Git/CMD/worktree.md",
-    "Git/CMD/switch.md",
-    "Git/CMD/status.md",
-    "Git/CMD/diff.md",
-    "Git/CMD/checkout.md",
-    "Git/CMD/branch.md",
-    "Web 安全与认证机制.md",
-    "Linux_shell_参数扩展.md",
     "未命名.base",
     "TS",
     "Docker + K8S",
