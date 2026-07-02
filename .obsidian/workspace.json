@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tmp/markdown/maven.md",
+                "file": "Tmp/markdown/log.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "maven"
+              "title": "log"
             }
           }
         ]
@@ -205,11 +205,12 @@
   },
   "active": "876cf7f78b135459",
   "lastOpenFiles": [
+    "Tmp/markdown/maven.md",
+    "Tmp/markdown/long-term.md",
     "Tmp/markdown/ostree.md",
     "Tmp/markdown/本体.md",
     "CMD/文件处理/ls.md",
     "CMD/文件处理",
-    "Tmp/markdown/maven.md",
     "Tmp/markdown/mime.md",
     "Tmp/markdown/net.md",
     "Tmp/markdown/OSI.md",
@@ -232,7 +233,6 @@
     "Tmp/markdown/safe.md",
     "Tmp/markdown/shell.md",
     "Git/CMD/show.md",
-    "Git/CMD/ls-files.md",
     "未命名.base",
     "TS",
     "Docker + K8S",
