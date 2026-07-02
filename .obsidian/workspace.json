@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "4192f258a6747b02",
+        "id": "09191201208a4ee4",
         "type": "tabs",
         "children": [
           {
-            "id": "f9dc6ea8ccb80603",
+            "id": "876cf7f78b135459",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Taskwarrior 指南.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Taskwarrior 指南"
+              "title": "新标签页"
             }
           }
         ]
@@ -203,8 +199,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f9dc6ea8ccb80603",
+  "active": "876cf7f78b135459",
   "lastOpenFiles": [
+    "Taskwarrior 指南.md",
     "Vim 指南.md",
     "Tmux 指南.md",
     "VSCode 指南.md",
@@ -230,7 +227,6 @@
     "CMD/文本处理/grep.md",
     "CMD/文本处理/grep2.md",
     "linux 命令指南.md",
-    "ripgrep 指南.md",
     "未命名.base",
     "TS",
     "Docker + K8S",
