@@ -11,10 +11,14 @@
             "id": "876cf7f78b135459",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Tmp/markdown/vue.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "vue"
             }
           }
         ]
@@ -201,13 +205,14 @@
   },
   "active": "876cf7f78b135459",
   "lastOpenFiles": [
+    "Tmp/markdown/0to1M.md",
+    "Tmp/markdown/yi.md",
     "Taskwarrior 指南.md",
     "Vim 指南.md",
     "Tmux 指南.md",
     "VSCode 指南.md",
     "LLM/Langchain.md",
     "Docker + K8S/Docker 指南.md",
-    "Tmp/markdown/0to1M.md",
     "Tmp/markdown/agent.md",
     "Git/CMD/worktree.md",
     "Git/CMD/switch.md",
@@ -226,7 +231,6 @@
     "CMD/文本处理/awk.md",
     "CMD/文本处理/grep.md",
     "CMD/文本处理/grep2.md",
-    "linux 命令指南.md",
     "未命名.base",
     "TS",
     "Docker + K8S",

@@ -1,31 +1,4 @@
-**使用 Vue 开发的最低知识点（精简版）**
-
-以下内容足够让你上手一个简单的 Vue 3 项目（单文件组件 + Composition API）。
-
-### 1. 前置基础（必须掌握）
-
-- **HTML + CSS** 基础（Flex/Grid 常用）
-- **JavaScript 现代语法**（ES6+）：
-  - `let/const`
-  - 箭头函数 `() => {}`
-  - 解构赋值 `{ name } = obj`
-  - 模板字符串 `` `Hello ${name}` ``
-  - `import/export` 模块化
-  - `Promise` 和 `async/await`
-
-### 2. Vue 3 核心概念（最重要）
-
-#### **创建应用**
-
-```js
-import { createApp } from 'vue';
-import App from './App.vue';
-
-createApp(App).mount('#app');
-```
-
-#### **单文件组件（.vue 文件结构）**
-
+## **单文件组件（.vue 文件结构）**
 ```vue
 <template>
   <!-- HTML 模板 -->
@@ -39,9 +12,7 @@ createApp(App).mount('#app');
 /* 样式，scoped 只作用于当前组件 */
 </style>
 ```
-
-#### **响应式数据（Composition API）**
-
+## **响应式数据（Composition API）**
 ```js
 import { ref, reactive, computed, watch } from 'vue'
 
@@ -52,9 +23,7 @@ const double = computed(() => count.value * 2)
 
 watch(count, (newVal) => { ... })
 ```
-
-#### **模板语法**
-
+## **模板语法**
 - 插值：`{{ message }}`
 - 指令：
   - `v-bind:` / `:`（绑定属性）
@@ -63,9 +32,7 @@ watch(count, (newVal) => { ... })
   - `v-for="(item, index) in list"`
   - `v-model`（双向绑定）
   - `v-show`
-
-#### **组件通信**
-
+## **组件通信**
 - **Props**：父传子
   ```js
   defineProps(['title']); // 简单写法
