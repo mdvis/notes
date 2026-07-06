@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/CMD/checkout.md",
+                "file": "Git/CMD/filter-repo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "checkout"
+              "title": "filter-repo"
             }
           }
         ]
@@ -205,6 +205,10 @@
   },
   "active": "876cf7f78b135459",
   "lastOpenFiles": [
+    "Git/CMD/branch.md",
+    "Git/CMD/filter-repo.md",
+    "Git/git.md",
+    "Git/CMD/checkout.md",
     "Tmp/markdown/cot_and_tot.md",
     "Tmp/markdown/content-t.md",
     "Tmp/markdown/CLAUDE.zh-en.md",
@@ -219,7 +223,6 @@
     "Tmp/markdown/java.md",
     "Tmp/用所选项目新建的文件夹",
     "Tmp/markdown/flake.md",
-    "Git/git.md",
     "Tmp/markdown/law.md",
     "Tmp/markdown/go.md",
     "Tmp/markdown/goods.md",
@@ -229,9 +232,6 @@
     "Tmp/markdown/mime.md",
     "Tmp/markdown/nix.md",
     "Tmp/用所选项目新建的文件夹/nix.md",
-    "Tmp/用所选项目新建的文件夹/nix-all.md",
-    "Tmp/markdown/java2.md",
-    "Tmp/markdown/llm-learn.md",
     "CMD/文件处理",
     "未命名.base",
     "TS",
