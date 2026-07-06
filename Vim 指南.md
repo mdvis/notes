@@ -2,16 +2,12 @@
 #### 启动选项
 ```vim
 vim -p filename1 filename2     # 以标签页方式打开多个文件
-vim -p *                       # 编辑当前目录所有文件
-vim -r                         # 恢复会话
 vim -o                         # 水平分割窗口打开文件
 vim -O                         # 垂直分割窗口打开文件
 vim +[num] filename            # 定位到指定行
 vim +/[pat] filename           # 定位到第一个匹配模式
 vim -u NONE -N                 # 以无配置、无插件模式启动
 vim -c "命令" file              # 执行命令后打开文件
-gvim -c 'normal ggdG"*p' file  # 从系统剪贴板粘贴内容
-mvim --servername VIM3 --remote-tab foobar.txt  # 在MacVim中远程打开标签页
 ```
 #### 保存与退出
 ```vim
@@ -126,12 +122,6 @@ autocmd BufReadPre *.log set noundofile
 autocmd BufReadPre *.log set noswapfile
 autocmd BufReadPre *.log set nobackup
 ```
-### 权限问题
-```vim
-" 无权限时保存
-:w !sudo tee % > /dev/null
-```
-
 ## expand
 核心作用是：将包含特殊通配符（如 %, #, ~）的字符串扩展为具体的路径、文件名或环境变量。
 ### 核心语法
@@ -283,10 +273,6 @@ let my_file = expand("%")
 ### 最经典组合（必须记住）
 ```vim
 :args **/*.js
-:argdo %s/oldFunc/newFunc/g | update
-```
-或者一行写完：
-```vim
 :argdo %s/oldFunc/newFunc/g | update
 ```
 ### glob 不展开
