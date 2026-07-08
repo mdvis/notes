@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BERT（双向编码器表示转换器）.md",
+                "file": "Tmp/markdown/city.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BERT（双向编码器表示转换器）"
+              "title": "city"
             }
           }
         ]
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BERT（双向编码器表示转换器）.md",
+                "file": "Tmp/markdown/city.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "BERT（双向编码器表示转换器） 的大纲"
+              "title": "city 的大纲"
             }
           },
           {
@@ -206,11 +206,13 @@
   },
   "active": "a5aab592ff9e5980",
   "lastOpenFiles": [
+    "Tmp/markdown/CLAUDE.zh-en.md",
     "chezmoi.md",
+    "Agent.md",
+    "蔬果保存指南.md",
     "BERT（双向编码器表示转换器）.md",
     "自注意力机制.md",
     "API 安全.md",
-    "agent.md",
     "Web 应用架构渐进演进.md",
     "nix.md",
     "stream.md",
@@ -230,8 +232,6 @@
     "Systemd 指南.md",
     "Taskwarrior 指南.md",
     "Tmux 指南.md",
-    "Vim 指南.md",
-    "0Web-- 安全与认证机制.md",
     "Tmp/用所选项目新建的文件夹",
     "CMD/文件处理",
     "未命名.base",
