@@ -152,9 +152,7 @@ system = "aarch64-darwin";
 | Intel Mac         | x86_64-darwin  |
 | Linux x64         | x86_64-linux   |
 ### 不要手写 system（正确写法）
-
 现代 flake 通常用 `flake-utils`，自动支持 macOS、Linux、x64、arm64。
-
 ```nix
 {
   description = "node dev";
@@ -182,14 +180,7 @@ system = "aarch64-darwin";
 }
 ```
 
-这是现代标准写法。
-
----
-
-## 九、packages 与 apps
-
 你可以导出自己的构建结果。
-
 ```nix
 packages.${system}.hello =
   pkgs.writeShellScriptBin "hello" ''
@@ -205,20 +196,12 @@ apps.${system}.default = {
   program = "${self.packages.${system}.hello}/bin/hello";
 };
 ```
-
 然后：
-
 ```bash
 nix build .#hello
 nix run
 ```
-
----
-
-## 十、现代 Nix 工作流
-
 你以后会这样工作：
-
 ```txt
 git clone
 ↓
@@ -226,12 +209,6 @@ nix develop
 ↓
 开始开发
 ```
-
-结束。不再需要：安装 SDK、配环境变量、文档写“请安装 xxx”、版本不一致。这就是 Nix 的真正革命性。
-
----
-
-## 十一、lock 文件与升级依赖
 
 第一次运行 `nix develop` 会生成 `flake.lock`，类似 `package-lock.json` / `pnpm-lock.yaml`。它锁定 nixpkgs 版本和所有依赖，保证可复现。
 
@@ -248,74 +225,6 @@ nix flake update
 ```bash
 nix flake lock --update-input nixpkgs
 ```
-
----
-
-## 十二、理解 nixpkgs
-
-这是全世界最大的包仓库之一。去 [search.nixos.org](https://search.nixos.org/packages) 搜索你需要的软件（记得切换到 "Flakes" 选项卡）。
-
-你会频繁使用：
-
-```nix
-pkgs.nodejs
-pkgs.jdk21
-pkgs.gradle
-pkgs.docker
-```
-
-命令行搜索：
-
-```bash
-nix search nixpkgs jdk
-```
-
----
-
-## 十三、Java 21 开发环境（推荐模板）
-
-```nix
-{
-  description = "java21";
-
-  inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
-  };
-
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
-      let
-        pkgs = import nixpkgs {
-          inherit system;
-        };
-      in
-      {
-        devShells.default =
-          pkgs.mkShell {
-            packages = [
-              pkgs.jdk21
-              pkgs.gradle
-              pkgs.jetbrains.idea-community
-            ];
-
-            shellHook = ''
-              export JAVA_HOME=${pkgs.jdk21}
-            '';
-          };
-      });
-}
-```
-
-进入：
-
-```bash
-nix develop
-```
-
----
-
-## 十四、direnv（强烈推荐，体验质变点）
 
 这是 Nix 真正的完全体。
 
@@ -342,10 +251,6 @@ cd project
 
 离开目录自动退出。体验会直接提升一个量级。
 
----
-
-## 十五、nix profile（现代安装方式）
-
 现代用户级安装：
 
 ```bash
@@ -355,10 +260,6 @@ nix profile remove 0
 ```
 
 但注意：**真正推荐的是 devShell，而不是 profile**。因为 profile 会污染全局。
-
----
-
-## 十六、理解 /nix/store
 
 所有东西都在 `/nix/store` 下，例如 `/nix/store/xxxxx-openjdk-21`。
 
@@ -370,18 +271,10 @@ nix profile remove 0
 
 所以：**不会出现“升级导致全炸”**。
 
----
-
-## 十七、引用路径的魔法 (Flake Refs)
-
 现代 Nix 允许你直接引用 GitHub 上的配置，而无需下载：
 
 - 运行远程 Flake 里的包：`nix run github:edolstra/dwarffs`
 - 使用特定的分支：`nix shell github:NixOS/nixpkgs/nixos-23.11#htop`
-
----
-
-## 十八、进阶：管理系统或用户环境
 
 虽然 `nix shell` 很好用，但你总归需要一些常驻工具。
 
@@ -402,64 +295,26 @@ programs.git = {
 };
 ```
 
----
-
-## 十九、为什么 Nix 很强
-
-因为它解决的是：
-
-1. **环境漂移**：“你电脑能跑我电脑不能跑”。
-2. **不可复现**：半年后项目跑不起来。
-3. **多版本冲突**：Java17/21、Node18/22 同时存在。
-4. **CI 不一致**：本地和 GitHub Actions 不同。
-
----
-
-## 二十、学习路径建议
-
 掌握顺序：
-
 ### 第一阶段（必须）
-
 专注：flakes、nix develop、mkShell、packages、nixpkgs。这是核心中的核心。
-
 ### 第二阶段（开始高级）
-
 学习：overlays、modules、home-manager、devenv.sh、nix-darwin / NixOS。
-
 ### 第三阶段（真正深入）
-
 学习：derivation、stdenv、callPackage、overrideAttrs、fixed-output derivation。
-
 当你习惯了 Nix 的逻辑，再考虑通过 Home Manager 管理你的整个点文件（Dotfiles）。
-
----
-
-## 二十一、你应该避免的坑
 
 ### 1. 不要学旧版教程
 
 避免 `nix-env`，避免 `shell.nix`、`default.nix`，除非维护旧项目。
-
 ### 2. 不要一开始研究语言理论
-
 很多 Nix 教程会变成 λ 演算、lazy evaluation、functional purity，新人会直接迷失。你应该先会“用”。
-
 ### 3. 不要把 Nix 当 Docker 替代品
-
 它们解决不同问题。最强组合是：`Nix + Docker`。
-
-### 4. 忘记 `NIX_PATH`
-
-在 Flake 模式下，一切依赖都应该写在 `inputs` 里，不要依赖系统变量。
-
 ### 5. Git 是必须的
-
 **重要！** Flake 会忽略任何未被 Git 追踪 (`git add`) 的文件。如果你新建了一个 `.nix` 文件却发现 Nix 报错找不到它，请先 `git add`。
 
----
-
-## 二十二、一个现代项目推荐结构
+现代项目推荐结构
 
 ```txt
 project/
@@ -470,24 +325,4 @@ project/
 └── README.md
 ```
 
----
-
-## 二十三、你现在最该做的事
-
-不要继续读理论。直接做这三件事：
-
-1. **给一个 Java 项目写 flake**：目标 `nix develop` 后直接能开发。
-2. **给一个 Node 项目写 flake**：体验 node、pnpm、typescript 自动进入环境。
-3. **配 direnv**：这是体验质变点。
-
----
-
-## 二十四、最后一句真正重要的话
-
 > **底层逻辑：** 现代 Nix 就像是软件包管理界的 Git。`flake.nix` 是你的代码，`flake.lock` 是你的 Commit ID，而 `/nix/store` 是你的仓库，`nix build/run` 则是你的 CI/CD。
-
-Nix 最大价值不是“安装包”，而是：
-
-> “把开发环境变成代码”。
-
-一旦你真正适应 `git clone` → `nix develop` 这个工作流，你会很难再回到：手动装 SDK、配 PATH、wiki 写环境文档、brew 冲突、版本不一致的世界。
