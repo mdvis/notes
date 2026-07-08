@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SSH 指南.md",
+                "file": "前端架构决策的核心依据框架.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SSH 指南"
+              "title": "前端架构决策的核心依据框架"
             }
           }
         ]
@@ -152,12 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "前端架构决策的核心依据框架.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "前端架构决策的核心依据框架 的大纲"
             }
           },
           {
@@ -181,7 +182,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -203,8 +204,20 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "876cf7f78b135459",
+  "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
+    "Tmp/markdown/fed2.md",
+    "Tmp/markdown/fed.md",
+    "Tmp/markdown/0to1M.md",
+    "SQL/PostgreSQL.md",
+    "SQL/Redis.md",
+    "SQL/MongoDB.md",
+    "SQL/SQLite.md",
+    "SQL/Pgvector.md",
+    "SQL/Milvus.md",
+    "Git/CMD/show.md",
+    "Git/CMD/show1.md",
+    "SSH 指南.md",
     "Systemd 指南.md",
     "Taskwarrior 指南.md",
     "Tmux 指南.md",
@@ -219,18 +232,6 @@
     "前端开发指南.md",
     "项目与团队管理.md",
     "5+2 轻断食.md",
-    "CLAUDE.md",
-    "Git/CMD/branch.md",
-    "Git/git.md",
-    "Git/CMD/checkout.md",
-    "Tmp/markdown/cot_and_tot.md",
-    "Tmp/markdown/content-t.md",
-    "Tmp/markdown/CLAUDE.zh-en.md",
-    "Tmp/markdown/agent.md",
-    "Tmp/markdown/0to1M.md",
-    "Tmp/markdown/本体.md",
-    "Tmp/markdown/atten.md",
-    "Tmp/markdown/api-safe.md",
     "Tmp/用所选项目新建的文件夹",
     "CMD/文件处理",
     "未命名.base",
