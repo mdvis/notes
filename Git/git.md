@@ -59,3 +59,21 @@ export GIT_WORK_TREE=/path/to/working
 git status  # 相当于带两个选项
 ```
 灵活使用这三个选项，可以突破 Git 默认的“父子目录”结构，实现更高级的工作流和脚本控制。
+
+
+##  `GIT_SSH_COMMAND` 环境变量
+
+这是最直接、最现代的方法，适用于 Git 2.3.0 及以上版本。通过 `-i` 参数明确指定私钥文件路径。
+
+*   **单次命令**：该环境变量仅对当前这条 `git fetch` 命令生效。
+    ```bash
+    GIT_SSH_COMMAND="ssh -i /path/to/your/private_key" git fetch origin
+    ```
+
+*   **当前会话**：在当前终端会话中，后续所有 Git 命令都会使用这个密钥。
+    ```bash
+    export GIT_SSH_COMMAND="ssh -i /path/to/your/private_key"
+    git fetch origin
+    git pull origin main
+    ```
+    如需取消，可执行 `unset GIT_SSH_COMMAND`。
