@@ -330,7 +330,3 @@ find / -xdev -name "*.log" 2>/dev/null   # 只搜当前根文件系统
 3. 删除前永远先 `find ... -print` 测试
 4. 安全第一：优先 `-execdir` + `-print0 | xargs -0`
 
-想看哪一个参数的**更深入实测**（比如 -newerXY 各种 X/Y 组合、-printf 完整格式表、跨文件系统 -xdev 演示）？
-或者我直接给你打包一个 **“find 进阶速查表”**（可打印版）？
-
-随时说，我继续拆！🚀

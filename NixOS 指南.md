@@ -300,6 +300,20 @@ packages.toolList = pkgs.symlinkJoin {
 *   **查看详情**: `nix flake show`
 *   **更新锁文件**: `nix flake update`
 *   **系统重建**: `nixos-rebuild switch --flake .#myhost` (优先读取 `flake.nix`)
+#### 🔑 解锁关键的输出类型
+
+`outputs` 属性集是 Flake 的核心，你可以通过不同的属性名来声明不同类型的产出。
+
+| 输出属性                     | 用途                          | 示例命令                                  |
+| :--------------------------- | :---------------------------- | :---------------------------------------- |
+| `packages.<system>.<name>`   | 构建一个具体的软件包          | `nix build .#hello`                       |
+| `apps.<system>.<name>`       | 定义一个可以直接运行的“应用”  | `nix run .#my-app`                        |
+| `devShells.<system>.<name>`  | 定义一个可复现的开发环境      | `nix develop`                             |
+| `checks.<system>.<name>`     | 定义自动化测试，确保代码质量  | `nix flake check`                         |
+| `nixosConfigurations.<name>` | 定义一个完整的 NixOS 系统配置 | `nixos-rebuild switch --flake .#my-nixos` |
+| `formatter.<system>`         | 指定用于格式化代码的程序      | `nix fmt`                                 |
+
+> **注**：`<system>` 是你的目标系统架构，如 `x86_64-linux`、`aarch64-darwin` 等。使用第三方库（如 `flake-utils`）可以简化对多系统的支持。
 
 ---
 
