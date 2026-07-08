@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端架构决策的核心依据框架.md",
+                "file": "Tmp/markdown/nix.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "前端架构决策的核心依据框架"
+              "title": "nix"
             }
           }
         ]
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端架构决策的核心依据框架.md",
+                "file": "Tmp/markdown/nix.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "前端架构决策的核心依据框架 的大纲"
+              "title": "nix 的大纲"
             }
           },
           {
@@ -204,8 +204,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b4055fa59d5ae5ba",
+  "active": "876cf7f78b135459",
   "lastOpenFiles": [
+    "stream.md",
+    "Tmp/markdown/ostree.md",
+    "前端架构决策的核心依据框架.md",
     "Tmp/markdown/fed2.md",
     "Tmp/markdown/fed.md",
     "Tmp/markdown/0to1M.md",
@@ -229,9 +232,6 @@
     "环境工程.md",
     "上下文工程.md",
     "前端监控手册.md",
-    "前端开发指南.md",
-    "项目与团队管理.md",
-    "5+2 轻断食.md",
     "Tmp/用所选项目新建的文件夹",
     "CMD/文件处理",
     "未命名.base",

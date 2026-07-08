@@ -1,53 +1,4 @@
-# Nix 全面教程（现代体系：`nix-command` + `flakes`）
-
-## 引言：现代 Nix 是什么
-
-你可以把现代 Nix 理解成：
-
-> 一个“可复现的软件与环境描述系统”。
-
-它不是“包管理器增强版”，而是：
-
-- 描述环境
-- 描述构建过程
-- 描述开发 Shell
-- 描述系统配置
-- 描述 CI
-- 描述部署
-
-然后：
-
-> Nix 保证任何机器得到同样结果。
-
-如果你之前听说 Nix 很难学，那通常是因为旧版的 Nix 充满了隐式逻辑和全局变量（如 `NIX_PATH`）。
-
-**现代 Nix（Nix 2.0+ 与 Flakes）** 的核心目标是：**显式、纯净、可重现**。
-
-> 先把它当成“声明式 pnpm + Docker + CI + SDK manager + Homebrew”的统一体。这是最容易理解的。
-
----
-
-## 一、核心思想：声明式与不可变性
-
-- **不可变商店 (`/nix/store`)**：所有包都安装在 `/nix/store/<hash>-<name>-<version>` 下。由于路径包含 Hash，不同版本的软件可以完美共存，互不干扰。
-- **声明式配置**：你不再通过运行命令来安装软件，而是通过编写一个 `.nix` 文件描述你想要的状态，然后让 Nix 去实现它。
-
----
-
-## 二、先建立正确认知
-
-很多教程一开始就讲：
-
-- derivation
-- lazy evaluation
-- purity
-- store
-- overlays
-
-这会把新人直接劝退。
-
 正确学习顺序应该是：
-
 1. flakes 是项目入口
 2. nix develop 是开发环境
 3. nix run 是运行
@@ -56,40 +7,11 @@
 6. nixpkgs 是软件仓库
 7. module system 是高级层
 
----
-
-## 三、安装 Nix（必须开启 flakes）
-
-官方安装：
-
-```bash
-sh <(curl -L https://nixos.org/nix/install) --daemon
-```
-
-或者使用官方推荐的 [Determinate Systems 安装脚本](https://determinate.systems/nix-installer)，它会自动为你开启 Flakes 支持：
-
-```bash
-curl -sSf -L https://install.determinate.systems/nix | sh -s -- install
-```
-
 然后启用现代命令，编辑 `~/.config/nix/nix.conf`（或系统级 `/etc/nix/nix.conf`），加入：
 
 ```conf
 experimental-features = nix-command flakes
 ```
-
-验证：
-
-```bash
-nix --version
-nix flake --help
-```
-
-如果正常，就进入现代 Nix 世界了。
-
----
-
-## 四、Nix 语言速成
 
 Nix 是一门函数式、惰性求值的领域特定语言（DSL）。先了解三个基础语法即可：
 
@@ -116,28 +38,10 @@ in
 
 > 不要一开始就研究 λ 演算、lazy evaluation、functional purity 等语言理论。先会“用”最重要。
 
----
-
-## 五、现代 Nix 的核心结构
-
-现代 Nix 基本围绕 `flake.nix` 展开，这是项目入口。
-
-| 技术   | 文件         |
-| ------ | ------------ |
-| Node   | package.json |
-| Rust   | Cargo.toml   |
-| Docker | Dockerfile   |
-| Nix    | flake.nix    |
-
-**Flake** 是一个包含 `flake.nix` 文件的目录。它解决了 Nix 过去最大的痛点：**版本锁定**。
-
-一个 `flake.nix` 主要由两部分组成：
-
+现代 Nix 基本围绕 `flake.nix` 展开，**Flake** 是一个包含 `flake.nix` 文件的目录。它解决了 Nix 过去最大的痛点：**版本锁定**。 一个 `flake.nix` 主要由两部分组成：
 1. **Inputs（输入）**：依赖项。比如你想用哪个版本的 `nixpkgs`。
 2. **Outputs（输出）**：你产出的东西。可以是软件包、开发环境、或者是整个系统配置。
-
 ### 最小 flake
-
 ```nix
 {
   description = "my first flake";
@@ -151,87 +55,55 @@ in
     };
 }
 ```
-
 字段说明：
-
 - **description**：纯描述。
 - **inputs**：依赖。类似 `dependencies`，但依赖的是 nixpkgs、其他 flakes、github 仓库、本地目录。例如 `nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"` 表示使用 nixpkgs 的 unstable 分支。
 - **outputs**：最重要。你定义的 package、dev shell、app、formatter、system config 全部从这里导出。
 
----
-
-## 六、核心指令：再见 nix-env，你好 nix profile
-
 现代指令统一以 `nix <subcommand>` 开头，逻辑极其清晰。
-
 ### 常用命令对比表
 
-| 旧指令 (Legacy)       | 现代指令 (Flakes/Command)             | 作用                             |
-| --------------------- | ------------------------------------- | -------------------------------- |
-| `nix-shell -p pkg`    | **`nix shell nixpkgs#pkg`**           | 临时进入包含该包的环境           |
-| `nix-env -iA pkg`     | **`nix profile install nixpkgs#pkg`** | 像传统包管理器一样安装包         |
-| `nix-build`           | **`nix build`**                       | 构建当前目录的 Flake             |
+| 旧指令 (Legacy)          | 现代指令 (Flakes/Command)                 | 作用                     |
+| --------------------- | ------------------------------------- | ---------------------- |
+| `nix-shell -p pkg`    | **`nix shell nixpkgs#pkg`**           | 临时进入包含该包的环境            |
+| `nix-env -iA pkg`     | **`nix profile install nixpkgs#pkg`** | 像传统包管理器一样安装包           |
+| `nix-build`           | **`nix build`**                       | 构建当前目录的 Flake          |
 | `nix-shell`           | **`nix develop`**                     | 进入开发环境（读取 `devShells`） |
-| `nix-collect-garbage` | **`nix store gc`**                    | 清理没用的文件（垃圾回收）       |
-
+| `nix-collect-garbage` | **`nix store gc`**                    | 清理没用的文件（垃圾回收）          |
 ### 1. 临时环境：`nix shell`
-
-想试用某个软件而不想污染系统？
-
 ```bash
 nix shell nixpkgs#nodejs
-# 等价："给我一个带 node 的 shell"。
-# 退出即消失，nodejs 不会留在你的 PATH 里
 ```
-
-这是替代 `brew install`、`apt install`、`sdkman` 的神器。
-
 ### 2. 开发环境：`nix develop`（日常使用最多）
-
 进入项目目录（含有 `flake.nix`），运行此命令。它会根据配置文件自动配置好所有编译器、依赖项和环境变量。
-
 ```bash
 nix develop
 ```
-
 临时运行：
-
 ```bash
 nix develop --command bash
 nix develop --command mvn test
 ```
-
 ### 3. 运行命令：`nix run`（杀手锏指令）
-
 直接运行一个远程或本地 Flake 定义的可执行文件，不用安装：
-
 ```bash
 nix run nixpkgs#cowsay -- "Hello Flakes!"
 nix run nixpkgs#cowsay
 nix run github:sharkdp/bat
 nix run github:edolstra/dwarffs -- --help
 ```
-
 这会自动下载、缓存并运行，运行完后你的系统依然干净如初。
-
 ### 4. 构建项目：`nix build`
-
 构建 Flake 定义的默认包，结果会生成一个名为 `result` 的软链接指向 `/nix/store`。
-
 ```bash
 nix build
 nix build .#hello
 ./result/bin/hello
 ```
 
----
-
-## 七、先学最重要的：devShell
-
-这是你最先应该掌握的。因为：
+devShell 你最先应该掌握的。因为：
 
 > 90% 人使用 Nix 的真正价值，是开发环境可复现。
-
 ### 创建开发环境
 
 ```nix
@@ -260,36 +132,25 @@ nix build .#hello
     };
 }
 ```
-
 进入环境：
-
 ```bash
 nix develop
 java -version
 mvn -version
 exit
 ```
-
 你会发现：机器没装 Java，但环境里有 Java。这就是 Nix 的核心魅力。
-
----
-
-## 八、system 是什么
-
 你必须理解：
-
 ```nix
 system = "aarch64-darwin";
 ```
-
 因为 Nix 所有包都按平台区分。
 
-| 平台              | 值             |
+| 平台                | 值              |
 | ----------------- | -------------- |
 | Apple Silicon Mac | aarch64-darwin |
 | Intel Mac         | x86_64-darwin  |
 | Linux x64         | x86_64-linux   |
-
 ### 不要手写 system（正确写法）
 
 现代 flake 通常用 `flake-utils`，自动支持 macOS、Linux、x64、arm64。
