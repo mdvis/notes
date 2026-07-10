@@ -151,7 +151,6 @@ HTTP 支持多种认证方案，以下是常见的几种：
 1. **Digest 方案示例**：
    - 请求头：`Authorization: Digest username="Mufasa", realm="testrealm@host.com", nonce="dcd98b7102dd2f0e8b11d0f600bfb0c093", uri="/dir/index.html", qop=auth, nc=00000001, cnonce="0a4f113b", response="6629fae49393a05397450978507c4ef1", opaque="5ccc069c403ebaf9f0171e9517f40e41"`。
 这些示例假设在 HTTPS 连接中使用。
-
 #### 安全考虑（Security Considerations）
 - **传输安全**：始终结合 HTTPS 使用，否则凭据可能被嗅探（man-in-the-middle attack）。
 - **凭据存储**：客户端不应持久存储明文凭据；服务器端需安全哈希密码。
@@ -159,7 +158,6 @@ HTTP 支持多种认证方案，以下是常见的几种：
 - **最佳实践**：优先使用现代方案如 Bearer + JWT；实施速率限制防暴力破解；定期轮换密钥或令牌。
 - **跨域问题**：在 CORS（Cross-Origin Resource Sharing）中，需显式允许 Authorization 头。
 - **隐私**：避免在日志中记录完整头部，以防敏感信息泄露。
-
 #### 相关头部和状态码（Related Headers and Status Codes）
 - **WWW-Authenticate**：服务器响应头，用于指定认证方案和参数（如 `WWW-Authenticate: Basic realm="Access to the staging site"`）。
 - **Proxy-Authorization**：类似 Authorization，但用于代理服务器认证。
