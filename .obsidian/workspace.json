@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CMD/文本处理/sort.md",
+                "file": "XDG-规范手册.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "sort"
+              "title": "XDG-规范手册"
             }
           }
         ]
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CMD/文本处理/sort.md",
+                "file": "XDG-规范手册.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "sort 的大纲"
+              "title": "XDG-规范手册 的大纲"
             }
           },
           {
@@ -206,8 +206,8 @@
   },
   "active": "daae81f296f80772",
   "lastOpenFiles": [
-    "linux 命令指南.md",
     "CMD/文本处理/sort.md",
+    "linux 命令指南.md",
     "环境工程.md",
     "SQL/SQLite.md",
     "SQL/Redis.md",
