@@ -206,6 +206,8 @@
   },
   "active": "daae81f296f80772",
   "lastOpenFiles": [
+    "Git/CMD/shortlog.md",
+    "Git/CMD/log.md",
     "CMD/文本处理/sort.md",
     "linux 命令指南.md",
     "环境工程.md",
@@ -230,8 +232,6 @@
     "package.md",
     "ostree.md",
     "mime.md",
-    "Tmp/markdown/maven.md",
-    "Linux 日志指南.md",
     "Tmp/用所选项目新建的文件夹",
     "CMD/文件处理",
     "未命名.base",
