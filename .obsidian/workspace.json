@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/git.md",
+                "file": "uv.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "git"
+              "title": "uv"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "uv",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,8 +84,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -205,8 +204,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7e7ab73cc512f79d",
+  "active": "daae81f296f80772",
   "lastOpenFiles": [
+    "Git/git.md",
     "Git/CMD/shortlog.md",
     "Git/CMD/log.md",
     "XDG-规范手册.md",
@@ -232,7 +232,6 @@
     "0项--目与团队管理.md",
     "package.md",
     "ostree.md",
-    "mime.md",
     "Tmp/用所选项目新建的文件夹",
     "CMD/文件处理",
     "未命名.base",
