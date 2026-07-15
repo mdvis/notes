@@ -47,17 +47,26 @@ source .venv/bin/activate         # 可选，uv 会自动识别 .venv
 uv add requests                   # 添加依赖
 uv add "fastapi>=0.100"           # 指定版本
 uv add --dev pytest               # 添加开发依赖
-uv add --optional # 添加开发依赖
+uv add --optional docs mkdocs     # 添加可选依赖
 
 uv remove requests                # 移除依赖
 
-uv run python main.py             # 在项目环境中运行命令
-uv run pytest                     # 运行测试
-
 uv sync                           # 根据 uv.lock 同步安装依赖（创建/激活 .venv）
-uv export -o requirements.txt
 uv lock                           # 仅更新 lockfile，不安装
 uv tree                           # 查看依赖树
+
+uv run python main.py             # 在项目环境中运行命令
+uv run pytest                     # 运行测试
+uv run test.py                    # 运行测试
+
+uv tool install ruff              # 全局安装 cli 到隔离环境
+uvx fuff check .                  # 临时运行，不安装
+uv tool list
+uv tool upgrade ruff
+uv tool uninstall ruff
+
+uv build
+uv publish
 ```
 
 pyproject.toml
@@ -465,7 +474,23 @@ uv python uninstall 3.12
 `uv tool uninstall`
 
 - `--all` — 卸载所有工具
-  
+
+`uv tool list`
+
+列出已通过 `uv tool install` 安装的全部 CLI 工具及其版本
+
+- `--show-paths` — 显示每个工具环境与可执行文件的路径
+- `--show-version-specifiers` — 显示安装时使用的版本约束
+- `--show-with` — 显示随工具安装的附加依赖
+- `--show-extras` — 显示随工具安装的 extra 依赖
+- `--show-python` — 显示每个工具关联的 Python 版本
+- `--outdated` — 列出可升级的工具
+- `--exclude-newer <date>` — 仅列出指定日期前上传的候选包
+- `-n, --no-cache` — 不使用缓存
+- `--cache-dir <path>` — 指定缓存目录
+- `--managed-python` — 强制使用 uv 管理的 Python
+- `--no-managed-python` — 禁用 uv 管理的 Python
+
 `uv tool run` (`uvx`)
 
 `uvx` 是 `uv tool run` 的顶层别名，临时在隔离环境中运行 CLI 工具，无需全局安装

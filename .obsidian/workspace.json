@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "0f09bede921885a5",
+        "id": "a8858972da5f1575",
         "type": "tabs",
         "children": [
           {
-            "id": "daae81f296f80772",
+            "id": "fcfba996f8d3cd9f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "uv.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "uv"
+              "title": "新标签页"
             }
           }
         ]
@@ -88,8 +84,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "1d21b8b5aff8b2b8",
@@ -187,8 +182,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -206,8 +200,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "daae81f296f80772",
+  "active": "fcfba996f8d3cd9f",
   "lastOpenFiles": [
+    "uv.md",
+    "未命名 1.base",
+    "未命名.base",
     "Git/git.md",
     "Git/CMD/shortlog.md",
     "Git/CMD/log.md",
@@ -232,18 +229,14 @@
     "AGENT 技术名词.md",
     "项目与团队管理.md",
     "0项--目与团队管理.md",
-    "package.md",
-    "ostree.md",
     "Tmp/用所选项目新建的文件夹",
     "CMD/文件处理",
-    "未命名.base",
     "TS",
     "Docker + K8S",
     "C++",
     "CMD/文本处理",
     "Git/CMD",
     "Git",
-    "CMD/网络连接",
     "未整理/运气表面积公式.png",
     "未整理/cc 九条实战技巧.png",
     "未命名.canvas",
