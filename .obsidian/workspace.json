@@ -11,13 +11,14 @@
             "id": "86fd345dc2eddc33",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "数据库-列表.base",
-                "viewName": "列表"
+                "file": "Docker + K8S/Docker 指南.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-list",
-              "title": "数据库-列表"
+              "icon": "lucide-file",
+              "title": "Docker 指南"
             }
           }
         ]
@@ -203,10 +204,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b4055fa59d5ae5ba",
+  "active": "86fd345dc2eddc33",
   "lastOpenFiles": [
-    "数据库-表格.base",
     "数据库-卡片.base",
+    "数据库-表格.base",
     "数据库-列表.base",
     "其他/项目与团队管理.md",
     "其他/设计哲学指南.md",
