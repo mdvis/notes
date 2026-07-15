@@ -1,0 +1,9 @@
+views:
+  - type: cards
+    name: 卡片
+    order:
+      - file.name
+      - file.folder
+      - file.tags
+      - file.mtime
+      - file.basename

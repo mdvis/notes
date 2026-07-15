@@ -1,0 +1,9 @@
+views:
+  - type: table
+    name: 表格
+    order:
+      - file.basename
+      - file.folder
+      - file.mtime
+      - file.name
+      - file.tags
