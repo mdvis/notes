@@ -439,6 +439,15 @@ uv python uninstall 3.12
 - `--overrides <file>` — 覆盖版本
 - `--excludes <file>` — 排除包
 
+`uv tool upgrade`
+
+- `--all` — 升级所有工具
+- `--python <ver>` — 指定 Python 版本
+
+`uv tool uninstall`
+
+- `--all` — 卸载所有工具
+  
 `uv tool run` (`uvx`)
 
 `uvx` 是 `uv tool run` 的顶层别名，临时在隔离环境中运行 CLI 工具，无需全局安装
@@ -571,15 +580,6 @@ uvx --no-binary ruff
 uvx --no-build ruff
 ```
 
-`uv tool upgrade`
-
-- `--all` — 升级所有工具
-- `--python <ver>` — 指定 Python 版本
-
-`uv tool uninstall`
-
-- `--all` — 卸载所有工具
-  
   ## 关键文件
 - pyproject.toml — 项目元数据与依赖声明
 - uv.lock — 锁定所有依赖版本（应提交到 git）
