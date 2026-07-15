@@ -1,0 +1,38 @@
+views:
+  - type: table
+    name: 表格
+    order:
+      - file.basename
+      - file.ctime
+      - file.embeds
+      - file.ext
+      - file.folder
+      - file.fullname
+      - file.links
+      - file.mtime
+      - file.name
+      - file.path
+      - file.size
+      - file.tags
+  - type: cards
+    name: 卡片
+    order:
+      - file.name
+      - file.folder
+      - file.tags
+  - type: list
+    name: 列表
+    order:
+      - file.name
+      - file.backlinks
+      - file.basename
+      - file.ctime
+      - file.embeds
+      - file.ext
+      - file.folder
+      - file.fullname
+      - file.links
+      - file.mtime
+      - file.path
+      - file.size
+      - file.tags

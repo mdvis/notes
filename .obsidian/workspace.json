@@ -11,14 +11,13 @@
             "id": "fcfba996f8d3cd9f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "编码分类总结.md",
-                "mode": "source",
-                "source": false
+                "file": "未命名.base",
+                "viewName": "表格"
               },
-              "icon": "lucide-file",
-              "title": "编码分类总结"
+              "icon": "lucide-table",
+              "title": "未命名"
             }
           }
         ]
@@ -206,11 +205,11 @@
   },
   "active": "fcfba996f8d3cd9f",
   "lastOpenFiles": [
+    "编码分类总结.md",
     "未命名.base",
     "未命名 2.base",
     "未命名 1.base",
     "主流视频编码.md",
-    "编码分类总结.md",
     "Agent/幻觉.md",
     "Agent/Agent 产品评估体系.md",
     "Agent",
@@ -241,7 +240,6 @@
     "Docker + K8S",
     "C++",
     "CMD/文本处理",
-    "Git/CMD",
     "未整理/运气表面积公式.png",
     "未整理/cc 九条实战技巧.png",
     "未命名.canvas",
