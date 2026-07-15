@@ -32,15 +32,22 @@
 
 ## 项目管理（推荐 workflow）
 
-```
+```sh
 uv init my-project                # 创建新项目（生成 pyproject.toml）
-uv init --app / --lib / --package # 指定项目类型
-
 cd my-project
 
-uv add requests                   # 添加依赖到 pyproject.toml + 更新 lockfile
-uv add --dev pytest               # 添加开发依赖
+uv python list
+uv python install 3.12
+uv python pin 3.12                # 固定版本到 .python-version
+
+uv venv
+uv venv --python 3.12
+source .venv/bin/activate         # 可选，uv 会自动识别 .venv
+
+uv add requests                   # 添加依赖
 uv add "fastapi>=0.100"           # 指定版本
+uv add --dev pytest               # 添加开发依赖
+uv add --optional # 添加开发依赖
 
 uv remove requests                # 移除依赖
 
@@ -51,6 +58,17 @@ uv sync                           # 根据 uv.lock 同步安装依赖（创建/�
 uv export -o requirements.txt
 uv lock                           # 仅更新 lockfile，不安装
 uv tree                           # 查看依赖树
+```
+
+pyproject.toml
+```toml
+[project]
+name = "myproj"
+version = "1.0.0"
+dependencies = [ "requests" ]
+
+[tool.uv]
+dev-dependencies = [ "pytest", "ruff" ]
 ```
 
 ## 全局选项（各个命令通用）
