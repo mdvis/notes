@@ -11,14 +11,13 @@
             "id": "86fd345dc2eddc33",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "其他/编码分类总结.md",
-                "mode": "source",
-                "source": false
+                "file": "数据库-表格.base",
+                "viewName": "表格"
               },
-              "icon": "lucide-file",
-              "title": "编码分类总结"
+              "icon": "lucide-table",
+              "title": "数据库-表格"
             }
           }
         ]
@@ -205,8 +204,10 @@
   },
   "active": "86fd345dc2eddc33",
   "lastOpenFiles": [
-    "其他/玻璃容器材质.md",
+    "Python/类型注解.md",
+    "Python",
     "其他/编码分类总结.md",
+    "其他/玻璃容器材质.md",
     "Docker + K8S/Docker 指南.md",
     "数据库-卡片.base",
     "数据库-表格.base",
@@ -232,15 +233,12 @@
     "其他/uv.md",
     "其他/stream.md",
     "其他/sioyek 指南.md",
-    "其他/ripgrep 指南.md",
-    "其他/package.md",
     "其他",
     "用所选项目新建的文件夹",
     "未命名 2.base",
     "未命名 1.base",
     "Agent",
     "Tmp/用所选项目新建的文件夹",
-    "CMD/文件处理",
     "未整理/运气表面积公式.png",
     "未整理/cc 九条实战技巧.png",
     "未命名.canvas",
