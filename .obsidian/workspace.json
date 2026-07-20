@@ -13,11 +13,11 @@
             "state": {
               "type": "bases",
               "state": {
-                "file": "数据库-表格.base",
-                "viewName": "表格"
+                "file": "数据库-卡片.base",
+                "viewName": "卡片"
               },
-              "icon": "lucide-table",
-              "title": "数据库-表格"
+              "icon": "lucide-layout-grid",
+              "title": "数据库-卡片"
             }
           }
         ]
@@ -204,17 +204,17 @@
   },
   "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
+    "数据库-卡片.base",
+    "数据库-表格.base",
     "TS",
     "Golang",
     "Rust",
-    "数据库-表格.base",
     "未命名.md",
     "Python/类型注解.md",
     "Python",
     "其他/编码分类总结.md",
     "其他/玻璃容器材质.md",
     "Docker + K8S/Docker 指南.md",
-    "数据库-卡片.base",
     "数据库-列表.base",
     "其他/项目与团队管理.md",
     "其他/设计哲学指南.md",

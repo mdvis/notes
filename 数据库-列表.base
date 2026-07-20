@@ -1,9 +1,0 @@
-views:
-  - type: list
-    name: 列表
-    order:
-      - file.name
-      - file.basename
-      - file.folder
-      - file.mtime
-      - file.tags
