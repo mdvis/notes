@@ -151,13 +151,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/CMD/shortlog.md",
+                "file": "数据库-卡片.base",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "shortlog 的大纲"
+              "title": "数据库-卡片 的大纲"
             }
           },
           {
@@ -181,7 +181,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -202,7 +202,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b4055fa59d5ae5ba",
+  "active": "afa94deef2a0cac1",
   "lastOpenFiles": [
     "数据库-卡片.base",
     "数据库-表格.base",
