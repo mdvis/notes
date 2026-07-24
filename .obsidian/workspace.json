@@ -84,8 +84,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -184,12 +183,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -206,7 +204,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "86fd345dc2eddc33",
+  "active": "7486ff4d5fe99554",
   "lastOpenFiles": [
     "Python/类型注解.md",
     "数据库-表格.base",
