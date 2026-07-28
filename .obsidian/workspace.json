@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "其他/chezmoi.md",
+                "file": "CMD/文本处理/sort.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "chezmoi"
+              "title": "sort"
             }
           }
         ]
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "其他/chezmoi.md",
+                "file": "CMD/文本处理/sort.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "chezmoi 的大纲"
+              "title": "sort 的大纲"
             }
           },
           {
@@ -203,8 +203,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7486ff4d5fe99554",
+  "active": "86fd345dc2eddc33",
   "lastOpenFiles": [
+    "其他/chezmoi.md",
     "Python/类型注解.md",
     "数据库-表格.base",
     "数据库-卡片.base",
