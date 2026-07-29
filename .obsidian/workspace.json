@@ -172,13 +172,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CMD/系统监控/df.md",
+                "file": "CMD/系统监控/du.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "df 的大纲"
+              "title": "du 的大纲"
             }
           },
           {
@@ -223,10 +223,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "86fd345dc2eddc33",
+  "active": "c8f025a09eaf3869",
   "lastOpenFiles": [
-    "CMD/系统监控/du.md",
     "CMD/系统监控/df.md",
+    "CMD/系统监控/du.md",
     "CMD/系统监控",
     "其他/linux 命令指南.md",
     "CMD/文本处理/sort.md",
