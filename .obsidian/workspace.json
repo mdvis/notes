@@ -179,7 +179,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -200,7 +200,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "658907c5766d10a3",
+  "active": "8b536fcf20839aa1",
   "lastOpenFiles": [
     "CMD/系统监控/du.md",
     "CMD/系统监控/df.md",
