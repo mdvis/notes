@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "468155eb5d652fc1",
+        "id": "e7441ebaebd00705",
         "type": "tabs",
         "children": [
           {
-            "id": "f98dd83a2a4c70d3",
+            "id": "658907c5766d10a3",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.13.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.13.4"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ]
@@ -39,7 +37,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -86,8 +86,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "1d21b8b5aff8b2b8",
@@ -184,8 +183,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -202,7 +200,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f98dd83a2a4c70d3",
+  "active": "658907c5766d10a3",
   "lastOpenFiles": [
     "CMD/系统监控/du.md",
     "CMD/系统监控/df.md",
