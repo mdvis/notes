@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docs/agent_guide.md",
+                "file": "Docs/agent-development-algorithms.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "agent_guide"
+              "title": "agent-development-algorithms"
             }
           }
         ]
@@ -206,11 +206,11 @@
   },
   "active": "658907c5766d10a3",
   "lastOpenFiles": [
-    "Docs/agent-development-algorithms.md",
     "Docs/frontend-development-algorithms.md",
+    "Docs/agent-development-algorithms.md",
+    "Docs/agent_guide.md",
     "Docs/algorithms/01-基础算法.md",
     "Docs/a-tour-of-go.md",
-    "Docs/agent_guide.md",
     "Docs/algorithms/10-评估与优化.md",
     "Docs/algorithms/09-工具调用与函数选择.md",
     "Docs/algorithms/08-强化学习.md",
