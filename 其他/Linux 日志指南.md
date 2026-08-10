@@ -60,14 +60,20 @@ ForwardToSyslog=yes
 创建日志：create、nocreate、copytruncate、nocopytruncate
 ...
 ### 常见日志文件
-- `/var/log/syslog` Debian 系统日志（服务、守护进程等）
-- `/var/log/messages`：RHEL 记录系统的常规信息和错误，是诊断系统问题的首要日志文件。（系统消息）
-- `/var/log/auth.log`：认证日志
-- `/var/log/secure`：记录与安全相关的事件，如用户认证、授权等操作。（登录日志）
-- `/var/log/kern.log`：内核日志
+#### 通用（跨发行版基本一致）
 - `/var/log/dmesg`：记录系统启动时内核产生的消息，可使用 `dmesg` 命令查看。（启动日志）
-- `/var/log/cron`：记录定时任务（如 cron 作业）的执行情况。
 - `/var/log/boot.log`：记录系统引导过程中的事件。（启动）
+- `/var/log/kern.log`：内核日志
+- `/var/log/cron`：记录定时任务（如 cron 作业）的执行情况。
+- `/var/log/audit/audit.log`：auditd 审计日志（需安装 auditd，主要 RHEL 系）
+- `/var/log/journal/`：journald 持久化日志（systemd 发行版通用）
+- `/run/log/journal/`：journald 易失日志（systemd 发行版通用）
+#### 发行版差异（同名功能、不同路径）
+| 功能 | Debian/Ubuntu 系 | RHEL/CentOS/SUSE 系 |
+| --- | --- | --- |
+| 系统常规日志 | `/var/log/syslog` | `/var/log/messages` |
+| 认证/安全日志 | `/var/log/auth.log` | `/var/log/secure` |
+> 注：以上文本日志是否生成取决于是否安装/运行 rsyslog；查询入口统一用 `journalctl` 跨发行版通用。
 ### journald
 - `-b` 本次启动日志
 - `-u` 查看某服务日志`journalctl -u ssh`
