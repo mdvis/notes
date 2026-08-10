@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "其他/Linux 日志指南.md",
+                "file": "其他/XDG-规范手册.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux 日志指南"
+              "title": "XDG-规范手册"
             }
           }
         ]
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "rsyslog",
+                "query": "XDG",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -155,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "其他/Linux 日志指南.md",
+                "file": "其他/XDG-规范手册.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -206,10 +206,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8b536fcf20839aa1",
+  "active": "658907c5766d10a3",
   "lastOpenFiles": [
-    "其他/Linux_安全指南.md",
     "其他/Linux 日志指南.md",
+    "其他/Linux_安全指南.md",
     "算法/01-agent-基础算法.md",
     "算法/10-agent-评估与优化.md",
     "算法/09-agent-工具调用与函数选择**.md",

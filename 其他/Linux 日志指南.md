@@ -74,14 +74,32 @@ ForwardToSyslog=yes
 | 系统常规日志 | `/var/log/syslog` | `/var/log/messages` |
 | 认证/安全日志 | `/var/log/auth.log` | `/var/log/secure` |
 > 注：以上文本日志是否生成取决于是否安装/运行 rsyslog；查询入口统一用 `journalctl` 跨发行版通用。
-### journald
-- `-b` 本次启动日志
-- `-u` 查看某服务日志`journalctl -u ssh`
-- `-f` 实时跟踪
-- `-p`
-- `--since`
-- `--until`
-- `-k`
+### journalctl 常用选项
+- `-b` / `--boot` 本次启动日志
+- `-u` / `--unit` 查看某服务日志，如 `journalctl -u ssh`
+- `-f` / `--follow` 实时跟踪，如 `journalctl -f`
+- `-p` / `--priority` 按日志级别过滤，如 `journalctl -p err`
+- `--since` 起始时间，如 `journalctl --since "2025-03-01"`
+- `--until` 结束时间，如 `journalctl --until "2025-03-31"`
+- `-k` / `--dmesg` 仅查看内核日志
+### journald 配置
+- 配置文件 `/etc/systemd/journald.conf`，修改后需 `systemctl restart systemd-journald` 生效
+- 日志来源：内核、服务标准输出/错误、audit、syslog
+- 存储模式（`Storage`）
+	1. `auto`（默认）：`/var/log/journal/` 存在则持久化，否则仅易失
+	2. `persistent`：始终持久化到 `/var/log/journal/`
+	3. `volatile`：仅易失，存于 `/run/log/journal/`
+	4. `none`：不存储
+- 转发规则
+	1. `ForwardToSyslog=yes` 转发给 rsyslog（生成传统文本日志的关键开关）
+	2. `ForwardToKMsg=no` 转发给内核日志缓冲区
+	3. `ForwardToConsole=no` 转发到控制台
+- 磁盘限额（避免日志撑爆磁盘）
+	1. `SystemMaxUse=` 持久日志最大占用
+	2. `SystemKeepFree=` 持久日志保留可用空间
+	3. `RuntimeMaxUse=` 易失日志最大占用
+	4. `MaxRetentionSec=` 日志最长保留时间
+- 日志格式：二进制 KV，结构化字段（`_PID`、`_UID`、`_SYSTEMD_UNIT`、`PRIORITY` 等）
 ## 安全审计日志（auditd）
 安全审计系统，主要用于监控文件访问、监控系统调用、安全审计；日志文件`/var/log/audit/audit.log`
 ## 内核日志（klog/dmesg）
