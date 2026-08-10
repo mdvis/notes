@@ -100,6 +100,17 @@ ForwardToSyslog=yes
 	3. `RuntimeMaxUse=` 易失日志最大占用
 	4. `MaxRetentionSec=` 日志最长保留时间
 - 日志格式：二进制 KV，结构化字段（`_PID`、`_UID`、`_SYSTEMD_UNIT`、`PRIORITY` 等）
+### journald 日志轮转与清理
+journald 自带轮转，**不需要 logrotate**，由 `journald.conf` 的限额参数自动触发；手动清理用 `journalctl --vacuum-*` 系列。
+- 查看占用 `journalctl --disk-usage`
+- 按大小清理 `journalctl --vacuum-size=500M`（保留最近 500M）
+- 按时间清理 `journalctl --vacuum-time=2weeks`（清理 2 周前的日志）
+- 按文件数清理 `journalctl --vacuum-files=5`（仅保留 5 个日志文件）
+- 强制轮转 `journalctl --rotate`（写入当前日志并切到新文件）
+- 校验完整性 `journalctl --verify`（检查二进制日志是否损坏）
+- 把易失日志刷到持久层 `journalctl --flush`（如从 `/run/log/journal` 迁到 `/var/log/journal`）
+- 列出历史启动 `journalctl --list-boots`（每行一次启动，可用于 `journalctl -b <编号>`）
+> 实践建议：配置 `SystemMaxUse=` 做长期上限，配合定时 `journalctl --vacuum-time=` 清理历史；不要直接 `rm` journal 文件，会破坏索引。
 ## 安全审计日志（auditd）
 安全审计系统，主要用于监控文件访问、监控系统调用、安全审计；日志文件`/var/log/audit/audit.log`
 ## 内核日志（klog/dmesg）
