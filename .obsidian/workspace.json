@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e7441ebaebd00705",
+        "id": "30dc040309457993",
         "type": "tabs",
         "children": [
           {
-            "id": "658907c5766d10a3",
+            "id": "76aac114f3aa6862",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "其他/XDG-规范手册.md",
-                "mode": "source",
-                "source": false
+                "aFile": "数据库-表格.base",
+                "bFile": "数据库-表格.base",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "XDG-规范手册"
+              "icon": "diff",
+              "title": "Diff: 数据库-表格.base  (Working Tree)"
             }
           }
         ]
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "XDG",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,8 +86,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -155,7 +154,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "其他/XDG-规范手册.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -206,9 +204,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "658907c5766d10a3",
+  "active": "76aac114f3aa6862",
   "lastOpenFiles": [
     "其他/Linux 日志指南.md",
+    "数据库-表格.base",
+    "数据库-卡片.base",
+    "未命名 1.base",
+    "未命名.base",
+    "其他/XDG-规范手册.md",
     "其他/Linux_安全指南.md",
     "算法/01-agent-基础算法.md",
     "算法/10-agent-评估与优化.md",
@@ -233,17 +236,11 @@
     "CMD/文本处理/sort.md",
     "其他/chezmoi.md",
     "Python/类型注解.md",
-    "数据库-表格.base",
-    "数据库-卡片.base",
     "TS",
     "Golang",
     "Rust",
     "未命名.md",
-    "Python",
     "其他/编码分类总结.md",
-    "其他/玻璃容器材质.md",
-    "Docker + K8S/Docker 指南.md",
-    "数据库-列表.base",
     "未整理/运气表面积公式.png",
     "未整理/cc 九条实战技巧.png",
     "未命名.canvas",

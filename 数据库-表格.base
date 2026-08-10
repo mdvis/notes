@@ -7,3 +7,6 @@ views:
       - file.mtime
       - file.name
       - file.tags
+    sort:
+      - property: file.mtime
+        direction: DESC
