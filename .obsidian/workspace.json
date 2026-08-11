@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "30dc040309457993",
+        "id": "353928ea68413c11",
         "type": "tabs",
         "children": [
           {
-            "id": "76aac114f3aa6862",
+            "id": "5d86aec527f39541",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "数据库-表格.base",
-                "bFile": "数据库-表格.base",
-                "aRef": ""
+                "file": "其他/FFmpeg 指南.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: 数据库-表格.base  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "FFmpeg 指南"
             }
           }
         ]
@@ -204,7 +204,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "76aac114f3aa6862",
+  "active": "5d86aec527f39541",
   "lastOpenFiles": [
     "其他/Linux 日志指南.md",
     "数据库-表格.base",
