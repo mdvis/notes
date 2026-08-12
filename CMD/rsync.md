@@ -4,14 +4,11 @@
 
 ## 一、Rsync 是什么？
 
-**Rsync**（Remote Sync）是 Linux/Unix 系统下的一款**远程数据同步工具**，最初由 Andrew Tridgell 和 Paul Mackerras 开发，用于取代老旧的 `rcp` 命令。它可以通过 LAN/WAN 在多台主机之间高效同步文件和目录。
-
----
+**Rsync**（Remote Sync）是 Linux/Unix 系统下的一款**远程数据同步工具**，可以通过 LAN/WAN 在多台主机之间高效同步文件和目录。
 
 ## 二、核心算法原理（Rsync Algorithm）
 
 这是 rsync 最精华的部分，也是它区别于 `scp`、`cp` 等工具的关键：
-
 ### 增量传输算法流程
 
 假设主机 α 有文件 A，主机 β 有文件 B，两者内容相似但不完全相同：
@@ -41,8 +38,6 @@
 
 > 📌 **关键优势**：只传输**差异部分**，而非整个文件。对于大文件的微小修改，传输量极小。
 
----
-
 ## 三、工作模式
 
 |模式|说明|示例|
@@ -50,9 +45,6 @@
 |**本地复制**|类似 `cp`，在同一机器上同步|`rsync -a /src/ /dst/`|
 |**远程 Shell（SSH）**|通过 SSH 隧道传输，最常用|`rsync -avz /src/ user@host:/dst/`|
 |**Rsync Daemon**|以守护进程方式运行，监听 873 端口|`rsync -avz /src/ host::module/`|
-
----
-
 ## 四、常用参数
 
 ```bash
