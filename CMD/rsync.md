@@ -81,8 +81,6 @@ rsync -avzP --bwlimit=1000 /bigfile.iso user@host:/iso/
 rsync -avz /web/ backup-server::webmodule/
 ```
 
----
-
 ## 六、类似的协议和工具
 
 ### 🔹 文件传输/同步类
@@ -113,9 +111,6 @@ rsync -avz /web/ backup-server::webmodule/
 |**Borg Backup**|去重 + 压缩 + 加密的增量备份，底层思想类似 rsync|
 |**Restic**|类似 Borg，支持多种后端（S3、SFTP、REST）|
 |**Duplicity**|增量加密备份，支持 GPG 加密|
-
----
-
 ## 七、如何选择？
 
 ```
@@ -127,7 +122,3 @@ rsync -avz /web/ backup-server::webmodule/
 需要加密增量备份 + 版本管理？     → Borg / Restic
 只是简单拷个文件？               → scp / sftp 就够了
 ```
-
----
-
-如果你对某个工具或 rsync 的某个具体用法（比如 daemon 配置、crontab 定时同步、与 inotify 结合等）想深入了解，随时可以继续问！
