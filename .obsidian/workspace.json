@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SQL/未命名.md",
+                "file": "DB/Milvus.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "Milvus"
             }
           }
         ]
@@ -206,8 +206,13 @@
   },
   "active": "1f507ff38c2bb4f2",
   "lastOpenFiles": [
+    "DB/MongoDB.md",
+    "DB/pgvector.md",
+    "DB/PostgreSQL.md",
+    "DB/Redis.md",
+    "DB/Milvus.md",
+    "SQL/Qdrant.md",
     "数据库-表格.base",
-    "SQL/未命名.md",
     "数据库-卡片.base",
     "其他/每日一读.md",
     "标准",
@@ -232,10 +237,6 @@
     "算法/09-agent-工具调用与函数选择**.md",
     "算法/08-agent-强化学习.md",
     "算法/07-agent-多Agent协作.md",
-    "算法/06-agent-记忆与状态管理.md",
-    "算法/05-agent-规划与任务分解.md",
-    "算法/04-agent-推理与决策算法***.md",
-    "算法/03-agent-RAG*.md",
     "Docs/algorithms",
     "算法",
     "CMD/系统监控",
