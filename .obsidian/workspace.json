@@ -39,14 +39,12 @@
             "id": "e33436d24bcd2f5f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "其他/每日一读.md",
-                "mode": "source",
-                "source": false
+                "file": "标准/lvm-usage-manual.html.pdf"
               },
-              "icon": "lucide-file",
-              "title": "每日一读"
+              "icon": "lucide-file-text",
+              "title": "lvm-usage-manual.html"
             }
           }
         ],
@@ -183,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "其他/每日一读.md",
+                "file": "标准/lvm-usage-manual.html.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -217,7 +215,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -236,12 +235,14 @@
   },
   "active": "e33436d24bcd2f5f",
   "lastOpenFiles": [
-    "其他/前端打包.md",
     "其他/每日一读.md",
+    "标准/lvm-usage-manual.html.pdf",
+    "其他/编码分类总结.md",
+    "标准/lvm-usage-manual.html",
+    "其他/前端打包.md",
     "其他/浏览器指纹.md",
     "其他/开源许可.md",
     "其他/环境工程.md",
-    "其他/编码分类总结.md",
     "CMD/系统管理/fdisk.md",
     "其他/Linux_逻辑卷管理_LVM.md",
     "其他/linux 命令指南.md",
@@ -266,12 +267,9 @@
     "其他/塑料容器材质.md",
     "其他/蔬果保存指南.md",
     "其他/玻璃容器材质.md",
-    "CMD/rsync.md",
     "未命名 1.base",
     "Docs/algorithms",
     "算法",
-    "CMD/系统监控",
-    "TS",
     "未整理/运气表面积公式.png",
     "未整理/cc 九条实战技巧.png",
     "未命名.canvas",
