@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "其他/Linux_逻辑卷管理_LVM.md",
+                "file": "标准/LVM.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux_逻辑卷管理_LVM"
+              "title": "LVM"
             }
           },
           {
@@ -39,16 +39,17 @@
             "id": "e33436d24bcd2f5f",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "标准/lvm-usage-manual.html.pdf"
+                "file": "其他/每日一读.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "lvm-usage-manual.html"
+              "icon": "lucide-file",
+              "title": "每日一读"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -181,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "标准/lvm-usage-manual.html.pdf",
+                "file": "标准/LVM.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -233,8 +234,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "e33436d24bcd2f5f",
+  "active": "b5e60b3d17f52481",
   "lastOpenFiles": [
+    "其他/Linux_错误码详解.md",
+    "标准/未命名.md",
+    "标准/LVM.md",
+    "其他/Linux_逻辑卷管理_LVM.md",
+    "CMD/系统管理/fdisk.md",
     "其他/每日一读.md",
     "标准/lvm-usage-manual.html.pdf",
     "其他/编码分类总结.md",
@@ -243,11 +249,8 @@
     "其他/浏览器指纹.md",
     "其他/开源许可.md",
     "其他/环境工程.md",
-    "CMD/系统管理/fdisk.md",
-    "其他/Linux_逻辑卷管理_LVM.md",
     "其他/linux 命令指南.md",
     "CMD/系统管理",
-    "其他/Linux_错误码详解.md",
     "其他/Linux_存储基础.md",
     "其他/Linux_磁盘阵列_RAID.md",
     "其他/Linux_安全指南.md",
@@ -266,7 +269,6 @@
     "其他/XDG-规范手册.md",
     "其他/塑料容器材质.md",
     "其他/蔬果保存指南.md",
-    "其他/玻璃容器材质.md",
     "未命名 1.base",
     "Docs/algorithms",
     "算法",
