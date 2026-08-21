@@ -4,49 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "6304f88ece66e6f9",
+        "id": "59d1ccaff4329432",
         "type": "tabs",
         "children": [
           {
-            "id": "b5e60b3d17f52481",
+            "id": "017dbba72b58be12",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "标准/LVM.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "LVM"
-            }
-          },
-          {
-            "id": "9e81c5bd43caab59",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CMD/系统管理/fdisk.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "fdisk"
-            }
-          },
-          {
-            "id": "e33436d24bcd2f5f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "其他/每日一读.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "每日一读"
+              "title": "新标签页"
             }
           }
         ]
@@ -114,7 +82,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -182,7 +151,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "标准/LVM.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -234,14 +202,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b5e60b3d17f52481",
+  "active": "7e7ab73cc512f79d",
   "lastOpenFiles": [
+    "其他/每日一读.md",
+    "CMD/系统管理/fdisk.md",
+    "Git/CMD/rev-parse.md",
+    "标准/LVM.md",
     "其他/Linux_错误码详解.md",
     "标准/未命名.md",
-    "标准/LVM.md",
     "其他/Linux_逻辑卷管理_LVM.md",
-    "CMD/系统管理/fdisk.md",
-    "其他/每日一读.md",
     "标准/lvm-usage-manual.html.pdf",
     "其他/编码分类总结.md",
     "标准/lvm-usage-manual.html",
@@ -268,7 +237,6 @@
     "标准",
     "其他/XDG-规范手册.md",
     "其他/塑料容器材质.md",
-    "其他/蔬果保存指南.md",
     "未命名 1.base",
     "Docs/algorithms",
     "算法",
