@@ -86,8 +86,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -206,7 +205,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "017dbba72b58be12",
+  "active": "b4055fa59d5ae5ba",
   "lastOpenFiles": [
     "其他/每日一读.md",
     "CMD/系统管理/fdisk.md",
