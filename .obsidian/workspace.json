@@ -11,13 +11,14 @@
             "id": "017dbba72b58be12",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "数据库-表格.base",
-                "viewName": "表格"
+                "file": "本体（Ontology）在软件研发领域的核心知识体系：从概念到企业落地.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "数据库-表格"
+              "icon": "lucide-file",
+              "title": "本体（Ontology）在软件研发领域的核心知识体系：从概念到企业落地"
             }
           }
         ]
@@ -206,9 +207,10 @@
   },
   "active": "017dbba72b58be12",
   "lastOpenFiles": [
-    "数据库-卡片.base",
-    "数据库-表格.base",
     "软件开发中的身份认证、加密机制与访问控制设计.md",
+    "本体（Ontology）在软件研发领域的核心知识体系：从概念到企业落地.md",
+    "数据库-表格.base",
+    "数据库-卡片.base",
     "其他/nix.md",
     "其他/每日一读.md",
     "CMD/系统管理/fdisk.md",
@@ -236,7 +238,6 @@
     "DB/MongoDB.md",
     "DB/pgvector.md",
     "DB/PostgreSQL.md",
-    "DB/Redis.md",
     "标准",
     "未命名 1.base",
     "Docs/algorithms",
