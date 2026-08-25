@@ -11,14 +11,13 @@
             "id": "017dbba72b58be12",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "其他/nix.md",
-                "mode": "source",
-                "source": false
+                "file": "数据库-表格.base",
+                "viewName": "表格"
               },
-              "icon": "lucide-file",
-              "title": "nix"
+              "icon": "lucide-table",
+              "title": "数据库-表格"
             }
           }
         ]
@@ -205,8 +204,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b4055fa59d5ae5ba",
+  "active": "017dbba72b58be12",
   "lastOpenFiles": [
+    "数据库-卡片.base",
+    "数据库-表格.base",
+    "软件开发中的身份认证、加密机制与访问控制设计.md",
+    "其他/nix.md",
     "其他/每日一读.md",
     "CMD/系统管理/fdisk.md",
     "Git/CMD/rev-parse.md",
@@ -234,12 +237,7 @@
     "DB/pgvector.md",
     "DB/PostgreSQL.md",
     "DB/Redis.md",
-    "SQL/Qdrant.md",
-    "数据库-表格.base",
-    "数据库-卡片.base",
     "标准",
-    "其他/XDG-规范手册.md",
-    "其他/塑料容器材质.md",
     "未命名 1.base",
     "Docs/algorithms",
     "算法",
