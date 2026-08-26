@@ -7,13 +7,8 @@
 - 容器 / chroot 环境准备：挂载 `/proc`、`/sys`、`/dev`，或目录绑定（bind mount）
 - 脚本中**检查某个目录是否已挂载**，避免重复挂载或误操作
 - 只读挂载可疑设备，防止恶意程序自动执行
-
----
-
 ## 2. 基本语法与高频选项
-
 ### 语法骨架
-
 ```
 mount [-t 文件系统类型] [-o 挂载选项] [设备] [目录]
 mount [-a]
@@ -22,20 +17,19 @@ mount   # 无参数 → 列出所有已挂载的文件系统
 
 - `设备` 和 `目录`：如果 `/etc/fstab` 中已有对应条目，**只给其中一个即可**，另一个会自动查找。
 - `-t` 和 `-o`：通常可省略（系统会自动检测类型；选项有默认值）。
-
 ### 高频选项（共 7 个，脚本中常用）
 
 > 标 ★ 的是**先掌握这三个**，足以应对 80% 的脚本需求。
 
-|选项|缩写来源|作用|可运行示例|
-|---|---|---|---|
-|**`-t`**​ ★|**t**ype|指定文件系统类型（如 ext4、vfat、nfs）|`mount -t ext4 /dev/sdb1 /mnt`|
-|**`-o`**​ ★|**o**ptions|指定挂载参数（ro/rw、noexec、loop、bind 等，逗号分隔）|`mount -o rw,noexec,nosuid /dev/sdb1 /mnt`|
-|**`-a`**​ ★|**a**ll|挂载 `/etc/fstab` 中所有未挂载的文件系统|`mount -a`|
-|`-r`|**r**ead-only|只读挂载（等价于 `-o ro`）|`mount -r /dev/sdb1 /mnt`|
-|`-v`|**v**erbose|显示详细挂载过程，排错时有用|`mount -v /dev/sdb1 /mnt`|
-|`-L`|**L**abel|通过分区卷标挂载（**GNU 特有**，依赖 `/dev/disk/by-label`）|`mount -L MYUSB /mnt`|
-|`--bind`|GNU 长选项|将已存在的目录挂载到另一个位置（**GNU/Linux 特有**，BSD 无此选项）|`mount --bind /src /dst`|
+| 选项          | 缩写来源          | 作用                                           | 可运行示例                                      |
+| ----------- | ------------- | -------------------------------------------- | ------------------------------------------ |
+| **`-t`**​ ★ | **t**ype      | 指定文件系统类型（如 ext4、vfat、nfs）                    | `mount -t ext4 /dev/sdb1 /mnt`             |
+| **`-o`**​ ★ | **o**ptions   | 指定挂载参数（ro/rw、noexec、loop、bind 等，逗号分隔）        | `mount -o rw,noexec,nosuid /dev/sdb1 /mnt` |
+| **`-a`**​ ★ | **a**ll       | 挂载 `/etc/fstab` 中所有未挂载的文件系统                  | `mount -a`                                 |
+| `-r`        | **r**ead-only | 只读挂载（等价于 `-o ro`）                            | `mount -r /dev/sdb1 /mnt`                  |
+| `-v`        | **v**erbose   | 显示详细挂载过程，排错时有用                               | `mount -v /dev/sdb1 /mnt`                  |
+| `-L`        | **L**abel     | 通过分区卷标挂载（**GNU 特有**，依赖 `/dev/disk/by-label`） | `mount -L MYUSB /mnt`                      |
+| `--bind`    | GNU 长选项       | 将已存在的目录挂载到另一个位置（**GNU/Linux 特有**，BSD 无此选项）   | `mount --bind /src /dst`                   |
 
 **BSD 注意事项：**
 
@@ -43,17 +37,15 @@ mount   # 无参数 → 列出所有已挂载的文件系统
 - BSD 没有 `-L`；FreeBSD 可用 `glabel` 或直接指定 `/dev/label/xxx`。
 - BSD 的 `mount -a` 行为与 GNU 类似，但 FreeBSD 还支持 `mount -A`（挂载 fstab 中所有，包括已挂载的会重新挂载）。
 
----
-
 ## 3. 新手最容易踩的坑
 
-|错误写法|实际后果|正确写法|
-|---|---|---|
-|`mount /dev/sdb1 /mnt/mydisk`（挂载点不存在）|报错 `mount point /mnt/mydisk does not exist`|`mkdir -p /mnt/mydisk && mount /dev/sdb1 /mnt/mydisk`|
-|`mount /dev/sdb1 /mnt`（普通用户执行）|报错 `only root can do that` 或 `permission denied`|`sudo mount /dev/sdb1 /mnt`（脚本需 root 运行）|
-|`mount image.iso /mnt`（GNU 旧内核/旧版）|提示需要指定文件系统类型或设备不存在|`mount -o loop image.iso /mnt`（现代 GNU 自动 loop，但显式写更稳）|
-|脚本中直接 `mount /dev/sdb1 /data`不检查|若已挂载，可能隐藏原目录内容或报错|先检查：`grep -qs '/data ' /proc/mounts|
-|macOS/FreeBSD 脚本写 `mount --bind /a /b`|BSD 不识别 `--bind`，直接报错|FreeBSD: `mount_nullfs /a /b`；脚本中用 `uname` 判断系统|
+| 错误写法                                   | 实际后果                                             | 正确写法                                                  |
+| -------------------------------------- | ------------------------------------------------ | ----------------------------------------------------- |
+| `mount /dev/sdb1 /mnt/mydisk`（挂载点不存在）  | 报错 `mount point /mnt/mydisk does not exist`      | `mkdir -p /mnt/mydisk && mount /dev/sdb1 /mnt/mydisk` |
+| `mount /dev/sdb1 /mnt`（普通用户执行）         | 报错 `only root can do that` 或 `permission denied` | `sudo mount /dev/sdb1 /mnt`（脚本需 root 运行）              |
+| `mount image.iso /mnt`（GNU 旧内核/旧版）     | 提示需要指定文件系统类型或设备不存在                               | `mount -o loop image.iso /mnt`（现代 GNU 自动 loop，但显式写更稳） |
+| 脚本中直接 `mount /dev/sdb1 /data`不检查       | 若已挂载，可能隐藏原目录内容或报错                                | 先检查：`grep -qs '/data ' /proc/mounts                   |
+| macOS/FreeBSD 脚本写 `mount --bind /a /b` | BSD 不识别 `--bind`，直接报错                            | FreeBSD: `mount_nullfs /a /b`；脚本中用 `uname` 判断系统       |
 
 ---
 
