@@ -67,7 +67,7 @@
 - `useradd/userdel` - 管理用户
 - `systemctl` - 控制systemd服务
 - `service` - 控制系统服务
-- `mount/umount` - 挂载/卸载文件系统
+- 【已归档】`mount/umount` - 挂载/卸载文件系统
 - 【已归档】`fdisk` - 管理磁盘分区
 
 ### 网络工具

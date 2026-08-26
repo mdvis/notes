@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端与后端架构图的画法.md",
+                "file": "CMD/系统管理/unmount.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "前端与后端架构图的画法"
+              "title": "unmount"
             }
           }
         ]
@@ -207,8 +207,11 @@
   },
   "active": "017dbba72b58be12",
   "lastOpenFiles": [
-    "本体（Ontology）在软件研发领域的核心知识体系：从概念到企业落地.md",
+    "CMD/系统管理/mount.md",
+    "CMD/系统管理/unmount.md",
+    "其他/linux 命令指南.md",
     "前端与后端架构图的画法.md",
+    "本体（Ontology）在软件研发领域的核心知识体系：从概念到企业落地.md",
     "软件开发中的身份认证、加密机制与访问控制设计.md",
     "数据库-表格.base",
     "数据库-卡片.base",
@@ -227,7 +230,6 @@
     "其他/浏览器指纹.md",
     "其他/开源许可.md",
     "其他/环境工程.md",
-    "其他/linux 命令指南.md",
     "CMD/系统管理",
     "其他/Linux_存储基础.md",
     "其他/Linux_磁盘阵列_RAID.md",
@@ -237,8 +239,6 @@
     "未命名.base",
     "DB/Milvus.md",
     "DB/MongoDB.md",
-    "DB/pgvector.md",
-    "DB/PostgreSQL.md",
     "标准",
     "未命名 1.base",
     "Docs/algorithms",
