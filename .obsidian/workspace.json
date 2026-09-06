@@ -75,7 +75,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nix",
+                "query": "gh",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -106,7 +106,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -225,7 +226,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "017dbba72b58be12",
+  "active": "7e7ab73cc512f79d",
   "lastOpenFiles": [
     "CMD/系统管理/mount.md",
     "CMD/系统管理/umount.md",
