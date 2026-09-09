@@ -11,10 +11,13 @@
             "id": "efa8f2966ad2e4ea",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "新标签页"
+              "type": "bases",
+              "state": {
+                "file": "数据库-表格.base",
+                "viewName": "表格"
+              },
+              "icon": "lucide-table",
+              "title": "数据库-表格"
             }
           }
         ]
@@ -201,7 +204,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b4055fa59d5ae5ba",
+  "active": "efa8f2966ad2e4ea",
   "lastOpenFiles": [
     "其他/环境工程.md",
     "算法/04-agent-推理与决策算法***.md",
