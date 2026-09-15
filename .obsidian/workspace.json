@@ -11,10 +11,14 @@
             "id": "ea7b1545e44d9be7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "简历.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "简历"
             }
           }
         ]
@@ -203,6 +207,7 @@
   },
   "active": "ea7b1545e44d9be7",
   "lastOpenFiles": [
+    "简历.md",
     "gh.md",
     "数据库-表格.base",
     "其他/环境工程.md",
