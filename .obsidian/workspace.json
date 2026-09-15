@@ -4,20 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a278779bf4bc2fcf",
+        "id": "8f9a90230220c1c2",
         "type": "tabs",
         "children": [
           {
-            "id": "efa8f2966ad2e4ea",
+            "id": "8c3de4f01565c52b",
             "type": "leaf",
             "state": {
-              "type": "bases",
-              "state": {
-                "file": "数据库-表格.base",
-                "viewName": "表格"
-              },
-              "icon": "lucide-table",
-              "title": "数据库-表格"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ]
@@ -204,8 +201,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "efa8f2966ad2e4ea",
+  "active": "8c3de4f01565c52b",
   "lastOpenFiles": [
+    "gh.md",
+    "数据库-表格.base",
     "其他/环境工程.md",
     "算法/04-agent-推理与决策算法***.md",
     "CMD/系统管理/umount.md",
@@ -214,7 +213,6 @@
     "前端与后端架构图的画法.md",
     "本体（Ontology）在软件研发领域的核心知识体系：从概念到企业落地.md",
     "软件开发中的身份认证、加密机制与访问控制设计.md",
-    "数据库-表格.base",
     "数据库-卡片.base",
     "其他/nix.md",
     "其他/每日一读.md",
@@ -235,9 +233,7 @@
     "其他/Linux_磁盘阵列_RAID.md",
     "其他/Linux_安全指南.md",
     "其他/Linux 日志指南.md",
-    "其他/Linux 进程指南.md",
     "未命名.base",
-    "DB/Milvus.md",
     "标准",
     "未命名 1.base",
     "Docs/algorithms",
