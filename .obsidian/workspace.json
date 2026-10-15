@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "简历"
             }
+          },
+          {
+            "id": "7d99810be38be770",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.14.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.14.4"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -205,7 +218,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "ea7b1545e44d9be7",
+  "active": "7d99810be38be770",
   "lastOpenFiles": [
     "简历.md",
     "gh.md",
