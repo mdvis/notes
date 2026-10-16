@@ -13,28 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "简历.md",
+                "file": "Git/CMD/branch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "简历"
-            }
-          },
-          {
-            "id": "7d99810be38be770",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.14.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.14.4"
+              "title": "branch"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -218,8 +205,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7d99810be38be770",
+  "active": "ea7b1545e44d9be7",
   "lastOpenFiles": [
+    "Git/CMD/shortlog.md",
+    "Git/CMD/log.md",
     "简历.md",
     "gh.md",
     "数据库-表格.base",
@@ -249,8 +238,6 @@
     "CMD/系统管理",
     "其他/Linux_存储基础.md",
     "其他/Linux_磁盘阵列_RAID.md",
-    "其他/Linux_安全指南.md",
-    "其他/Linux 日志指南.md",
     "未命名.base",
     "标准",
     "未命名 1.base",
